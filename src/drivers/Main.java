@@ -1,5 +1,6 @@
 package drivers;
 import domini.*;
+import dades.*;
 
 import java.util.*;
 
@@ -9,8 +10,17 @@ import java.util.*;
  */
 
 public class Main {
+    static Table<Player> _players;
+    static Table<BoardHidato> _boards;
+    static Table<Match> _matches;
+    static HidatoBD HBD;
+   
+   
+    
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
+        HBD = new HidatoBD();
+        HBD.load();
         int size;
         int select;
         int entrada;
@@ -25,6 +35,12 @@ public class Main {
         System.out.printf("Entra nom de jugador:  ");
         String nom = input.nextLine();
         Player Jugador = new Player(nom);
+        if (HidatoBD.find(nom) == -1) {
+            HBD._players.add(new Player(nom));
+            HBD.save();
+        }
+        else System.out.println("El jugador ja existeix");
+        
 
         while(sortida == 's') {
 
