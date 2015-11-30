@@ -14,6 +14,8 @@ public class Main {
     static Table<BoardHidato> _boards;
     static Table<Match> _matches;
     static HidatoBD HBD;
+    static PlayersAdmin admin;
+    static Player Jugador;
    
    
     
@@ -21,6 +23,7 @@ public class Main {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
         HBD.load();
+        admin = new PlayersAdmin(_players);
         int size;
         int select;
         int entrada;
@@ -31,15 +34,76 @@ public class Main {
         int dificultat;
         Character sortida = 's';
         Boolean generat = false;
-
-        System.out.printf("Entra nom de jugador:  ");
+        Boolean b = false;
+        
+        while (!b){
+            System.out.println("Crear nou Jugador (0)"); 
+            System.out.println("entrar en Jugador existent (1)");
+            System.out.println("canviar contrasenya de Jugador existent (2)");
+            System.out.println("eliminar Jugador existent (3)");
+            entrada = input.nextInt();
+            if (entrada == 0){
+                System.out.println("Entra nom de jugador:  ");
+                String nom = input.nextLine();
+                if (admin.exists(nom)) System.out.println("Aquest nom de jugador ja existex");
+                else {
+                    System.out.println("Entra contrassenya:  ");
+                    String password = input.nextLine();
+                    Boolean exit = admin.createPlayer(nom, password);
+                    Jugador = new Player(nom);
+                    if(exit) b=true;
+                }  
+            }
+            
+            
+            else if (entrada == 1){
+                System.out.println("Entra nom de jugador:  ");
+                String nom = input.nextLine();
+                if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
+                else {
+                    System.out.println("Entra contrassenya:  ");
+                    String password = input.nextLine();
+                    if (admin.checkLogin(nom, password)) {
+                        Jugador = new Player(nom);
+                        System.out.println("Contrassenya correcte");
+                    }
+                    else System.out.println("Contrassenya incorrecte");
+                }
+            }
+            
+            else if (entrada == 2){
+                System.out.println("Entra nom de jugador:  ");
+                String nom = input.nextLine();
+                if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
+                else {
+                    System.out.println("Entra contrassenya actual:  ");
+                    String password = input.nextLine();
+                    System.out.println("Entra nova contrassenya:  ");
+                    String newPassword = input.nextLine();
+                    admin.changePassword(nom, newPassword, newPassword);
+                }
+            }
+            
+            else if (entrada == 3){
+                System.out.println("Entra nom de jugador:  ");
+                String nom = input.nextLine();
+                if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
+                else {
+                    System.out.println("Entra contrassenya:  ");
+                    String password = input.nextLine();
+                    admin.removePlayer(nom, password);
+                }
+            }
+        }    
+        
+        /*System.out.printf("Entra nom de jugador:  ");
         String nom = input.nextLine();
         Player Jugador = new Player(nom);
         if (HidatoBD.find(nom) == -1) {
             HBD._players.add(new Player(nom));
             HBD.save();
         }
-        else System.out.println("El jugador ja existeix");
+        else System.out.println("El jugador ja existeix");*/
         
 
         while(sortida == 's') {
