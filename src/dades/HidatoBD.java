@@ -15,8 +15,11 @@ public class HidatoBD extends DB {
     /** Contains all the matches in progress and finished */
     static  public Table<Match> _matches;
     
-    /*Contains all the boards*/
+    /*Contains all the boards */
     static public Table<BoardHidato> _boards;
+    
+    /*Contains temporal random generateed board */
+    static public Table<BoardHidato> _temporal;
 
     /** Class constructor, by default loads all the data */
     public HidatoBD()
@@ -24,6 +27,7 @@ public class HidatoBD extends DB {
         _players = new Table<>();
         _matches = new Table<>();
         _boards = new Table<>();
+        _temporal = new Table<>();
     }
 
     /** Returns the Players Administration class */
@@ -38,6 +42,7 @@ public class HidatoBD extends DB {
         _players.save(getOutputStream("players"));
         _matches.save(getOutputStream("matches"));
         _boards.save(getOutputStream("boards"));
+        _temporal.save(getOutputStream("temporal"));
     }
 
     /** Load all data from disc */
@@ -58,6 +63,11 @@ public class HidatoBD extends DB {
         } catch (IOException e) {
             System.err.println("Table not found");
         }
+        try {
+            _boards.load(getInputStream("temporal"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
     }
 
     /**
@@ -72,11 +82,11 @@ public class HidatoBD extends DB {
      */
     public void setMatches(Table<Match> m) { this._matches = m; }
     
-    public static int find(String nom) {
+    /*public static int find(String nom) {
         for (int i = 0; i < _players.size(); ++i) {
             if (_players.get(i).getName().equals(nom)) return i;
             
         }
         return -1;
-    }
+    }*/
 }
