@@ -22,8 +22,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
+        _players = new Table<Player>();
+        //HBD.save();
         HBD.load();
-        admin = new PlayersAdmin(_players);
+        admin = HBD.getPlayersAdmin();
         int size;
         int select;
         int entrada;
@@ -35,6 +37,8 @@ public class Main {
         Character sortida = 's';
         Boolean generat = false;
         Boolean b = false;
+        String nom;
+        String password;
         
         while (!b){
             System.out.println("Crear nou Jugador (0)"); 
@@ -44,11 +48,12 @@ public class Main {
             entrada = input.nextInt();
             if (entrada == 0){
                 System.out.println("Entra nom de jugador:  ");
-                String nom = input.nextLine();
+                nom = input.next();
+                //System.out.println(nom);
                 if (admin.exists(nom)) System.out.println("Aquest nom de jugador ja existex");
                 else {
                     System.out.println("Entra contrassenya:  ");
-                    String password = input.nextLine();
+                    password = input.next();
                     Boolean exit = admin.createPlayer(nom, password);
                     Jugador = new Player(nom);
                     if(exit) b=true;
@@ -58,14 +63,15 @@ public class Main {
             
             else if (entrada == 1){
                 System.out.println("Entra nom de jugador:  ");
-                String nom = input.nextLine();
+                nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
                 else {
                     System.out.println("Entra contrassenya:  ");
-                    String password = input.nextLine();
+                    password = input.next();
                     if (admin.checkLogin(nom, password)) {
                         Jugador = new Player(nom);
                         System.out.println("Contrassenya correcte");
+                        b=true;
                     }
                     else System.out.println("Contrassenya incorrecte");
                 }
@@ -73,27 +79,35 @@ public class Main {
             
             else if (entrada == 2){
                 System.out.println("Entra nom de jugador:  ");
-                String nom = input.nextLine();
+                nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
                 else {
                     System.out.println("Entra contrassenya actual:  ");
-                    String password = input.nextLine();
+                    password = input.next();
                     System.out.println("Entra nova contrassenya:  ");
-                    String newPassword = input.nextLine();
-                    admin.changePassword(nom, newPassword, newPassword);
+                    String newPassword = input.next();
+                    if (admin.changePassword(nom, newPassword, newPassword)) System.out.println("Canvi efectuat");
+                    else System.out.println("ERROR");
+                    
                 }
             }
             
             else if (entrada == 3){
                 System.out.println("Entra nom de jugador:  ");
-                String nom = input.nextLine();
+                nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
                 else {
                     System.out.println("Entra contrassenya:  ");
-                    String password = input.nextLine();
-                    admin.removePlayer(nom, password);
+                    password = input.next();
+                    if (admin.checkLogin(nom, password)) {
+                        admin.removePlayer(nom, password);
+                        System.out.println("Jugador eliminat");
+                    }
+                    else System.out.println("Contrasenya Incorrecte");
                 }
             }
+            //System.out.println("SAVED");
+            HBD.save();
         }    
         
         /*System.out.printf("Entra nom de jugador:  ");
