@@ -107,18 +107,11 @@ public class Main {
                     else System.out.println("Contrasenya Incorrecte");
                 }
             }
-            //System.out.println("SAVED");
+            
             HBD.save();
         }    
         
-        /*System.out.printf("Entra nom de jugador:  ");
-        String nom = input.nextLine();
-        Player Jugador = new Player(nom);
-        if (HidatoBD.find(nom) == -1) {
-            HBD._players.add(new Player(nom));
-            HBD.save();
-        }
-        else System.out.println("El jugador ja existeix");*/
+        
         
 
         while(sortida == 's') {
