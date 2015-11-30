@@ -39,6 +39,7 @@ public class Main {
         Boolean b = false;
         String nom;
         String password;
+        String newPassword;
         
         while (!b){
             System.out.println("Crear nou Jugador (0)"); 
@@ -85,8 +86,8 @@ public class Main {
                     System.out.println("Entra contrassenya actual:  ");
                     password = input.next();
                     System.out.println("Entra nova contrassenya:  ");
-                    String newPassword = input.next();
-                    if (admin.changePassword(nom, newPassword, newPassword)) System.out.println("Canvi efectuat");
+                    newPassword = input.next();
+                    if (admin.changePassword(nom, password, newPassword)) System.out.println("Canvi efectuat");
                     else System.out.println("ERROR");
                     
                 }
