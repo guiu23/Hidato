@@ -44,6 +44,22 @@ public class HidatoBD extends DB {
         _boards.save(getOutputStream("boards"));
         _temporal.save(getOutputStream("temporal"));
     }
+    
+    public void savePlayers() {
+        _players.save(getOutputStream("players"));
+    }
+    
+    public void saveMatches() {
+         _matches.save(getOutputStream("matches"));
+    }
+    
+    public void saveBoards() {
+        _boards.save(getOutputStream("boards"));
+    }
+    
+    public void saveTemporal() {
+        _temporal.save(getOutputStream("temporal"));
+    }
 
     /** Load all data from disc */
     public void load()
