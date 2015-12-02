@@ -40,6 +40,8 @@ public class Main {
         String nom;
         String password;
         String newPassword;
+        Integer X[] = {0,1,1,1,0,-1,-1,-1};
+        Integer Y[] = {1,1,0,-1,-1,-1,0,1};
         
         while (!b){
             System.out.println("Crear nou Jugador (0)"); 
@@ -56,8 +58,13 @@ public class Main {
                     System.out.println("Entra contrassenya:  ");
                     password = input.next();
                     Boolean exit = admin.createPlayer(nom, password);
-                    Jugador = new Player(nom);
-                    if(exit) b=true;
+                    for (int i = 0; i < HBD._players.size(); ++i){
+                        if (HBD._players.get(i).getName().equals(nom)){   
+                            Jugador = HBD._players.get(i);
+                            System.out.println("Creat amb exit");
+                            if(exit) b=true;
+                        }
+                    }
                 }  
             }
             
@@ -70,9 +77,13 @@ public class Main {
                     System.out.println("Entra contrassenya:  ");
                     password = input.next();
                     if (admin.checkLogin(nom, password)) {
-                        Jugador = new Player(nom);
-                        System.out.println("Contrassenya correcte");
-                        b=true;
+                        for (int i = 0; i < HBD._players.size(); ++i){
+                            if (HBD._players.get(i).getName().equals(nom)){   
+                            Jugador = HBD._players.get(i);
+                            System.out.println("Contrassenya correcte");
+                            b=true;
+                            }
+                        }
                     }
                     else System.out.println("Contrassenya incorrecte");
                 }
@@ -194,7 +205,7 @@ public class Main {
                     Funcions.solve(Taulell, size, true);
                 }
                 else if(entrada == 6) {
-                    Match Partida = new Match(dificultat);
+                    Match Partida = new Match(Joc, Jugador);
 
                     BoardHidato TaulellAux = new BoardHidato(size);
                     Funcions.copiarBoard(TaulellAux, Taulell);
@@ -255,8 +266,31 @@ public class Main {
                                 if (TaulellAux.getAnnotationCell(i, val1, val2) == true) System.out.println(i + " ");
                             }
                         } else if (entrada2 == 4) {
-                            if(Funcions.verificadorSolucio(TaulellAux)) {
+                            int startx=0;
+                            int starty=0;
+                        
+                            for (int i = 0; i < size; ++i)  {
+                                for (int j = 0; j < size; ++j)  {
+                                    if (Taulell.getValidaCell(i,j)) {
+                                        if (Taulell.getValueCell(i,j) == 1)   {
+                                                          //guardem casella start i la marquem com a visitada
+                                            startx = i;
+                                            starty = j;
+                                        }
+                                    }
+                                }
+                            }
+                            if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  //AQUI ANAVA LA FUNCIO TAJA 
                                 System.out.println("Ben resolt! Felicitats :)");
+                                int puntuacioF = Jugador.getPuntuacio() + Partida.getResult();
+                                for (int i = 0; i < HBD._players.size(); ++i){
+                                    if (HBD._players.get(i).getName().equals(Jugador.getName())){   
+                                        HBD._players.get(i).SetPuntuacio(puntuacioF);
+                                        b=true;
+                                        HBD.savePlayers();
+                                        //System.out.println(HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
+                                    }
+                                }
                                 fi_joc = true;
                             }
                             else {
