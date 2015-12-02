@@ -346,7 +346,7 @@ public class Funcions {
         solution = false;
     }
 
-    public static boolean verificadorSolucio(BoardHidato Taulell) {
+    public static boolean verificadorSolucio(BoardHidato Taulell) { //LA FUNCIO ESTA TAJA
         int actual_i = Taulell.getStart_i();
         int actual_j = Taulell.getStart_j();
         int val_actual;
