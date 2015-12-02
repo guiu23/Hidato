@@ -306,6 +306,7 @@ public class Main {
                             entrada2 = input.nextInt();
                         }
                     }
+                    fi_joc = false;
                 } else {
                     System.out.println("Numero no valid.");
                 }
