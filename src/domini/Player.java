@@ -12,6 +12,8 @@ public class Player implements Serializable {
 
     /** Contains the player's password hash with SHA-512 */
     private byte[] _hash;
+    
+    private int puntuacio = 0;
 
     /////////////
     // METHODS //
@@ -86,4 +88,8 @@ public class Player implements Serializable {
      * @param _name Player's name to set
      */
     public void setName(String _name) { this._name = _name; }
+    
+    public int getPuntuacio() { return puntuacio; }
+    
+    public void SetPuntuacio(int Score){ this.puntuacio = Score;} 
 }
