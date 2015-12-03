@@ -10,9 +10,9 @@ import java.util.*;
  */
 
 public class Main {
-    static Table<Player> _players;
+    /*static Table<Player> _players;
     static Table<BoardHidato> _boards;
-    static Table<Match> _matches;
+    static Table<Match> _matches;*/
     static HidatoBD HBD;
     static PlayersAdmin admin;
     static Player Jugador;
@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
-        _players = new Table<Player>();
+        //_players = new Table<Player>();
         //HBD.save();
         HBD.load();
         admin = HBD.getPlayersAdmin();
@@ -282,7 +282,7 @@ public class Main {
                             }
                             if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  //AQUI ANAVA LA FUNCIO TAJA 
                                 System.out.println("Ben resolt! Felicitats :)");
-                                int puntuacioF = Jugador.getPuntuacio() + Partida.getResult();
+                                int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
                                 for (int i = 0; i < HBD._players.size(); ++i){
                                     if (HBD._players.get(i).getName().equals(Jugador.getName())){   
                                         HBD._players.get(i).SetPuntuacio(puntuacioF);
