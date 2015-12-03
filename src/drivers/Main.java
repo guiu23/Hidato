@@ -37,6 +37,7 @@ public class Main {
         Character sortida = 's';
         Boolean generat = false;
         Boolean b = false;
+        Boolean temporal = false;
         String nom;
         String password;
         String newPassword;
@@ -140,10 +141,12 @@ public class Main {
             if (select == 0) {
                 System.out.println("Introdueix el nom del taulell");
                 id = input.next();
+                temporal = false;
                 dificultat = 1;
             } else if ( select == 1){
                 System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
                 id = "temporal";
+                temporal = true;
                 dificultat = input.nextInt();
             }
             else {
@@ -176,6 +179,7 @@ public class Main {
                 System.out.println("(Recorda: Com a minim s'han d'introduir el primer i ultim valor del Hidato. 0 = cela buida, -1 = cela invalida.)");
                 Funcions.llegirTaulell(Taulell);
                 
+                
                 /*for(int i = 0; i< HBD._boards.size(); ++i)    PER COMPROVAR SI GUARDA TAULELLS BD
                 Funcions.imprimeixValors(HBD._boards.get(i));
                 
@@ -189,6 +193,7 @@ public class Main {
                 Funcions.generar_written(Taulell,Joc.getDifficulty());
                 System.out.println("Generat:");
                 Funcions.imprimeixValors(Taulell);
+                
                 /*for(int i = 0; i< HBD._temporal.size(); ++i)    //PER COMPROVAR SI GUARDA TAULELLS BD
                 Funcions.imprimeixValors(HBD._temporal.get(i));
                 
@@ -242,7 +247,36 @@ public class Main {
                 } else if(entrada == 5) {
                     System.out.println("Resolent el taulell . . .");
                     System.out.println("Resolt:");
-                    Funcions.solve(Taulell, size, true);
+                    boolean trobat = false;
+                    if (!temporal)  {
+                        HBD.loadBoardsResolts();
+                        while (!trobat) {
+                           String nomT = Taulell.getID();
+                            for(int i = 0; i < HBD._boardsResolts.size() && !trobat; ++i) {
+                                if (HBD._boardsResolts.get(i).getID().equals(nomT)) {
+
+                                    Funcions.imprimeixValors(HBD._boardsResolts.get(i));
+                                    trobat = true;
+                                }
+                            }
+                        if (!trobat) System.out.println("error");
+                        }
+                    }
+                    else if (temporal){
+                       HBD.loadTemporalResolts();
+                        while (!trobat) {
+                           String nomT = "temporal";
+                            for(int i = 0; i < HBD._temporalResolts.size() && !trobat; ++i) {
+                                if (HBD._temporalResolts.get(i).getID().equals(nomT)) {
+
+                                    Funcions.imprimeixValors(HBD._temporalResolts.get(i));
+                                    trobat = true;
+                                }
+                            }
+                        if (!trobat) System.out.println("error");
+                        } 
+                    }
+                    //Funcions.solve(Taulell, size, true);
                 }
                 else if(entrada == 6) {
                     Match Partida = new Match(Joc, Jugador);
