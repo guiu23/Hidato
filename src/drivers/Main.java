@@ -134,14 +134,19 @@ public class Main {
             System.out.println("0 : Introduir el taulell.");
             System.out.println("1 : Crear el taulell aleatoriament.");
             select = input.nextInt();
+            String id;
             if (select == 0) {
+                System.out.println("Introdueix el nom del taulell");
+                id = input.next();
                 dificultat = 1;
             } else {
                 System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
+                id = "temporal";
                 dificultat = input.nextInt();
             }
             Game Joc = new Game(GameId, dificultat);
-            BoardHidato Taulell = new BoardHidato(size);
+            
+            BoardHidato Taulell = new BoardHidato(size, id);
 
             if (select == 0) {
                 System.out.println("Introdueix els valors del taullel per ordre.");
@@ -207,7 +212,7 @@ public class Main {
                 else if(entrada == 6) {
                     Match Partida = new Match(Joc, Jugador);
 
-                    BoardHidato TaulellAux = new BoardHidato(size);
+                    BoardHidato TaulellAux = new BoardHidato(size, id);
                     Funcions.copiarBoard(TaulellAux, Taulell);
 
                     System.out.println("Benvingut a la partida del joc "+ Joc.getId() + ":");
