@@ -1,5 +1,5 @@
 package domini;
-
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,10 +15,12 @@ public class Game implements Playable{
     //dificil 5% celes invalides
     //mitja 10% celes invalides
     //facil 20% celes invalides
+    public BoardHidato GameBoard;
 
-    public Game(int GameId, int difficult) {
+    public Game(int GameId, int difficult, BoardHidato GameBoard) {
         this.GameId = GameId;
         this.difficult = difficult;
+        this.GameBoard = GameBoard;
     }
 
     public int getId() {
@@ -36,4 +38,5 @@ public class Game implements Playable{
     public void setDifficult(int difficult) {
         this.difficult = difficult;
     }
+
 }
