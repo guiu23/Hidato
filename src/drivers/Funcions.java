@@ -218,10 +218,16 @@ public class Funcions {
         Random segj = new Random();
         double tantpercent = ((size * size)-Taulell.consultar_num_celesinvalides()) * percentatgeceles_written(dificultat);
         int totalsvisibles = (int) tantpercent;
-        solve_modifica(Taulell, size, false);
         
-        //GUARDAR EL TAULELL RESOLT A LA BD
-       
+        BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
+        solve_modifica(Taulell, size, false);
+        copiarBoard(TaulellRes, Taulell);
+        
+                //GUARDA ELS TAULELLS A LA BD
+        HBD._temporalResolts.add(TaulellRes);
+        HBD.saveTemporalResolts();
+        
+        
         solution = false;
         reset_written(Taulell);//posem a written = false totes les celes menys linici i el fi
         while (numvisibles < totalsvisibles) {
@@ -235,6 +241,9 @@ public class Funcions {
             //quan triem la posicio i no es invalida ni ja written, incrementem el nombre de celes visibles posades
         }
         amagar_nowritten(Taulell);
+        HBD._temporal.add(Taulell);
+        HBD.saveTemporal();
+        
     }
 
     static boolean posarainvalida(BoardHidato Taulell,int row,int column) {//si totes les celes veines o totes menys una son invalides, return true
