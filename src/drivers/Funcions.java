@@ -363,6 +363,7 @@ public class Funcions {
         posa_final(Taulell); //POSEM LA ULTIMA CELA AL TAULELL
         //imprimeixValors(Taulell);
         solve(Taulell, size, false);
+        imprimeixValors(Taulell);
         if (!solution) {
             netejaBoard(Taulell);
             colocar_celesinvalides(Taulell);
