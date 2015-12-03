@@ -539,7 +539,7 @@ public class Funcions {
     }
 
 
-    public static void solve (BoardHidato Taulell, int size, boolean escriure)    {   //de moment ho farem amb un taulell arbitrari
+    public static void solve (BoardHidato Taulell, int size, boolean escriure)    {   
         int startx = 0;  //i de la primera cela
         int starty = 0;  //j de la ultima cela
         int finish = 1;
