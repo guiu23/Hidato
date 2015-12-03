@@ -130,28 +130,58 @@ public class Main {
             System.out.println("Estàs al Joc " + GameId + ".");
             System.out.printf("Entra mida del taulell:  ");
             size = input.nextInt();
-            System.out.println("Voldràs introduir tu el taulell o que el generi la maquina aleatoriament?");
+            System.out.println("Voldràs introduir tu el taulell, que el generi la maquina aleatoriament o vols carregar-ne un d'existent?");
             System.out.println("0 : Introduir el taulell.");
             System.out.println("1 : Crear el taulell aleatoriament.");
+            System.out.println("2 : Carregar un taulell ja creat.");
             select = input.nextInt();
             String id;
+            BoardHidato TaulellAux2 = new BoardHidato(size,"1");
             if (select == 0) {
                 System.out.println("Introdueix el nom del taulell");
                 id = input.next();
                 dificultat = 1;
-            } else {
+            } else if ( select == 1){
                 System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
                 id = "temporal";
                 dificultat = input.nextInt();
             }
-            Game Joc = new Game(GameId, dificultat);
-            
-            BoardHidato Taulell = new BoardHidato(size, id);
+            else {
+                HBD.loadBoards();
+                System.out.println("Introdueix el nom del taulell:");
+                dificultat = 1;
+                id = null;
+                boolean trobat = false;
+                while ( !trobat) {
+                   String nomT = input.next();
+                    for(int i = 0; i < HBD._boards.size() && !trobat; ++i) {
+                        if (HBD._boards.get(i).getID().equals(nomT)) {
+                            TaulellAux2 = HBD._boards.get(i);
+                            id = TaulellAux2.getID();
+                            trobat = true;
+                        }
+                    }
+                if (!trobat) System.out.println("El nom no es correcte, torna-ho a provar:");
+                }
 
+            }
+                       
+            BoardHidato Taulell = new BoardHidato(size,id);
+            if (select == 2) Taulell = TaulellAux2;
+            Game Joc = new Game(GameId, dificultat,Taulell);
+            
+            
             if (select == 0) {
                 System.out.println("Introdueix els valors del taullel per ordre.");
                 System.out.println("(Recorda: Com a minim s'han d'introduir el primer i ultim valor del Hidato. 0 = cela buida, -1 = cela invalida.)");
                 Funcions.llegirTaulell(Taulell);
+                
+                /*for(int i = 0; i< HBD._boards.size(); ++i)    PER COMPROVAR SI GUARDA TAULELLS BD
+                Funcions.imprimeixValors(HBD._boards.get(i));
+                
+                for(int i = 0; i< HBD._boardsResolts.size(); ++i)
+                Funcions.imprimeixValors(HBD._boardsResolts.get(i));*/
+                
                 generat = false;
             } else if (select == 1) {
                 System.out.println("Generant un taulell qualsevol . . .");
@@ -159,6 +189,11 @@ public class Main {
                 Funcions.generar_written(Taulell,Joc.getDifficulty());
                 System.out.println("Generat:");
                 Funcions.imprimeixValors(Taulell);
+                /*for(int i = 0; i< HBD._temporal.size(); ++i)    //PER COMPROVAR SI GUARDA TAULELLS BD
+                Funcions.imprimeixValors(HBD._temporal.get(i));
+                
+                for(int i = 0; i< HBD._temporalResolts.size(); ++i)
+                Funcions.imprimeixValors(HBD._temporalResolts.get(i));*/
                 generat = true;
             }
 
