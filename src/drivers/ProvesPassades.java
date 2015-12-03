@@ -8,8 +8,8 @@ import java.util.*;
  * Classe per fer proves de Run a veure si funcionen les classes que hem fet com volem.
  */
 
-public class ProvesPassades {
-    public static void main(/*String[] args*/) {
+/*public class ProvesPassades {
+    public static void main(/*String[] args) {
         Scanner input = new Scanner( System.in );
         int size;
         //int num,dif;
@@ -33,7 +33,7 @@ public class ProvesPassades {
         System.out.println("Dificultat? " + joc.getDifficult());
         System.out.println("Canvio Dificult a 3");
         joc.setDifficult(3);
-        System.out.println("Dificultat:" + joc.getDifficult());*/
+        System.out.println("Dificultat:" + joc.getDifficult());
 
         System.out.println("mida taulell:" + Taulell.getSize()); //treu mida taulell
 
@@ -83,8 +83,7 @@ public class ProvesPassades {
 
         System.out.println();
     }
-}
-
+} */
         /*
         System.out.println("PROVA DE CELA HIDATO");
         System.out.println("Entra una fila i una columna per crear una cela hidato qualsevol:  ");
