@@ -139,10 +139,9 @@ public class Carrega extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
 
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Downloads\\Fons.png")); // NOI18N
-        fons.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
         getContentPane().add(fons);
-        fons.setBounds(0, 0, 673, 450);
+        fons.setBounds(0, 0, 860, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

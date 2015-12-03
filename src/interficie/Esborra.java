@@ -9,12 +9,12 @@ package interficie;
  *
  * @author jordi.guiu.pujols
  */
-public class Crea extends javax.swing.JFrame {
+public class Esborra extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
-    public Crea() {
+    public Esborra() {
         initComponents();
     }
 
@@ -30,8 +30,8 @@ public class Crea extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        user = new javax.swing.JTextField();
         pass = new javax.swing.JTextField();
+        user = new javax.swing.JTextField();
         entra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         fons = new javax.swing.JLabel();
@@ -72,25 +72,25 @@ public class Crea extends javax.swing.JFrame {
         jLabel2.setText("nom:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(160, 240, 50, 20);
-        getContentPane().add(user);
-        user.setBounds(300, 290, 180, 30);
+        getContentPane().add(pass);
+        pass.setBounds(300, 290, 180, 30);
 
-        pass.addActionListener(new java.awt.event.ActionListener() {
+        user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passActionPerformed(evt);
+                userActionPerformed(evt);
             }
         });
-        getContentPane().add(pass);
-        pass.setBounds(240, 240, 240, 30);
+        getContentPane().add(user);
+        user.setBounds(240, 240, 240, 30);
 
-        entra.setText("Crea");
+        entra.setText("Esborra");
         entra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entraActionPerformed(evt);
             }
         });
         getContentPane().add(entra);
-        entra.setBounds(500, 250, 70, 60);
+        entra.setBounds(500, 240, 80, 80);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,9 +115,9 @@ public class Crea extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passActionPerformed
+    }//GEN-LAST:event_userActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
@@ -152,14 +152,30 @@ public class Crea extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Crea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Esborra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Crea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Esborra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Crea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Esborra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Crea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Esborra.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -180,7 +196,7 @@ public class Crea extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Crea().setVisible(true);
+                new Esborra().setVisible(true);
             }
         });
     }
