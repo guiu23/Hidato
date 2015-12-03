@@ -35,7 +35,7 @@ public class Identificacio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(673, 449));
+        setMaximumSize(new java.awt.Dimension(690, 4490));
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
 
@@ -98,10 +98,9 @@ public class Identificacio extends javax.swing.JFrame {
         getContentPane().add(carrega_user);
         carrega_user.setBounds(253, 321, 171, 28);
 
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Downloads\\Fons.png")); // NOI18N
-        fons.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
         getContentPane().add(fons);
-        fons.setBounds(0, 0, 673, 450);
+        fons.setBounds(0, 0, 860, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
