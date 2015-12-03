@@ -1,13 +1,15 @@
 package drivers;
 import domini.*;
 import java.util.*;
+import dades.*;
 
 import static java.lang.System.out;
 
 public class Funcions {
     public static boolean solution = false;
     public static int numfinal;
-
+    private static HidatoBD HBD = new HidatoBD();
+    
     public static void imprimeixValors(BoardHidato Taulell) {
         for (int i = 0; i < Taulell.getSize();i++) {
             for (int j = 0; j < Taulell.getSize();j++) {
@@ -20,6 +22,8 @@ public class Funcions {
     }
 
     public static void llegirTaulell(BoardHidato Taulell)   {
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
         int valor;
         int valormax = 1;
         Boolean correcte = false;
@@ -49,15 +53,26 @@ public class Funcions {
                 }
             }
             correcte = true; //per fer que funcioni ara, dsp mes tard esborrar-ho
-            BoardHidato TaulellRes = new BoardHidato(Taulell.getSize());
+            BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
             copiarBoard(TaulellRes, Taulell);
             solve_modifica(TaulellRes, TaulellRes.getSize(), false);
-            
-            //GUARDAR EL TAULELL RES A LA BD. 
-            
+                        
             if (solution) {
-                System.out.println("Hidato possible de resoldre.");
                 correcte = true;
+                boolean jaExisteix = false;
+                for ( int i =0; i< HBD._boards.size() && !jaExisteix; ++i) {
+                    if (HBD._boards.get(i).equals(Taulell)) jaExisteix = true; 
+                }
+                if (!jaExisteix) {
+                    HBD._boards.add(Taulell);                    //taulell sense resoldre
+                    HBD._boardsResolts.add(TaulellRes);          //taulell resolt
+                    System.out.println("Hidato possible de resoldre.");
+                    HBD.saveBoards();
+                    HBD.saveBoardsResolts();
+                }
+                else System.out.println("El taulell ja existeix.");
+                
+
                 
                 //Definir la dificultat
                 
