@@ -20,6 +20,12 @@ public class HidatoBD extends DB {
     
     /*Contains temporal random generateed board */
     static public Table<BoardHidato> _temporal;
+    
+    /*Containsgenerateed and solved board */
+    static public Table<BoardHidato> _boardsResolts;
+    
+    /*Contains temporal random solved generateed board */
+    static public Table<BoardHidato> _temporalResolts;
 
     /** Class constructor, by default loads all the data */
     public HidatoBD()
@@ -28,6 +34,8 @@ public class HidatoBD extends DB {
         _matches = new Table<>();
         _boards = new Table<>();
         _temporal = new Table<>();
+        _boardsResolts = new Table<>();
+        _temporalResolts = new Table<>();
     }
 
     /** Returns the Players Administration class */
@@ -43,6 +51,8 @@ public class HidatoBD extends DB {
         _matches.save(getOutputStream("matches"));
         _boards.save(getOutputStream("boards"));
         _temporal.save(getOutputStream("temporal"));
+        _temporalResolts.save(getOutputStream("temporalResolts"));
+        _boardsResolts.save(getOutputStream("boardsResolts"));
     }
     
     public void savePlayers() {
@@ -59,6 +69,14 @@ public class HidatoBD extends DB {
     
     public void saveTemporal() {
         _temporal.save(getOutputStream("temporal"));
+    }
+    
+    public void saveTemporalResolts() {
+        _temporalResolts.save(getOutputStream("temporalResolts"));
+    }
+    
+    public void saveBoardsResolts() {
+        _boardsResolts.save(getOutputStream("boardsResolts"));
     }
 
     /** Load all data from disc */
@@ -80,10 +98,67 @@ public class HidatoBD extends DB {
             System.err.println("Table not found");
         }
         try {
-            _boards.load(getInputStream("temporal"));
+            _temporal.load(getInputStream("temporal"));
         } catch (IOException e) {
             System.err.println("Table not found");
         }
+        try {
+            _temporalResolts.load(getInputStream("temporalResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+        try {
+            _boardsResolts.load(getInputStream("boardsResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+    }
+    
+    public void loadPlayers() {
+        try {
+            _players.load(getInputStream("players"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+    }
+    
+    public void loadMatches() {
+        try {
+            _matches.load(getInputStream("matches"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }    
+    }
+    
+    public void loadBoards() {
+        try {
+            _boards.load(getInputStream("boards"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+    }
+    
+    public void loadTemporal() {
+        try {
+            _temporal.load(getInputStream("temporal"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }    }
+    
+    public void loadTemporalResolts() {
+        try {
+            _temporalResolts.load(getInputStream("temporalResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+    }
+    
+    public void loadBoardsResolts() {
+        try {
+            _boardsResolts.load(getInputStream("boardsResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }    
     }
 
     /**
