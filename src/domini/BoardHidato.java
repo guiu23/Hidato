@@ -18,8 +18,9 @@ public class BoardHidato extends Board {
     private int start_j;
     private int finish_i;
     private int finish_j;
+    private String id;
 
-    public BoardHidato(int size) {
+    public BoardHidato(int size, String id) {
         super(size);
         for (int i=0;i < size;++i) {
             board.add(new ArrayList<CellHidato>(size));
@@ -29,6 +30,7 @@ public class BoardHidato extends Board {
             }
         }
         max_annotations = size*size; //Si taulell hi han 25 caselles podrà anar-hi del 1 al 25 en una casella.
+        this.id = id;
     }
 
     public static int consult_max_annotations(){
@@ -106,4 +108,7 @@ public class BoardHidato extends Board {
     public void setFinish_j(int j) {finish_j = j;}
 
     public int getFinish_j() {return finish_j;}
+    
+    public String getID() {return id;}
+
 }
