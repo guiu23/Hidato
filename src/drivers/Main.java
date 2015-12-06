@@ -1,6 +1,9 @@
 package drivers;
 import domini.*;
 import dades.*;
+import domini.stats.HidatoStats;
+import domini.stats.stubGame;
+import domini.stats.stubMatch;
 
 import java.util.*;
 
@@ -14,6 +17,7 @@ public class Main {
     static Table<BoardHidato> _boards;
     static Table<Match> _matches;*/
     static HidatoBD HBD;
+    static HidatoStats _stats;
     static PlayersAdmin admin;
     static Player Jugador;
    
@@ -22,6 +26,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         //_players = new Table<Player>();
         //HBD.save();
         HBD.load();
@@ -32,7 +37,7 @@ public class Main {
         int entrada2;
         int val1, val2, val3;
         int marca;
-        int GameId = 1;
+        int gameID = 1;
         int dificultat;
         Character sortida = 's';
         Boolean generat = false;
@@ -127,8 +132,7 @@ public class Main {
         
 
         while(sortida == 's') {
-
-            System.out.println("Estàs al Joc " + GameId + ".");
+            System.out.println("Estàs al Joc " + gameID + ".");
             System.out.printf("Entra mida del taulell:  ");
             size = input.nextInt();
             System.out.println("Voldràs introduir tu el taulell, que el generi la maquina aleatoriament o vols carregar-ne un d'existent?");
@@ -168,10 +172,12 @@ public class Main {
                 }
 
             }
-                       
+            
+            HBD._games.add(new stubGame(gameID, size, dificultat));
             BoardHidato Taulell = new BoardHidato(size,id);
             if (select == 2) Taulell = TaulellAux2;
-            Game Joc = new Game(GameId, dificultat,Taulell);
+            Game Joc = new Game(gameID, dificultat, Taulell);
+            HBD.saveGames();
             
             
             if (select == 0) {
@@ -211,6 +217,8 @@ public class Main {
             System.out.println("4 : Consultar estat actual del taulell.");
             System.out.println("5 : Resoldre el taulell la màquina."); //valors dins Taulell, true/false
             System.out.println("6 : Fer una partida al joc.");
+            System.out.println("7 : Consultar estadístiques personals.");
+            System.out.println("8 : Consultar estadístiques totals.");
             System.out.println("-1 : Sortir.");
             System.out.println("Com a usuari et volem advertir que les celes van de [0][0] a [size-1][size-1]!");
             System.out.println("(Si t'oblides dels numeros, posant la paraula el numero 0 et sortira un manual per recordar-t'ho)");
@@ -226,6 +234,8 @@ public class Main {
                     System.out.println("4 : Consultar estat actual del taulell.");
                     System.out.println("5 : Resoldre el taulell la màquina.");
                     System.out.println("6 : Fer una partida al joc.");
+                    System.out.println("7 : Consultar estadístiques personals.");
+                    System.out.println("8 : Consultar estadístiques totals.");
                     System.out.println("-1 : Sortir.");
                     System.out.println();
 
@@ -280,11 +290,25 @@ public class Main {
                 }
                 else if(entrada == 6) {
                     Match Partida = new Match(Joc, Jugador);
+                    System.out.println("abans");
+                    int posG = -1;
+                    
+                    HBD.loadGames();
+                    System.out.println(HBD._games.size());
+                    for (int i = 0; i < HBD._games.size(); ++i)
+                        if (HBD._games.get(i).getID() == gameID) posG = i;
+                    
+                    
+                    System.out.println(posG);
+                    stubGame g = HBD._games.get(posG);
+                    stubMatch m = new stubMatch(Jugador,g);
+                    HBD._matches.add(m);
+                    HBD.saveMatches();
 
                     BoardHidato TaulellAux = new BoardHidato(size, id);
                     Funcions.copiarBoard(TaulellAux, Taulell);
 
-                    System.out.println("Benvingut a la partida del joc "+ Joc.getId() + ":");
+                    System.out.println("Benvingut a la partida del joc "+ Joc.getID() + ":");
                     System.out.printf("Apretant els seguents numeros podras fer les seguents coses:\n");
                     System.out.println("1 : Introduir valor a una cela.");
                     System.out.println("2: Posar una marca a una cela.");
@@ -357,12 +381,13 @@ public class Main {
                             if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  //AQUI ANAVA LA FUNCIO TAJA 
                                 System.out.println("Ben resolt! Felicitats :)");
                                 int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
+                                HBD.loadPlayers();
                                 for (int i = 0; i < HBD._players.size(); ++i){
-                                    if (HBD._players.get(i).getName().equals(Jugador.getName())){   
+                                    if (HBD._players.get(i).getName().equals(Jugador.getName())){ 
                                         HBD._players.get(i).SetPuntuacio(puntuacioF);
                                         b=true;
                                         HBD.savePlayers();
-                                        //System.out.println(HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
+                                        System.out.println(HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
                                     }
                                 }
                                 fi_joc = true;
@@ -381,13 +406,91 @@ public class Main {
                         }
                     }
                     fi_joc = false;
+                } else if(entrada == 7) {
+                    int option;
+        do {
+            System.out.println("Player Stats | Select an option:  1. countMatches" +
+                    "  2. countSolvedGames  3. countSolvedGamesDiff  4. rank  0. Return");
+            option = input.nextInt();
+            if (option < 0 || 4 < option)System.out.println("Not an option.");
+            else if (option != 0) {
+                System.out.println("Enter a valid username.");
+                String username = input.next();
+                int pos = find(username);
+                Player player = null;
+                if (pos == -1) option = 5;
+                switch (option) {
+                    case 1:
+                        System.out.println("Player "+username+" has played "+_stats.countMatches(player)+" matches.");
+                        break;
+                    case 2:
+                        System.out.println("Player "+username+" has solved "+
+                                _stats.countSolvedGames(player)+" distinct games.");
+                        break;
+                    case 3:
+                        System.out.println("Enter a difficulty level.");
+                        int difficulty = input.nextInt();
+                        System.out.println("Player "+username+" has solved "+_stats.countSolvedDiff
+                                (difficulty,player)+" distinct games of difficulty "+difficulty+".");
+                        break;
+                    case 4:
+                        System.out.println("Player "+username+" is ranked "+
+                                _stats.rank(player)+" in the game global ranking.");
+                        break;
+                    case 5:
+                        System.out.println("Invalid username.");
+                        break;
+                }
+            }
+        } while (option != 0);
+                } else if(entrada == 8) {
+                     int option;
+        do {
+           System.out.println("Global Stats | Select an option:  1. rankingGlobal" +
+                    "  2. countPlayers  3. countGames  4. countMatches" +
+                    "  5. rankingDifficulty  6. rankingSize  0. Return");
+            option = input.nextInt();
+            switch (option) {
+                case 1:
+                    System.out.println("Position | Player | Score");
+                    System.out.println(_stats.rankingGlobal());
+                    break;
+                case 2:
+                    System.out.println("Number of players in the program: "+_stats.countPlayers()+".");
+                    break;
+                case 3:
+                    
+                    System.out.println("Number of games in the program: "+_stats.countGames()+".");
+                    break;
+                case 4:
+                    System.out.println("Number of matches in the program: "+_stats.countMatches()+".");
+                    break;
+                case 5:
+                    System.out.println("Enter a difficulty");
+                    int diff = input.nextInt();
+                    System.out.println("Position | Player | Games of size" +diff);
+                    System.out.println(_stats.rankingDifficulty(diff));
+                    break;
+                case 6:
+                    System.out.println("Enter a size");
+                    int siz = input.nextInt();
+                    System.out.println("Position | Player | Games of Size "+siz);
+                    System.out.println(_stats.rankingSize(siz));
+                    break;
+                case 0: break;
+                default:
+                    System.out.println("Not an option.");
+                    break;
+            }
+        } while (option != 0);
+                    
                 } else {
                     System.out.println("Numero no valid.");
                 }
                 System.out.println("Estas al menu del joc.");
                 entrada = input.nextInt();
             }
-            ++GameId;
+            ++gameID;
             System.out.println("Vols jugar un altre joc? (s/n)");
             sortida = input.next().charAt(0);
             while (sortida != 's' && sortida != 'n')        {
@@ -397,6 +500,13 @@ public class Main {
             }
         }
         System.out.println("Fi de les proves.");
+    }
+     private static int find(String username)
+    {
+        HBD.loadPlayers();
+        for (int i = 0; i < HBD._players.size(); ++i)
+            if (HBD._players.get(i).getName().equals(username)) return i;
+        return -1;
     }
 }
 
