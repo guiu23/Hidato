@@ -1,6 +1,9 @@
 package dades;
 
 import domini.*;
+import domini.stats.HidatoStats;
+import domini.stats.stubGame;
+import domini.stats.stubMatch;
 
 import java.io.IOException;
 
@@ -13,7 +16,10 @@ public class HidatoBD extends DB {
     static public Table<Player> _players;
 
     /** Contains all the matches in progress and finished */
-    static  public Table<Match> _matches;
+    static  public Table<stubMatch> _matches;
+    
+    /** Contains all the games in progress and finished */
+    static  public Table<stubGame> _games;
     
     /*Contains all the boards */
     static public Table<BoardHidato> _boards;
@@ -32,6 +38,7 @@ public class HidatoBD extends DB {
     {
         _players = new Table<>();
         _matches = new Table<>();
+        _games = new Table<>();
         _boards = new Table<>();
         _temporal = new Table<>();
         _boardsResolts = new Table<>();
@@ -49,6 +56,7 @@ public class HidatoBD extends DB {
     {
         _players.save(getOutputStream("players"));
         _matches.save(getOutputStream("matches"));
+        _games.save(getOutputStream("games"));
         _boards.save(getOutputStream("boards"));
         _temporal.save(getOutputStream("temporal"));
         _temporalResolts.save(getOutputStream("temporalResolts"));
@@ -61,6 +69,10 @@ public class HidatoBD extends DB {
     
     public void saveMatches() {
          _matches.save(getOutputStream("matches"));
+    }
+    
+    public void saveGames() {
+         _games.save(getOutputStream("games"));
     }
     
     public void saveBoards() {
@@ -89,6 +101,11 @@ public class HidatoBD extends DB {
         }
         try {
             _matches.load(getInputStream("matches"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+        try {
+            _games.load(getInputStream("games"));
         } catch (IOException e) {
             System.err.println("Table not found");
         }
@@ -130,6 +147,14 @@ public class HidatoBD extends DB {
         }    
     }
     
+    public void loadGames() {
+        try {
+            _games.load(getInputStream("games"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }    
+    }
+    
     public void loadBoards() {
         try {
             _boards.load(getInputStream("boards"));
@@ -160,18 +185,20 @@ public class HidatoBD extends DB {
             System.err.println("Table not found");
         }    
     }
+    
+    
 
     /**
      * To get all Matches
      * @return Returns all stored matches
      */
-    public Table<Match> getMatches() { return _matches; }
+    //public Table<Match> getMatches() { return _matches; }
 
     /**
      * To replace the matches
      * @param m Matches to replace the current data
      */
-    public void setMatches(Table<Match> m) { this._matches = m; }
+    //public void setMatches(Table<Match> m) { this._matches = m; }
     
     /*public static int find(String nom) {
         for (int i = 0; i < _players.size(); ++i) {

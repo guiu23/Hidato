@@ -22,7 +22,7 @@ public class Match implements Serializable {
         this.Jugador = Jugador;
         time = 0;
         hints = 0;
-        result = -1;  //no hi ha resultat encara
+        result = -1;  
     }
 
     public int getTime() {
@@ -55,6 +55,6 @@ public class Match implements Serializable {
     }
 
     public int getGameId() {
-        return Joc.getId();
+        return Joc.getID();
     }
 }

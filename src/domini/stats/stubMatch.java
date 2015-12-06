@@ -1,14 +1,13 @@
 package domini.stats;
 
+import domini.Matchable;
 import domini.Player;
 
-import java.io.Serializable;
-
-public class stubMatch implements Serializable {
+public class stubMatch implements Matchable {
     Player player;
     stubGame game;
 
-    int time;   // seconds?
+    int time;   // seconds
     int hints;
     int result;
 
@@ -25,7 +24,7 @@ public class stubMatch implements Serializable {
     public Player getPlayer(){ return player; }
     public stubGame getGame(){ return game; }
 
-    public int getResult() { return result; }
+    public boolean finished() { return result != -1; }
 
     public void setTime(int seconds)
     {

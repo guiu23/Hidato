@@ -9,8 +9,8 @@ import java.util.*;
  */
 
 
-public class Game implements Playable{
-    private int GameId;
+public class Game implements Playable {
+    private int gameID;
     private int difficult;    // 1 = fàcil, 2 = mitjà, 3 = difícil
     //dificil 5% celes invalides
     //mitja 10% celes invalides
@@ -18,17 +18,17 @@ public class Game implements Playable{
     public BoardHidato GameBoard;
 
     public Game(int GameId, int difficult, BoardHidato GameBoard) {
-        this.GameId = GameId;
+        this.gameID = GameId;
         this.difficult = difficult;
         this.GameBoard = GameBoard;
     }
 
-    public int getId() {
-        return GameId;
+    public int getID() {
+        return gameID;
     }
 
-    public void setGameId(int GameId) {
-        this.GameId = GameId;
+    public void setGameId(int gameID) {
+        this.gameID = gameID;
     }
 
     public int getDifficulty() {
@@ -37,6 +37,11 @@ public class Game implements Playable{
 
     public void setDifficult(int difficult) {
         this.difficult = difficult;
+    }
+    
+    @Override
+    public int getSize() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

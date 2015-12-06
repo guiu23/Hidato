@@ -570,6 +570,7 @@ public class Funcions {
         int current = 2;
         backtrack(Taulell, visitats, startx, starty, X, Y, current,size, escriure);  //resoldre taulell
     }
+   
 
 }
 

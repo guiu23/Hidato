@@ -1,9 +1,10 @@
 package domini.stats;
 
+import dades.HidatoBD;
 import dades.Table;
+import domini.Matchable;
 import domini.Playable;
 import domini.Player;
-
 import java.util.ArrayList;
 
 public abstract class Stats {
@@ -11,13 +12,8 @@ public abstract class Stats {
     protected Table<Player> _players;
     protected Table<? extends Playable> _games;
     protected Table<stubMatch> _matches;
-    /** He posat els camps a protected per si voleu calcular més stats a la vostra subclasse.
-     * Com a mínim _matches ho hauria de ser, per a poder calcular l'score d'un player.
-     * L'unica alternativa es que Stats tingui getMatches() { return _matches; }
-     * Pero suposo que sent Stats abstract, no està tan mal que els camps siguin protected.
-     * La taula games casi no es fa servir, però només es un punter.
-     */
-
+    static HidatoBD HBD;
+    
     public Stats(Table<Player> players, Table<? extends Playable> games, Table<stubMatch> matches)
     {
         this._players = players;
@@ -40,17 +36,17 @@ public abstract class Stats {
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
         for (stubMatch m : _matches)
-            if (m.getPlayer() == player && m.getResult() != -1)
-                insert_no_repeat(countedGames, m.getGame().getId());
+            if (m.getPlayer() == player && m.finished())
+                insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
     }
 
-    public int countSolvedGamesDiff(int difficulty, Player player)
+    public int countSolvedSize(int size, Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (stubMatch m : _matches)
-            if (m.getPlayer() == player && m.getResult() != -1 && getDiff(m) == difficulty)
-                insert_no_repeat(countedGames, m.getGame().getId());
+        for (Matchable m : _matches)
+            if (m.getPlayer() == player && m.finished() && getSize(m) == size)
+                insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
     }
 
@@ -97,7 +93,7 @@ public abstract class Stats {
     {
         int count = 0;
         for (stubMatch match : _matches)
-            if (match.getGame() == game&& match.getResult() != -1) ++count;
+            if (match.getGame() == game&& match.finished()) ++count;
         return count;
     }
 
@@ -109,9 +105,37 @@ public abstract class Stats {
         return new Ranking(_players,scores,false);
     }
 
-    public int countPlayers() { return _players.size(); }
-    public int countGames() { return _games.size(); }
-    public int countMatches() { return _matches.size(); }
+    public Ranking rankingSize(int size)
+    {
+        ArrayList<Integer> solvedSize = new ArrayList<>();
+        for (Player p : _players) {
+            int sSize = countSolvedSize(size,p);
+            if (sSize == 0) sSize = -1;
+            solvedSize.add(sSize);
+        }
+        return new Ranking(_players,solvedSize,false);
+    }
+
+    public int countPlayers() { 
+        HBD.loadPlayers();
+        return _players.size(); 
+    }
+    public int countGames() {
+        HBD.loadGames();
+        return _games.size(); 
+    }
+    public int countMatches() {
+        HBD.loadMatches();
+        return _matches.size(); 
+    }
+
+    public int countGamesSize(int size)
+    {
+        int count = 0;
+        for (Playable game : _games)
+            if (game.getSize() == size) ++count;
+        return count;
+    }
 
     /////// INTERNAL METHODS ////////////////////////////////////////////////////////////////
     protected void insert_no_repeat(ArrayList<Integer> array, int new_one)
@@ -130,8 +154,8 @@ public abstract class Stats {
         }
     }
 
-    protected int getDiff(stubMatch match)
+    protected int getSize(Matchable match)
     {
-        return match.getGame().getDifficulty();
+        return match.getGame().getSize();
     }
 }

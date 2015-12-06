@@ -2,8 +2,7 @@ package domini.stats;
 
 import dades.Table;
 import domini.Player;
-
-import java.util.ArrayList;
+import java.util.*;
 
 public class Ranking {
 
@@ -28,19 +27,19 @@ public class Ranking {
      * size = numero de players que tenen value.
      * En RankingGlobal size = players.size() pero en Records(game) no.
      * Pot ser que un player no hagi jugat al game i llavors no apareix al ranking.
-     */
+    */
     public int getSize() { return _order.size(); }
 
     /**
      * 1 <= @param position <= size.
-     */
+    */
     public Player getPlayer(int position) {
         return _players.get(_order.get(position));
     }
 
     /**
      * 1 <= @param position <= size.
-     */
+    */
     public int getValue(int position) {
         return _values.get(_order.get(position));
     }
