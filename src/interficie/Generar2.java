@@ -69,6 +69,7 @@ public class Generar2 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
+        primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -79,16 +80,19 @@ public class Generar2 extends javax.swing.JFrame {
         getContentPane().add(primera);
         primera.setBounds(160, 180, 90, 80);
 
+        primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
         primera1.setBounds(250, 180, 90, 80);
 
+        primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
         primera2.setBounds(160, 260, 90, 80);
 
+        primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);

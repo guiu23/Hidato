@@ -74,6 +74,7 @@ public class Generar3 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
+        primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -84,16 +85,19 @@ public class Generar3 extends javax.swing.JFrame {
         getContentPane().add(primera);
         primera.setBounds(170, 170, 60, 60);
 
+        primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
         primera1.setBounds(290, 170, 60, 60);
 
+        primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
         primera2.setBounds(230, 170, 60, 60);
 
+        primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
@@ -201,26 +205,31 @@ public class Generar3 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
 
+        primera4.setEditable(false);
         primera4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera4);
         primera4.setBounds(170, 230, 60, 60);
 
+        primera5.setEditable(false);
         primera5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera5);
         primera5.setBounds(230, 230, 60, 60);
 
+        primera6.setEditable(false);
         primera6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera6);
         primera6.setBounds(290, 230, 60, 60);
 
+        primera7.setEditable(false);
         primera7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera7);
         primera7.setBounds(170, 290, 60, 60);
 
+        primera8.setEditable(false);
         primera8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera8);

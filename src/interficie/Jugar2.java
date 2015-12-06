@@ -44,12 +44,12 @@ public class Jugar2 extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -74,6 +74,7 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(170, 50, 260, 60);
 
+        primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -84,16 +85,19 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(primera);
         primera.setBounds(210, 180, 90, 80);
 
+        primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
         primera1.setBounds(300, 180, 90, 80);
 
+        primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
         primera2.setBounds(210, 260, 90, 80);
 
+        primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
@@ -204,8 +208,10 @@ public class Jugar2 extends javax.swing.JFrame {
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
         jButton10.setBounds(450, 370, 79, 23);
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 860, 450);
+
+        jTextField1.setEditable(false);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(30, 250, 80, 140);
 
         jButton11.setText("Afegir marca");
         getContentPane().add(jButton11);
@@ -218,13 +224,13 @@ public class Jugar2 extends javax.swing.JFrame {
 
         jButton12.setText("Treure marca");
         getContentPane().add(jButton12);
-        jButton12.setBounds(20, 160, 100, 23);
+        jButton12.setBounds(20, 160, 110, 23);
 
         jButton13.setText("Afegir marca");
         getContentPane().add(jButton13);
         jButton13.setBounds(20, 120, 100, 23);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(30, 250, 80, 140);
+        getContentPane().add(fons);
+        fons.setBounds(-60, 0, 860, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

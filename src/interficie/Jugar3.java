@@ -48,13 +48,13 @@ public class Jugar3 extends javax.swing.JFrame {
         primera6 = new javax.swing.JTextField();
         primera7 = new javax.swing.JTextField();
         primera8 = new javax.swing.JTextField();
-        fons = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -79,6 +79,7 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(160, 50, 260, 60);
 
+        primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -89,16 +90,19 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(primera);
         primera.setBounds(210, 170, 60, 60);
 
+        primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
         primera1.setBounds(330, 170, 60, 60);
 
+        primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
         primera2.setBounds(270, 170, 60, 60);
 
+        primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
@@ -206,34 +210,35 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
 
+        primera4.setEditable(false);
         primera4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera4);
         primera4.setBounds(210, 230, 60, 60);
 
+        primera5.setEditable(false);
         primera5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera5);
         primera5.setBounds(270, 230, 60, 60);
 
+        primera6.setEditable(false);
         primera6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera6);
         primera6.setBounds(330, 230, 60, 60);
 
+        primera7.setEditable(false);
         primera7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera7);
         primera7.setBounds(210, 290, 60, 60);
 
+        primera8.setEditable(false);
         primera8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera8);
         primera8.setBounds(270, 290, 60, 60);
-
-        fons.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(20, 0, 860, 450);
 
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
@@ -250,13 +255,19 @@ public class Jugar3 extends javax.swing.JFrame {
 
         jButton12.setText("Treure marca");
         getContentPane().add(jButton12);
-        jButton12.setBounds(20, 160, 100, 23);
+        jButton12.setBounds(20, 160, 110, 23);
 
         jButton13.setText("Afegir marca");
         getContentPane().add(jButton13);
         jButton13.setBounds(20, 120, 100, 23);
+
+        jTextField1.setEditable(false);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(30, 250, 80, 140);
+
+        fons.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(20, 0, 860, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -221,6 +221,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera9">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -234,6 +235,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera33">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -247,6 +249,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera34">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -260,6 +263,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera35">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -273,6 +277,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera36">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -286,6 +291,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera37">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -299,6 +305,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera38">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -312,6 +319,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera39">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -325,6 +333,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera40">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -338,6 +347,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera41">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -351,6 +361,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera42">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -364,6 +375,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera43">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -377,6 +389,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera44">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -390,6 +403,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera45">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -403,6 +417,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera46">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -416,6 +431,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera47">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -429,6 +445,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera48">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -442,6 +459,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera49">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -455,6 +473,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera50">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -468,6 +487,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera51">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -481,6 +501,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera52">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -494,6 +515,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera53">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -507,6 +529,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera54">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -520,6 +543,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera55">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -533,6 +557,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera56">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -546,6 +571,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera57">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -559,6 +585,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera58">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -572,6 +599,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera59">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -585,6 +613,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera60">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -598,6 +627,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera61">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -611,6 +641,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera62">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -624,6 +655,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera63">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -637,6 +669,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera64">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -650,6 +683,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera65">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -663,6 +697,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera66">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -676,6 +711,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera67">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -689,6 +725,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="primera68">
       <Properties>
+        <Property name="editable" type="boolean" value="false"/>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
