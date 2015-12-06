@@ -20,6 +20,22 @@ public class Funcions {
         }
         out.println();
     }
+    
+    public static void borrarTaulell(String nomT){
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
+        Boolean done = false;
+        for (int i = 0; i < HBD._boards.size() && !done;++i){
+            if (HBD._boards.get(i).getID().equals(nomT)) {
+                HBD._boards.remove(i);
+                HBD._boardsResolts.remove(i);
+                done = true;
+                HBD.saveBoards();
+                HBD.saveBoardsResolts();
+            }
+        }
+        if (!done) System.out.println("El taulell no existeix.");
+    }
 
     public static void llegirTaulell(BoardHidato Taulell)   {
         HBD.loadBoards();
