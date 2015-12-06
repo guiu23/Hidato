@@ -119,8 +119,6 @@ public class Identificacio extends javax.swing.JFrame {
         });
         getContentPane().add(esborra_user);
         esborra_user.setBounds(260, 310, 171, 28);
-
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 
