@@ -30,11 +30,11 @@ public class Carrega extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
-        user = new javax.swing.JTextField();
         pass = new javax.swing.JTextField();
         entra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         fons = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -103,8 +103,6 @@ public class Carrega extends javax.swing.JFrame {
         });
         getContentPane().add(text_contra);
         text_contra.setBounds(160, 290, 110, 30);
-        getContentPane().add(user);
-        user.setBounds(300, 290, 180, 30);
 
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,10 +136,12 @@ public class Carrega extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
-
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
+
+        jPasswordField1.setText("jPasswordField1");
+        getContentPane().add(jPasswordField1);
+        jPasswordField1.setBounds(300, 290, 180, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,10 +224,10 @@ public class Carrega extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton entra;
     private javax.swing.JLabel fons;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField pass;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
     private javax.swing.JTextArea titol;
-    private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
