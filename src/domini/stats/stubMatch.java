@@ -22,6 +22,7 @@ public class stubMatch implements Matchable {
     }
 
     public Player getPlayer(){ return player; }
+    
     public stubGame getGame(){ return game; }
 
     public boolean finished() { return result != -1; }

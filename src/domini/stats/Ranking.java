@@ -1,12 +1,13 @@
 package domini.stats;
 
+import dades.HidatoBD;
 import dades.Table;
 import domini.Player;
 import java.util.*;
 
 public class Ranking {
 
-    private Table<Player> _players;
+    protected static HidatoBD HBD = new HidatoBD();
     private ArrayList<Integer> _values;
     private boolean _asc;
     private ArrayList<Integer> _order;
@@ -17,7 +18,7 @@ public class Ranking {
      */
     protected Ranking(Table<Player> players, ArrayList<Integer> values, boolean asc)
     {
-        _players = players;
+        HBD._players = players;
         _values = values;
         _asc = asc;
         this.sort();
@@ -34,7 +35,7 @@ public class Ranking {
      * 1 <= @param position <= size.
     */
     public Player getPlayer(int position) {
-        return _players.get(_order.get(position));
+        return HBD._players.get(_order.get(position));
     }
 
     /**

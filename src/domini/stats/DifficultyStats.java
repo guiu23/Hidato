@@ -17,7 +17,7 @@ public abstract class DifficultyStats extends Stats {
     public int countSolvedDiff(int difficulty, Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (Matchable m : _matches)
+        for (Matchable m : HBD._matches)
             if (m.getPlayer() == player && m.finished() && getDiff(m) == difficulty)
                 super.insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
@@ -27,18 +27,18 @@ public abstract class DifficultyStats extends Stats {
     public Ranking rankingDifficulty(int difficulty)
     {
         ArrayList<Integer> solvedDifficulty = new ArrayList<>();
-        for (Player p : _players) {
+        for (Player p : HBD._players) {
             int sDiff = countSolvedDiff(difficulty,p);
             if (sDiff == 0) sDiff = -1;
             solvedDifficulty.add(sDiff);
         }
-        return new Ranking(_players,solvedDifficulty,false);
+        return new Ranking(HBD._players,solvedDifficulty,false);
     }
 
     public int countGamesDifficulty(int difficulty)
     {
         int count = 0;
-        for (Playable game : _games)
+        for (Playable game : HBD._games)
             if (getDiff(game) == difficulty) ++count;
         return count;
     }

@@ -8,33 +8,31 @@ import domini.Player;
 import java.util.ArrayList;
 
 public abstract class Stats {
-
-    protected Table<Player> _players;
-    protected Table<? extends Playable> _games;
-    protected Table<stubMatch> _matches;
+    protected static HidatoBD HBD = new HidatoBD();
     
-    public Stats(Table<Player> players, Table<? extends Playable> games, Table<stubMatch> matches)
+    public Stats(Table<Player> players, Table<stubGame> games, Table<stubMatch> matches)
     {
-        this._players = players;
-        this._games = games;
-        this._matches = matches;
+        this.HBD._players = players;
+        this.HBD._games = games;
+        this.HBD._matches = matches;
     }
 
     /////// PLAYER STATS ////////////////////////////////////////////////////////////////////
-    public abstract int score(Player player);
 
     public int countMatches(Player player)
     {
         int count = 0;
-        for (stubMatch m: _matches)
+        for (stubMatch m: HBD._matches) {
+            System.out.println(m.getPlayer());
             if (m.getPlayer() == player) ++count;
+        }
         return count;
     }
 
     public int countSolvedGames(Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (stubMatch m : _matches)
+        for (stubMatch m : HBD._matches)
             if (m.getPlayer() == player && m.finished())
                 insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
@@ -43,7 +41,7 @@ public abstract class Stats {
     public int countSolvedSize(int size, Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (Matchable m : _matches)
+        for (Matchable m : HBD._matches)
             if (m.getPlayer() == player && m.finished() && getSize(m) == size)
                 insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
@@ -51,20 +49,24 @@ public abstract class Stats {
 
     public int rank(Player player)
     {
-        int rank = _players.size();
-        int score = score(player);
+        HBD.loadPlayers();
+        int rank = HBD._players.size();
+        int score = player.getPuntuacio();
         int i;
-        for (i = 0; _players.get(i) != player; ++i)
-            if (score >= score(_players.get(i))) --rank;
-        for (; i < _players.size(); ++i)
-            if (score > score(_players.get(i))) --rank;
+        /*for (i = 0; HBD._players.get(i) != player; ++i) {
+            System.out.println(HBD._players.get(i));
+            System.out.println(player);
+            if (score >= score(HBD._players.get(i))) --rank;
+        }*/
+        for (i = 0; i < HBD._players.size(); ++i)
+            if (score > HBD._players.get(i).getPuntuacio()) --rank;
         return rank;
     }
 
     public int bestTime(Player player, Playable game)
     {
         int time = -1;
-        for (stubMatch m : _matches)
+        for (stubMatch m : HBD._matches)
             if (m.getPlayer() == player && m.getGame() == game) {
                 if (time > m.computeTime()) time = m.computeTime();
                 else if (time == -1) time = m.computeTime();
@@ -76,14 +78,14 @@ public abstract class Stats {
     public Ranking recordsGame(Playable game)
     {
         ArrayList<Integer> bestTimes = new ArrayList<>();
-        for (Player p : _players) bestTimes.add(bestTime(p,game));
-        return new Ranking(_players,bestTimes,true);
+        for (Player p : HBD._players) bestTimes.add(bestTime(p,game));
+        return new Ranking(HBD._players,bestTimes,true);
     }
 
     public int countTimesPlayed(Playable game)
     {
         int count = 0;
-        for (stubMatch match : _matches)
+        for (stubMatch match : HBD._matches)
             if (match.getGame() == game) ++count;
         return count;
     }
@@ -91,7 +93,7 @@ public abstract class Stats {
     public int countTimesSolved(Playable game)
     {
         int count = 0;
-        for (stubMatch match : _matches)
+        for (stubMatch match : HBD._matches)
             if (match.getGame() == game&& match.finished()) ++count;
         return count;
     }
@@ -100,35 +102,42 @@ public abstract class Stats {
     public Ranking rankingGlobal()
     {
         ArrayList<Integer> scores = new ArrayList<>();
-        for (Player p: _players) scores.add(score(p));
-        return new Ranking(_players,scores,false);
+        int i;
+        HBD.loadPlayers();
+        for (i = 0; i < HBD._players.size(); ++i) {
+             scores.add(HBD._players.get(i).getPuntuacio());
+        }
+        return new Ranking(HBD._players,scores,false);
     }
 
     public Ranking rankingSize(int size)
     {
         ArrayList<Integer> solvedSize = new ArrayList<>();
-        for (Player p : _players) {
+        for (Player p : HBD._players) {
             int sSize = countSolvedSize(size,p);
             if (sSize == 0) sSize = -1;
             solvedSize.add(sSize);
         }
-        return new Ranking(_players,solvedSize,false);
+        return new Ranking(HBD._players,solvedSize,false);
     }
 
     public int countPlayers() { 
-        return _players.size(); 
+        HBD.loadPlayers();
+        return HBD._players.size(); 
     }
     public int countGames() {
-        return _games.size(); 
+        HBD.loadGames();
+        return HBD._games.size(); 
     }
     public int countMatches() {
-        return _matches.size(); 
+        HBD.loadMatches();
+        return HBD._matches.size(); 
     }
 
     public int countGamesSize(int size)
     {
         int count = 0;
-        for (Playable game : _games)
+        for (Playable game : HBD._games)
             if (game.getSize() == size) ++count;
         return count;
     }
