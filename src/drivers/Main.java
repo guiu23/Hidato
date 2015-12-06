@@ -202,7 +202,7 @@ public class Main {
                         System.out.println("Tonra a introduir el taulell");
                         //Funcio de eliminar taulell i el seu resolt
                         Funcions.borrarTaulell(nomT);
-                        Funcions.netejaBoard(TaulellAux2);
+                        Funcions.netejaBoard(TaulellAux2); //neteja
                         Funcions.llegirTaulell(TaulellAux2);
                         HBD.saveBoards();
                         HBD.saveBoardsResolts();
