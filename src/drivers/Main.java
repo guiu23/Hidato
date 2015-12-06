@@ -140,38 +140,97 @@ public class Main {
             System.out.println("0 : Introduir el taulell.");
             System.out.println("1 : Crear el taulell aleatoriament.");
             System.out.println("2 : Carregar un taulell ja creat.");
-            select = input.nextInt();
-            String id;
+            System.out.println("3 : Modificar un taulell ja creat.");
+            System.out.println("4 : Esborrar un taulell.");
+            select = 0;
+            String id = null;
+            Boolean b2 = false;
+            dificultat = 1;
             BoardHidato TaulellAux2 = new BoardHidato(size,"1");
-            if (select == 0) {
-                System.out.println("Introdueix el nom del taulell");
-                id = input.next();
-                temporal = false;
-                dificultat = 1;
-            } else if ( select == 1){
-                System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
-                id = "temporal";
-                temporal = true;
-                dificultat = input.nextInt();
-            }
-            else {
-                HBD.loadBoards();
-                System.out.println("Introdueix el nom del taulell:");
-                dificultat = 1;
-                id = null;
-                boolean trobat = false;
-                while ( !trobat) {
-                   String nomT = input.next();
-                    for(int i = 0; i < HBD._boards.size() && !trobat; ++i) {
-                        if (HBD._boards.get(i).getID().equals(nomT)) {
-                            TaulellAux2 = HBD._boards.get(i);
-                            id = TaulellAux2.getID();
-                            trobat = true;
-                        }
-                    }
-                if (!trobat) System.out.println("El nom no es correcte, torna-ho a provar:");
+            while (!b2) {
+                select = input.nextInt();
+                if (select == 0) {
+                    System.out.println("Introdueix el nom del taulell");
+                    id = input.next();
+                    temporal = false;
+                    dificultat = 1;
+                    b2 = true;
+                } else if ( select == 1){
+                    System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
+                    id = "temporal";
+                    temporal = true;
+                    dificultat = input.nextInt();
+                    b2 = true;
                 }
-
+                else if (select == 2){
+                    HBD.loadBoards();
+                    System.out.println("Introdueix el nom del taulell:");
+                    dificultat = 1;
+                    id = null;
+                    boolean trobat = false;
+                    while ( !trobat) {
+                       String nomT = input.next();
+                        for(int i = 0; i < HBD._boards.size() && !trobat; ++i) {
+                            if (HBD._boards.get(i).getID().equals(nomT)) {
+                                TaulellAux2 = HBD._boards.get(i);
+                                id = TaulellAux2.getID();
+                                trobat = true;
+                            }
+                        }
+                    if (!trobat) System.out.println("El nom no es correcte, torna-ho a provar:");
+                    }
+                b2 = true;
+                }
+                else if (select == 3){
+                    String nomT = null;
+                    HBD.loadBoards();
+                    System.out.println("Introdueix el nom del taulell a modificar");
+                    boolean trobat = false;
+                    while ( !trobat) {
+                        nomT = input.next();
+                        for(int i = 0; i < HBD._boards.size() && !trobat; ++i) {
+                            if (HBD._boards.get(i).getID().equals(nomT)) {
+                                TaulellAux2 = HBD._boards.get(i);
+                                id = TaulellAux2.getID();
+                                trobat = true;
+                            }
+                        }
+                    if (!trobat) System.out.println("El nom no es correcte, torna-ho a provar:");
+                    }
+                    if (trobat) {
+                        Funcions.imprimeixValors(TaulellAux2);
+                        System.out.println("Tonra a introduir el taulell");
+                        //Funcio de eliminar taulell i el seu resolt
+                        Funcions.borrarTaulell(nomT);
+                        Funcions.netejaBoard(TaulellAux2);
+                        Funcions.llegirTaulell(TaulellAux2);
+                        HBD.saveBoards();
+                        HBD.saveBoardsResolts();
+                    }
+                }
+                else if (select == 4){
+                    HBD.loadBoards();
+                    System.out.println("Introdueix el nom del taulell a esborrar");
+                    String nomT = null; 
+                    boolean trobat = false;
+                    while (!trobat) {
+                        nomT = input.next();
+                        for(int i = 0; i < HBD._boards.size(); ++i) {
+                            if (HBD._boards.get(i).getID().equals(nomT)) {
+                                TaulellAux2 = HBD._boards.get(i);
+                                id = TaulellAux2.getID();
+                                trobat = true;
+                            }
+                        }
+                    if (!trobat) System.out.println("El nom no es correcte, torna-ho a provar:");
+                    }
+                    if (trobat){
+                        Funcions.borrarTaulell(nomT);
+                        System.out.println("Taulell esborrat");
+                        HBD.saveBoards();
+                        HBD.saveBoardsResolts();
+                    }
+                }
             }
             
             HBD._games.add(new stubGame(gameID, size, dificultat));
