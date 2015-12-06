@@ -347,7 +347,6 @@ public class Main {
                         if (!trobat) System.out.println("error");
                         } 
                     }
-                    //Funcions.solve(Taulell, size, true);
                 }
                 else if(entrada == 6) {
                     Match Partida = new Match(Joc, Jugador);
