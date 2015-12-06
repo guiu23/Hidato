@@ -9,12 +9,12 @@ package interficie;
  *
  * @author jordi.guiu.pujols
  */
-public class Jugar4 extends javax.swing.JFrame {
+public class Generar4 extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
-    public Jugar4() {
+    public Generar4() {
         initComponents();
     }
 
@@ -56,11 +56,6 @@ public class Jugar4 extends javax.swing.JFrame {
         primera22 = new javax.swing.JTextField();
         primera23 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        numeros1 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -83,7 +78,7 @@ public class Jugar4 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(180, 50, 260, 60);
+        titol.setBounds(120, 50, 260, 60);
 
         primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -93,7 +88,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera);
-        primera.setBounds(350, 320, 50, 50);
+        primera.setBounds(290, 320, 50, 50);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -205,7 +200,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera9);
-        primera9.setBounds(200, 170, 50, 50);
+        primera9.setBounds(140, 170, 50, 50);
 
         primera10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -215,7 +210,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera10);
-        primera10.setBounds(250, 170, 50, 50);
+        primera10.setBounds(190, 170, 50, 50);
 
         primera11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -225,7 +220,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera11);
-        primera11.setBounds(300, 170, 50, 50);
+        primera11.setBounds(240, 170, 50, 50);
 
         primera12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -235,7 +230,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera12);
-        primera12.setBounds(350, 170, 50, 50);
+        primera12.setBounds(290, 170, 50, 50);
 
         primera13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -245,7 +240,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera13);
-        primera13.setBounds(200, 220, 50, 50);
+        primera13.setBounds(140, 220, 50, 50);
 
         primera14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -255,7 +250,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera14);
-        primera14.setBounds(250, 220, 50, 50);
+        primera14.setBounds(190, 220, 50, 50);
 
         primera15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -265,7 +260,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera15);
-        primera15.setBounds(300, 220, 50, 50);
+        primera15.setBounds(240, 220, 50, 50);
 
         primera16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -275,7 +270,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera16);
-        primera16.setBounds(350, 220, 50, 50);
+        primera16.setBounds(290, 220, 50, 50);
 
         primera17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -285,7 +280,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera17);
-        primera17.setBounds(200, 270, 50, 50);
+        primera17.setBounds(140, 270, 50, 50);
 
         primera18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -295,7 +290,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera18);
-        primera18.setBounds(250, 270, 50, 50);
+        primera18.setBounds(190, 270, 50, 50);
 
         primera19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -305,7 +300,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera19);
-        primera19.setBounds(300, 270, 50, 50);
+        primera19.setBounds(240, 270, 50, 50);
 
         primera20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -315,7 +310,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera20);
-        primera20.setBounds(350, 270, 50, 50);
+        primera20.setBounds(290, 270, 50, 50);
 
         primera21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -325,7 +320,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera21);
-        primera21.setBounds(200, 320, 50, 50);
+        primera21.setBounds(140, 320, 50, 50);
 
         primera22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -335,7 +330,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera22);
-        primera22.setBounds(250, 320, 50, 50);
+        primera22.setBounds(190, 320, 50, 50);
 
         primera23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -345,30 +340,11 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera23);
-        primera23.setBounds(300, 320, 50, 50);
+        primera23.setBounds(240, 320, 50, 50);
 
-        jButton10.setText("Resoldre");
+        jButton10.setText("Generar");
         getContentPane().add(jButton10);
         jButton10.setBounds(450, 370, 79, 23);
-
-        jButton11.setText("Afegir marca");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(550, 370, 100, 23);
-
-        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros1.setText("Marques:");
-        getContentPane().add(numeros1);
-        numeros1.setBounds(30, 200, 80, 40);
-
-        jButton12.setText("Treure marca");
-        getContentPane().add(jButton12);
-        jButton12.setBounds(20, 160, 100, 23);
-
-        jButton13.setText("Afegir marca");
-        getContentPane().add(jButton13);
-        jButton13.setBounds(20, 120, 100, 23);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(30, 250, 80, 140);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -502,14 +478,110 @@ public class Jugar4 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jugar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jugar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jugar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jugar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -546,7 +618,7 @@ public class Jugar4 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar4().setVisible(true);
+                new Generar4().setVisible(true);
             }
         });
     }
@@ -555,9 +627,6 @@ public class Jugar4 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -566,9 +635,7 @@ public class Jugar4 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
-    private javax.swing.JLabel numeros1;
     private javax.swing.JTextField primera;
     private javax.swing.JTextField primera10;
     private javax.swing.JTextField primera11;

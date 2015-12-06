@@ -9,12 +9,12 @@ package interficie;
  *
  * @author jordi.guiu.pujols
  */
-public class Jugar7 extends javax.swing.JFrame {
+public class Generar7 extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
-    public Jugar7() {
+    public Generar7() {
         initComponents();
     }
 
@@ -91,10 +91,6 @@ public class Jugar7 extends javax.swing.JFrame {
         primera81 = new javax.swing.JTextField();
         primera82 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        numeros1 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -117,7 +113,7 @@ public class Jugar7 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(160, 40, 260, 60);
+        titol.setBounds(120, 50, 260, 60);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -228,7 +224,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera9);
-        primera9.setBounds(230, 320, 40, 40);
+        primera9.setBounds(190, 330, 40, 40);
 
         primera33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera33.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -237,7 +233,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera33);
-        primera33.setBounds(150, 120, 40, 40);
+        primera33.setBounds(110, 130, 40, 40);
 
         primera34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera34.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -246,7 +242,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera34);
-        primera34.setBounds(190, 120, 40, 40);
+        primera34.setBounds(150, 130, 40, 40);
 
         primera35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera35.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -255,7 +251,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera35);
-        primera35.setBounds(230, 120, 40, 40);
+        primera35.setBounds(190, 130, 40, 40);
 
         primera36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera36.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -264,7 +260,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera36);
-        primera36.setBounds(270, 120, 40, 40);
+        primera36.setBounds(230, 130, 40, 40);
 
         primera37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera37.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -273,7 +269,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera37);
-        primera37.setBounds(310, 120, 40, 40);
+        primera37.setBounds(270, 130, 40, 40);
 
         primera38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera38.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -282,7 +278,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera38);
-        primera38.setBounds(150, 360, 40, 40);
+        primera38.setBounds(110, 370, 40, 40);
 
         primera39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera39.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -291,7 +287,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera39);
-        primera39.setBounds(150, 160, 40, 40);
+        primera39.setBounds(110, 170, 40, 40);
 
         primera40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera40.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -300,7 +296,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera40);
-        primera40.setBounds(150, 200, 40, 40);
+        primera40.setBounds(110, 210, 40, 40);
 
         primera41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera41.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -309,7 +305,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera41);
-        primera41.setBounds(150, 240, 40, 40);
+        primera41.setBounds(110, 250, 40, 40);
 
         primera42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera42.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -318,7 +314,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera42);
-        primera42.setBounds(150, 280, 40, 40);
+        primera42.setBounds(110, 290, 40, 40);
 
         primera43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera43.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -327,7 +323,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera43);
-        primera43.setBounds(150, 320, 40, 40);
+        primera43.setBounds(110, 330, 40, 40);
 
         primera44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera44.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -336,7 +332,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera44);
-        primera44.setBounds(150, 320, 40, 40);
+        primera44.setBounds(110, 330, 40, 40);
 
         primera45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera45.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -345,7 +341,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera45);
-        primera45.setBounds(190, 320, 40, 40);
+        primera45.setBounds(150, 330, 40, 40);
 
         primera46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera46.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -354,7 +350,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera46);
-        primera46.setBounds(190, 280, 40, 40);
+        primera46.setBounds(150, 290, 40, 40);
 
         primera47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera47.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -363,7 +359,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera47);
-        primera47.setBounds(190, 240, 40, 40);
+        primera47.setBounds(150, 250, 40, 40);
 
         primera48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera48.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -372,7 +368,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera48);
-        primera48.setBounds(190, 200, 40, 40);
+        primera48.setBounds(150, 210, 40, 40);
 
         primera49.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera49.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -381,7 +377,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera49);
-        primera49.setBounds(190, 160, 40, 40);
+        primera49.setBounds(150, 170, 40, 40);
 
         primera50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera50.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -390,7 +386,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera50);
-        primera50.setBounds(230, 160, 40, 40);
+        primera50.setBounds(190, 170, 40, 40);
 
         primera51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera51.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -399,7 +395,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera51);
-        primera51.setBounds(270, 160, 40, 40);
+        primera51.setBounds(230, 170, 40, 40);
 
         primera52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera52.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -408,7 +404,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera52);
-        primera52.setBounds(310, 160, 40, 40);
+        primera52.setBounds(270, 170, 40, 40);
 
         primera53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera53.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -417,7 +413,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera53);
-        primera53.setBounds(350, 160, 40, 40);
+        primera53.setBounds(310, 170, 40, 40);
 
         primera54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera54.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -426,7 +422,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera54);
-        primera54.setBounds(350, 200, 40, 40);
+        primera54.setBounds(310, 210, 40, 40);
 
         primera55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera55.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -435,7 +431,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera55);
-        primera55.setBounds(350, 240, 40, 40);
+        primera55.setBounds(310, 250, 40, 40);
 
         primera56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera56.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -444,7 +440,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera56);
-        primera56.setBounds(350, 280, 40, 40);
+        primera56.setBounds(310, 290, 40, 40);
 
         primera57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera57.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -453,7 +449,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera57);
-        primera57.setBounds(350, 320, 40, 40);
+        primera57.setBounds(310, 330, 40, 40);
 
         primera58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera58.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -462,7 +458,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera58);
-        primera58.setBounds(310, 320, 40, 40);
+        primera58.setBounds(270, 330, 40, 40);
 
         primera59.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera59.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -471,7 +467,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera59);
-        primera59.setBounds(310, 280, 40, 40);
+        primera59.setBounds(270, 290, 40, 40);
 
         primera60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera60.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -480,7 +476,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera60);
-        primera60.setBounds(310, 240, 40, 40);
+        primera60.setBounds(270, 250, 40, 40);
 
         primera61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera61.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -489,7 +485,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera61);
-        primera61.setBounds(310, 200, 40, 40);
+        primera61.setBounds(270, 210, 40, 40);
 
         primera62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera62.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -498,7 +494,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera62);
-        primera62.setBounds(270, 200, 40, 40);
+        primera62.setBounds(230, 210, 40, 40);
 
         primera63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera63.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -507,7 +503,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera63);
-        primera63.setBounds(230, 200, 40, 40);
+        primera63.setBounds(190, 210, 40, 40);
 
         primera64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera64.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -516,7 +512,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera64);
-        primera64.setBounds(270, 240, 40, 40);
+        primera64.setBounds(230, 250, 40, 40);
 
         primera65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera65.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -525,7 +521,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera65);
-        primera65.setBounds(230, 240, 40, 40);
+        primera65.setBounds(190, 250, 40, 40);
 
         primera66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera66.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -534,7 +530,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera66);
-        primera66.setBounds(230, 280, 40, 40);
+        primera66.setBounds(190, 290, 40, 40);
 
         primera67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera67.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -543,7 +539,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera67);
-        primera67.setBounds(270, 280, 40, 40);
+        primera67.setBounds(230, 290, 40, 40);
 
         primera68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera68.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -552,7 +548,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera68);
-        primera68.setBounds(270, 320, 40, 40);
+        primera68.setBounds(230, 330, 40, 40);
 
         primera69.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera69.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -561,7 +557,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera69);
-        primera69.setBounds(350, 120, 40, 40);
+        primera69.setBounds(310, 130, 40, 40);
 
         primera70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera70.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -570,7 +566,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera70);
-        primera70.setBounds(390, 120, 40, 40);
+        primera70.setBounds(350, 130, 40, 40);
 
         primera71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera71.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -579,7 +575,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera71);
-        primera71.setBounds(390, 160, 40, 40);
+        primera71.setBounds(350, 170, 40, 40);
 
         primera72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera72.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -588,7 +584,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera72);
-        primera72.setBounds(390, 200, 40, 40);
+        primera72.setBounds(350, 210, 40, 40);
 
         primera73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera73.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -597,7 +593,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera73);
-        primera73.setBounds(390, 240, 40, 40);
+        primera73.setBounds(350, 250, 40, 40);
 
         primera74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera74.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -606,7 +602,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera74);
-        primera74.setBounds(390, 280, 40, 40);
+        primera74.setBounds(350, 290, 40, 40);
 
         primera75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera75.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -615,7 +611,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera75);
-        primera75.setBounds(390, 320, 40, 40);
+        primera75.setBounds(350, 330, 40, 40);
 
         primera76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera76.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -624,7 +620,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera76);
-        primera76.setBounds(390, 360, 40, 40);
+        primera76.setBounds(350, 370, 40, 40);
 
         primera77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera77.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -633,7 +629,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera77);
-        primera77.setBounds(350, 360, 40, 40);
+        primera77.setBounds(310, 370, 40, 40);
 
         primera78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera78.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -642,7 +638,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera78);
-        primera78.setBounds(310, 360, 40, 40);
+        primera78.setBounds(270, 370, 40, 40);
 
         primera79.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera79.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -651,7 +647,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera79);
-        primera79.setBounds(270, 360, 40, 40);
+        primera79.setBounds(230, 370, 40, 40);
 
         primera80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera80.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -660,7 +656,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera80);
-        primera80.setBounds(230, 360, 40, 40);
+        primera80.setBounds(190, 370, 40, 40);
 
         primera81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera81.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -669,7 +665,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera81);
-        primera81.setBounds(190, 360, 40, 40);
+        primera81.setBounds(150, 370, 40, 40);
 
         primera82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera82.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -678,26 +674,11 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera82);
-        primera82.setBounds(190, 360, 40, 40);
+        primera82.setBounds(150, 370, 40, 40);
 
-        jButton10.setText("Resoldre");
+        jButton10.setText("Generar");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
-
-        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros1.setText("Marques:");
-        getContentPane().add(numeros1);
-        numeros1.setBounds(30, 200, 80, 40);
-
-        jButton11.setText("Treure marca");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(20, 160, 100, 23);
-
-        jButton12.setText("Afegir marca");
-        getContentPane().add(jButton12);
-        jButton12.setBounds(20, 120, 100, 23);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(30, 250, 80, 140);
+        jButton10.setBounds(450, 370, 79, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -971,14 +952,782 @@ public class Jugar7 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jugar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jugar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jugar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jugar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar7.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1239,7 +1988,7 @@ public class Jugar7 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar7().setVisible(true);
+                new Generar7().setVisible(true);
             }
         });
     }
@@ -1248,8 +1997,6 @@ public class Jugar7 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1258,9 +2005,7 @@ public class Jugar7 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
-    private javax.swing.JLabel numeros1;
     private javax.swing.JTextField primera33;
     private javax.swing.JTextField primera34;
     private javax.swing.JTextField primera35;
