@@ -21,7 +21,7 @@ public class Funcions {
         out.println();
     }
     
-    public static void borrarTaulell(String nomT){ //borrar
+    public static void borrarTaulell(String nomT){ 
         HBD.loadBoards();
         HBD.loadBoardsResolts();
         Boolean done = false;
