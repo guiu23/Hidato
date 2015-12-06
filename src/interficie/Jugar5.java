@@ -88,13 +88,15 @@ public class Jugar5 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
+        primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primeraMouseClicked(evt);
             }
         });
         getContentPane().add(primera);
-        primera.setBounds(270, 310, 50, 50);
+        primera.setBounds(280, 290, 50, 50);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -198,197 +200,245 @@ public class Jugar5 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
 
+        primera9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera9MouseClicked(evt);
             }
         });
         getContentPane().add(primera9);
-        primera9.setBounds(120, 160, 50, 50);
+        primera9.setBounds(130, 140, 50, 50);
 
+        primera10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera10MouseClicked(evt);
             }
         });
         getContentPane().add(primera10);
-        primera10.setBounds(170, 160, 50, 50);
+        primera10.setBounds(180, 140, 50, 50);
 
+        primera11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera11MouseClicked(evt);
             }
         });
         getContentPane().add(primera11);
-        primera11.setBounds(220, 160, 50, 50);
+        primera11.setBounds(230, 140, 50, 50);
 
+        primera12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera12MouseClicked(evt);
             }
         });
         getContentPane().add(primera12);
-        primera12.setBounds(120, 360, 50, 50);
+        primera12.setBounds(130, 340, 50, 50);
 
+        primera13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera13MouseClicked(evt);
             }
         });
         getContentPane().add(primera13);
-        primera13.setBounds(120, 210, 50, 50);
+        primera13.setBounds(130, 190, 50, 50);
 
+        primera14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera14MouseClicked(evt);
             }
         });
         getContentPane().add(primera14);
-        primera14.setBounds(170, 210, 50, 50);
+        primera14.setBounds(180, 190, 50, 50);
 
+        primera15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera15MouseClicked(evt);
             }
         });
         getContentPane().add(primera15);
-        primera15.setBounds(220, 210, 50, 50);
+        primera15.setBounds(230, 190, 50, 50);
 
+        primera16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera16MouseClicked(evt);
             }
         });
         getContentPane().add(primera16);
-        primera16.setBounds(270, 210, 50, 50);
+        primera16.setBounds(280, 190, 50, 50);
 
+        primera17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera17MouseClicked(evt);
             }
         });
         getContentPane().add(primera17);
-        primera17.setBounds(120, 260, 50, 50);
+        primera17.setBounds(130, 240, 50, 50);
 
+        primera18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera18MouseClicked(evt);
             }
         });
         getContentPane().add(primera18);
-        primera18.setBounds(170, 260, 50, 50);
+        primera18.setBounds(180, 240, 50, 50);
 
+        primera19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera19MouseClicked(evt);
             }
         });
         getContentPane().add(primera19);
-        primera19.setBounds(220, 260, 50, 50);
+        primera19.setBounds(230, 240, 50, 50);
 
+        primera20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera20MouseClicked(evt);
             }
         });
         getContentPane().add(primera20);
-        primera20.setBounds(270, 260, 50, 50);
+        primera20.setBounds(280, 240, 50, 50);
 
+        primera21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera21MouseClicked(evt);
             }
         });
         getContentPane().add(primera21);
-        primera21.setBounds(120, 310, 50, 50);
+        primera21.setBounds(130, 290, 50, 50);
 
+        primera22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera22MouseClicked(evt);
             }
         });
         getContentPane().add(primera22);
-        primera22.setBounds(170, 310, 50, 50);
+        primera22.setBounds(180, 290, 50, 50);
 
+        primera23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera23MouseClicked(evt);
             }
         });
         getContentPane().add(primera23);
-        primera23.setBounds(220, 310, 50, 50);
+        primera23.setBounds(230, 290, 50, 50);
 
+        primera24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera24MouseClicked(evt);
             }
         });
         getContentPane().add(primera24);
-        primera24.setBounds(270, 160, 50, 50);
+        primera24.setBounds(280, 140, 50, 50);
 
+        primera25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera25MouseClicked(evt);
             }
         });
         getContentPane().add(primera25);
-        primera25.setBounds(320, 160, 50, 50);
+        primera25.setBounds(330, 140, 50, 50);
 
+        primera26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera26MouseClicked(evt);
             }
         });
         getContentPane().add(primera26);
-        primera26.setBounds(320, 210, 50, 50);
+        primera26.setBounds(330, 190, 50, 50);
 
+        primera27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera27MouseClicked(evt);
             }
         });
         getContentPane().add(primera27);
-        primera27.setBounds(320, 260, 50, 50);
+        primera27.setBounds(330, 240, 50, 50);
 
+        primera28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera28MouseClicked(evt);
             }
         });
         getContentPane().add(primera28);
-        primera28.setBounds(320, 310, 50, 50);
+        primera28.setBounds(330, 290, 50, 50);
 
+        primera29.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera29.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera29.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera29MouseClicked(evt);
             }
         });
         getContentPane().add(primera29);
-        primera29.setBounds(320, 360, 50, 50);
+        primera29.setBounds(330, 340, 50, 50);
 
+        primera30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera30MouseClicked(evt);
             }
         });
         getContentPane().add(primera30);
-        primera30.setBounds(270, 360, 50, 50);
+        primera30.setBounds(280, 340, 50, 50);
 
+        primera31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera31MouseClicked(evt);
             }
         });
         getContentPane().add(primera31);
-        primera31.setBounds(220, 360, 50, 50);
+        primera31.setBounds(230, 340, 50, 50);
 
+        primera32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primera32MouseClicked(evt);
             }
         });
         getContentPane().add(primera32);
-        primera32.setBounds(170, 360, 50, 50);
+        primera32.setBounds(180, 340, 50, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

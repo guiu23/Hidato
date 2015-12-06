@@ -43,12 +43,12 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
         primera4 = new javax.swing.JTextField();
         primera5 = new javax.swing.JTextField();
         primera6 = new javax.swing.JTextField();
         primera7 = new javax.swing.JTextField();
         primera8 = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -73,19 +73,30 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
+        primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 primeraMouseClicked(evt);
             }
         });
         getContentPane().add(primera);
-        primera.setBounds(120, 180, 70, 60);
+        primera.setBounds(170, 170, 60, 60);
+
+        primera1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
-        primera1.setBounds(260, 180, 70, 60);
+        primera1.setBounds(290, 170, 60, 60);
+
+        primera2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
-        primera2.setBounds(190, 180, 70, 60);
+        primera2.setBounds(230, 170, 60, 60);
+
+        primera3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
-        primera3.setBounds(260, 300, 70, 60);
+        primera3.setBounds(290, 290, 60, 60);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -188,18 +199,35 @@ public class Jugar3 extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 860, 450);
+
+        primera4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera4);
-        primera4.setBounds(120, 240, 70, 60);
+        primera4.setBounds(170, 230, 60, 60);
+
+        primera5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera5);
-        primera5.setBounds(190, 240, 70, 60);
+        primera5.setBounds(230, 230, 60, 60);
+
+        primera6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera6);
-        primera6.setBounds(260, 240, 70, 60);
+        primera6.setBounds(290, 230, 60, 60);
+
+        primera7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera7);
-        primera7.setBounds(120, 300, 70, 60);
+        primera7.setBounds(170, 290, 60, 60);
+
+        primera8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        primera8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera8);
-        primera8.setBounds(190, 300, 70, 60);
+        primera8.setBounds(230, 290, 60, 60);
+
+        fons.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(20, 0, 860, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

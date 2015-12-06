@@ -220,6 +220,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera9">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera9MouseClicked"/>
       </Events>
@@ -230,6 +233,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera33">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera33MouseClicked"/>
       </Events>
@@ -240,6 +246,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera34">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera34MouseClicked"/>
       </Events>
@@ -250,6 +259,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera35">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera35MouseClicked"/>
       </Events>
@@ -260,6 +272,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera36">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera36MouseClicked"/>
       </Events>
@@ -270,6 +285,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera37">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera37MouseClicked"/>
       </Events>
@@ -280,6 +298,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera38">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera38MouseClicked"/>
       </Events>
@@ -290,6 +311,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera39">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera39MouseClicked"/>
       </Events>
@@ -300,6 +324,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera40">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera40MouseClicked"/>
       </Events>
@@ -310,6 +337,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera41">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera41MouseClicked"/>
       </Events>
@@ -320,6 +350,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera42">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera42MouseClicked"/>
       </Events>
@@ -330,6 +363,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera43">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera43MouseClicked"/>
       </Events>
@@ -340,6 +376,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera44">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera44MouseClicked"/>
       </Events>
@@ -350,6 +389,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera45">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera45MouseClicked"/>
       </Events>
@@ -360,6 +402,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera46">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera46MouseClicked"/>
       </Events>
@@ -370,6 +415,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera47">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera47MouseClicked"/>
       </Events>
@@ -380,6 +428,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera48">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera48MouseClicked"/>
       </Events>
@@ -390,6 +441,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera49">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera49MouseClicked"/>
       </Events>
@@ -400,6 +454,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera50">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera50MouseClicked"/>
       </Events>
@@ -410,6 +467,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera51">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera51MouseClicked"/>
       </Events>
@@ -420,6 +480,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera52">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera52MouseClicked"/>
       </Events>
@@ -430,6 +493,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera53">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera53MouseClicked"/>
       </Events>
@@ -440,6 +506,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera54">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera54MouseClicked"/>
       </Events>
@@ -450,6 +519,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera55">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera55MouseClicked"/>
       </Events>
@@ -460,6 +532,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera56">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera56MouseClicked"/>
       </Events>
@@ -470,6 +545,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera57">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera57MouseClicked"/>
       </Events>
@@ -480,6 +558,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera58">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera58MouseClicked"/>
       </Events>
@@ -490,6 +571,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera59">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera59MouseClicked"/>
       </Events>
@@ -500,6 +584,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera60">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera60MouseClicked"/>
       </Events>
@@ -510,6 +597,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera61">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera61MouseClicked"/>
       </Events>
@@ -520,6 +610,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera62">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera62MouseClicked"/>
       </Events>
@@ -530,6 +623,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera63">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera63MouseClicked"/>
       </Events>
@@ -540,6 +636,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera64">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera64MouseClicked"/>
       </Events>
@@ -550,6 +649,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera65">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera65MouseClicked"/>
       </Events>
@@ -560,6 +662,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera66">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera66MouseClicked"/>
       </Events>
@@ -570,6 +675,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera67">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera67MouseClicked"/>
       </Events>
@@ -580,6 +688,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera68">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera68MouseClicked"/>
       </Events>
@@ -590,6 +701,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera69">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera69MouseClicked"/>
       </Events>
@@ -600,6 +714,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera70">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera70MouseClicked"/>
       </Events>
@@ -610,6 +727,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera71">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera71MouseClicked"/>
       </Events>
@@ -620,6 +740,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera72">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera72MouseClicked"/>
       </Events>
@@ -630,6 +753,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera73">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera73MouseClicked"/>
       </Events>
@@ -640,6 +766,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera74">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera74MouseClicked"/>
       </Events>
@@ -650,6 +779,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera75">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera75MouseClicked"/>
       </Events>
@@ -660,6 +792,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera76">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera76MouseClicked"/>
       </Events>
@@ -670,6 +805,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera77">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera77MouseClicked"/>
       </Events>
@@ -680,6 +818,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera78">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera78MouseClicked"/>
       </Events>
@@ -690,6 +831,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera79">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera79MouseClicked"/>
       </Events>
@@ -700,6 +844,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera80">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera80MouseClicked"/>
       </Events>
@@ -710,6 +857,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera81">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera81MouseClicked"/>
       </Events>
@@ -720,6 +870,9 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="primera82">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primera82MouseClicked"/>
       </Events>
