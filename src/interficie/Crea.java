@@ -28,13 +28,13 @@ public class Crea extends javax.swing.JFrame {
     private void initComponents() {
 
         titol = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        user = new javax.swing.JTextField();
         pass = new javax.swing.JTextField();
         entra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         fons = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        text_nom = new javax.swing.JTextField();
+        text_contra = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -60,20 +60,6 @@ public class Crea extends javax.swing.JFrame {
         titol.setBounds(208, 94, 260, 60);
         titol.getAccessibleContext().setAccessibleName("");
         titol.getAccessibleContext().setAccessibleDescription("");
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("contrasenya:");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 290, 110, 22);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("nom:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 240, 50, 20);
-        getContentPane().add(user);
-        user.setBounds(300, 290, 180, 30);
 
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,10 +93,55 @@ public class Crea extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
-
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
+
+        jPasswordField1.setText("jPasswordField1");
+        getContentPane().add(jPasswordField1);
+        jPasswordField1.setBounds(300, 290, 180, 30);
+
+        text_nom.setEditable(false);
+        text_nom.setBackground(new java.awt.Color(0, 0, 0));
+        text_nom.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        text_nom.setForeground(new java.awt.Color(255, 255, 255));
+        text_nom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text_nom.setText("nom:");
+        text_nom.setBorder(null);
+        text_nom.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        text_nom.setRequestFocusEnabled(false);
+        text_nom.setSelectionColor(new java.awt.Color(153, 153, 153));
+        text_nom.setVerifyInputWhenFocusTarget(false);
+        text_nom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                text_nomMouseClicked(evt);
+            }
+        });
+        text_nom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_nomActionPerformed(evt);
+            }
+        });
+        getContentPane().add(text_nom);
+        text_nom.setBounds(160, 240, 50, 30);
+
+        text_contra.setEditable(false);
+        text_contra.setBackground(new java.awt.Color(0, 0, 0));
+        text_contra.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        text_contra.setForeground(new java.awt.Color(255, 255, 255));
+        text_contra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text_contra.setText("contrasenya:");
+        text_contra.setBorder(null);
+        text_contra.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        text_contra.setRequestFocusEnabled(false);
+        text_contra.setSelectionColor(new java.awt.Color(153, 153, 153));
+        text_contra.setVerifyInputWhenFocusTarget(false);
+        text_contra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_contraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(text_contra);
+        text_contra.setBounds(160, 290, 110, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -133,6 +164,18 @@ public class Crea extends javax.swing.JFrame {
     private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_entraActionPerformed
+
+    private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nomMouseClicked
+
+    private void text_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_nomActionPerformed
+
+    private void text_contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_contraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_contraActionPerformed
 
     
     /**
@@ -189,10 +232,10 @@ public class Crea extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton entra;
     private javax.swing.JLabel fons;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField pass;
+    private javax.swing.JTextField text_contra;
+    private javax.swing.JTextField text_nom;
     private javax.swing.JTextArea titol;
-    private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

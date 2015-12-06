@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interficie;
+package interficie.jugar;
+
+import interficie.Menu;
 
 /**
  *
@@ -121,6 +123,11 @@ public class Jugar9 extends javax.swing.JFrame {
         primera161 = new javax.swing.JTextField();
         primera162 = new javax.swing.JTextField();
         primera163 = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        numeros1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -143,12 +150,12 @@ public class Jugar9 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 40, 260, 60);
+        titol.setBounds(150, 30, 260, 60);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros.setText("Números:");
+        numeros.setText("Marques:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
+        numeros.setBounds(30, 200, 80, 40);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -247,6 +254,7 @@ public class Jugar9 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
 
+        primera33.setEditable(false);
         primera33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -254,8 +262,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera33);
-        primera33.setBounds(190, 280, 30, 30);
+        primera33.setBounds(240, 270, 30, 30);
 
+        primera83.setEditable(false);
         primera83.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera83.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -263,8 +272,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera83);
-        primera83.setBounds(100, 130, 30, 30);
+        primera83.setBounds(150, 120, 30, 30);
 
+        primera84.setEditable(false);
         primera84.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera84.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -272,8 +282,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera84);
-        primera84.setBounds(130, 130, 30, 30);
+        primera84.setBounds(180, 120, 30, 30);
 
+        primera85.setEditable(false);
         primera85.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera85.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -281,8 +292,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera85);
-        primera85.setBounds(160, 130, 30, 30);
+        primera85.setBounds(210, 120, 30, 30);
 
+        primera86.setEditable(false);
         primera86.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera86.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -290,8 +302,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera86);
-        primera86.setBounds(190, 130, 30, 30);
+        primera86.setBounds(240, 120, 30, 30);
 
+        primera87.setEditable(false);
         primera87.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera87.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -299,8 +312,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera87);
-        primera87.setBounds(220, 130, 30, 30);
+        primera87.setBounds(270, 120, 30, 30);
 
+        primera88.setEditable(false);
         primera88.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera88.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -308,8 +322,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera88);
-        primera88.setBounds(250, 130, 30, 30);
+        primera88.setBounds(300, 120, 30, 30);
 
+        primera89.setEditable(false);
         primera89.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera89.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -317,8 +332,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera89);
-        primera89.setBounds(280, 130, 30, 30);
+        primera89.setBounds(330, 120, 30, 30);
 
+        primera90.setEditable(false);
         primera90.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera90.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -326,8 +342,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera90);
-        primera90.setBounds(160, 370, 30, 30);
+        primera90.setBounds(210, 360, 30, 30);
 
+        primera91.setEditable(false);
         primera91.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera91.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -335,8 +352,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera91);
-        primera91.setBounds(100, 160, 30, 30);
+        primera91.setBounds(150, 150, 30, 30);
 
+        primera92.setEditable(false);
         primera92.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera92.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -344,8 +362,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera92);
-        primera92.setBounds(100, 190, 30, 30);
+        primera92.setBounds(150, 180, 30, 30);
 
+        primera93.setEditable(false);
         primera93.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera93.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -353,8 +372,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera93);
-        primera93.setBounds(100, 220, 30, 30);
+        primera93.setBounds(150, 210, 30, 30);
 
+        primera94.setEditable(false);
         primera94.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera94.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -362,8 +382,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera94);
-        primera94.setBounds(100, 250, 30, 30);
+        primera94.setBounds(150, 240, 30, 30);
 
+        primera95.setEditable(false);
         primera95.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera95.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -371,8 +392,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera95);
-        primera95.setBounds(100, 280, 30, 30);
+        primera95.setBounds(150, 270, 30, 30);
 
+        primera96.setEditable(false);
         primera96.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera96.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -380,8 +402,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera96);
-        primera96.setBounds(100, 310, 30, 30);
+        primera96.setBounds(150, 300, 30, 30);
 
+        primera97.setEditable(false);
         primera97.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera97.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -389,8 +412,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera97);
-        primera97.setBounds(100, 340, 30, 30);
+        primera97.setBounds(150, 330, 30, 30);
 
+        primera98.setEditable(false);
         primera98.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera98.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -398,8 +422,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera98);
-        primera98.setBounds(130, 340, 30, 30);
+        primera98.setBounds(180, 330, 30, 30);
 
+        primera99.setEditable(false);
         primera99.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera99.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -407,8 +432,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera99);
-        primera99.setBounds(160, 340, 30, 30);
+        primera99.setBounds(210, 330, 30, 30);
 
+        primera100.setEditable(false);
         primera100.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera100.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -416,8 +442,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera100);
-        primera100.setBounds(130, 310, 30, 30);
+        primera100.setBounds(180, 300, 30, 30);
 
+        primera101.setEditable(false);
         primera101.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -425,8 +452,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera101);
-        primera101.setBounds(130, 280, 30, 30);
+        primera101.setBounds(180, 270, 30, 30);
 
+        primera102.setEditable(false);
         primera102.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -434,8 +462,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera102);
-        primera102.setBounds(130, 250, 30, 30);
+        primera102.setBounds(180, 240, 30, 30);
 
+        primera103.setEditable(false);
         primera103.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -443,8 +472,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera103);
-        primera103.setBounds(130, 220, 30, 30);
+        primera103.setBounds(180, 210, 30, 30);
 
+        primera104.setEditable(false);
         primera104.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera104.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -452,8 +482,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera104);
-        primera104.setBounds(130, 190, 30, 30);
+        primera104.setBounds(180, 180, 30, 30);
 
+        primera105.setEditable(false);
         primera105.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera105.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -461,8 +492,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera105);
-        primera105.setBounds(130, 160, 30, 30);
+        primera105.setBounds(180, 150, 30, 30);
 
+        primera106.setEditable(false);
         primera106.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera106.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -470,8 +502,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera106);
-        primera106.setBounds(160, 160, 30, 30);
+        primera106.setBounds(210, 150, 30, 30);
 
+        primera107.setEditable(false);
         primera107.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera107.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -479,8 +512,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera107);
-        primera107.setBounds(190, 160, 30, 30);
+        primera107.setBounds(240, 150, 30, 30);
 
+        primera108.setEditable(false);
         primera108.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera108.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -488,8 +522,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera108);
-        primera108.setBounds(220, 160, 30, 30);
+        primera108.setBounds(270, 150, 30, 30);
 
+        primera109.setEditable(false);
         primera109.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera109.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -497,8 +532,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera109);
-        primera109.setBounds(250, 160, 30, 30);
+        primera109.setBounds(300, 150, 30, 30);
 
+        primera110.setEditable(false);
         primera110.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera110.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -506,8 +542,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera110);
-        primera110.setBounds(280, 160, 30, 30);
+        primera110.setBounds(330, 150, 30, 30);
 
+        primera111.setEditable(false);
         primera111.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera111.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -515,8 +552,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera111);
-        primera111.setBounds(310, 160, 30, 30);
+        primera111.setBounds(360, 150, 30, 30);
 
+        primera112.setEditable(false);
         primera112.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera112.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -524,8 +562,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera112);
-        primera112.setBounds(310, 190, 30, 30);
+        primera112.setBounds(360, 180, 30, 30);
 
+        primera113.setEditable(false);
         primera113.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera113.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -533,8 +572,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera113);
-        primera113.setBounds(310, 220, 30, 30);
+        primera113.setBounds(360, 210, 30, 30);
 
+        primera114.setEditable(false);
         primera114.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera114.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -542,8 +582,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera114);
-        primera114.setBounds(310, 250, 30, 30);
+        primera114.setBounds(360, 240, 30, 30);
 
+        primera115.setEditable(false);
         primera115.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera115.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -551,8 +592,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera115);
-        primera115.setBounds(310, 280, 30, 30);
+        primera115.setBounds(360, 270, 30, 30);
 
+        primera116.setEditable(false);
         primera116.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera116.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -560,8 +602,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera116);
-        primera116.setBounds(310, 310, 30, 30);
+        primera116.setBounds(360, 300, 30, 30);
 
+        primera117.setEditable(false);
         primera117.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera117.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -569,8 +612,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera117);
-        primera117.setBounds(310, 340, 30, 30);
+        primera117.setBounds(360, 330, 30, 30);
 
+        primera118.setEditable(false);
         primera118.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera118.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -578,8 +622,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera118);
-        primera118.setBounds(280, 340, 30, 30);
+        primera118.setBounds(330, 330, 30, 30);
 
+        primera119.setEditable(false);
         primera119.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera119.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -587,8 +632,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera119);
-        primera119.setBounds(250, 340, 30, 30);
+        primera119.setBounds(300, 330, 30, 30);
 
+        primera120.setEditable(false);
         primera120.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera120.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -596,8 +642,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera120);
-        primera120.setBounds(220, 340, 30, 30);
+        primera120.setBounds(270, 330, 30, 30);
 
+        primera121.setEditable(false);
         primera121.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera121.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -605,8 +652,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera121);
-        primera121.setBounds(190, 340, 30, 30);
+        primera121.setBounds(240, 330, 30, 30);
 
+        primera122.setEditable(false);
         primera122.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera122.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -614,8 +662,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera122);
-        primera122.setBounds(160, 310, 30, 30);
+        primera122.setBounds(210, 300, 30, 30);
 
+        primera123.setEditable(false);
         primera123.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera123.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -623,8 +672,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera123);
-        primera123.setBounds(190, 310, 30, 30);
+        primera123.setBounds(240, 300, 30, 30);
 
+        primera124.setEditable(false);
         primera124.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera124.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -632,8 +682,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera124);
-        primera124.setBounds(220, 310, 30, 30);
+        primera124.setBounds(270, 300, 30, 30);
 
+        primera125.setEditable(false);
         primera125.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera125.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -641,8 +692,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera125);
-        primera125.setBounds(250, 310, 30, 30);
+        primera125.setBounds(300, 300, 30, 30);
 
+        primera126.setEditable(false);
         primera126.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera126.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -650,8 +702,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera126);
-        primera126.setBounds(280, 310, 30, 30);
+        primera126.setBounds(330, 300, 30, 30);
 
+        primera127.setEditable(false);
         primera127.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera127.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -659,8 +712,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera127);
-        primera127.setBounds(280, 280, 30, 30);
+        primera127.setBounds(330, 270, 30, 30);
 
+        primera128.setEditable(false);
         primera128.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera128.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -668,8 +722,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera128);
-        primera128.setBounds(280, 250, 30, 30);
+        primera128.setBounds(330, 240, 30, 30);
 
+        primera129.setEditable(false);
         primera129.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera129.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -677,8 +732,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera129);
-        primera129.setBounds(280, 220, 30, 30);
+        primera129.setBounds(330, 210, 30, 30);
 
+        primera130.setEditable(false);
         primera130.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera130.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -686,8 +742,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera130);
-        primera130.setBounds(280, 190, 30, 30);
+        primera130.setBounds(330, 180, 30, 30);
 
+        primera131.setEditable(false);
         primera131.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera131.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -695,8 +752,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera131);
-        primera131.setBounds(250, 190, 30, 30);
+        primera131.setBounds(300, 180, 30, 30);
 
+        primera132.setEditable(false);
         primera132.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera132.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -704,8 +762,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera132);
-        primera132.setBounds(250, 220, 30, 30);
+        primera132.setBounds(300, 210, 30, 30);
 
+        primera133.setEditable(false);
         primera133.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera133.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -713,8 +772,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera133);
-        primera133.setBounds(250, 250, 30, 30);
+        primera133.setBounds(300, 240, 30, 30);
 
+        primera134.setEditable(false);
         primera134.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera134.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -722,8 +782,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera134);
-        primera134.setBounds(250, 280, 30, 30);
+        primera134.setBounds(300, 270, 30, 30);
 
+        primera135.setEditable(false);
         primera135.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera135.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -731,8 +792,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera135);
-        primera135.setBounds(220, 280, 30, 30);
+        primera135.setBounds(270, 270, 30, 30);
 
+        primera136.setEditable(false);
         primera136.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera136.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -740,8 +802,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera136);
-        primera136.setBounds(220, 250, 30, 30);
+        primera136.setBounds(270, 240, 30, 30);
 
+        primera137.setEditable(false);
         primera137.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera137.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -749,8 +812,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera137);
-        primera137.setBounds(220, 220, 30, 30);
+        primera137.setBounds(270, 210, 30, 30);
 
+        primera138.setEditable(false);
         primera138.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera138.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -758,8 +822,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera138);
-        primera138.setBounds(220, 190, 30, 30);
+        primera138.setBounds(270, 180, 30, 30);
 
+        primera139.setEditable(false);
         primera139.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera139.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -767,8 +832,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera139);
-        primera139.setBounds(190, 190, 30, 30);
+        primera139.setBounds(240, 180, 30, 30);
 
+        primera140.setEditable(false);
         primera140.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera140.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -776,8 +842,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera140);
-        primera140.setBounds(160, 190, 30, 30);
+        primera140.setBounds(210, 180, 30, 30);
 
+        primera141.setEditable(false);
         primera141.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera141.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -785,8 +852,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera141);
-        primera141.setBounds(160, 220, 30, 30);
+        primera141.setBounds(210, 210, 30, 30);
 
+        primera142.setEditable(false);
         primera142.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera142.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -794,8 +862,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera142);
-        primera142.setBounds(190, 220, 30, 30);
+        primera142.setBounds(240, 210, 30, 30);
 
+        primera143.setEditable(false);
         primera143.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera143.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -803,8 +872,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera143);
-        primera143.setBounds(190, 250, 30, 30);
+        primera143.setBounds(240, 240, 30, 30);
 
+        primera144.setEditable(false);
         primera144.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera144.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -812,8 +882,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera144);
-        primera144.setBounds(160, 250, 30, 30);
+        primera144.setBounds(210, 240, 30, 30);
 
+        primera145.setEditable(false);
         primera145.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera145.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -821,8 +892,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera145);
-        primera145.setBounds(160, 280, 30, 30);
+        primera145.setBounds(210, 270, 30, 30);
 
+        primera146.setEditable(false);
         primera146.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera146.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -830,8 +902,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera146);
-        primera146.setBounds(310, 130, 30, 30);
+        primera146.setBounds(360, 120, 30, 30);
 
+        primera147.setEditable(false);
         primera147.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera147.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -839,8 +912,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera147);
-        primera147.setBounds(340, 130, 30, 30);
+        primera147.setBounds(390, 120, 30, 30);
 
+        primera148.setEditable(false);
         primera148.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera148.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -848,8 +922,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera148);
-        primera148.setBounds(340, 160, 30, 30);
+        primera148.setBounds(390, 150, 30, 30);
 
+        primera149.setEditable(false);
         primera149.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera149.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -857,8 +932,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera149);
-        primera149.setBounds(340, 190, 30, 30);
+        primera149.setBounds(390, 180, 30, 30);
 
+        primera150.setEditable(false);
         primera150.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera150.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -866,8 +942,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera150);
-        primera150.setBounds(340, 220, 30, 30);
+        primera150.setBounds(390, 210, 30, 30);
 
+        primera151.setEditable(false);
         primera151.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera151.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -875,8 +952,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera151);
-        primera151.setBounds(340, 250, 30, 30);
+        primera151.setBounds(390, 240, 30, 30);
 
+        primera152.setEditable(false);
         primera152.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera152.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -884,8 +962,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera152);
-        primera152.setBounds(340, 280, 30, 30);
+        primera152.setBounds(390, 270, 30, 30);
 
+        primera153.setEditable(false);
         primera153.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera153.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -893,8 +972,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera153);
-        primera153.setBounds(340, 310, 30, 30);
+        primera153.setBounds(390, 300, 30, 30);
 
+        primera154.setEditable(false);
         primera154.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera154.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -902,8 +982,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera154);
-        primera154.setBounds(340, 340, 30, 30);
+        primera154.setBounds(390, 330, 30, 30);
 
+        primera155.setEditable(false);
         primera155.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera155.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -911,8 +992,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera155);
-        primera155.setBounds(340, 370, 30, 30);
+        primera155.setBounds(390, 360, 30, 30);
 
+        primera156.setEditable(false);
         primera156.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera156.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -920,8 +1002,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera156);
-        primera156.setBounds(310, 370, 30, 30);
+        primera156.setBounds(360, 360, 30, 30);
 
+        primera157.setEditable(false);
         primera157.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera157.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -929,8 +1012,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera157);
-        primera157.setBounds(280, 370, 30, 30);
+        primera157.setBounds(330, 360, 30, 30);
 
+        primera158.setEditable(false);
         primera158.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera158.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -938,8 +1022,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera158);
-        primera158.setBounds(250, 370, 30, 30);
+        primera158.setBounds(300, 360, 30, 30);
 
+        primera159.setEditable(false);
         primera159.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera159.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -947,8 +1032,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera159);
-        primera159.setBounds(220, 370, 30, 30);
+        primera159.setBounds(270, 360, 30, 30);
 
+        primera160.setEditable(false);
         primera160.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera160.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -956,8 +1042,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera160);
-        primera160.setBounds(190, 370, 30, 30);
+        primera160.setBounds(240, 360, 30, 30);
 
+        primera161.setEditable(false);
         primera161.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera161.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -965,8 +1052,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera161);
-        primera161.setBounds(130, 370, 30, 30);
+        primera161.setBounds(180, 360, 30, 30);
 
+        primera162.setEditable(false);
         primera162.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera162.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -974,8 +1062,9 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera162);
-        primera162.setBounds(100, 370, 30, 30);
+        primera162.setBounds(150, 360, 30, 30);
 
+        primera163.setEditable(false);
         primera163.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera163.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -983,7 +1072,28 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera163);
-        primera163.setBounds(100, 370, 30, 30);
+        primera163.setBounds(150, 360, 30, 30);
+
+        jButton10.setText("Resoldre");
+        getContentPane().add(jButton10);
+        jButton10.setBounds(450, 370, 79, 23);
+
+        jButton11.setText("Treure marca");
+        getContentPane().add(jButton11);
+        jButton11.setBounds(20, 160, 110, 23);
+
+        jButton12.setText("Afegir marca");
+        getContentPane().add(jButton12);
+        jButton12.setBounds(20, 120, 100, 23);
+
+        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros1.setText("Números:");
+        getContentPane().add(numeros1);
+        numeros1.setBounds(510, 100, 80, 40);
+
+        jTextField1.setEditable(false);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(30, 250, 80, 140);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -2425,6 +2535,9 @@ public class Jugar9 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2433,7 +2546,9 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
+    private javax.swing.JLabel numeros1;
     private javax.swing.JTextField primera100;
     private javax.swing.JTextField primera101;
     private javax.swing.JTextField primera102;

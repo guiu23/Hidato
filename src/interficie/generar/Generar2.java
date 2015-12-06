@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interficie;
+package interficie.generar;
+
+import interficie.Menu;
 
 /**
  *
  * @author jordi.guiu.pujols
  */
-public class Jugar2 extends javax.swing.JFrame {
+public class Generar2 extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
-    public Jugar2() {
+    public Generar2() {
         initComponents();
     }
 
@@ -43,6 +45,7 @@ public class Jugar2 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,6 +71,7 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
+        primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         primera.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -78,16 +82,19 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(primera);
         primera.setBounds(160, 180, 90, 80);
 
+        primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
         primera1.setBounds(250, 180, 90, 80);
 
+        primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
         primera2.setBounds(160, 260, 90, 80);
 
+        primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
@@ -96,7 +103,7 @@ public class Jugar2 extends javax.swing.JFrame {
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
+        numeros.setBounds(500, 100, 80, 40);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -194,6 +201,10 @@ public class Jugar2 extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 65, 23);
+
+        jButton10.setText("Generar");
+        getContentPane().add(jButton10);
+        jButton10.setBounds(450, 370, 79, 23);
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 
@@ -269,14 +280,38 @@ public class Jugar2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Jugar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Jugar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Jugar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Jugar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Generar2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -289,7 +324,7 @@ public class Jugar2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar2().setVisible(true);
+                new Generar2().setVisible(true);
             }
         });
     }
@@ -298,6 +333,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

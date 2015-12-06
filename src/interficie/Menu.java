@@ -27,6 +27,7 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        titol = new javax.swing.JTextArea();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -35,7 +36,22 @@ public class Menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
 
-        fons.setIcon(new javax.swing.ImageIcon("C:\\Users\\jordi.guiu.pujols\\Documents\\NetBeansProjects\\Hidato\\src\\fons.jpg")); // NOI18N
+        titol.setEditable(false);
+        titol.setBackground(new java.awt.Color(0, 0, 0));
+        titol.setColumns(20);
+        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setRows(5);
+        titol.setText("HIDATO");
+        titol.setAutoscrolls(false);
+        titol.setBorder(null);
+        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        titol.setRequestFocusEnabled(false);
+        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
+        titol.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(titol);
+        titol.setBounds(210, 40, 260, 60);
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 
@@ -81,5 +97,6 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel fons;
+    private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }
