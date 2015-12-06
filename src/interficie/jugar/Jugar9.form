@@ -222,9 +222,6 @@
     <Component class="javax.swing.JTextField" name="primera33">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -239,9 +236,6 @@
     <Component class="javax.swing.JTextField" name="primera83">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -256,9 +250,6 @@
     <Component class="javax.swing.JTextField" name="primera84">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -273,9 +264,6 @@
     <Component class="javax.swing.JTextField" name="primera85">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -290,9 +278,6 @@
     <Component class="javax.swing.JTextField" name="primera86">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -307,9 +292,6 @@
     <Component class="javax.swing.JTextField" name="primera87">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -324,9 +306,6 @@
     <Component class="javax.swing.JTextField" name="primera88">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -341,9 +320,6 @@
     <Component class="javax.swing.JTextField" name="primera89">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -358,9 +334,6 @@
     <Component class="javax.swing.JTextField" name="primera90">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -375,9 +348,6 @@
     <Component class="javax.swing.JTextField" name="primera91">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -392,9 +362,6 @@
     <Component class="javax.swing.JTextField" name="primera92">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -409,9 +376,6 @@
     <Component class="javax.swing.JTextField" name="primera93">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -426,9 +390,6 @@
     <Component class="javax.swing.JTextField" name="primera94">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -443,9 +404,6 @@
     <Component class="javax.swing.JTextField" name="primera95">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -460,9 +418,6 @@
     <Component class="javax.swing.JTextField" name="primera96">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -477,9 +432,6 @@
     <Component class="javax.swing.JTextField" name="primera97">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -494,9 +446,6 @@
     <Component class="javax.swing.JTextField" name="primera98">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -511,9 +460,6 @@
     <Component class="javax.swing.JTextField" name="primera99">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -528,9 +474,6 @@
     <Component class="javax.swing.JTextField" name="primera100">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -545,9 +488,6 @@
     <Component class="javax.swing.JTextField" name="primera101">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -562,9 +502,6 @@
     <Component class="javax.swing.JTextField" name="primera102">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -579,9 +516,6 @@
     <Component class="javax.swing.JTextField" name="primera103">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -596,9 +530,6 @@
     <Component class="javax.swing.JTextField" name="primera104">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -613,9 +544,6 @@
     <Component class="javax.swing.JTextField" name="primera105">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -630,9 +558,6 @@
     <Component class="javax.swing.JTextField" name="primera106">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -647,9 +572,6 @@
     <Component class="javax.swing.JTextField" name="primera107">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -664,9 +586,6 @@
     <Component class="javax.swing.JTextField" name="primera108">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -681,9 +600,6 @@
     <Component class="javax.swing.JTextField" name="primera109">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -698,9 +614,6 @@
     <Component class="javax.swing.JTextField" name="primera110">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -715,9 +628,6 @@
     <Component class="javax.swing.JTextField" name="primera111">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -732,9 +642,6 @@
     <Component class="javax.swing.JTextField" name="primera112">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -749,9 +656,6 @@
     <Component class="javax.swing.JTextField" name="primera113">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -766,9 +670,6 @@
     <Component class="javax.swing.JTextField" name="primera114">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -783,9 +684,6 @@
     <Component class="javax.swing.JTextField" name="primera115">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -800,9 +698,6 @@
     <Component class="javax.swing.JTextField" name="primera116">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -817,9 +712,6 @@
     <Component class="javax.swing.JTextField" name="primera117">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -834,9 +726,6 @@
     <Component class="javax.swing.JTextField" name="primera118">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -851,9 +740,6 @@
     <Component class="javax.swing.JTextField" name="primera119">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -868,9 +754,6 @@
     <Component class="javax.swing.JTextField" name="primera120">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -885,9 +768,6 @@
     <Component class="javax.swing.JTextField" name="primera121">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -902,9 +782,6 @@
     <Component class="javax.swing.JTextField" name="primera122">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -919,9 +796,6 @@
     <Component class="javax.swing.JTextField" name="primera123">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -936,9 +810,6 @@
     <Component class="javax.swing.JTextField" name="primera124">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -953,9 +824,6 @@
     <Component class="javax.swing.JTextField" name="primera125">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -970,9 +838,6 @@
     <Component class="javax.swing.JTextField" name="primera126">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -987,9 +852,6 @@
     <Component class="javax.swing.JTextField" name="primera127">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1004,9 +866,6 @@
     <Component class="javax.swing.JTextField" name="primera128">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1021,9 +880,6 @@
     <Component class="javax.swing.JTextField" name="primera129">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1038,9 +894,6 @@
     <Component class="javax.swing.JTextField" name="primera130">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1055,9 +908,6 @@
     <Component class="javax.swing.JTextField" name="primera131">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1072,9 +922,6 @@
     <Component class="javax.swing.JTextField" name="primera132">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1089,9 +936,6 @@
     <Component class="javax.swing.JTextField" name="primera133">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1106,9 +950,6 @@
     <Component class="javax.swing.JTextField" name="primera134">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1123,9 +964,6 @@
     <Component class="javax.swing.JTextField" name="primera135">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1140,9 +978,6 @@
     <Component class="javax.swing.JTextField" name="primera136">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1157,9 +992,6 @@
     <Component class="javax.swing.JTextField" name="primera137">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1174,9 +1006,6 @@
     <Component class="javax.swing.JTextField" name="primera138">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1191,9 +1020,6 @@
     <Component class="javax.swing.JTextField" name="primera139">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1208,9 +1034,6 @@
     <Component class="javax.swing.JTextField" name="primera140">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1225,9 +1048,6 @@
     <Component class="javax.swing.JTextField" name="primera141">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1242,9 +1062,6 @@
     <Component class="javax.swing.JTextField" name="primera142">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1259,9 +1076,6 @@
     <Component class="javax.swing.JTextField" name="primera143">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1276,9 +1090,6 @@
     <Component class="javax.swing.JTextField" name="primera144">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1293,9 +1104,6 @@
     <Component class="javax.swing.JTextField" name="primera145">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1310,9 +1118,6 @@
     <Component class="javax.swing.JTextField" name="primera146">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1327,9 +1132,6 @@
     <Component class="javax.swing.JTextField" name="primera147">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1344,9 +1146,6 @@
     <Component class="javax.swing.JTextField" name="primera148">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1361,9 +1160,6 @@
     <Component class="javax.swing.JTextField" name="primera149">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1378,9 +1174,6 @@
     <Component class="javax.swing.JTextField" name="primera150">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1395,9 +1188,6 @@
     <Component class="javax.swing.JTextField" name="primera151">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1412,9 +1202,6 @@
     <Component class="javax.swing.JTextField" name="primera152">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1429,9 +1216,6 @@
     <Component class="javax.swing.JTextField" name="primera153">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1446,9 +1230,6 @@
     <Component class="javax.swing.JTextField" name="primera154">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1463,9 +1244,6 @@
     <Component class="javax.swing.JTextField" name="primera155">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1480,9 +1258,6 @@
     <Component class="javax.swing.JTextField" name="primera156">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1497,9 +1272,6 @@
     <Component class="javax.swing.JTextField" name="primera157">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1514,9 +1286,6 @@
     <Component class="javax.swing.JTextField" name="primera158">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1531,9 +1300,6 @@
     <Component class="javax.swing.JTextField" name="primera159">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1548,9 +1314,6 @@
     <Component class="javax.swing.JTextField" name="primera160">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1565,9 +1328,6 @@
     <Component class="javax.swing.JTextField" name="primera161">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1582,9 +1342,6 @@
     <Component class="javax.swing.JTextField" name="primera162">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>
@@ -1599,9 +1356,6 @@
     <Component class="javax.swing.JTextField" name="primera163">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="document" type="javax.swing.text.Document" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="default"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
       <Events>

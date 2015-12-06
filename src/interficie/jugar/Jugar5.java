@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interficie;
+package interficie.jugar;
+
+import interficie.Menu;
 
 /**
  *
  * @author jordi.guiu.pujols
  */
-public class Generar5 extends javax.swing.JFrame {
+public class Jugar5 extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
-    public Generar5() {
+    public Jugar5() {
         initComponents();
     }
 
@@ -65,6 +67,10 @@ public class Generar5 extends javax.swing.JFrame {
         primera31 = new javax.swing.JTextField();
         primera32 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
+        numeros1 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -87,7 +93,7 @@ public class Generar5 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 50, 260, 60);
+        titol.setBounds(150, 50, 260, 60);
 
         primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -98,7 +104,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera);
-        primera.setBounds(280, 290, 50, 50);
+        primera.setBounds(310, 290, 50, 50);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -211,7 +217,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera9);
-        primera9.setBounds(130, 140, 50, 50);
+        primera9.setBounds(160, 140, 50, 50);
 
         primera10.setEditable(false);
         primera10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -222,7 +228,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera10);
-        primera10.setBounds(180, 140, 50, 50);
+        primera10.setBounds(210, 140, 50, 50);
 
         primera11.setEditable(false);
         primera11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -233,7 +239,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera11);
-        primera11.setBounds(230, 140, 50, 50);
+        primera11.setBounds(260, 140, 50, 50);
 
         primera12.setEditable(false);
         primera12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -244,7 +250,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera12);
-        primera12.setBounds(130, 340, 50, 50);
+        primera12.setBounds(160, 340, 50, 50);
 
         primera13.setEditable(false);
         primera13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -255,7 +261,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera13);
-        primera13.setBounds(130, 190, 50, 50);
+        primera13.setBounds(160, 190, 50, 50);
 
         primera14.setEditable(false);
         primera14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -266,7 +272,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera14);
-        primera14.setBounds(180, 190, 50, 50);
+        primera14.setBounds(210, 190, 50, 50);
 
         primera15.setEditable(false);
         primera15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -277,7 +283,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera15);
-        primera15.setBounds(230, 190, 50, 50);
+        primera15.setBounds(260, 190, 50, 50);
 
         primera16.setEditable(false);
         primera16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -288,7 +294,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera16);
-        primera16.setBounds(280, 190, 50, 50);
+        primera16.setBounds(310, 190, 50, 50);
 
         primera17.setEditable(false);
         primera17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -299,7 +305,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera17);
-        primera17.setBounds(130, 240, 50, 50);
+        primera17.setBounds(160, 240, 50, 50);
 
         primera18.setEditable(false);
         primera18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -310,7 +316,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera18);
-        primera18.setBounds(180, 240, 50, 50);
+        primera18.setBounds(210, 240, 50, 50);
 
         primera19.setEditable(false);
         primera19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -321,7 +327,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera19);
-        primera19.setBounds(230, 240, 50, 50);
+        primera19.setBounds(260, 240, 50, 50);
 
         primera20.setEditable(false);
         primera20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -332,7 +338,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera20);
-        primera20.setBounds(280, 240, 50, 50);
+        primera20.setBounds(310, 240, 50, 50);
 
         primera21.setEditable(false);
         primera21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -343,7 +349,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera21);
-        primera21.setBounds(130, 290, 50, 50);
+        primera21.setBounds(160, 290, 50, 50);
 
         primera22.setEditable(false);
         primera22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -354,7 +360,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera22);
-        primera22.setBounds(180, 290, 50, 50);
+        primera22.setBounds(210, 290, 50, 50);
 
         primera23.setEditable(false);
         primera23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -365,7 +371,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera23);
-        primera23.setBounds(230, 290, 50, 50);
+        primera23.setBounds(260, 290, 50, 50);
 
         primera24.setEditable(false);
         primera24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -376,7 +382,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera24);
-        primera24.setBounds(280, 140, 50, 50);
+        primera24.setBounds(310, 140, 50, 50);
 
         primera25.setEditable(false);
         primera25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -387,7 +393,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera25);
-        primera25.setBounds(330, 140, 50, 50);
+        primera25.setBounds(360, 140, 50, 50);
 
         primera26.setEditable(false);
         primera26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -398,7 +404,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera26);
-        primera26.setBounds(330, 190, 50, 50);
+        primera26.setBounds(360, 190, 50, 50);
 
         primera27.setEditable(false);
         primera27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -409,7 +415,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera27);
-        primera27.setBounds(330, 240, 50, 50);
+        primera27.setBounds(360, 240, 50, 50);
 
         primera28.setEditable(false);
         primera28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -420,7 +426,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera28);
-        primera28.setBounds(330, 290, 50, 50);
+        primera28.setBounds(360, 290, 50, 50);
 
         primera29.setEditable(false);
         primera29.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -431,7 +437,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera29);
-        primera29.setBounds(330, 340, 50, 50);
+        primera29.setBounds(360, 340, 50, 50);
 
         primera30.setEditable(false);
         primera30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -442,7 +448,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera30);
-        primera30.setBounds(280, 340, 50, 50);
+        primera30.setBounds(310, 340, 50, 50);
 
         primera31.setEditable(false);
         primera31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -453,7 +459,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera31);
-        primera31.setBounds(230, 340, 50, 50);
+        primera31.setBounds(260, 340, 50, 50);
 
         primera32.setEditable(false);
         primera32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -464,11 +470,28 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera32);
-        primera32.setBounds(180, 340, 50, 50);
+        primera32.setBounds(210, 340, 50, 50);
 
-        jButton10.setText("Generar");
+        jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
         jButton10.setBounds(450, 370, 79, 23);
+
+        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros1.setText("Marques:");
+        getContentPane().add(numeros1);
+        numeros1.setBounds(30, 200, 80, 40);
+
+        jButton11.setText("Treure marca");
+        getContentPane().add(jButton11);
+        jButton11.setBounds(20, 160, 110, 23);
+
+        jButton12.setText("Afegir marca");
+        getContentPane().add(jButton12);
+        jButton12.setBounds(20, 120, 100, 23);
+
+        jTextField1.setEditable(false);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(30, 250, 80, 140);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -638,206 +661,14 @@ public class Generar5 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Generar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Generar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Generar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Generar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Jugar5.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -906,7 +737,7 @@ public class Generar5 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Generar5().setVisible(true);
+                new Jugar5().setVisible(true);
             }
         });
     }
@@ -915,6 +746,8 @@ public class Generar5 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -923,7 +756,9 @@ public class Generar5 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
+    private javax.swing.JLabel numeros1;
     private javax.swing.JTextField primera;
     private javax.swing.JTextField primera10;
     private javax.swing.JTextField primera11;
