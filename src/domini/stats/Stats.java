@@ -12,7 +12,6 @@ public abstract class Stats {
     protected Table<Player> _players;
     protected Table<? extends Playable> _games;
     protected Table<stubMatch> _matches;
-    static HidatoBD HBD;
     
     public Stats(Table<Player> players, Table<? extends Playable> games, Table<stubMatch> matches)
     {
@@ -117,15 +116,12 @@ public abstract class Stats {
     }
 
     public int countPlayers() { 
-        HBD.loadPlayers();
         return _players.size(); 
     }
     public int countGames() {
-        HBD.loadGames();
         return _games.size(); 
     }
     public int countMatches() {
-        HBD.loadMatches();
         return _matches.size(); 
     }
 

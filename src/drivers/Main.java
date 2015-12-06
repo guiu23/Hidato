@@ -290,6 +290,7 @@ public class Main {
                 }
                 else if(entrada == 6) {
                     Match Partida = new Match(Joc, Jugador);
+                    System.out.println(Jugador.getName());
                     System.out.println("abans");
                     int posG = -1;
                     
@@ -387,7 +388,7 @@ public class Main {
                                         HBD._players.get(i).SetPuntuacio(puntuacioF);
                                         b=true;
                                         HBD.savePlayers();
-                                        System.out.println(HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
+                                        System.out.println("Punts Totals:" + HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
                                     }
                                 }
                                 fi_joc = true;
@@ -414,13 +415,14 @@ public class Main {
             option = input.nextInt();
             if (option < 0 || 4 < option)System.out.println("Not an option.");
             else if (option != 0) {
-                System.out.println("Enter a valid username.");
-                String username = input.next();
+                String username = Jugador.getName();
                 int pos = find(username);
                 Player player = null;
                 if (pos == -1) option = 5;
+                else player = HBD._players.get(pos);
                 switch (option) {
                     case 1:
+                        HBD.loadMatches();
                         System.out.println("Player "+username+" has played "+_stats.countMatches(player)+" matches.");
                         break;
                     case 2:
