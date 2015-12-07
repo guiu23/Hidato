@@ -240,7 +240,7 @@ public class Menu extends javax.swing.JFrame {
     private void ModificarMapaExistentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMapaExistentsActionPerformed
         // TODO add your handling code here:
         LlistatMapesExistents obj = new LlistatMapesExistents();
-        obj.setVisivle(true);
+        obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_ModificarMapaExistentsActionPerformed
 
