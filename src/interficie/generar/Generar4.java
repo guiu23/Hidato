@@ -181,7 +181,7 @@ public class Generar4 extends javax.swing.JFrame {
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
-        enrere.setText("Enrere");
+        enrere.setText("Sortir");
         enrere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enrereActionPerformed(evt);
@@ -193,7 +193,7 @@ public class Generar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
+        enrere.setBounds(610, 430, 59, 23);
 
         primera9.setEditable(false);
         primera9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

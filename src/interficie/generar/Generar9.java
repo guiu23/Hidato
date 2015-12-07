@@ -236,7 +236,7 @@ public class Generar9 extends javax.swing.JFrame {
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
-        enrere.setText("Enrere");
+        enrere.setText("Sortir");
         enrere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enrereActionPerformed(evt);
@@ -248,7 +248,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
+        enrere.setBounds(610, 430, 59, 23);
 
         primera33.setEditable(false);
         primera33.setHorizontalAlignment(javax.swing.JTextField.CENTER);

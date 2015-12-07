@@ -188,7 +188,7 @@ public class Generar2 extends javax.swing.JFrame {
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
-        enrere.setText("Enrere");
+        enrere.setText("Sortir");
         enrere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enrereActionPerformed(evt);
@@ -200,11 +200,11 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(600, 420, 71, 25);
+        enrere.setBounds(610, 430, 65, 23);
 
         jButton10.setText("Generar");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 25);
+        jButton10.setBounds(450, 370, 79, 23);
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 
