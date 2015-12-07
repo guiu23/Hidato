@@ -206,7 +206,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
+        enrere.setBounds(600, 420, 71, 25);
 
         primera9.setEditable(false);
         primera9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -474,7 +474,7 @@ public class Jugar5 extends javax.swing.JFrame {
 
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
+        jButton10.setBounds(450, 370, 79, 25);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Marques:");
@@ -483,11 +483,11 @@ public class Jugar5 extends javax.swing.JFrame {
 
         jButton11.setText("Treure marca");
         getContentPane().add(jButton11);
-        jButton11.setBounds(20, 160, 110, 23);
+        jButton11.setBounds(20, 160, 110, 25);
 
         jButton12.setText("Afegir marca");
         getContentPane().add(jButton12);
-        jButton12.setBounds(20, 120, 100, 23);
+        jButton12.setBounds(20, 120, 100, 25);
 
         jTextField1.setEditable(false);
         getContentPane().add(jTextField1);
@@ -534,7 +534,7 @@ public class Jugar5 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        SeleccioTamanyMapa obj = new SeleccioTamanyMapa();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
