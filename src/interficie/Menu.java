@@ -35,7 +35,6 @@ public class Menu extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        enrere = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -61,13 +60,18 @@ public class Menu extends javax.swing.JFrame {
         titol.setBounds(210, 40, 260, 60);
 
         jButton1.setText("Tancar sessió");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(550, 10, 120, 30);
+        jButton1.setBounds(540, 410, 120, 30);
 
         jButton2.setText("RANKING");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +83,11 @@ public class Menu extends javax.swing.JFrame {
         jButton2.setBounds(270, 270, 130, 40);
 
         jButton3.setText("SORTIR");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -107,22 +116,6 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(270, 210, 130, 40);
 
-        enrere.setBackground(new java.awt.Color(0, 0, 0));
-        enrere.setForeground(new java.awt.Color(255, 255, 255));
-        enrere.setText("Enrere");
-        enrere.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enrereActionPerformed(evt);
-            }
-        });
-        enrere.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                enrereKeyPressed(evt);
-            }
-        });
-        getContentPane().add(enrere);
-        enrere.setBounds(580, 410, 71, 25);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -150,16 +143,17 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         Identificacio obj = new Identificacio();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_enrereActionPerformed
-
-    private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_enrereKeyPressed
+    }//GEN-LAST:event_jButton1MouseClicked
 
     
     /**
@@ -199,7 +193,6 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

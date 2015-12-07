@@ -240,7 +240,7 @@ public class Jugar9 extends javax.swing.JFrame {
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
-        enrere.setText("Enrere");
+        enrere.setText("Sortir");
         enrere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enrereActionPerformed(evt);
@@ -252,7 +252,7 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(600, 420, 71, 25);
+        enrere.setBounds(600, 420, 59, 23);
 
         primera33.setEditable(false);
         primera33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1076,15 +1076,15 @@ public class Jugar9 extends javax.swing.JFrame {
 
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 25);
+        jButton10.setBounds(450, 370, 79, 23);
 
         jButton11.setText("Treure marca");
         getContentPane().add(jButton11);
-        jButton11.setBounds(20, 160, 110, 25);
+        jButton11.setBounds(20, 160, 110, 23);
 
         jButton12.setText("Afegir marca");
         getContentPane().add(jButton12);
-        jButton12.setBounds(20, 120, 100, 25);
+        jButton12.setBounds(20, 120, 100, 23);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Números:");
@@ -1136,7 +1136,7 @@ public class Jugar9 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        SeleccioTamanyMapa obj = new SeleccioTamanyMapa();
+        Menu obj = new Menu();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
