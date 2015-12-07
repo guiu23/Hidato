@@ -6,6 +6,8 @@
 package interficie;
 
 import interficie.generar.CrearMapa;
+import interficie.generar.LlistatMapesExistents;
+import interficie.jugar.CarregarPartida;
 import interficie.jugar.JugarMain;
 
 /**
@@ -30,12 +32,58 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        titol1 = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
         titol = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        MenuPrincipal = new javax.swing.JMenuBar();
+        JugarPartida = new javax.swing.JMenu();
+        NovaPartida = new javax.swing.JMenu();
+        MapaAleatori = new javax.swing.JMenuItem();
+        EscollirMapaPredefinit = new javax.swing.JMenu();
+        CarregarPartida = new javax.swing.JMenuItem();
+        CrearMapa = new javax.swing.JMenu();
+        CrearMapaNou = new javax.swing.JMenuItem();
+        ModificarMapaExistents = new javax.swing.JMenuItem();
+        EsborrarMapa = new javax.swing.JMenuItem();
+        Ranking = new javax.swing.JMenu();
+        jMenu6 = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
+
+        titol1.setEditable(false);
+        titol1.setBackground(new java.awt.Color(0, 0, 0));
+        titol1.setColumns(20);
+        titol1.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
+        titol1.setForeground(new java.awt.Color(255, 255, 255));
+        titol1.setRows(5);
+        titol1.setText("HIDATO");
+        titol1.setAutoscrolls(false);
+        titol1.setBorder(null);
+        titol1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        titol1.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        titol1.setRequestFocusEnabled(false);
+        titol1.setSelectionColor(new java.awt.Color(255, 255, 255));
+        titol1.setVerifyInputWhenFocusTarget(false);
+
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Selecciona el tamany del mapa:");
+        jTextField1.setDisabledTextColor(new java.awt.Color(102, 102, 102));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -46,7 +94,7 @@ public class Menu extends javax.swing.JFrame {
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
         titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
+        titol.setFont(new java.awt.Font("Rockwell", 1, 72)); // NOI18N
         titol.setForeground(new java.awt.Color(255, 255, 255));
         titol.setRows(5);
         titol.setText("HIDATO");
@@ -58,7 +106,7 @@ public class Menu extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(210, 40, 260, 60);
+        titol.setBounds(170, 140, 320, 100);
 
         jButton1.setText("Tancar sessió");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,15 +122,6 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(540, 410, 120, 30);
 
-        jButton2.setText("RANKING");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(270, 270, 130, 40);
-
         jButton3.setText("SORTIR");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -95,32 +134,70 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(270, 330, 130, 40);
+        jButton3.setBounds(20, 390, 80, 40);
 
-        jButton4.setText("JUGAR PARTIDA");
-        jButton4.setBorder(null);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(270, 150, 130, 40);
+        MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
+        MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton5.setText("CREAR MAPA");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
-            }
-        });
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        JugarPartida.setBackground(new java.awt.Color(0, 0, 0));
+        JugarPartida.setForeground(new java.awt.Color(255, 255, 255));
+        JugarPartida.setText("Jugar Partida");
+
+        NovaPartida.setText("Nova Partida");
+
+        MapaAleatori.setText("Mapa Aleatori");
+        NovaPartida.add(MapaAleatori);
+
+        EscollirMapaPredefinit.setText("Escollir Mapa Predefinit");
+        NovaPartida.add(EscollirMapaPredefinit);
+
+        JugarPartida.add(NovaPartida);
+
+        CarregarPartida.setText("Carregar Partida");
+        CarregarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                CarregarPartidaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(270, 210, 130, 40);
+        JugarPartida.add(CarregarPartida);
+
+        MenuPrincipal.add(JugarPartida);
+
+        CrearMapa.setBackground(new java.awt.Color(0, 0, 0));
+        CrearMapa.setForeground(new java.awt.Color(255, 255, 255));
+        CrearMapa.setText("Crear Mapa");
+
+        CrearMapaNou.setText("Crear Mapa Nou");
+        CrearMapaNou.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearMapaNouActionPerformed(evt);
+            }
+        });
+        CrearMapa.add(CrearMapaNou);
+
+        ModificarMapaExistents.setText("Modificar Mapa Existent");
+        ModificarMapaExistents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarMapaExistentsActionPerformed(evt);
+            }
+        });
+        CrearMapa.add(ModificarMapaExistents);
+
+        EsborrarMapa.setText("Esborrar Mapa");
+        CrearMapa.add(EsborrarMapa);
+
+        MenuPrincipal.add(CrearMapa);
+
+        Ranking.setBackground(new java.awt.Color(0, 0, 0));
+        Ranking.setForeground(new java.awt.Color(255, 255, 255));
+        Ranking.setText("Ranking");
+
+        jMenu6.setText("jMenu6");
+        Ranking.add(jMenu6);
+
+        MenuPrincipal.add(Ranking);
+
+        setJMenuBar(MenuPrincipal);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -129,25 +206,9 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        JugarMain obj = new JugarMain();
-        obj.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
@@ -161,12 +222,27 @@ public class Menu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void CarregarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarregarPartidaActionPerformed
         // TODO add your handling code here:
-        CrearMapa obj = new CrearMapa();
+        CarregarPartida obj = new CarregarPartida();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton5MouseClicked
+    }//GEN-LAST:event_CarregarPartidaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void CrearMapaNouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearMapaNouActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CrearMapaNouActionPerformed
+
+    private void ModificarMapaExistentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMapaExistentsActionPerformed
+        // TODO add your handling code here:
+        LlistatMapesExistents obj = new LlistatMapesExistents();
+        obj.setVisivle(true);
+        dispose();
+    }//GEN-LAST:event_ModificarMapaExistentsActionPerformed
 
     
     /**
@@ -206,11 +282,25 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem CarregarPartida;
+    private javax.swing.JMenu CrearMapa;
+    private javax.swing.JMenuItem CrearMapaNou;
+    private javax.swing.JMenuItem EsborrarMapa;
+    private javax.swing.JMenu EscollirMapaPredefinit;
+    private javax.swing.JMenu JugarPartida;
+    private javax.swing.JMenuItem MapaAleatori;
+    private javax.swing.JMenuBar MenuPrincipal;
+    private javax.swing.JMenuItem ModificarMapaExistents;
+    private javax.swing.JMenu NovaPartida;
+    private javax.swing.JMenu Ranking;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextArea titol;
+    private javax.swing.JTextArea titol1;
     // End of variables declaration//GEN-END:variables
 }
