@@ -92,7 +92,7 @@ public class Crea extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
+        enrere.setBounds(580, 410, 71, 25);
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 
@@ -163,6 +163,9 @@ public class Crea extends javax.swing.JFrame {
 
     private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
         // TODO add your handling code here:
+        Menu obj = new Menu();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_entraActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
