@@ -68,7 +68,7 @@ public class Funcions {
             }
         }
         cont_val = (Taulell.getSize()*Taulell.getSize()) - cont_inv - 2; //el 2 son el start i el finish, tecnicament que son valides 
-        if ((cont_writ-2) == 0) return 3;
+        if ((cont_writ-2) == 0) return 1;
         double proporcio = (cont_writ-2)/cont_val;
         if (proporcio >= 0.8) return 1;
         else if (proporcio >= 0.6 ) return 2;
