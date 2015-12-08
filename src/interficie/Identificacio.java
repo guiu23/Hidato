@@ -16,6 +16,9 @@ public class Identificacio extends javax.swing.JFrame {
      */
     public Identificacio() {
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -28,10 +31,9 @@ public class Identificacio extends javax.swing.JFrame {
     private void initComponents() {
 
         titol = new javax.swing.JTextArea();
-        crea_user = new javax.swing.JTextField();
-        esborra_user = new javax.swing.JTextField();
-        carrega_user = new javax.swing.JTextField();
-        fons = new javax.swing.JLabel();
+        EsborraUsuari = new javax.swing.JButton();
+        CrearUsuari = new javax.swing.JButton();
+        CarregarUsuari = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -43,7 +45,7 @@ public class Identificacio extends javax.swing.JFrame {
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
         titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
+        titol.setFont(new java.awt.Font("Rockwell", 1, 80)); // NOI18N
         titol.setForeground(new java.awt.Color(255, 255, 255));
         titol.setRows(5);
         titol.setText("HIDATO");
@@ -55,109 +57,60 @@ public class Identificacio extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(208, 94, 260, 60);
+        titol.setBounds(320, 90, 350, 100);
         titol.getAccessibleContext().setAccessibleName("");
         titol.getAccessibleContext().setAccessibleDescription("");
 
-        crea_user.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        crea_user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        crea_user.setText("CREAR USUARI");
-        crea_user.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        crea_user.setRequestFocusEnabled(false);
-        crea_user.setSelectionColor(new java.awt.Color(153, 153, 153));
-        crea_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                crea_userMouseClicked(evt);
-            }
-        });
-        crea_user.addActionListener(new java.awt.event.ActionListener() {
+        EsborraUsuari.setText("Esborra Usuari");
+        EsborraUsuari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crea_userActionPerformed(evt);
+                EsborraUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(crea_user);
-        crea_user.setBounds(270, 260, 143, 28);
+        getContentPane().add(EsborraUsuari);
+        EsborraUsuari.setBounds(400, 440, 170, 60);
 
-        esborra_user.setEditable(false);
-        esborra_user.setBackground(new java.awt.Color(255, 255, 255));
-        esborra_user.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        esborra_user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        esborra_user.setText("ESBORRA USUARI");
-        esborra_user.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        esborra_user.setRequestFocusEnabled(false);
-        esborra_user.setSelectionColor(new java.awt.Color(153, 153, 153));
-        esborra_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                esborra_userMouseClicked(evt);
-            }
-        });
-        esborra_user.addActionListener(new java.awt.event.ActionListener() {
+        CrearUsuari.setText("Crear Usuari");
+        CrearUsuari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                esborra_userActionPerformed(evt);
+                CrearUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(esborra_user);
-        esborra_user.setBounds(260, 360, 171, 28);
+        getContentPane().add(CrearUsuari);
+        CrearUsuari.setBounds(400, 260, 170, 60);
 
-        carrega_user.setEditable(false);
-        carrega_user.setBackground(new java.awt.Color(255, 255, 255));
-        carrega_user.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        carrega_user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        carrega_user.setText("CARREGA USUARI");
-        carrega_user.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        carrega_user.setRequestFocusEnabled(false);
-        carrega_user.setSelectionColor(new java.awt.Color(153, 153, 153));
-        carrega_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                carrega_userMouseClicked(evt);
-            }
-        });
-        carrega_user.addActionListener(new java.awt.event.ActionListener() {
+        CarregarUsuari.setText("Carregar Usuari");
+        CarregarUsuari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carrega_userActionPerformed(evt);
+                CarregarUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(carrega_user);
-        carrega_user.setBounds(260, 310, 171, 28);
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 860, 450);
+        getContentPane().add(CarregarUsuari);
+        CarregarUsuari.setBounds(400, 350, 170, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void esborra_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esborra_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_esborra_userActionPerformed
-
-    private void crea_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crea_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_crea_userActionPerformed
-
-    private void crea_userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crea_userMouseClicked
+    private void CrearUsuariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearUsuariActionPerformed
         // TODO add your handling code here:
         Crea obj = new Crea();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_crea_userMouseClicked
+    }//GEN-LAST:event_CrearUsuariActionPerformed
 
-    private void esborra_userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_esborra_userMouseClicked
-        // TODO add your handling code here:
-        Esborra obj = new Esborra();
-        obj.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_esborra_userMouseClicked
-
-    private void carrega_userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carrega_userMouseClicked
+    private void CarregarUsuariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarregarUsuariActionPerformed
         // TODO add your handling code here:
         Carrega obj = new Carrega();
         obj.setVisible(true);
         dispose();
-    }//GEN-LAST:event_carrega_userMouseClicked
+    }//GEN-LAST:event_CarregarUsuariActionPerformed
 
-    private void carrega_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carrega_userActionPerformed
+    private void EsborraUsuariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborraUsuariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_carrega_userActionPerformed
+        Esborra obj = new Esborra();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_EsborraUsuariActionPerformed
 
     
     /**
@@ -196,10 +149,9 @@ public class Identificacio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField carrega_user;
-    private javax.swing.JTextField crea_user;
-    private javax.swing.JTextField esborra_user;
-    private javax.swing.JLabel fons;
+    private javax.swing.JButton CarregarUsuari;
+    private javax.swing.JButton CrearUsuari;
+    private javax.swing.JButton EsborraUsuari;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,6 +16,9 @@ public class Esborra extends javax.swing.JFrame {
      */
     public Esborra() {
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -31,7 +34,6 @@ public class Esborra extends javax.swing.JFrame {
         user = new javax.swing.JTextField();
         entra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
@@ -45,7 +47,7 @@ public class Esborra extends javax.swing.JFrame {
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
         titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
+        titol.setFont(new java.awt.Font("Rockwell", 1, 80)); // NOI18N
         titol.setForeground(new java.awt.Color(255, 255, 255));
         titol.setRows(5);
         titol.setText("HIDATO");
@@ -57,7 +59,7 @@ public class Esborra extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(208, 94, 260, 60);
+        titol.setBounds(310, 100, 340, 100);
         titol.getAccessibleContext().setAccessibleName("");
         titol.getAccessibleContext().setAccessibleDescription("");
 
@@ -67,7 +69,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(user);
-        user.setBounds(240, 240, 240, 30);
+        user.setBounds(330, 270, 270, 50);
 
         entra.setText("Esborra");
         entra.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +78,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(entra);
-        entra.setBounds(500, 240, 80, 80);
+        entra.setBounds(680, 290, 110, 100);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,13 +94,11 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 860, 450);
+        enrere.setBounds(910, 550, 71, 25);
 
         jPasswordField1.setText("jPasswordField1");
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(300, 290, 180, 30);
+        jPasswordField1.setBounds(400, 350, 210, 50);
 
         text_nom.setEditable(false);
         text_nom.setBackground(new java.awt.Color(0, 0, 0));
@@ -122,7 +122,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(text_nom);
-        text_nom.setBounds(160, 240, 50, 30);
+        text_nom.setBounds(200, 270, 80, 50);
 
         text_contra.setEditable(false);
         text_contra.setBackground(new java.awt.Color(0, 0, 0));
@@ -141,7 +141,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(text_contra);
-        text_contra.setBounds(160, 290, 110, 30);
+        text_contra.setBounds(200, 350, 140, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -247,7 +247,6 @@ public class Esborra extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
     private javax.swing.JButton entra;
-    private javax.swing.JLabel fons;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
