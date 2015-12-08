@@ -36,8 +36,26 @@ public class Funcions {
         }
         if (!done) System.out.println("El taulell no existeix.");
     }
+    
+    public static int triaDificultat (BoardHidato Taulell) {
+        double cont_inv = 0;
+        double cont_writ = 0;
+        double cont_val;
+        for (int i = 0; i < Taulell.getSize(); ++i) {
+            for (int j = 0; j < Taulell.getSize(); ++j) {
+                if (!Taulell.getValidaCell(i,j)) ++cont_inv;
+                else if (Taulell.getWrittenCell(i,j)) ++cont_writ;
+            }
+        }
+        cont_val = (Taulell.getSize()*Taulell.getSize()) - cont_inv - 2; //el 2 son el start i el finish, tecnicament que son valides 
+        if ((cont_writ-2) == 0) return 3;
+        double proporcio = (cont_writ-2)/cont_val;
+        if (proporcio >= 0.8) return 1;
+        else if (proporcio >= 0.6 ) return 2;
+        else return 3;
+    }
 
-    public static void llegirTaulell(BoardHidato Taulell)   {
+    public static int llegirTaulell(BoardHidato Taulell)   {
         HBD.loadBoards();
         HBD.loadBoardsResolts();
         int valor;
@@ -85,6 +103,8 @@ public class Funcions {
                     System.out.println("Hidato possible de resoldre.");
                     HBD.saveBoards();
                     HBD.saveBoardsResolts();
+                    int dificultat = triaDificultat(Taulell);
+                    return dificultat;
                 }
                 else System.out.println("El taulell ja existeix.");
                 
@@ -98,6 +118,7 @@ public class Funcions {
             }
             solution = false;
         }
+        return 1;
     }
 
     public static void copiarBoard(BoardHidato TaulellCopiat, BoardHidato Taulell) {
