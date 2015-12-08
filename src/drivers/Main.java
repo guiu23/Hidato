@@ -493,10 +493,10 @@ public class Main {
                     int option;
         do {
             System.out.println("Estadistiques de jugador | Tria una opcio:");
-            System.out.println("1. Partides Totals");
-            System.out.println("2. Jocs diferents solucionades");
-            System.out.println("3. Jocs diferents solucionats per dificultat");
-            System.out.println("4. Posicio al ranking ");
+            System.out.println("1. Partides totals solucionades");
+            System.out.println("2. Taulells diferents solucionats per dificultat");
+            System.out.println("3. Posicio al ranking ");
+            System.out.println("4. Consulta puntuacio ");
             System.out.println("0. Torna al menu");
                       
             option = input.nextInt();
@@ -508,19 +508,18 @@ public class Main {
                         System.out.println("Jugador "+username+" ha jugat "+_stats.countMatches(Jugador)+" partides.");
                         break;
                     case 2:
-                        System.out.println("Jugador "+username+" ha solucionat "+
-                                _stats.countSolvedGames(Jugador)+" jocs diferents.");
-                        break;
-                    case 3:
                         System.out.println("Entra un nivell de dificultat (1-3).");
                         int difficulty = input.nextInt();
                         System.out.println("Jugador "+username+" ha solucionat "+_stats.countSolvedDiff
                                 (difficulty,Jugador)+" jocs diferents en dificultat "+difficulty+".");
                         break;
-                    case 4:
+                    case 3:
                         System.out.println("Jugador "+username+" esta la posicio "+
                                 (_stats.rank(Jugador)+1) +" del ranking global."); //+1 perquè comença al 0
                         break;
+                    case 4:
+                        System.out.println("Puntuacio total: " + Jugador.getPuntuacio());
+                        break;    
                 }
             }
             System.out.println();
