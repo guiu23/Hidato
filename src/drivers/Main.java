@@ -3,6 +3,7 @@ import domini.*;
 import dades.*;
 import static dades.HidatoBD._games;
 import domini.stats.HidatoStats;
+import domini.stats.Ranking;
 import domini.stats.stubGame;
 import domini.stats.stubMatch;
 
@@ -479,9 +480,10 @@ public class Main {
                             Funcions.imprimeixValors(TaulellAux);
                             System.out.println("Estas al menu de partida.");
                             entrada2 = input.nextInt();
-                        } /*else { 
-                            HBD._matches.add(m);
-                        }*/
+                        } else { 
+                            HBD._solvedmatches.add(m);
+                            HBD.saveSolvedMatches();
+                        }
                     }
                     fi_joc = false;
                 } else if(entrada == 7) {
@@ -509,7 +511,7 @@ public class Main {
                         break;
                     case 4:
                         System.out.println("Player "+username+" is ranked "+
-                                _stats.rank(Jugador)+" in the game global ranking.");
+                                (_stats.rank(Jugador)+1) +" in the game global ranking."); //+1 perquè comença al 0
                         break;
                     case 5:
                         System.out.println("Invalid username.");
@@ -527,13 +529,25 @@ public class Main {
             switch (option) {
                 case 1:
                     System.out.println("Position | Player | Score");
-                    System.out.println(_stats.rankingGlobal());
+                    print(_stats.rankingGlobal());
                     break;
                 case 2:
                     System.out.println("Number of players in the program: "+_stats.countPlayers()+".");
                     break;
                 case 3:
                     System.out.println("Number of games in the program: "+_stats.countGames()+".");
+                    break;
+                case 5:
+                    System.out.println("Enter a difficulty");
+                    int diff = input.nextInt();
+                    System.out.println("Position | Player | Games of size" +diff);
+                    print(_stats.rankingDifficulty(diff));
+                    break;
+                case 6:
+                    System.out.println("Enter a size");
+                    int siz = input.nextInt();
+                    System.out.println("Position | Player | Games of Size "+siz);
+                    print(_stats.rankingSize(siz));
                     break;
                 case 0: break;
                 default:
@@ -565,6 +579,37 @@ public class Main {
         for (int i = 0; i < HBD._players.size(); ++i)
             if (HBD._players.get(i).getName().equals(username)) return i;
         return -1;
+    }
+     
+     private static void print(Ranking ranking)
+    {
+        int size = ranking.getSize();
+        if (size == 0) System.out.println("This ranking is void.");
+        else {
+            int digits = digits(size);
+            HBD.loadPlayers();
+            for (int i = 0; i < size; ++i) {
+                System.out.println(num(i+1,digits) + "  " + ranking.getPlayer(i).getName() + "   " + ranking.getValue(i));    
+            }
+        }
+    }
+     
+     private static String num(int num, int digits)
+    {
+        String numS = "";
+        int zeros = digits - digits(num);
+        for (int i = 1; i <= zeros; ++i) numS = numS + "0";
+        return numS + num;
+    }
+
+    private static int digits(int num)
+    {
+        int digits = 1;
+        while (num > 9) {
+            ++digits;
+            num /= 10;
+        }
+        return digits;
     }
 }
 

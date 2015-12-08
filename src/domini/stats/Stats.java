@@ -22,8 +22,7 @@ public abstract class Stats {
     public int countMatches(Player player)
     {
         int count = 0;
-        for (stubMatch m: HBD._matches) {
-            System.out.println(m.getPlayer());
+        for (stubMatch m: HBD._solvedmatches) {
             if (m.getPlayer() == player) ++count;
         }
         return count;
@@ -32,7 +31,7 @@ public abstract class Stats {
     public int countSolvedGames(Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (stubMatch m : HBD._matches)
+        for (stubMatch m : HBD._solvedmatches)
             if (m.getPlayer() == player && m.finished())
                 insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
@@ -41,7 +40,7 @@ public abstract class Stats {
     public int countSolvedSize(int size, Player player)
     {
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (Matchable m : HBD._matches)
+        for (Matchable m : HBD._solvedmatches)
             if (m.getPlayer() == player && m.finished() && getSize(m) == size)
                 insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
@@ -59,7 +58,7 @@ public abstract class Stats {
             if (score >= score(HBD._players.get(i))) --rank;
         }*/
         for (i = 0; i < HBD._players.size(); ++i)
-            if (score > HBD._players.get(i).getPuntuacio()) --rank;
+            if (score >= HBD._players.get(i).getPuntuacio()) --rank; //>= perquè comenci dalt de tot dels iguals al 7 (com el 8)
         return rank;
     }
 
@@ -85,7 +84,7 @@ public abstract class Stats {
     public int countTimesPlayed(Playable game)
     {
         int count = 0;
-        for (stubMatch match : HBD._matches)
+        for (stubMatch match : HBD._solvedmatches)
             if (match.getGame() == game) ++count;
         return count;
     }
@@ -93,7 +92,7 @@ public abstract class Stats {
     public int countTimesSolved(Playable game)
     {
         int count = 0;
-        for (stubMatch match : HBD._matches)
+        for (stubMatch match : HBD._solvedmatches)
             if (match.getGame() == game&& match.finished()) ++count;
         return count;
     }

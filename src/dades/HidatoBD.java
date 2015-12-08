@@ -18,6 +18,9 @@ public class HidatoBD extends DB {
     /** Contains all the matches in progress and finished */
     static  public Table<stubMatch> _matches;
     
+    /** Contains all the matches in progress and finished */
+    static  public Table<stubMatch> _solvedmatches;
+    
     /** Contains all the games in progress and finished */
     static  public Table<stubGame> _games;
     
@@ -37,6 +40,7 @@ public class HidatoBD extends DB {
     public HidatoBD()
     {
         _players = new Table<>();
+        _solvedmatches = new Table<>();
         _matches = new Table<>();
         _games = new Table<>();
         _boards = new Table<>();
@@ -55,6 +59,7 @@ public class HidatoBD extends DB {
     public void save()
     {
         _players.save(getOutputStream("players"));
+        _solvedmatches.save(getOutputStream("solvedmatches"));
         _matches.save(getOutputStream("matches"));
         _games.save(getOutputStream("games"));
         _boards.save(getOutputStream("boards"));
@@ -65,6 +70,10 @@ public class HidatoBD extends DB {
     
     public void savePlayers() {
         _players.save(getOutputStream("players"));
+    }
+    
+    public void saveSolvedMatches() {
+         _solvedmatches.save(getOutputStream("solvedmatches"));
     }
     
     public void saveMatches() {
@@ -96,6 +105,11 @@ public class HidatoBD extends DB {
     {
         try {
             _players.load(getInputStream("players"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+        try {
+            _solvedmatches.load(getInputStream("solvedmatches"));
         } catch (IOException e) {
             System.err.println("Table not found");
         }
@@ -137,6 +151,14 @@ public class HidatoBD extends DB {
         } catch (IOException e) {
             System.err.println("Table not found");
         }
+    }
+    
+    public void loadSolvedMatches() {
+        try {
+            _solvedmatches.load(getInputStream("solvedmatches"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }    
     }
     
     public void loadMatches() {
