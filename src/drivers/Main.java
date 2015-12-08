@@ -495,10 +495,10 @@ public class Main {
                     int option;
         do {
             System.out.println("Estadistiques de jugador | Tria una opcio:");
-            System.out.println("1. Partides Totals");
-            System.out.println("2. Jocs diferents solucionades");
-            System.out.println("3. Jocs diferents solucionats per dificultat");
-            System.out.println("4. Posicio al ranking ");
+            System.out.println("1. Partides totals solucionades");
+            System.out.println("2. Taulells diferents solucionats per dificultat");
+            System.out.println("3. Posicio al ranking ");
+            System.out.println("4. Consulta puntuacio ");
             System.out.println("0. Torna al menu");
                       
             option = input.nextInt();
@@ -510,19 +510,18 @@ public class Main {
                         System.out.println("Jugador "+username+" ha jugat "+_stats.countMatches(Jugador)+" partides.");
                         break;
                     case 2:
-                        System.out.println("Jugador "+username+" ha solucionat "+
-                                _stats.countSolvedGames(Jugador)+" jocs diferents.");
-                        break;
-                    case 3:
                         System.out.println("Entra un nivell de dificultat (1-3).");
                         int difficulty = input.nextInt();
                         System.out.println("Jugador "+username+" ha solucionat "+_stats.countSolvedDiff
                                 (difficulty,Jugador)+" jocs diferents en dificultat "+difficulty+".");
                         break;
-                    case 4:
+                    case 3:
                         System.out.println("Jugador "+username+" esta la posicio "+
                                 (_stats.rank(Jugador)+1) +" del ranking global."); //+1 perquè comença al 0
                         break;
+                    case 4:
+                        System.out.println("Puntuacio total: " + Jugador.getPuntuacio());
+                        break;    
                 }
             }
             System.out.println();
@@ -557,21 +556,9 @@ public class Main {
                 case 5:
                     System.out.println("Nombre de partides solucionades en el programa: "+_stats.countSolvedMatches()+".");
                     break;    
-                /*case 6:
-                    System.out.println("E");
-                    int diff = input.nextInt();
-                    System.out.println("Position | Player | Games of size" +diff);
-                    print(_stats.rankingDifficulty(diff));
-                    break;
-                case 7:
-                    System.out.println("Enter a size");
-                    int siz = input.nextInt();
-                    System.out.println("Position | Player | Games of Size "+siz);
-                    print(_stats.rankingSize(siz));
-                    break;*/
                 case 0: break;
                 default:
-                    System.out.println("Not an option.");
+                    System.out.println("No es una opcio");
                     break;
             }
             System.out.println();
