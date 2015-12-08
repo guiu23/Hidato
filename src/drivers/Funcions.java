@@ -37,6 +37,26 @@ public class Funcions {
         if (!done) System.out.println("El taulell no existeix.");
     }
     
+    public static void borrarMatches(String nom){
+       HBD.loadMatches();
+       for(int i = 0; i < HBD._matches.size(); ++i) {
+            if (HBD._matches.get(i).getPlayer().getName().equals(nom)) {
+                HBD._matches.remove(i);
+            }
+        }
+       HBD.saveMatches();
+    }
+    
+    public static void borrarMatchesResolts(String nom) {
+       HBD.loadSolvedMatches();
+       for (int i = 0; i < HBD._solvedmatches.size();++i) {
+           if (HBD._solvedmatches.get(i).getPlayer().getName().equals(nom)) {
+               HBD._solvedmatches.remove(i);
+           }
+       }
+       HBD.saveSolvedMatches();
+    }
+    
     public static int triaDificultat (BoardHidato Taulell) {
         double cont_inv = 0;
         double cont_writ = 0;
@@ -120,6 +140,8 @@ public class Funcions {
         }
         return 1;
     }
+    
+    
 
     public static void copiarBoard(BoardHidato TaulellCopiat, BoardHidato Taulell) {
         for (int i = 0; i < Taulell.getSize();i++) {
