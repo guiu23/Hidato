@@ -142,6 +142,7 @@ public class Main {
             System.out.println("2 : Carregar un taulell ja creat.");
             System.out.println("3 : Modificar un taulell ja creat.");
             System.out.println("4 : Esborrar un taulell.");
+            System.out.println("5 : Carregar partida anterior");
             select = 0;
             String id = null;
             Boolean b2 = false;
@@ -231,6 +232,12 @@ public class Main {
                         HBD.saveBoardsResolts();
                     }
                 }
+                else if (select == 5) {
+                    System.out.println("Escriu el nom de la partida a carregar");
+                    //Funcio que treu matches per pantalla
+                    String nomM = input.next(); 
+                }
+                else if (select > 5) System.out.println("No es una opcio");
             }
             
             HBD._games.add(new stubGame(gameID, size, dificultat));
@@ -459,15 +466,21 @@ public class Main {
                             }
                         } else if (entrada2 == -1) {
                             fi_joc = true;
+                            System.out.println("Vols guardar la partida? (0:NO / 1:Si)");
+                            Integer guardar = input.nextInt();
+                            if (guardar == 1) {
+                                HBD._matches.add(m);
+                                HBD.saveMatches();
+                            }
                         }
                         if (fi_joc == false) {
                             System.out.println("Taulell:");
                             Funcions.imprimeixValors(TaulellAux);
                             System.out.println("Estas al menu de partida.");
                             entrada2 = input.nextInt();
-                        } else { 
+                        } /*else { 
                             HBD._matches.add(m);
-                        }
+                        }*/
                     }
                     fi_joc = false;
                 } else if(entrada == 7) {
