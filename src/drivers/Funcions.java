@@ -37,7 +37,7 @@ public class Funcions {
         if (!done) System.out.println("El taulell no existeix.");
     }
     
-    public static void borrarMatches(String nom){
+    public static void borrarMatches(String nom){ //
        HBD.loadMatches();
        for(int i = 0; i < HBD._matches.size(); ++i) {
             if (HBD._matches.get(i).getPlayer().getName().equals(nom)) {
