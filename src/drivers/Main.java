@@ -170,7 +170,9 @@ public class Main {
                         for(int i = 0; i < HBD._boards.size() && !trobat; ++i) {
                             if (HBD._boards.get(i).getID().equals(nomT)) {
                                 TaulellAux2 = HBD._boards.get(i);
+                                Funcions.imprimeixValors(TaulellAux2);
                                 id = TaulellAux2.getID();
+                                dificultat = Funcions.triaDificultat(TaulellAux2);
                                 trobat = true;
                             }
                         }
@@ -200,7 +202,7 @@ public class Main {
                         //Funcio de eliminar taulell i el seu resolt
                         Funcions.borrarTaulell(nomT);
                         Funcions.netejaBoard(TaulellAux2); //neteja
-                        Funcions.llegirTaulell(TaulellAux2);
+                        dificultat = Funcions.llegirTaulell(TaulellAux2);
                         HBD.saveBoards();
                         HBD.saveBoardsResolts();
                     }
@@ -236,18 +238,18 @@ public class Main {
                 else if (select > 5) System.out.println("No es una opcio");
             }
             
-            HBD._games.add(new stubGame(gameID, size, dificultat));
-            HBD.saveGames();
             BoardHidato Taulell = new BoardHidato(size,id);
+            
             if (select == 2) Taulell = TaulellAux2;
             Game Joc = new Game(gameID, dificultat, Taulell);
             
             
             
-            if (select == 0) {
+           if (select == 0) {
                 System.out.println("Introdueix els valors del taullel per ordre.");
                 System.out.println("(Recorda: Com a minim s'han d'introduir el primer i ultim valor del Hidato. 0 = cela buida, -1 = cela invalida.)");
-                Funcions.llegirTaulell(Taulell);
+                dificultat = Funcions.llegirTaulell(Taulell);
+                Joc.setDifficult(dificultat);
                 
                 
                 /*for(int i = 0; i< HBD._boards.size(); ++i)    PER COMPROVAR SI GUARDA TAULELLS BD
@@ -271,6 +273,11 @@ public class Main {
                 Funcions.imprimeixValors(HBD._temporalResolts.get(i));*/
                 generat = true;
             }
+           
+           HBD._games.add(new stubGame(gameID, size, dificultat));
+           HBD.saveGames();
+            
+            
 
             Boolean fi_joc = false;
 
@@ -308,13 +315,13 @@ public class Main {
                 } else if (entrada == 2) {
                     System.out.println("L'usuari actual és: " + Jugador.getName());
                 } else if (entrada == 3) {
-                    if (!generat) System.out.println("Dificultat generada pel creador del taulell.");
-                    else {
+                    //if (!generat) System.out.println("Dificultat generada pel creador del taulell.");
+                    //else {
                         System.out.print("La dificultat és: ");
                         if (Joc.getDifficulty() == 1) System.out.println("facil.");
                         else if (Joc.getDifficulty() == 2) System.out.println("mitja.");
                         else if (Joc.getDifficulty() == 3) System.out.println("dificil. ");
-                    }
+                    //}
                 } else if(entrada == 4) {
                     System.out.println("Taulell actual:");
                     Funcions.imprimeixValors(Taulell);
