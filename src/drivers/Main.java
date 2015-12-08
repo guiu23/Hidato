@@ -471,6 +471,7 @@ public class Main {
                             if (guardar == 1) {
                                 HBD._matches.add(m);
                                 HBD.saveMatches();
+                                System.out.println("Partida Guardada");
                             }
                         }
                         if (fi_joc == false) {
