@@ -15,9 +15,6 @@ import java.util.*;
  */
 
 public class Main {
-    /*static Table<Player> _players;
-    static Table<BoardHidato> _boards;
-    static Table<Match> _matches;*/
     static HidatoBD HBD;
     static HidatoStats _stats;
     static PlayersAdmin admin;
@@ -29,8 +26,6 @@ public class Main {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
-        //_players = new Table<Player>();
-        //HBD.save();
         HBD.load();
         admin = HBD.getPlayersAdmin();
         int size;
@@ -448,6 +443,7 @@ public class Main {
                             }
                             if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  //AQUI ANAVA LA FUNCIO TAJA 
                                 System.out.println("Ben resolt! Felicitats :)");
+                                System.out.println("Punts Partida: " + Partida.getResult()*size); 
                                 int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
                                 Jugador.SetPuntuacio(puntuacioF);
                                 m.setTime(1);
@@ -457,7 +453,7 @@ public class Main {
                                         HBD._players.get(i).SetPuntuacio(puntuacioF);
                                         b=true;
                                         HBD.savePlayers();
-                                        System.out.println("Punts Totals:" + HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
+                                        System.out.println("Punts Totals de " + HBD._players.get(i).getName() + ": "+ HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
                                     }
                                 }
                                 fi_joc = true;
@@ -465,6 +461,9 @@ public class Main {
                             else {
                                 System.out.println("Mal resolt :( Tornar-ho a intentar.");
                             }
+                        } if (fi_joc == true) { 
+                            HBD._solvedmatches.add(m);
+                            HBD.saveSolvedMatches();
                         } else if (entrada2 == -1) {
                             fi_joc = true;
                             System.out.println("Vols guardar la partida? (0:NO / 1:Si)");
@@ -480,80 +479,93 @@ public class Main {
                             Funcions.imprimeixValors(TaulellAux);
                             System.out.println("Estas al menu de partida.");
                             entrada2 = input.nextInt();
-                        } else { 
-                            HBD._solvedmatches.add(m);
-                            HBD.saveSolvedMatches();
-                        }
+                        } 
                     }
                     fi_joc = false;
                 } else if(entrada == 7) {
                     int option;
         do {
-            System.out.println("Player Stats | Select an option:  1. countMatches" +
-                    "  2. countSolvedGames  3. countSolvedGamesDiff  4. rank  0. Return");
+            System.out.println("Estadistiques de jugador | Tria una opcio:");
+            System.out.println("1. Partides Totals");
+            System.out.println("2. Jocs diferents solucionades");
+            System.out.println("3. Jocs diferents solucionats per dificultat");
+            System.out.println("4. Posicio al ranking ");
+            System.out.println("0. Torna al menu");
+                      
             option = input.nextInt();
-            if (option < 0 || 4 < option)System.out.println("Not an option.");
+            if (option < 0 || 4 < option)System.out.println("No es una opcio.");
             else if (option != 0) {
                 String username = Jugador.getName();
                 switch (option) {
                     case 1:
-                        System.out.println("Player "+username+" has played "+_stats.countMatches(Jugador)+" matches.");
+                        System.out.println("Jugador "+username+" ha jugat "+_stats.countMatches(Jugador)+" partides.");
                         break;
                     case 2:
-                        System.out.println("Player "+username+" has solved "+
-                                _stats.countSolvedGames(Jugador)+" distinct games.");
+                        System.out.println("Jugador "+username+" ha solucionat "+
+                                _stats.countSolvedGames(Jugador)+" jocs diferents.");
                         break;
                     case 3:
-                        System.out.println("Enter a difficulty level.");
+                        System.out.println("Entra un nivell de dificultat (1-3).");
                         int difficulty = input.nextInt();
-                        System.out.println("Player "+username+" has solved "+_stats.countSolvedDiff
-                                (difficulty,Jugador)+" distinct games of difficulty "+difficulty+".");
+                        System.out.println("Jugador "+username+" ha solucionat "+_stats.countSolvedDiff
+                                (difficulty,Jugador)+" jocs diferents en dificultat "+difficulty+".");
                         break;
                     case 4:
-                        System.out.println("Player "+username+" is ranked "+
-                                (_stats.rank(Jugador)+1) +" in the game global ranking."); //+1 perquè comença al 0
-                        break;
-                    case 5:
-                        System.out.println("Invalid username.");
+                        System.out.println("Jugador "+username+" esta la posicio "+
+                                (_stats.rank(Jugador)+1) +" del ranking global."); //+1 perquè comença al 0
                         break;
                 }
             }
+            System.out.println();
         } while (option != 0);
                 } else if(entrada == 8) {
                      int option;
         do {
-           System.out.println("Global Stats | Select an option:  1. rankingGlobal" +
-                    "  2. countPlayers  3. countGames " +
-                    "  0. Return");
+           System.out.println("Estadistiques Globals | Tria una opcio:");
+          
+            System.out.println("1. Ranking Global");
+            System.out.println("2. Numero de jugadors totals");
+            System.out.println("3. Numero de jocs totals ");
+            System.out.println("4. Numero de partides guardades totals ");
+            System.out.println("5. Numero de partides solucionades totals ");
+            System.out.println("0. Torna al menu");
+            
             option = input.nextInt();
             switch (option) {
                 case 1:
-                    System.out.println("Position | Player | Score");
+                    System.out.println("Posicio | Jugador | Puntuacio");
                     print(_stats.rankingGlobal());
                     break;
                 case 2:
-                    System.out.println("Number of players in the program: "+_stats.countPlayers()+".");
+                    System.out.println("Nombre de jugadors en el programa: "+_stats.countPlayers()+".");
                     break;
                 case 3:
-                    System.out.println("Number of games in the program: "+_stats.countGames()+".");
+                    System.out.println("Nombre de jocs en el programa: "+_stats.countGames()+".");
                     break;
+                case 4:
+                    System.out.println("Nombre de partides guardades en el programa: "+_stats.countMatches()+".");
+                    break;    
                 case 5:
-                    System.out.println("Enter a difficulty");
+                    System.out.println("Nombre de partides solucionades en el programa: "+_stats.countSolvedMatches()+".");
+                    break;    
+                /*case 6:
+                    System.out.println("E");
                     int diff = input.nextInt();
                     System.out.println("Position | Player | Games of size" +diff);
                     print(_stats.rankingDifficulty(diff));
                     break;
-                case 6:
+                case 7:
                     System.out.println("Enter a size");
                     int siz = input.nextInt();
                     System.out.println("Position | Player | Games of Size "+siz);
                     print(_stats.rankingSize(siz));
-                    break;
+                    break;*/
                 case 0: break;
                 default:
                     System.out.println("Not an option.");
                     break;
             }
+            System.out.println();
         } while (option != 0);
                     
                 } else {

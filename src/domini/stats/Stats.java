@@ -65,7 +65,7 @@ public abstract class Stats {
     public int bestTime(Player player, Playable game)
     {
         int time = -1;
-        for (stubMatch m : HBD._matches)
+        for (stubMatch m : HBD._solvedmatches)
             if (m.getPlayer() == player && m.getGame() == game) {
                 if (time > m.computeTime()) time = m.computeTime();
                 else if (time == -1) time = m.computeTime();
@@ -131,6 +131,11 @@ public abstract class Stats {
     public int countMatches() {
         HBD.loadMatches();
         return HBD._matches.size(); 
+    }
+    
+    public int countSolvedMatches() {
+        HBD.loadSolvedMatches();
+        return HBD._solvedmatches.size(); 
     }
 
     public int countGamesSize(int size)

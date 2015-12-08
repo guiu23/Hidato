@@ -89,6 +89,11 @@ public class Jugar3 extends javax.swing.JFrame {
                 primeraMouseClicked(evt);
             }
         });
+        primera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeraActionPerformed(evt);
+            }
+        });
         getContentPane().add(primera);
         primera.setBounds(210, 170, 60, 60);
 
@@ -324,6 +329,10 @@ public class Jugar3 extends javax.swing.JFrame {
     private void primeraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primeraMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_primeraMouseClicked
+
+    private void primeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_primeraActionPerformed
 
     
     /**
