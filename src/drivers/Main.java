@@ -117,7 +117,7 @@ public class Main {
                     if (admin.checkLogin(nom, password)) {
                         Funcions.borrarMatches(nom);  //BORRAR MATCHES DEL PLAYER
                         Funcions.borrarMatchesResolts(nom);  //BORRAR MATCHES RESOLTS DEL PLAYER
-                        admin.removePlayer(nom, password);  //BORRAR PLAYER
+                        admin.removePlayer(nom, password);   //BORRAR PLAYER
                         System.out.println("Jugador eliminat");
                     }
                     else System.out.println("Contrasenya Incorrecte");
