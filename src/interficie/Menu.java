@@ -110,7 +110,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogOut);
-        LogOut.setBounds(850, 520, 120, 30);
+        LogOut.setBounds(860, 510, 120, 30);
 
         jButton3.setText("SORTIR");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -124,13 +124,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(20, 510, 80, 40);
+        jButton3.setBounds(20, 500, 80, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
 
         JugarPartida.setBackground(new java.awt.Color(0, 0, 0));
-        JugarPartida.setForeground(new java.awt.Color(255, 255, 255));
         JugarPartida.setText("Jugar Partida");
 
         NovaPartida.setText("Nova Partida");
@@ -164,7 +163,6 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(JugarPartida);
 
         CrearMapa.setBackground(new java.awt.Color(0, 0, 0));
-        CrearMapa.setForeground(new java.awt.Color(255, 255, 255));
         CrearMapa.setText("Crear Mapa");
 
         CrearMapaNou.setText("Crear Mapa Nou");
@@ -194,7 +192,6 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(CrearMapa);
 
         Ranking.setBackground(new java.awt.Color(0, 0, 0));
-        Ranking.setForeground(new java.awt.Color(255, 255, 255));
         Ranking.setText("Ranking");
 
         jMenu6.setText("jMenu6");
