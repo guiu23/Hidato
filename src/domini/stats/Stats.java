@@ -31,17 +31,6 @@ public abstract class Stats {
         return count;
     }
 
-    public int countSolvedGames(Player player)
-    {
-        HBD.loadSolvedMatches();
-        ArrayList<Integer> countedGames = new ArrayList<>();
-        for (stubMatch m : HBD._solvedmatches) {
-            if (m.getPlayer().equals(player) && m.finished())
-                insert_no_repeat(countedGames, m.getGame().getID());
-        }
-        return countedGames.size();
-    }
-
     public int countSolvedSize(int size, Player player)
     {
         HBD.loadSolvedMatches();
@@ -66,44 +55,6 @@ public abstract class Stats {
         for (i = 0; i < HBD._players.size(); ++i)
             if (score >= HBD._players.get(i).getPuntuacio()) --rank; //>= perquè comenci dalt de tot dels iguals al 7 (com el 8)
         return rank;
-    }
-
-    public int bestTime(Player player, Playable game)
-    {
-        HBD.loadSolvedMatches();
-        int time = -1;
-        for (stubMatch m : HBD._solvedmatches)
-            if (m.getPlayer().equals(player) && m.getGame() == game) {
-                if (time > m.computeTime()) time = m.computeTime();
-                else if (time == -1) time = m.computeTime();
-            }
-        return time;
-    }
-
-    /////// GAME STATS //////////////////////////////////////////////////////////////////////
-    public Ranking recordsGame(Playable game)
-    {
-        ArrayList<Integer> bestTimes = new ArrayList<>();
-        for (Player p : HBD._players) bestTimes.add(bestTime(p,game));
-        return new Ranking(HBD._players,bestTimes,true);
-    }
-
-    public int countTimesPlayed(Playable game)
-    {
-        HBD.loadSolvedMatches();
-        int count = 0;
-        for (stubMatch match : HBD._solvedmatches)
-            if (match.getGame().equals(game)) ++count;
-        return count;
-    }
-
-    public int countTimesSolved(Playable game)
-    {
-        HBD.loadSolvedMatches();
-        int count = 0;
-        for (stubMatch match : HBD._solvedmatches)
-            if (match.getGame().equals(game) && match.finished()) ++count;
-        return count;
     }
 
     /////// GLOBAL STATS ///////////////////////////////////////////////////////////////////

@@ -554,21 +554,9 @@ public class Main {
                 case 5:
                     System.out.println("Nombre de partides solucionades en el programa: "+_stats.countSolvedMatches()+".");
                     break;    
-                /*case 6:
-                    System.out.println("E");
-                    int diff = input.nextInt();
-                    System.out.println("Position | Player | Games of size" +diff);
-                    print(_stats.rankingDifficulty(diff));
-                    break;
-                case 7:
-                    System.out.println("Enter a size");
-                    int siz = input.nextInt();
-                    System.out.println("Position | Player | Games of Size "+siz);
-                    print(_stats.rankingSize(siz));
-                    break;*/
                 case 0: break;
                 default:
-                    System.out.println("Not an option.");
+                    System.out.println("No es una opcio");
                     break;
             }
             System.out.println();
