@@ -106,7 +106,7 @@ public class Menu extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(170, 140, 320, 100);
+        titol.setBounds(180, 110, 320, 100);
 
         jButton1.setText("Tancar sessió");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,7 +120,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(540, 410, 120, 30);
+        jButton1.setBounds(540, 390, 120, 30);
 
         jButton3.setText("SORTIR");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -134,7 +134,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(20, 390, 80, 40);
+        jButton3.setBounds(10, 380, 80, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
