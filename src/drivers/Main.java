@@ -115,7 +115,9 @@ public class Main {
                     System.out.println("Entra contrassenya:  ");
                     password = input.next();
                     if (admin.checkLogin(nom, password)) {
-                        admin.removePlayer(nom, password);
+                        Funcions.borrarMatches(nom);  //BORRAR MATCHES DEL PLAYER
+                        Funcions.borrarMatchesResolts(nom);  //BORRAR MATCHES RESOLTS DEL PLAYER
+                        admin.removePlayer(nom, password);  //BORRAR PLAYER
                         System.out.println("Jugador eliminat");
                     }
                     else System.out.println("Contrasenya Incorrecte");
