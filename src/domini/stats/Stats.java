@@ -21,27 +21,33 @@ public abstract class Stats {
 
     public int countMatches(Player player)
     {
+        HBD.loadSolvedMatches();
         int count = 0;
         for (stubMatch m: HBD._solvedmatches) {
-            if (m.getPlayer() == player) ++count;
+            if (m.getPlayer().equals(player)) {
+                ++count;
+            }
         }
         return count;
     }
 
     public int countSolvedGames(Player player)
     {
+        HBD.loadSolvedMatches();
         ArrayList<Integer> countedGames = new ArrayList<>();
-        for (stubMatch m : HBD._solvedmatches)
-            if (m.getPlayer() == player && m.finished())
+        for (stubMatch m : HBD._solvedmatches) {
+            if (m.getPlayer().equals(player) && m.finished())
                 insert_no_repeat(countedGames, m.getGame().getID());
+        }
         return countedGames.size();
     }
 
     public int countSolvedSize(int size, Player player)
     {
+        HBD.loadSolvedMatches();
         ArrayList<Integer> countedGames = new ArrayList<>();
         for (Matchable m : HBD._solvedmatches)
-            if (m.getPlayer() == player && m.finished() && getSize(m) == size)
+            if (m.getPlayer().equals(player) && m.finished() && getSize(m) == size)
                 insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
     }
@@ -64,9 +70,10 @@ public abstract class Stats {
 
     public int bestTime(Player player, Playable game)
     {
+        HBD.loadSolvedMatches();
         int time = -1;
         for (stubMatch m : HBD._solvedmatches)
-            if (m.getPlayer() == player && m.getGame() == game) {
+            if (m.getPlayer().equals(player) && m.getGame() == game) {
                 if (time > m.computeTime()) time = m.computeTime();
                 else if (time == -1) time = m.computeTime();
             }
@@ -83,17 +90,19 @@ public abstract class Stats {
 
     public int countTimesPlayed(Playable game)
     {
+        HBD.loadSolvedMatches();
         int count = 0;
         for (stubMatch match : HBD._solvedmatches)
-            if (match.getGame() == game) ++count;
+            if (match.getGame().equals(game)) ++count;
         return count;
     }
 
     public int countTimesSolved(Playable game)
     {
+        HBD.loadSolvedMatches();
         int count = 0;
         for (stubMatch match : HBD._solvedmatches)
-            if (match.getGame() == game&& match.finished()) ++count;
+            if (match.getGame().equals(game) && match.finished()) ++count;
         return count;
     }
 

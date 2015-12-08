@@ -16,9 +16,10 @@ public abstract class DifficultyStats extends Stats {
     /////// PLAYER STATS ////////////////////////////////////////////////////////////////////
     public int countSolvedDiff(int difficulty, Player player)
     {
+        HBD.loadSolvedMatches();
         ArrayList<Integer> countedGames = new ArrayList<>();
         for (Matchable m : HBD._solvedmatches)
-            if (m.getPlayer() == player && m.finished() && getDiff(m) == difficulty)
+            if (m.getPlayer().equals(player) && m.finished() && getDiff(m) == difficulty)
                 super.insert_no_repeat(countedGames, m.getGame().getID());
         return countedGames.size();
     }
