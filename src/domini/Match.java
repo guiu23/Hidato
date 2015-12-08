@@ -15,6 +15,7 @@ public class Match implements Serializable {
     private int time;
     private int hints; //número de pistes que porta el player.
     private int result; //resultat de puntuació final del Match.
+    private String nomM;
 
     public Match(Game Joc, Player Jugador) {
         //hem d'agafar el idi del player q esta iniciat a la base de dades i el id del Game
@@ -57,4 +58,15 @@ public class Match implements Serializable {
     public int getGameId() {
         return Joc.getID();
     }
+    
+    public void setnomM(String nomM) {
+       this.nomM = nomM;
+    }
+    
+    public String getnomM() {
+        return nomM;
+    }
+    
+        
+    
 }
