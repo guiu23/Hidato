@@ -25,8 +25,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
-        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         HBD.load();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
+        //HBD.load();
         admin = HBD.getPlayersAdmin();
         int size;
         int select;
@@ -55,6 +56,7 @@ public class Main {
             entrada = input.nextInt();
             if (entrada == 0){
                 System.out.println("Entra nom de jugador:  ");
+                HBD.loadPlayers();
                 nom = input.next();
                 //System.out.println(nom);
                 if (admin.exists(nom)) System.out.println("Aquest nom de jugador ja existex");
@@ -62,9 +64,9 @@ public class Main {
                     System.out.println("Entra contrassenya:  ");
                     password = input.next();
                     Boolean exit = admin.createPlayer(nom, password);
-                    for (int i = 0; i < HBD._players.size(); ++i){
-                        if (HBD._players.get(i).getName().equals(nom)){   
-                            Jugador = HBD._players.get(i);
+                    for (int i = 0; i < admin._players.size(); ++i){
+                        if (admin._players.get(i).getName().equals(nom)){   
+                            Jugador = admin._players.get(i);
                             System.out.println("Creat amb exit");
                             if(exit) b=true;
                         }
@@ -74,6 +76,7 @@ public class Main {
             
             
             else if (entrada == 1){
+                HBD.loadPlayers();
                 System.out.println("Entra nom de jugador:  ");
                 nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
@@ -81,9 +84,9 @@ public class Main {
                     System.out.println("Entra contrassenya:  ");
                     password = input.next();
                     if (admin.checkLogin(nom, password)) {
-                        for (int i = 0; i < HBD._players.size(); ++i){
-                            if (HBD._players.get(i).getName().equals(nom)){   
-                            Jugador = HBD._players.get(i);
+                        for (int i = 0; i < admin._players.size(); ++i){
+                            if (admin._players.get(i).getName().equals(nom)){   
+                            Jugador = admin._players.get(i);
                             System.out.println("Contrassenya correcte");
                             b=true;
                             }
@@ -94,6 +97,7 @@ public class Main {
             }
             
             else if (entrada == 2){
+                HBD.loadPlayers();
                 System.out.println("Entra nom de jugador:  ");
                 nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
@@ -109,6 +113,7 @@ public class Main {
             }
             
             else if (entrada == 3){
+                HBD.loadPlayers();
                 System.out.println("Entra nom de jugador:  ");
                 nom = input.next();
                 if (!admin.exists(nom)) System.out.println("Aquest nom de jugador no existex");
@@ -120,12 +125,13 @@ public class Main {
                         Funcions.borrarMatchesResolts(nom);  //BORRAR MATCHES RESOLTS DEL PLAYER
                         admin.removePlayer(nom, password);   //BORRAR PLAYER
                         System.out.println("Jugador eliminat");
-                        HBD.loadPlayers();
+                        
+                        //HBD.loadPlayers();
                     }
                     else System.out.println("Contrasenya Incorrecte");
                 }
             }
-            
+            HBD._players = admin._players;
             HBD.savePlayers();
         }    
         
