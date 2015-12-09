@@ -120,6 +120,7 @@ public class Main {
                         Funcions.borrarMatchesResolts(nom);  //BORRAR MATCHES RESOLTS DEL PLAYER
                         admin.removePlayer(nom, password);   //BORRAR PLAYER
                         System.out.println("Jugador eliminat");
+                        HBD.loadPlayers();
                     }
                     else System.out.println("Contrasenya Incorrecte");
                 }
