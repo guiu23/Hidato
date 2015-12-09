@@ -5,6 +5,7 @@
  */
 package interficie.generar;
 
+import domini.BoardHidato;
 import interficie.Menu;
 
 /**
@@ -21,6 +22,7 @@ public class SeleccioTamanyMapaGenerar extends javax.swing.JFrame {
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        count = "primer"; //contador de taulells
     }
 
     /**
@@ -272,6 +274,7 @@ public class SeleccioTamanyMapaGenerar extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        BoardHidato Taulell = new BoardHidato(2,count);
         Generar2 obj = new Generar2();
         obj.setVisible(true);
         dispose();
@@ -325,4 +328,5 @@ public class SeleccioTamanyMapaGenerar extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+    private String count;
 }
