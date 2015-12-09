@@ -1,5 +1,6 @@
 package drivers;
 import domini.*;
+import domini.stats.*;
 import java.util.*;
 import dades.*;
 
@@ -22,6 +23,16 @@ public class Funcions {
             out.println();
         }
         out.println();
+    }
+    
+    public static stubGame CarregarPartida (String nomM) {
+        HBD.loadMatches();
+        stubGame Joc = null;
+        for (int i = 0; i < HBD._matches.size(); ++i){
+            if (HBD._matches.get(i).getNomM().equals(nomM)) Joc = HBD._matches.get(i).getGame();
+            else System.out.println("La partida guardada no existeix");
+        }
+        return Joc;
     }
     
     public static void borrarTaulell(String nomT){ 
