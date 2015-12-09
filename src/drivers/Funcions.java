@@ -9,6 +9,9 @@ public class Funcions {
     public static boolean solution = false;
     public static int numfinal;
     private static HidatoBD HBD = new HidatoBD();
+    private static int max_cont;
+    
+    
     
     public static void imprimeixValors(BoardHidato Taulell) {
         for (int i = 0; i < Taulell.getSize();i++) {
@@ -68,7 +71,7 @@ public class Funcions {
             }
         }
         cont_val = (Taulell.getSize()*Taulell.getSize()) - cont_inv - 2; //el 2 son el start i el finish, tecnicament que son valides 
-        if ((cont_writ-2) == 0) return 1;
+        if ((cont_writ-2) == 0) return 3;
         double proporcio = (cont_writ-2)/cont_val;
         if (proporcio >= 0.8) return 1;
         else if (proporcio >= 0.6 ) return 2;
@@ -422,7 +425,7 @@ public class Funcions {
         posa_final(Taulell); //POSEM LA ULTIMA CELA AL TAULELL
         //imprimeixValors(Taulell);
         solve(Taulell, size, false);
-        imprimeixValors(Taulell);
+        //imprimeixValors(Taulell);
         if (!solution) {
             netejaBoard(Taulell);
             colocar_celesinvalides(Taulell);
@@ -564,11 +567,16 @@ public class Funcions {
     }
     
     
-    public static void backtrack(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure)   {
+    public static void backtrack(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure, int cont)   {
         // Fent servir el taulell, la matriu de visitats, el punt de start i el punt de finish,
         // resoldre el taulell i posar els valors de caselles not written als que toquen
         Boolean canviat = false;
-        if (comprovar2(Taulell, X, Y, size, startx, starty)) {
+        //imprimeixValors(Taulell);
+        if (cont >= max_cont) {
+            //System.out.println("OUT");
+            return;
+        }
+        else if (comprovar2(Taulell, X, Y, size, startx, starty)) {
             if (escriure) imprimeixValors(Taulell);
             solution = true;
         }
@@ -583,7 +591,10 @@ public class Funcions {
                                     canviat = true;
                                 }
                                 visitats[startx + X[i]][starty + Y[i]] = true;
-                                backtrack(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure);
+                                //System.out.println("X "+(startx + X[i]));
+                                //System.out.println("Y "+(startx + Y[i]));
+                                //System.out.println(cont);
+                                backtrack(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure, cont+1);
                                 visitats[startx + X[i]][starty + Y[i]] = false;
                                 if (canviat) {
                                     Taulell.setValueCell(0, startx + X[i], starty + Y[i]);
@@ -627,7 +638,8 @@ public class Funcions {
             }
         }
         int current = 2;
-        backtrack(Taulell, visitats, startx, starty, X, Y, current,size, escriure);  //resoldre taulell
+        max_cont = size*size;
+        backtrack(Taulell, visitats, startx, starty, X, Y, current,size, escriure, 0);  //resoldre taulell
     }
    
 
