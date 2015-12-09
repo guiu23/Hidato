@@ -8,7 +8,7 @@ import domini.stats.stubMatch;
 import java.io.IOException;
 
 /**
- * Class used only in the Ken-Ken program to store the program data dynamically and statically
+ * 
  */
 public class HidatoBD extends DB {
 
