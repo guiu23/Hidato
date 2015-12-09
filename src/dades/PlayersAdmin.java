@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class PlayersAdmin {
 
     /** Contains all the players from the DB */
-    Table<Player> _players;
+    public Table<Player> _players;
 
     /**
      * PlayersAdmin constructor, creates a player administrator
