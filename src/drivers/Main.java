@@ -592,7 +592,7 @@ public class Main {
      private static void print(Ranking ranking)
     {
         int size = ranking.getSize();
-        if (size == 0) System.out.println("This ranking is void.");
+        if (size == 0) System.out.println("El ranking es buit.");
         else {
             int digits = digits(size);
             HBD.loadPlayers();
