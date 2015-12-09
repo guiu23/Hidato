@@ -537,9 +537,8 @@ public class Main {
           
             System.out.println("1. Ranking Global");
             System.out.println("2. Numero de jugadors totals");
-            System.out.println("3. Numero de jocs totals ");
-            System.out.println("4. Numero de partides guardades totals ");
-            System.out.println("5. Numero de partides solucionades totals ");
+            System.out.println("3. Numero de partides guardades totals ");
+            System.out.println("4. Numero de partides solucionades totals ");
             System.out.println("0. Torna al menu");
             
             option = input.nextInt();
@@ -552,12 +551,9 @@ public class Main {
                     System.out.println("Nombre de jugadors en el programa: "+_stats.countPlayers()+".");
                     break;
                 case 3:
-                    System.out.println("Nombre de jocs en el programa: "+_stats.countGames()+".");
-                    break;
-                case 4:
                     System.out.println("Nombre de partides guardades en el programa: "+_stats.countMatches()+".");
                     break;    
-                case 5:
+                case 4:
                     System.out.println("Nombre de partides solucionades en el programa: "+_stats.countSolvedMatches()+".");
                     break;    
                 case 0: break;
