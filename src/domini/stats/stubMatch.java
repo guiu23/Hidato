@@ -6,6 +6,7 @@ import domini.Player;
 public class stubMatch implements Matchable {
     Player player;
     stubGame game;
+    String nomM;
 
     int time;   // seconds
     int hints;
@@ -38,4 +39,8 @@ public class stubMatch implements Matchable {
         if (result == -1) return -1;
         else return time + hints*10;
     }
+    
+    public void setNomM(String nomM) { this.nomM = nomM; }
+    
+    public String getNomM() { return nomM; }
 }
