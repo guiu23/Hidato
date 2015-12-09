@@ -243,15 +243,23 @@ public class Main {
                         HBD.saveBoardsResolts();
                     }
                 }
-                else if (select == 5) {
-                    System.out.println("Escriu el nom de la partida a carregar");
-                    //Funcio que treu matches per pantalla
-                    String nomM = input.next(); 
-                }
+                //else 
                 else if (select > 5) System.out.println("No es una opcio");
             }
             
             BoardHidato Taulell = new BoardHidato(size,id);
+            
+            if (select == 5) {
+                    System.out.println("Escriu el nom de la partida a carregar");
+                    //Funcio que treu matches per pantalla
+                    String nomM = input.next(); 
+                    stubGame Carregat = Funcions.CarregarPartida(nomM);
+                    if (Carregat != null) {
+                        gameID = Carregat.getID();
+                        dificultat = Carregat.getDifficulty();
+                        Taulell = Carregat.getBoard();
+                    }
+            }
             
             if (select == 2) Taulell = TaulellAux2;
             Game Joc = new Game(gameID, dificultat, Taulell);
@@ -287,7 +295,7 @@ public class Main {
                 generat = true;
             }
            
-           HBD._games.add(new stubGame(gameID, size, dificultat));
+           HBD._games.add(new stubGame(gameID, size, dificultat,Taulell));
            HBD.saveGames();
             
             
