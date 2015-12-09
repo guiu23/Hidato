@@ -144,6 +144,15 @@ public class Funcions {
         return 1;
     }
     
+    public static boolean ExisteixTaulell (String id) {
+        HBD.loadBoards();
+        boolean trobat = false;
+        for (int i = 0; i < HBD._boards.size() && !trobat; ++i){
+            if (HBD._boards.get(i).getID().equals(id)) trobat = true;
+        }
+        return trobat;
+    } 
+    
     
 
     public static void copiarBoard(BoardHidato TaulellCopiat, BoardHidato Taulell) {
