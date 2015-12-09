@@ -152,9 +152,12 @@ public class Main {
                 if (select == 0) {
                     System.out.println("Introdueix el nom del taulell");
                     id = input.next();
-                    temporal = false;
-                    dificultat = 1;
-                    b2 = true;
+                    if (!Funcions.ExisteixTaulell(id)){
+                        temporal = false;
+                        dificultat = 1;
+                        b2 = true;
+                    }
+                    else System.out.println("El nom introfuit ja existeix");
                 } else if ( select == 1){
                     System.out.println("Introdueix la dificultat (1 = facil, 2 = mitja, 3 = dificil)");
                     id = "temporal";
