@@ -33,4 +33,8 @@ public class stubGame implements Playable {
     public BoardHidato getBoard() {
         return _GameBoard;
     }
+    
+    public void setBoard (BoardHidato board){
+        this._GameBoard = board;
+    }
 }
