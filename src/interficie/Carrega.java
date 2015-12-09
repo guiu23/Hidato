@@ -5,6 +5,11 @@
  */
 package interficie;
 
+import dades.HidatoBD;
+import dades.PlayersAdmin;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jordi.guiu.pujols
@@ -33,8 +38,8 @@ public class Carrega extends javax.swing.JFrame {
         enrere = new javax.swing.JButton();
         titol = new javax.swing.JTextArea();
         user = new javax.swing.JTextField();
-        entra = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        carrega = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
 
@@ -85,18 +90,18 @@ public class Carrega extends javax.swing.JFrame {
         getContentPane().add(user);
         user.setBounds(330, 270, 270, 50);
 
-        entra.setText("Carregar");
-        entra.addActionListener(new java.awt.event.ActionListener() {
+        carrega.setText("Carregar");
+        carrega.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entraActionPerformed(evt);
+                carregaActionPerformed(evt);
             }
         });
-        getContentPane().add(entra);
-        entra.setBounds(680, 290, 110, 100);
+        getContentPane().add(carrega);
+        carrega.setBounds(680, 290, 110, 100);
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(400, 350, 210, 50);
+        password.setText("jPasswordField1");
+        getContentPane().add(password);
+        password.setBounds(400, 350, 210, 50);
 
         text_nom.setEditable(false);
         text_nom.setBackground(new java.awt.Color(0, 0, 0));
@@ -159,12 +164,24 @@ public class Carrega extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userActionPerformed
 
-    private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
+    private void carregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carregaActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
-        obj.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_entraActionPerformed
+        
+        HidatoBD HBD = new HidatoBD();
+        HBD.loadPlayers();
+        PlayersAdmin admin = HBD.getPlayersAdmin();
+        JFrame frame = new JFrame("Carregar");
+        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix");
+        else {
+            if (admin.checkLogin(user.getText(), password.getText())) { //FALTA POSAR COM CARREGAR EL JUGADOR AMB EL QUE ES JUGA LA PARTIDA
+                JOptionPane.showMessageDialog(frame,"Contrassenya correcta");
+                Menu obj = new Menu();
+                obj.setVisible(true);
+                dispose();
+            }
+            else JOptionPane.showMessageDialog(frame,"Contrassenya incorrecta");
+        }
+    }//GEN-LAST:event_carregaActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
         // TODO add your handling code here:
@@ -222,9 +239,9 @@ public class Carrega extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton carrega;
     private javax.swing.JButton enrere;
-    private javax.swing.JButton entra;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
     private javax.swing.JTextArea titol;

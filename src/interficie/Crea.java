@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package interficie;
+import dades.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,8 +36,8 @@ public class Crea extends javax.swing.JFrame {
         enrere = new javax.swing.JButton();
         titol = new javax.swing.JTextArea();
         user = new javax.swing.JTextField();
-        entra = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        Crea = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
 
@@ -85,18 +88,18 @@ public class Crea extends javax.swing.JFrame {
         getContentPane().add(user);
         user.setBounds(330, 270, 270, 50);
 
-        entra.setText("Crear");
-        entra.addActionListener(new java.awt.event.ActionListener() {
+        Crea.setText("Crear");
+        Crea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entraActionPerformed(evt);
+                CreaActionPerformed(evt);
             }
         });
-        getContentPane().add(entra);
-        entra.setBounds(680, 290, 110, 100);
+        getContentPane().add(Crea);
+        Crea.setBounds(680, 290, 110, 100);
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(400, 350, 210, 50);
+        password.setText("jPasswordField1");
+        getContentPane().add(password);
+        password.setBounds(400, 350, 210, 50);
 
         text_nom.setEditable(false);
         text_nom.setBackground(new java.awt.Color(0, 0, 0));
@@ -159,13 +162,24 @@ public class Crea extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userActionPerformed
 
-    private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
+    private void CreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreaActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
-        obj.setVisible(true);
-        dispose();
-        
-    }//GEN-LAST:event_entraActionPerformed
+        HidatoBD HBD = new HidatoBD();
+        HBD.loadPlayers();
+        PlayersAdmin admin = HBD.getPlayersAdmin();
+        JFrame frame = new JFrame("Usuari creat");
+        if (admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"Aquest usuari ja existeix");
+        else {
+            boolean creat = admin.createPlayer(user.getText(),password.getText());
+            if (creat) JOptionPane.showMessageDialog(frame,"Usuari creat correctament");
+            HBD.savePlayers();
+            /*for(int i = 0; i<HBD._players.size(); ++i)                PER MIRAR SI EL CREA BÉ
+                JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
+            Menu obj = new Menu();
+            obj.setVisible(true);
+            dispose();
+        }
+    }//GEN-LAST:event_CreaActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
         // TODO add your handling code here:
@@ -231,9 +245,9 @@ public class Crea extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Crea;
     private javax.swing.JButton enrere;
-    private javax.swing.JButton entra;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
     private javax.swing.JTextArea titol;

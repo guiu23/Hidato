@@ -5,6 +5,12 @@
  */
 package interficie;
 
+import dades.HidatoBD;
+import dades.PlayersAdmin;
+import drivers.Funcions;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jordi.guiu.pujols
@@ -32,9 +38,9 @@ public class Esborra extends javax.swing.JFrame {
 
         titol = new javax.swing.JTextArea();
         user = new javax.swing.JTextField();
-        entra = new javax.swing.JButton();
+        Esborra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
 
@@ -71,14 +77,14 @@ public class Esborra extends javax.swing.JFrame {
         getContentPane().add(user);
         user.setBounds(330, 270, 270, 50);
 
-        entra.setText("Esborra");
-        entra.addActionListener(new java.awt.event.ActionListener() {
+        Esborra.setText("Esborra");
+        Esborra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entraActionPerformed(evt);
+                EsborraActionPerformed(evt);
             }
         });
-        getContentPane().add(entra);
-        entra.setBounds(680, 290, 110, 100);
+        getContentPane().add(Esborra);
+        Esborra.setBounds(680, 290, 110, 100);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,9 +102,9 @@ public class Esborra extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(910, 550, 71, 25);
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(400, 350, 210, 50);
+        password.setText("jPasswordField1");
+        getContentPane().add(password);
+        password.setBounds(400, 350, 210, 50);
 
         text_nom.setEditable(false);
         text_nom.setBackground(new java.awt.Color(0, 0, 0));
@@ -161,9 +167,29 @@ public class Esborra extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
+    private void EsborraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_entraActionPerformed
+        HidatoBD HBD = new HidatoBD();
+        HBD.loadPlayers();
+        PlayersAdmin admin = HBD.getPlayersAdmin();
+        JFrame frame = new JFrame("Esborrar");
+        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix");
+        else {
+            if (admin.checkLogin(user.getText(), password.getText())) {
+                //Funcions.borrarMatches(user.getText());  //BORRAR MATCHES DEL PLAYER
+                //Funcions.borrarMatchesResolts(user.getText());  //BORRAR MATCHES RESOLTS DEL PLAYER
+                admin.removePlayer(user.getText(), password.getText());   //BORRAR PLAYER
+                HBD.save();
+                JOptionPane.showMessageDialog(frame,"Usuari esborrat correctament");
+                /*for(int i = 0; i<HBD._players.size(); ++i)                        PER MIRAR SI ESBORRA BÉ
+                    JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
+                Identificacio obj = new Identificacio();
+                obj.setVisible(true);
+                dispose();
+            }
+            else JOptionPane.showMessageDialog(frame,"Constrassenya incorrecta");
+        }
+    }//GEN-LAST:event_EsborraActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
         // TODO add your handling code here:
@@ -245,9 +271,9 @@ public class Esborra extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Esborra;
     private javax.swing.JButton enrere;
-    private javax.swing.JButton entra;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
     private javax.swing.JTextArea titol;
