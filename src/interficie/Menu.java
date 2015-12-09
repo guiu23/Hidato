@@ -9,6 +9,9 @@ import interficie.jugar.SeleccioMapaPredefinit;
 import interficie.*;
 import interficie.generar.*;
 import interficie.jugar.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.YES_OPTION;
 
 
 
@@ -43,7 +46,7 @@ public class Menu extends javax.swing.JFrame {
         titol1 = new javax.swing.JTextArea();
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        sortir = new javax.swing.JButton();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -112,19 +115,14 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(LogOut);
         LogOut.setBounds(860, 510, 120, 30);
 
-        jButton3.setText("SORTIR");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        sortir.setText("SORTIR");
+        sortir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                sortirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(20, 500, 80, 40);
+        getContentPane().add(sortir);
+        sortir.setBounds(30, 500, 90, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,15 +210,6 @@ public class Menu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LogOutActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_jButton3MouseClicked
-
     private void LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogOutMouseClicked
         // TODO add your handling code here:
         Identificacio obj = new Identificacio();
@@ -251,9 +240,53 @@ public class Menu extends javax.swing.JFrame {
 
     private void MapaAleatoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MapaAleatoriActionPerformed
         // TODO add your handling code here:
-        SeleccioTamanyMapa obj = new SeleccioTamanyMapa();
+        int num2=1;
+        Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
+        JFrame frame = new JFrame("Tamany Mapa");
+        int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        if ( n == 0) {
+            Jugar2 obj = new Jugar2();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 1) {
+            Jugar3 obj = new Jugar3();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 2) {
+            Jugar4 obj = new Jugar4();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 3) {
+            Jugar5 obj = new Jugar5();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 4) {
+            Jugar6 obj = new Jugar6();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 5) {
+            Jugar7 obj = new Jugar7();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 6) {
+            Jugar8 obj = new Jugar8();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 7) {
+            Jugar9 obj = new Jugar9();
+            obj.setVisible(true);
+            dispose();
+        }
+        /*SeleccioTamanyMapa obj = new SeleccioTamanyMapa();
         obj.setVisible(true);
-        dispose();
+        dispose();*/
     }//GEN-LAST:event_MapaAleatoriActionPerformed
 
     private void EsborrarMapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarMapaActionPerformed
@@ -270,6 +303,15 @@ public class Menu extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_EscollirMapaActionPerformed
+
+    private void sortirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortirActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Sí", "No"};
+        JFrame frame = new JFrame("Sortir");
+        int n = JOptionPane.showOptionDialog(frame,"Segur que vols sortir?", "SORTIR?",
+            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+        if ( n == YES_OPTION ) System.exit(0);
+    }//GEN-LAST:event_sortirActionPerformed
 
     
     /**
@@ -321,9 +363,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem ModificarMapaExistents;
     private javax.swing.JMenu NovaPartida;
     private javax.swing.JMenu Ranking;
-    private javax.swing.JButton jButton3;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;
     private javax.swing.JTextArea titol1;
     // End of variables declaration//GEN-END:variables

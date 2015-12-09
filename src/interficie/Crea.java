@@ -7,6 +7,7 @@ package interficie;
 import dades.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -168,7 +169,7 @@ public class Crea extends javax.swing.JFrame {
         HBD.loadPlayers();
         PlayersAdmin admin = HBD.getPlayersAdmin();
         JFrame frame = new JFrame("Usuari creat");
-        if (admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"Aquest usuari ja existeix");
+        if (admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"Aquest usuari ja existeix", "Alerta!", WARNING_MESSAGE);
         else {
             boolean creat = admin.createPlayer(user.getText(),password.getText());
             if (creat) JOptionPane.showMessageDialog(frame,"Usuari creat correctament");

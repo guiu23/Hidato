@@ -9,6 +9,8 @@ import dades.HidatoBD;
 import dades.PlayersAdmin;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -171,7 +173,7 @@ public class Carrega extends javax.swing.JFrame {
         HBD.loadPlayers();
         PlayersAdmin admin = HBD.getPlayersAdmin();
         JFrame frame = new JFrame("Carregar");
-        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix");
+        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix", "Error!", ERROR_MESSAGE);
         else {
             if (admin.checkLogin(user.getText(), password.getText())) { //FALTA POSAR COM CARREGAR EL JUGADOR AMB EL QUE ES JUGA LA PARTIDA
                 JOptionPane.showMessageDialog(frame,"Contrassenya correcta");

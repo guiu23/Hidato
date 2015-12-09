@@ -10,6 +10,7 @@ import dades.PlayersAdmin;
 import drivers.Funcions;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 /**
  *
@@ -173,7 +174,7 @@ public class Esborra extends javax.swing.JFrame {
         HBD.loadPlayers();
         PlayersAdmin admin = HBD.getPlayersAdmin();
         JFrame frame = new JFrame("Esborrar");
-        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix");
+        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix", "Error!", ERROR_MESSAGE);
         else {
             if (admin.checkLogin(user.getText(), password.getText())) {
                 //Funcions.borrarMatches(user.getText());  //BORRAR MATCHES DEL PLAYER
