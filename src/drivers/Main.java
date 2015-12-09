@@ -243,7 +243,7 @@ public class Main {
                         HBD.saveBoardsResolts();
                     }
                 }
-                //else 
+                else if (select == 5){b2 = true;}
                 else if (select > 5) System.out.println("No es una opcio");
             }
             
@@ -497,6 +497,10 @@ public class Main {
                             System.out.println("Vols guardar la partida? (0:NO / 1:Si)");
                             Integer guardar = input.nextInt();
                             if (guardar == 1) {
+                                System.out.println("Amb quin nom la vols guardar?");
+                                String Nom = input.next();
+                                m.setNomM(Nom);
+                                m.getGame().setBoard(TaulellAux);  
                                 HBD._matches.add(m);
                                 HBD.saveMatches();
                                 System.out.println("Partida Guardada");
