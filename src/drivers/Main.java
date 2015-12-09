@@ -45,6 +45,7 @@ public class Main {
         String newPassword;
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
         Integer Y[] = {1,1,0,-1,-1,-1,0,1};
+        Integer cont_max;
         
         while (!b){
             System.out.println("Crear nou Jugador (0)"); 
