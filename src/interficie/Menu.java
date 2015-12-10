@@ -47,6 +47,7 @@ public class Menu extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -123,6 +124,10 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(sortir);
         sortir.setBounds(30, 500, 90, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(1, -4, 1000, 580);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,9 +231,57 @@ public class Menu extends javax.swing.JFrame {
 
     private void CrearMapaNouActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearMapaNouActionPerformed
         // TODO add your handling code here:
+        int num2=1;
+        Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
+        JFrame frame = new JFrame("Tamany Mapa");
+        int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        if ( n == 0) {
+            Generar2 obj = new Generar2();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 1) {
+            Generar3 obj = new Generar3();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 2) {
+            Generar4 obj = new Generar4();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 3) {
+            Generar5 obj = new Generar5();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 4) {
+            Generar6 obj = new Generar6();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 5) {
+            Generar7 obj = new Generar7();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if ( n == 6) {
+            Generar8 obj = new Generar8();
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (n == 7) {
+            Generar9 obj = new Generar9();
+            obj.setVisible(true);
+            dispose();
+        }
+        
+        
+        
+        /*
         SeleccioTamanyMapaGenerar obj = new SeleccioTamanyMapaGenerar();
         obj.setVisible(true);
-        dispose();
+        dispose();*/
     }//GEN-LAST:event_CrearMapaNouActionPerformed
 
     private void ModificarMapaExistentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMapaExistentsActionPerformed
@@ -363,6 +416,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem ModificarMapaExistents;
     private javax.swing.JMenu NovaPartida;
     private javax.swing.JMenu Ranking;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
