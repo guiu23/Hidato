@@ -9,6 +9,7 @@ import interficie.jugar.SeleccioMapaPredefinit;
 import interficie.*;
 import interficie.generar.*;
 import interficie.jugar.*;
+import interficie.ranking.RankingPersonal;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.YES_OPTION;
@@ -59,7 +60,10 @@ public class Menu extends javax.swing.JFrame {
         ModificarMapaExistents = new javax.swing.JMenuItem();
         EsborrarMapa = new javax.swing.JMenuItem();
         Ranking = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
+        RankingPersonal = new javax.swing.JMenuItem();
+        RankingTotal = new javax.swing.JMenu();
+        RankingGlobal = new javax.swing.JMenuItem();
+        Estadistiques = new javax.swing.JMenuItem();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -197,8 +201,23 @@ public class Menu extends javax.swing.JFrame {
         Ranking.setBackground(new java.awt.Color(0, 0, 0));
         Ranking.setText("Ranking");
 
-        jMenu6.setText("jMenu6");
-        Ranking.add(jMenu6);
+        RankingPersonal.setText("Personal");
+        RankingPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RankingPersonalActionPerformed(evt);
+            }
+        });
+        Ranking.add(RankingPersonal);
+
+        RankingTotal.setText("Total");
+
+        RankingGlobal.setText("RankingGlobal");
+        RankingTotal.add(RankingGlobal);
+
+        Estadistiques.setText("Altres Estadístiques");
+        RankingTotal.add(Estadistiques);
+
+        Ranking.add(RankingTotal);
 
         MenuPrincipal.add(Ranking);
 
@@ -366,6 +385,13 @@ public class Menu extends javax.swing.JFrame {
         if ( n == YES_OPTION ) System.exit(0);
     }//GEN-LAST:event_sortirActionPerformed
 
+    private void RankingPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankingPersonalActionPerformed
+        // TODO add your handling code here:
+        RankingPersonal obj = new RankingPersonal();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_RankingPersonalActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -409,6 +435,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem CrearMapaNou;
     private javax.swing.JMenuItem EsborrarMapa;
     private javax.swing.JMenuItem EscollirMapa;
+    private javax.swing.JMenuItem Estadistiques;
     private javax.swing.JMenu JugarPartida;
     private javax.swing.JButton LogOut;
     private javax.swing.JMenuItem MapaAleatori;
@@ -416,8 +443,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem ModificarMapaExistents;
     private javax.swing.JMenu NovaPartida;
     private javax.swing.JMenu Ranking;
+    private javax.swing.JMenuItem RankingGlobal;
+    private javax.swing.JMenuItem RankingPersonal;
+    private javax.swing.JMenu RankingTotal;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;

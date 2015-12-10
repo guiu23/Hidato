@@ -26,6 +26,8 @@ public class Esborra extends javax.swing.JFrame {
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        password.setText(null);
+
     }
 
     /**

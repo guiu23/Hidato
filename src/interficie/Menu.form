@@ -131,10 +131,30 @@
             <Property name="text" type="java.lang.String" value="Ranking"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenu6">
+            <MenuItem class="javax.swing.JMenuItem" name="RankingPersonal">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jMenu6"/>
+                <Property name="text" type="java.lang.String" value="Personal"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RankingPersonalActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="RankingTotal">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Total"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="RankingGlobal">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="RankingGlobal"/>
+                  </Properties>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="Estadistiques">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Altres Estad&#xed;stiques"/>
+                  </Properties>
+                </MenuItem>
+              </SubComponents>
             </Menu>
           </SubComponents>
         </Menu>
