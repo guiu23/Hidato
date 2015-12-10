@@ -5,6 +5,7 @@
  */
 package interficie;
 import dades.*;
+import static drivers.Controlador.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
@@ -164,22 +165,19 @@ public class Crea extends javax.swing.JFrame {
     }//GEN-LAST:event_userActionPerformed
 
     private void CreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreaActionPerformed
-        // TODO add your handling code here:
-        HidatoBD HBD = new HidatoBD();
-        HBD.loadPlayers();
-        PlayersAdmin admin = HBD.getPlayersAdmin();
+        // TODO add your handling code here
+        int num = crea_user(user.getText(),password.getText());
         JFrame frame = new JFrame("Usuari creat");
-        if (admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"Aquest usuari ja existeix", "Alerta!", WARNING_MESSAGE);
-        else {
-            boolean creat = admin.createPlayer(user.getText(),password.getText());
-            if (creat) JOptionPane.showMessageDialog(frame,"Usuari creat correctament");
-            HBD.savePlayers();
-            /*for(int i = 0; i<HBD._players.size(); ++i)                PER MIRAR SI EL CREA BÉ
-                JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
+        if (num == 1) JOptionPane.showMessageDialog(frame,"Aquest usuari ja existeix", "Alerta!", WARNING_MESSAGE);
+        else if (num == 0) {
+            JOptionPane.showMessageDialog(frame,"Usuari creat correctament");
+            
             Menu obj = new Menu();
             obj.setVisible(true);
             dispose();
         }
+            /*for(int i = 0; i<HBD._players.size(); ++i)                PER MIRAR SI EL CREA BÉ
+                JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
     }//GEN-LAST:event_CreaActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked

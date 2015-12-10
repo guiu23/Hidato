@@ -7,6 +7,7 @@ package interficie;
 
 import dades.HidatoBD;
 import dades.PlayersAdmin;
+import static drivers.Controlador.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
@@ -168,21 +169,17 @@ public class Carrega extends javax.swing.JFrame {
 
     private void carregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carregaActionPerformed
         // TODO add your handling code here:
-        
-        HidatoBD HBD = new HidatoBD();
-        HBD.loadPlayers();
-        PlayersAdmin admin = HBD.getPlayersAdmin();
+        int num = carrega_user(user.getText(),password.getText());
         JFrame frame = new JFrame("Carregar");
-        if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix", "Error!", ERROR_MESSAGE);
-        else {
-            if (admin.checkLogin(user.getText(), password.getText())) { //FALTA POSAR COM CARREGAR EL JUGADOR AMB EL QUE ES JUGA LA PARTIDA
-                JOptionPane.showMessageDialog(frame,"Contrassenya correcta");
-                Menu obj = new Menu();
-                obj.setVisible(true);
-                dispose();
-            }
-            else JOptionPane.showMessageDialog(frame,"Contrassenya incorrecta");
+        if (num == 1) JOptionPane.showMessageDialog(frame,"L'usuari no existeix", "Error!", ERROR_MESSAGE);
+        else if (num == 0) {
+            JOptionPane.showMessageDialog(frame,"Contrassenya correcta");
+            
+             Menu obj = new Menu();
+             obj.setVisible(true);
+             dispose();
         }
+        else JOptionPane.showMessageDialog(frame,"Contrassenya incorrecta");
     }//GEN-LAST:event_carregaActionPerformed
 
     private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
