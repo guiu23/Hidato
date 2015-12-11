@@ -142,13 +142,10 @@ public class Funcions {
                 }
                 else System.out.println("El taulell ja existeix.");
                 
-
-                
-                //Definir la dificultat
-                
             } else {
                 System.out.println("Hidato sense solucio possible. Torna-ho a provar.");
                 netejaBoard(Taulell);
+                llegirTaulell(Taulell);
             }
             solution = false;
         }
