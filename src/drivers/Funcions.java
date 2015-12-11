@@ -192,6 +192,29 @@ public class Funcions {
         }
     }
 
+    public static void CleanTemporal() {
+        HBD.loadTemporal();
+        HBD.loadTemporalResolts();
+        for (int i=0;i < HBD._temporal.size();++i){
+            HBD._temporal.remove(i);
+        }
+        for (int i=0;i < HBD._temporalResolts.size();++i){
+            HBD._temporalResolts.remove(i);
+        }
+    }
+    
+    public static BoardHidato CarregarTemporal() {
+       HBD.loadTemporal();
+       BoardHidato Taulell = new BoardHidato(2,"temporal");
+       boolean trobat = false;
+       for (int i=0;i < HBD._temporal.size() && !trobat;++i){
+            Taulell =  HBD._temporal.get(i);
+            trobat = true;
+        }
+       return Taulell;
+    }
+    
+    
     public static boolean perafegir(BoardHidato Taulell, int row, int column){
         if (Taulell.getValidaCell(row, column) && Taulell.getValueCell(row,column) == 0) return true;
         else return false;
