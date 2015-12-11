@@ -90,4 +90,18 @@ public class Controlador {
         return num;
     }
     
+    public static void crea_taulell(int size)   { //Prepara un Taulell amb tot a 0 per posarli caselles a la base de dades temporal, no cal resposta
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        BoardHidato Taulell = new BoardHidato(size,"temporal");
+        Funcions.CleanTemporal();
+        HBD._temporal.add(Taulell);    
+    }
+    
+    public static int DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
+        Taulell.setValProvCell(valor, i, j);
+    }
 }
