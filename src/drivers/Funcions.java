@@ -263,9 +263,9 @@ public class Funcions {
 
     public static double percentatgeceles_written(int dificultat){
         int percentatge = dificultat;
-        if (percentatge == 1) return 0.8;
-        else if (percentatge == 2) return 0.6;
-        else return 0.3;
+        if (percentatge == 1) return 0.5;
+        else if (percentatge == 2) return 0.35;
+        else return 0.25;
     }
 
     public static void reset_written(BoardHidato Taulell){
@@ -404,7 +404,7 @@ public class Funcions {
         return false;
     }
     static double percentatgeceles_valides(){
-        double num = 0.2;
+        double num = 0.15;
         return num;
     }
 
@@ -463,9 +463,11 @@ public class Funcions {
         numcelesinvalides = Taulell.consultar_num_celesinvalides();
         numfinal = numfinal - numcelesinvalides;
         posa_final(Taulell); //POSEM LA ULTIMA CELA AL TAULELL
-        //imprimeixValors(Taulell);
-        solve(Taulell, size, false);
-        //imprimeixValors(Taulell);
+        imprimeixValors(Taulell);
+        BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
+        copiarBoard(TaulellRes, Taulell);
+        solve_modifica(TaulellRes, TaulellRes.getSize(), false); //aquí si no té solució hauria de parar 
+        System.out.println("EPEP"); 
         if (!solution) {
             netejaBoard(Taulell);
             colocar_celesinvalides(Taulell);
@@ -684,8 +686,6 @@ public class Funcions {
    
 
 }
-
-
 
 
 
