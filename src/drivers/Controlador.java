@@ -132,7 +132,7 @@ public class Controlador {
         
         Ranking ranking = _stats.rankingGlobal();
         
-        return ranking;
+        return ranking; //aquí per agafar els valors mira bé el main el print i tot, s'haurà de fer algo allà de l'estil
     }
     
     public static ArrayList<Integer> ObteRankingTotalAltres(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
