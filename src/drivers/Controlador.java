@@ -7,6 +7,7 @@ import domini.stats.Ranking;
 import domini.stats.stubGame;
 import domini.stats.stubMatch;
 import static drivers.Controlador.HBD;
+import static drivers.Funcions.*;
 import static drivers.Main.HBD;
 import static drivers.Main._stats;
 import static drivers.Main.admin;
@@ -126,13 +127,28 @@ public class Controlador {
         return valors;
     }
     
-    public static Ranking ObteRankingGlobal(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+    public static ArrayList<struct> ObteRankingGlobal(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         
         Ranking ranking = _stats.rankingGlobal();
         
-        return ranking; //aquí per agafar els valors mira bé el main el print i tot, s'haurà de fer algo allà de l'estil
+        ArrayList<struct> valors = new ArrayList<>();
+        
+        int size = ranking.getSize();
+        if (size == 0) return null; //ranking buit 
+        else {
+            int digits = digits(size);
+            HBD.loadPlayers();
+            for (int i = 0; i < size; ++i) {
+                struct s = new struct();
+                s.setPos(num(i+1,digits)); //posició ranking del jugador 
+                s.setNom(ranking.getPlayer(i).getName()); //nom del jugador
+                s.setPunts(ranking.getValue(i)); //punts del jugador
+            }
+        }
+        
+        return valors; //vector amb ranking per posicions i = 0 (primer amb tot), i = 1 (segon amb tot), etc...
     }
     
     public static ArrayList<Integer> ObteRankingTotalAltres(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
