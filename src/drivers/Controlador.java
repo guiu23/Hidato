@@ -145,7 +145,7 @@ public class Controlador {
     }
     
     public static ArrayList<Integer> carregarTaulell (String nomT){
-        HBD.loadBoards();
+        HBD.loadTemporal();
         ArrayList<Integer> valors = new ArrayList<>();
         for (int i = 0; i < HBD._boards.size(); ++i){
             if (HBD._boards.get(i).getID().equals(nomT)) {
@@ -156,7 +156,7 @@ public class Controlador {
                     }
                 }
                 Funcions.CleanTemporal();
-                HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel
+                HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
             }
             else {
                 valors = null; //el taulell no existeix a la base de dades
@@ -164,6 +164,29 @@ public class Controlador {
         }
         return valors;
     }
+    
+    public static boolean esborrarTaulell(String nomT) {
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
+        boolean exit = false;
+        for (int i = 0; i < HBD._boards.size(); ++i){
+            if (HBD._boards.get(i).getID().equals(nomT)) {
+                HBD._boards.remove(i);
+                exit = true;
+                HBD.saveBoards();
+            }
+        }
+        for (int i = 0; i < HBD._boardsResolts.size(); ++i){
+            if (HBD._boardsResolts.get(i).getID().equals(nomT)) {
+                HBD._boardsResolts.remove(i);
+                exit = true;
+                HBD.saveBoardsResolts();
+            }
+            else exit = false;
+        }
+        return exit;  //exit = true esborrat exitosament / exit = false no existeix el taulell que es vol esborrar
+    }
+    
     
     
     public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
