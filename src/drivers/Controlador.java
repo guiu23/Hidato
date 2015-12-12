@@ -99,15 +99,24 @@ public class Controlador {
         HBD._temporal.add(Taulell);    
     }
     
-    public static int DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+    public static int DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell 
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
-        Taulell.setValProvCell(valor, i, j);
-        
-        
-        
+        if (i > 0 && i <= Taulell.getSize() && j > 0 && j <= Taulell.getSize()) {
+            if (!Taulell.getWrittenCell(i, j))  {
+                if (Taulell. getValidaCell(i,j)) {
+                    Taulell.setValueCell(valor, i, j);
+                    Funcions.CleanTemporal();
+                    HBD._temporal.add(Taulell);
+                    return 1; //Afegida correctament
+                }
+            }
+        }
+        return 0; //No es pot afegir (intenta ficarla fora del taulell o substituir un written o posarla en invalida)
     }
+    
+    
     
     public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
