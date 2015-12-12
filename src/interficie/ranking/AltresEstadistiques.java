@@ -12,15 +12,17 @@ import interficie.Menu;
  * @author Àlex
  */
 public class AltresEstadistiques extends javax.swing.JFrame {
-
+    static String us;
     /**
      * Creates new form AltresEstadistiques
      */
-    public AltresEstadistiques() {
+    public AltresEstadistiques(String usuari) {
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        
+        us = usuari;
     }
 
     /**
@@ -33,12 +35,16 @@ public class AltresEstadistiques extends javax.swing.JFrame {
     private void initComponents() {
 
         enrere = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        titol = new javax.swing.JTextField();
+        text1 = new javax.swing.JTextField();
+        text2 = new javax.swing.JTextField();
+        text3 = new javax.swing.JTextField();
+        num_jug = new javax.swing.JTextField();
+        num_guard = new javax.swing.JTextField();
+        num_sol = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -53,92 +59,112 @@ public class AltresEstadistiques extends javax.swing.JFrame {
                 enrereKeyPressed(evt);
             }
         });
+        getContentPane().add(enrere);
+        enrere.setBounds(920, 540, 65, 23);
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Altres Estadístiques");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        titol.setEditable(false);
+        titol.setBackground(new java.awt.Color(0, 0, 0));
+        titol.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        titol.setText("Altres Estadístiques");
+        titol.setFocusable(false);
+        titol.setRequestFocusEnabled(false);
+        titol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                titolActionPerformed(evt);
             }
         });
+        getContentPane().add(titol);
+        titol.setBounds(336, 38, 270, 78);
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Número de jugadors del joc:");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        text1.setEditable(false);
+        text1.setBackground(new java.awt.Color(0, 0, 0));
+        text1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text1.setForeground(new java.awt.Color(255, 255, 255));
+        text1.setText("Número de jugadors del joc:");
+        text1.setFocusable(false);
+        text1.setRequestFocusEnabled(false);
+        text1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                text1ActionPerformed(evt);
             }
         });
+        getContentPane().add(text1);
+        text1.setBounds(150, 190, 240, 51);
 
-        jTextField3.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField3.setText("Número de partides guardades al joc:");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        text2.setEditable(false);
+        text2.setBackground(new java.awt.Color(0, 0, 0));
+        text2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text2.setForeground(new java.awt.Color(255, 255, 255));
+        text2.setText("Número de partides guardades al joc:");
+        text2.setFocusable(false);
+        text2.setRequestFocusEnabled(false);
+        text2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                text2ActionPerformed(evt);
             }
         });
+        getContentPane().add(text2);
+        text2.setBounds(150, 310, 310, 51);
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setText("Número de partides solucionades del joc:");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        text3.setEditable(false);
+        text3.setBackground(new java.awt.Color(0, 0, 0));
+        text3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text3.setForeground(new java.awt.Color(255, 255, 255));
+        text3.setText("Número de partides solucionades del joc:");
+        text3.setFocusable(false);
+        text3.setRequestFocusEnabled(false);
+        text3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                text3ActionPerformed(evt);
             }
         });
+        getContentPane().add(text3);
+        text3.setBounds(150, 420, 340, 51);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(enrere))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(336, 336, 336)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(87, 87, 87)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 389, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92)
-                .addComponent(enrere)
-                .addContainerGap())
-        );
+        num_jug.setEditable(false);
+        num_jug.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_jug.setFocusable(false);
+        num_jug.setRequestFocusEnabled(false);
+        num_jug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num_jugActionPerformed(evt);
+            }
+        });
+        getContentPane().add(num_jug);
+        num_jug.setBounds(410, 190, 60, 50);
+
+        num_guard.setEditable(false);
+        num_guard.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_guard.setFocusable(false);
+        num_guard.setRequestFocusEnabled(false);
+        num_guard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num_guardActionPerformed(evt);
+            }
+        });
+        getContentPane().add(num_guard);
+        num_guard.setBounds(490, 310, 60, 50);
+
+        num_sol.setEditable(false);
+        num_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_sol.setFocusable(false);
+        num_sol.setRequestFocusEnabled(false);
+        num_sol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num_solActionPerformed(evt);
+            }
+        });
+        getContentPane().add(num_sol);
+        num_sol.setBounds(520, 420, 60, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
@@ -147,21 +173,33 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void titolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titolActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_titolActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_text1ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_text2ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void text3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_text3ActionPerformed
+
+    private void num_jugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_jugActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_jugActionPerformed
+
+    private void num_guardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_guardActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_guardActionPerformed
+
+    private void num_solActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_solActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_solActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,16 +231,19 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AltresEstadistiques().setVisible(true);
+                new AltresEstadistiques(us).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField num_guard;
+    private javax.swing.JTextField num_jug;
+    private javax.swing.JTextField num_sol;
+    private javax.swing.JTextField text1;
+    private javax.swing.JTextField text2;
+    private javax.swing.JTextField text3;
+    private javax.swing.JTextField titol;
     // End of variables declaration//GEN-END:variables
 }

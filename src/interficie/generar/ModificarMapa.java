@@ -5,17 +5,20 @@
  */
 package interficie.generar;
 
+import interficie.Menu;
+
 /**
  *
  * @author Àlex
  */
 public class ModificarMapa extends javax.swing.JFrame {
-
+    public static String us;
     /**
      * Creates new form ModificarMapa
      */
-    public ModificarMapa() {
+    public ModificarMapa(String usuari) {
         initComponents();
+        us = usuari;
     }
 
     /**
@@ -118,7 +121,7 @@ public class ModificarMapa extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        CrearMapa obj = new CrearMapa();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
@@ -157,7 +160,7 @@ public class ModificarMapa extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ModificarMapa().setVisible(true);
+                new ModificarMapa(us).setVisible(true);
             }
         });
     }

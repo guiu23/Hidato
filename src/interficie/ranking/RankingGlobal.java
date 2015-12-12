@@ -12,15 +12,16 @@ import interficie.Menu;
  * @author Àlex
  */
 public class RankingGlobal extends javax.swing.JFrame {
-
+    static String us;
     /**
      * Creates new form RankingGlobal
      */
-    public RankingGlobal() {
+    public RankingGlobal(String usuari) {
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        us = usuari;
     }
 
     /**
@@ -38,10 +39,13 @@ public class RankingGlobal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setText("Ranking Global");
+        jTextField1.setFocusable(false);
+        jTextField1.setRequestFocusEnabled(false);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,7 +101,7 @@ public class RankingGlobal extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
@@ -136,7 +140,7 @@ public class RankingGlobal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RankingGlobal().setVisible(true);
+                new RankingGlobal(us).setVisible(true);
             }
         });
     }

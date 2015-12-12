@@ -15,15 +15,16 @@ import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
  * @author alex.correa
  */
 public class RankingPersonal extends javax.swing.JFrame {
-
+    static String us;
     /**
      * Creates new form RankingPersonal
      */
-    public RankingPersonal() {
+    public RankingPersonal(String usuari) {
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        us = usuari;
     }
 
     /**
@@ -36,16 +37,24 @@ public class RankingPersonal extends javax.swing.JFrame {
     private void initComponents() {
 
         enrere1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        titol = new javax.swing.JTextField();
+        text1 = new javax.swing.JTextField();
+        text2 = new javax.swing.JTextField();
+        text3 = new javax.swing.JTextField();
+        text4 = new javax.swing.JTextField();
+        text5 = new javax.swing.JTextField();
+        text6 = new javax.swing.JTextField();
+        text7 = new javax.swing.JTextField();
+        pos_rank = new javax.swing.JTextField();
+        tot_sol = new javax.swing.JTextField();
+        tot_diferents_sol = new javax.swing.JTextField();
+        tot_diffclty_1 = new javax.swing.JTextField();
+        tot_diffclty_2 = new javax.swing.JTextField();
+        tot_diffclty_3 = new javax.swing.JTextField();
+        pnts = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         enrere1.setBackground(new java.awt.Color(0, 0, 0));
         enrere1.setForeground(new java.awt.Color(255, 255, 255));
@@ -55,188 +64,220 @@ public class RankingPersonal extends javax.swing.JFrame {
                 enrere1ActionPerformed(evt);
             }
         });
+        getContentPane().add(enrere1);
+        enrere1.setBounds(925, 551, 65, 23);
 
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Estadístiques personals");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        titol.setEditable(false);
+        titol.setBackground(new java.awt.Color(0, 0, 0));
+        titol.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        titol.setText("Estadístiques personals");
+        titol.setFocusable(false);
+        titol.setRequestFocusEnabled(false);
+        titol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                titolActionPerformed(evt);
             }
         });
+        getContentPane().add(titol);
+        titol.setBounds(314, 29, 330, 89);
 
-        jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("Partides totals solucionades:");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        text1.setEditable(false);
+        text1.setBackground(new java.awt.Color(0, 0, 0));
+        text1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text1.setForeground(new java.awt.Color(255, 255, 255));
+        text1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text1.setText("Partides totals solucionades:");
+        text1.setFocusable(false);
+        text1.setRequestFocusEnabled(false);
+        text1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                text1ActionPerformed(evt);
             }
         });
+        getContentPane().add(text1);
+        text1.setBounds(107, 161, 238, 51);
 
-        jTextField4.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField4.setText("Taulells diferents solucionats:");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        text2.setEditable(false);
+        text2.setBackground(new java.awt.Color(0, 0, 0));
+        text2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text2.setForeground(new java.awt.Color(255, 255, 255));
+        text2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text2.setText("Taulells diferents solucionats:");
+        text2.setFocusable(false);
+        text2.setRequestFocusEnabled(false);
+        text2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                text2ActionPerformed(evt);
             }
         });
+        getContentPane().add(text2);
+        text2.setBounds(107, 258, 246, 51);
 
-        jTextField5.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField5.setText("En dificultat fàcil: ");
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        text3.setEditable(false);
+        text3.setBackground(new java.awt.Color(0, 0, 0));
+        text3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text3.setForeground(new java.awt.Color(255, 255, 255));
+        text3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text3.setText("En dificultat fàcil: ");
+        text3.setFocusable(false);
+        text3.setRequestFocusEnabled(false);
+        text3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                text3ActionPerformed(evt);
             }
         });
+        getContentPane().add(text3);
+        text3.setBounds(200, 340, 156, 51);
 
-        jTextField6.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setText("En dificultat mitja: ");
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        text4.setEditable(false);
+        text4.setBackground(new java.awt.Color(0, 0, 0));
+        text4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text4.setForeground(new java.awt.Color(255, 255, 255));
+        text4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text4.setText("En dificultat mitja: ");
+        text4.setFocusable(false);
+        text4.setRequestFocusEnabled(false);
+        text4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                text4ActionPerformed(evt);
             }
         });
+        getContentPane().add(text4);
+        text4.setBounds(193, 410, 160, 51);
 
-        jTextField7.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setText("En dificultat difícil: ");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        text5.setEditable(false);
+        text5.setBackground(new java.awt.Color(0, 0, 0));
+        text5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        text5.setForeground(new java.awt.Color(255, 255, 255));
+        text5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text5.setText("En dificultat difícil: ");
+        text5.setFocusable(false);
+        text5.setRequestFocusEnabled(false);
+        text5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                text5ActionPerformed(evt);
             }
         });
+        getContentPane().add(text5);
+        text5.setBounds(193, 479, 160, 51);
 
-        jTextField8.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField8.setText("Posició al ranking:");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        text6.setEditable(false);
+        text6.setBackground(new java.awt.Color(0, 0, 0));
+        text6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        text6.setForeground(new java.awt.Color(255, 255, 255));
+        text6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text6.setText("Posició al ranking:");
+        text6.setFocusable(false);
+        text6.setRequestFocusEnabled(false);
+        text6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                text6ActionPerformed(evt);
             }
         });
+        getContentPane().add(text6);
+        text6.setBounds(570, 220, 210, 65);
 
-        jTextField9.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField9.setText("Puntuació:");
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        text7.setEditable(false);
+        text7.setBackground(new java.awt.Color(0, 0, 0));
+        text7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        text7.setForeground(new java.awt.Color(255, 255, 255));
+        text7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        text7.setText("Puntuació:");
+        text7.setFocusable(false);
+        text7.setRequestFocusEnabled(false);
+        text7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                text7ActionPerformed(evt);
             }
         });
+        getContentPane().add(text7);
+        text7.setBounds(650, 353, 130, 65);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(314, 314, 314)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(246, 372, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(enrere1)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(107, 107, 107)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(220, 220, 220))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(55, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(enrere1)
-                                .addContainerGap())))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(68, 68, 68)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
+        pos_rank.setEditable(false);
+        pos_rank.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pos_rank.setRequestFocusEnabled(false);
+        getContentPane().add(pos_rank);
+        pos_rank.setBounds(820, 220, 70, 70);
+
+        tot_sol.setEditable(false);
+        tot_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tot_sol.setRequestFocusEnabled(false);
+        getContentPane().add(tot_sol);
+        tot_sol.setBounds(380, 160, 50, 50);
+
+        tot_diferents_sol.setEditable(false);
+        tot_diferents_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tot_diferents_sol.setRequestFocusEnabled(false);
+        getContentPane().add(tot_diferents_sol);
+        tot_diferents_sol.setBounds(380, 260, 50, 50);
+
+        tot_diffclty_1.setEditable(false);
+        tot_diffclty_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tot_diffclty_1.setRequestFocusEnabled(false);
+        getContentPane().add(tot_diffclty_1);
+        tot_diffclty_1.setBounds(380, 340, 50, 50);
+
+        tot_diffclty_2.setEditable(false);
+        tot_diffclty_2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tot_diffclty_2.setRequestFocusEnabled(false);
+        getContentPane().add(tot_diffclty_2);
+        tot_diffclty_2.setBounds(380, 410, 50, 50);
+
+        tot_diffclty_3.setEditable(false);
+        tot_diffclty_3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tot_diffclty_3.setRequestFocusEnabled(false);
+        getContentPane().add(tot_diffclty_3);
+        tot_diffclty_3.setBounds(380, 480, 50, 50);
+
+        pnts.setEditable(false);
+        pnts.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        pnts.setRequestFocusEnabled(false);
+        getContentPane().add(pnts);
+        pnts.setBounds(820, 350, 70, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void enrere1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrere1ActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrere1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void titolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titolActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_titolActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_text1ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_text2ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void text3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_text3ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void text4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_text4ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void text5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_text5ActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void text6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_text6ActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+ void text7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_text7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,20 +309,27 @@ public class RankingPersonal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RankingPersonal().setVisible(true);
+                new RankingPersonal(us).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField pnts;
+    private javax.swing.JTextField pos_rank;
+    private javax.swing.JTextField text1;
+    private javax.swing.JTextField text2;
+    private javax.swing.JTextField text3;
+    private javax.swing.JTextField text4;
+    private javax.swing.JTextField text5;
+    private javax.swing.JTextField text6;
+    private javax.swing.JTextField text7;
+    private javax.swing.JTextField titol;
+    private javax.swing.JTextField tot_diferents_sol;
+    private javax.swing.JTextField tot_diffclty_1;
+    private javax.swing.JTextField tot_diffclty_2;
+    private javax.swing.JTextField tot_diffclty_3;
+    private javax.swing.JTextField tot_sol;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,15 +26,16 @@ import javax.swing.JPanel;
  * @author jordi.guiu.pujols
  */
 public class Menu extends javax.swing.JFrame {
-
+    public static String us;
     /**
      * Creates new form Identificacio
      */
-    public Menu() {
+    public Menu(String usuari) {
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        us = usuari;
         /*setIconImage(new ImageIcon(getClass().getResource("/imatges/fonspng.png")).getImage());
         ((JPanel)getContentPane()).setOpaque(false); 
         ImageIcon uno=new ImageIcon(this.getClass().getResource("/imatges/fonspng.png")); 
@@ -59,7 +60,6 @@ public class Menu extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -111,6 +111,7 @@ public class Menu extends javax.swing.JFrame {
         titol.setBorder(null);
         titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        titol.setFocusable(false);
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
@@ -139,10 +140,6 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(sortir);
         sortir.setBounds(30, 504, 90, 40);
-
-        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1000, 600);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -264,7 +261,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void CarregarPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CarregarPartidaActionPerformed
         // TODO add your handling code here:
-        CarregarPartida obj = new CarregarPartida();
+        CarregarPartida obj = new CarregarPartida(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_CarregarPartidaActionPerformed
@@ -276,42 +273,42 @@ public class Menu extends javax.swing.JFrame {
         JFrame frame = new JFrame("Tamany Mapa");
         int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
         if ( n == 0) {
-            Generar2 obj = new Generar2();
+            Generar2 obj = new Generar2(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 1) {
-            Generar3 obj = new Generar3();
+            Generar3 obj = new Generar3(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 2) {
-            Generar4 obj = new Generar4();
+            Generar4 obj = new Generar4(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 3) {
-            Generar5 obj = new Generar5();
+            Generar5 obj = new Generar5(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 4) {
-            Generar6 obj = new Generar6();
+            Generar6 obj = new Generar6(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 5) {
-            Generar7 obj = new Generar7();
+            Generar7 obj = new Generar7(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 6) {
-            Generar8 obj = new Generar8();
+            Generar8 obj = new Generar8(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 7) {
-            Generar9 obj = new Generar9();
+            Generar9 obj = new Generar9(us);
             obj.setVisible(true);
             dispose();
         }
@@ -326,7 +323,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void ModificarMapaExistentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarMapaExistentsActionPerformed
         // TODO add your handling code here:
-        LlistatMapesExistents obj = new LlistatMapesExistents();
+        LlistatMapesExistents obj = new LlistatMapesExistents(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_ModificarMapaExistentsActionPerformed
@@ -338,42 +335,42 @@ public class Menu extends javax.swing.JFrame {
         JFrame frame = new JFrame("Tamany Mapa");
         int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
         if ( n == 0) {
-            Jugar2 obj = new Jugar2();
+            Jugar2 obj = new Jugar2(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 1) {
-            Jugar3 obj = new Jugar3();
+            Jugar3 obj = new Jugar3(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 2) {
-            Jugar4 obj = new Jugar4();
+            Jugar4 obj = new Jugar4(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 3) {
-            Jugar5 obj = new Jugar5();
+            Jugar5 obj = new Jugar5(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 4) {
-            Jugar6 obj = new Jugar6();
+            Jugar6 obj = new Jugar6(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 5) {
-            Jugar7 obj = new Jugar7();
+            Jugar7 obj = new Jugar7(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 6) {
-            Jugar8 obj = new Jugar8();
+            Jugar8 obj = new Jugar8(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 7) {
-            Jugar9 obj = new Jugar9();
+            Jugar9 obj = new Jugar9(us);
             obj.setVisible(true);
             dispose();
         }
@@ -384,7 +381,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void EsborrarMapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarMapaActionPerformed
         // TODO add your handling code here:
-        EsborrarMapa obj = new EsborrarMapa();
+        EsborrarMapa obj = new EsborrarMapa(us);
         obj.setVisible(true);
         dispose();
         
@@ -392,7 +389,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void EscollirMapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscollirMapaActionPerformed
         // TODO add your handling code here:
-        SeleccioMapaPredefinit obj = new SeleccioMapaPredefinit();
+        SeleccioMapaPredefinit obj = new SeleccioMapaPredefinit(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_EscollirMapaActionPerformed
@@ -408,21 +405,21 @@ public class Menu extends javax.swing.JFrame {
 
     private void RankingPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankingPersonalActionPerformed
         // TODO add your handling code here:
-        RankingPersonal obj = new RankingPersonal();
+        RankingPersonal obj = new RankingPersonal(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_RankingPersonalActionPerformed
 
     private void RankingGlobalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankingGlobalActionPerformed
         // TODO add your handling code here:
-        RankingGlobal obj = new RankingGlobal();
+        RankingGlobal obj = new RankingGlobal(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_RankingGlobalActionPerformed
 
     private void EstadistiquesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadistiquesActionPerformed
         // TODO add your handling code here:
-        AltresEstadistiques obj = new AltresEstadistiques();
+        AltresEstadistiques obj = new AltresEstadistiques(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_EstadistiquesActionPerformed
@@ -459,7 +456,7 @@ public class Menu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new Menu(us).setVisible(true);
             }
         });
     }
@@ -481,7 +478,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem RankingGlobal;
     private javax.swing.JMenuItem RankingPersonal;
     private javax.swing.JMenu RankingTotal;
-    private javax.swing.JLabel fons;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;
