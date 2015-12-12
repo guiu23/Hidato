@@ -19,9 +19,10 @@ public class Jugar2 extends javax.swing.JFrame {
     /**
      * Creates new form Identificacio
      */
-    public Jugar2() {
+    public Jugar2(String usuari) {
         initComponents();
         afegirmarca = false;
+        us = usuari;
     }
 
     /**
