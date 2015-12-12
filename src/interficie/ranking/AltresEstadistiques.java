@@ -20,6 +20,7 @@ public class AltresEstadistiques extends javax.swing.JFrame {
      */
     public AltresEstadistiques(String usuari) {
         initComponents();
+        myinitComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -129,9 +130,21 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         num_jug.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         num_jug.setFocusable(false);
         num_jug.setRequestFocusEnabled(false);
+        num_jug.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                num_jugInputMethodTextChanged(evt);
+            }
+        });
         num_jug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_jugActionPerformed(evt);
+            }
+        });
+        num_jug.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                num_jugPropertyChange(evt);
             }
         });
         getContentPane().add(num_jug);
@@ -141,6 +154,13 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         num_guard.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         num_guard.setFocusable(false);
         num_guard.setRequestFocusEnabled(false);
+        num_guard.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                num_guardInputMethodTextChanged(evt);
+            }
+        });
         num_guard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_guardActionPerformed(evt);
@@ -153,6 +173,13 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         num_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         num_sol.setFocusable(false);
         num_sol.setRequestFocusEnabled(false);
+        num_sol.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                num_solInputMethodTextChanged(evt);
+            }
+        });
         num_sol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_solActionPerformed(evt);
@@ -164,6 +191,14 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myinitComponents() {
+        ArrayList<String> dades = new ArrayList<String>();
+        ObteRankingTotalAltres(dades);
+        num_jug.setText(dades.get(0));
+        num_guard.setText(dades.get(1));
+        num_sol.setText(dades.get(2));
+    }
+    
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
         Menu obj = new Menu(us);
@@ -203,6 +238,23 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_num_solActionPerformed
 
+    private void num_jugInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_num_jugInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_jugInputMethodTextChanged
+
+    
+    private void num_jugPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_num_jugPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_jugPropertyChange
+
+    private void num_guardInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_num_guardInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num_guardInputMethodTextChanged
+
+    private void num_solInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_num_solInputMethodTextChanged
+        // TODO add your handling code here: 
+    }//GEN-LAST:event_num_solInputMethodTextChanged
+
     /**
      * @param args the command line arguments
      */
@@ -233,18 +285,7 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                AltresEstadistiques ae = new AltresEstadistiques(us);
-                ArrayList<Integer> dades = new ArrayList<Integer>();
-                ObteRankingTotalAltres(dades);
-                //int a string
-                StringBuilder sb = new StringBuilder();
-                sb.append("");
-                sb.append(dades.get(1));
-                String strI = sb.toString();
-//
-                num_guard.setText(strI);
-                num_jug.setText(dades.get(2));
-                num_sol.setText(dades.get(3));
+                AltresEstadistiques ae = new AltresEstadistiques(us); 
                 ae.setVisible(true);
             }
         });

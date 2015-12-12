@@ -130,7 +130,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogOut);
-        LogOut.setBounds(860, 514, 120, 30);
+        LogOut.setBounds(30, 510, 120, 30);
 
         sortir.setText("SORTIR");
         sortir.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +139,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sortir);
-        sortir.setBounds(30, 504, 90, 40);
+        sortir.setBounds(900, 510, 90, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));

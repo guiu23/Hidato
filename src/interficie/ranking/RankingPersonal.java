@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import static drivers.Controlador.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,10 +23,11 @@ public class RankingPersonal extends javax.swing.JFrame {
      */
     public RankingPersonal(String usuari) {
         initComponents();
+        us = usuari;
+        myinitComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
-        us = usuari;
     }
 
     /**
@@ -241,6 +243,18 @@ public class RankingPersonal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void myinitComponents() {
+        ArrayList<String> dades = new ArrayList<String>();
+        ObteRankingPersonal(us, dades);
+        tot_sol.setText(dades.get(0));
+        tot_diffclty_1.setText(dades.get(1));
+        tot_diffclty_2.setText(dades.get(2));
+        tot_diffclty_3.setText(dades.get(3));
+        pos_rank.setText(dades.get(4));
+        pnts.setText(dades.get(5));
+    }
+    
     private void enrere1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrere1ActionPerformed
         // TODO add your handling code here:
         Menu obj = new Menu(us);
