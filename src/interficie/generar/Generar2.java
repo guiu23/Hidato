@@ -200,11 +200,11 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 23);
+        enrere.setBounds(610, 430, 65, 25);
 
         jButton10.setText("Generar");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
+        jButton10.setBounds(450, 370, 79, 25);
         getContentPane().add(fons);
         fons.setBounds(0, 0, 860, 450);
 

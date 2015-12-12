@@ -9,11 +9,16 @@ import interficie.jugar.SeleccioMapaPredefinit;
 import interficie.*;
 import interficie.generar.*;
 import interficie.jugar.*;
+import interficie.ranking.AltresEstadistiques;
+import interficie.ranking.RankingGlobal;
 import interficie.ranking.RankingPersonal;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.YES_OPTION;
-
+import javax.swing.JPanel;
 
 
 /**
@@ -30,8 +35,14 @@ public class Menu extends javax.swing.JFrame {
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
-        
-        
+        /*setIconImage(new ImageIcon(getClass().getResource("/imatges/fonspng.png")).getImage());
+        ((JPanel)getContentPane()).setOpaque(false); 
+        ImageIcon uno=new ImageIcon(this.getClass().getResource("/imatges/fonspng.png")); 
+        JLabel fondo= new JLabel(); 
+        fondo.setIcon(uno); 
+        getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER);
+        fondo.setBounds(0,0,uno.getIconWidth(),uno.getIconHeight());
+        */
     }
 
     /**
@@ -48,7 +59,6 @@ public class Menu extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -87,7 +97,6 @@ public class Menu extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        getContentPane().setLayout(null);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
@@ -103,8 +112,6 @@ public class Menu extends javax.swing.JFrame {
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(340, 210, 320, 100);
 
         LogOut.setText("Tancar sessió");
         LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,8 +124,6 @@ public class Menu extends javax.swing.JFrame {
                 LogOutActionPerformed(evt);
             }
         });
-        getContentPane().add(LogOut);
-        LogOut.setBounds(860, 510, 120, 30);
 
         sortir.setText("SORTIR");
         sortir.addActionListener(new java.awt.event.ActionListener() {
@@ -126,12 +131,6 @@ public class Menu extends javax.swing.JFrame {
                 sortirActionPerformed(evt);
             }
         });
-        getContentPane().add(sortir);
-        sortir.setBounds(30, 500, 90, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(1, -4, 1000, 580);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,9 +211,19 @@ public class Menu extends javax.swing.JFrame {
         RankingTotal.setText("Total");
 
         RankingGlobal.setText("RankingGlobal");
+        RankingGlobal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RankingGlobalActionPerformed(evt);
+            }
+        });
         RankingTotal.add(RankingGlobal);
 
         Estadistiques.setText("Altres Estadístiques");
+        Estadistiques.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstadistiquesActionPerformed(evt);
+            }
+        });
         RankingTotal.add(Estadistiques);
 
         Ranking.add(RankingTotal);
@@ -222,6 +231,39 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(Ranking);
 
         setJMenuBar(MenuPrincipal);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(340, 340, 340)
+                        .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(860, 860, 860)
+                        .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(sortir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(514, 514, 514)
+                        .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(504, 504, 504)
+                        .addComponent(sortir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -392,6 +434,20 @@ public class Menu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_RankingPersonalActionPerformed
 
+    private void RankingGlobalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankingGlobalActionPerformed
+        // TODO add your handling code here:
+        RankingGlobal obj = new RankingGlobal();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_RankingGlobalActionPerformed
+
+    private void EstadistiquesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadistiquesActionPerformed
+        // TODO add your handling code here:
+        AltresEstadistiques obj = new AltresEstadistiques();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_EstadistiquesActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -446,7 +502,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem RankingGlobal;
     private javax.swing.JMenuItem RankingPersonal;
     private javax.swing.JMenu RankingTotal;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;

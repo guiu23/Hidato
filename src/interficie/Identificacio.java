@@ -40,7 +40,6 @@ public class Identificacio extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMaximumSize(new java.awt.Dimension(690, 4490));
         setMinimumSize(new java.awt.Dimension(688, 488));
-        getContentPane().setLayout(null);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
@@ -56,10 +55,6 @@ public class Identificacio extends javax.swing.JFrame {
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(320, 90, 350, 100);
-        titol.getAccessibleContext().setAccessibleName("");
-        titol.getAccessibleContext().setAccessibleDescription("");
 
         EsborraUsuari.setText("Esborra Usuari");
         EsborraUsuari.addActionListener(new java.awt.event.ActionListener() {
@@ -67,8 +62,6 @@ public class Identificacio extends javax.swing.JFrame {
                 EsborraUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(EsborraUsuari);
-        EsborraUsuari.setBounds(400, 440, 170, 60);
 
         CrearUsuari.setText("Crear Usuari");
         CrearUsuari.addActionListener(new java.awt.event.ActionListener() {
@@ -76,8 +69,6 @@ public class Identificacio extends javax.swing.JFrame {
                 CrearUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(CrearUsuari);
-        CrearUsuari.setBounds(400, 260, 170, 60);
 
         CarregarUsuari.setText("Carregar Usuari");
         CarregarUsuari.addActionListener(new java.awt.event.ActionListener() {
@@ -85,8 +76,39 @@ public class Identificacio extends javax.swing.JFrame {
                 CarregarUsuariActionPerformed(evt);
             }
         });
-        getContentPane().add(CarregarUsuari);
-        CarregarUsuari.setBounds(400, 350, 170, 60);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(320, 320, 320)
+                .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(CrearUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(CarregarUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(EsborraUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addComponent(CrearUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(CarregarUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(EsborraUsuari, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        titol.getAccessibleContext().setAccessibleName("");
+        titol.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
