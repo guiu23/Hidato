@@ -141,6 +141,14 @@ public class Controlador {
                                                  //return 5 el taulell no te solucio
     }
     
+    public static void crearTaulellAleatori(int size, int dificultat) {
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        BoardHidato Taulell = new BoardHidato(size,"temporal");
+        Funcions.colocar_celesinvalides(Taulell);
+        Funcions.generar_written(Taulell,dificultat);
+    }
+    
     
     
     public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
