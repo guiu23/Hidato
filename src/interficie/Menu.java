@@ -111,6 +111,7 @@ public class Menu extends javax.swing.JFrame {
         titol.setBorder(null);
         titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
+        titol.setFocusable(false);
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);

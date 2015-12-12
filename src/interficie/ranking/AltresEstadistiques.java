@@ -60,82 +60,104 @@ public class AltresEstadistiques extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(923, 562, 65, 23);
+        enrere.setBounds(920, 540, 65, 23);
 
+        titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
         titol.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         titol.setText("Altres Estadístiques");
+        titol.setFocusable(false);
+        titol.setRequestFocusEnabled(false);
         titol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 titolActionPerformed(evt);
             }
         });
         getContentPane().add(titol);
-        titol.setBounds(336, 38, 263, 78);
+        titol.setBounds(336, 38, 270, 78);
 
+        text1.setEditable(false);
         text1.setBackground(new java.awt.Color(0, 0, 0));
         text1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         text1.setForeground(new java.awt.Color(255, 255, 255));
         text1.setText("Número de jugadors del joc:");
+        text1.setFocusable(false);
+        text1.setRequestFocusEnabled(false);
         text1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text1ActionPerformed(evt);
             }
         });
         getContentPane().add(text1);
-        text1.setBounds(150, 190, 231, 51);
+        text1.setBounds(150, 190, 240, 51);
 
+        text2.setEditable(false);
         text2.setBackground(new java.awt.Color(0, 0, 0));
         text2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         text2.setForeground(new java.awt.Color(255, 255, 255));
         text2.setText("Número de partides guardades al joc:");
+        text2.setFocusable(false);
+        text2.setRequestFocusEnabled(false);
         text2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text2ActionPerformed(evt);
             }
         });
         getContentPane().add(text2);
-        text2.setBounds(150, 310, 302, 51);
+        text2.setBounds(150, 310, 310, 51);
 
+        text3.setEditable(false);
         text3.setBackground(new java.awt.Color(0, 0, 0));
         text3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         text3.setForeground(new java.awt.Color(255, 255, 255));
         text3.setText("Número de partides solucionades del joc:");
+        text3.setFocusable(false);
+        text3.setRequestFocusEnabled(false);
         text3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text3ActionPerformed(evt);
             }
         });
         getContentPane().add(text3);
-        text3.setBounds(150, 420, 331, 51);
+        text3.setBounds(150, 420, 340, 51);
 
+        num_jug.setEditable(false);
         num_jug.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_jug.setFocusable(false);
+        num_jug.setRequestFocusEnabled(false);
         num_jug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_jugActionPerformed(evt);
             }
         });
         getContentPane().add(num_jug);
-        num_jug.setBounds(410, 190, 50, 50);
+        num_jug.setBounds(410, 190, 60, 50);
 
+        num_guard.setEditable(false);
         num_guard.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_guard.setFocusable(false);
+        num_guard.setRequestFocusEnabled(false);
         num_guard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_guardActionPerformed(evt);
             }
         });
         getContentPane().add(num_guard);
-        num_guard.setBounds(490, 310, 50, 50);
+        num_guard.setBounds(490, 310, 60, 50);
 
+        num_sol.setEditable(false);
         num_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num_sol.setFocusable(false);
+        num_sol.setRequestFocusEnabled(false);
         num_sol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 num_solActionPerformed(evt);
             }
         });
         getContentPane().add(num_sol);
-        num_sol.setBounds(520, 420, 50, 50);
+        num_sol.setBounds(520, 420, 60, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
