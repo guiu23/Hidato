@@ -144,6 +144,26 @@ public class Controlador {
         Funcions.generar_written(Taulell,dificultat);
     }
     
+    public static ArrayList<Integer> carregarTaulell (String nomT){
+        HBD.loadBoards();
+        ArrayList<Integer> valors = new ArrayList<>();
+        for (int i = 0; i < HBD._boards.size(); ++i){
+            if (HBD._boards.get(i).getID().equals(nomT)) {
+                BoardHidato Taulell = HBD._boards.get(i);
+                for (int j = 0; j < Taulell.getSize(); ++j) {
+                    for (int k = 0; k < Taulell.getSize(); ++k) {
+                        valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
+                    }
+                }
+                Funcions.CleanTemporal();
+                HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel
+            }
+            else {
+                valors = null; //el taulell no existeix a la base de dades
+            }
+        }
+        return valors;
+    }
     
     
     public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
