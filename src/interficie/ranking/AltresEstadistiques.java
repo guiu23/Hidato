@@ -6,6 +6,8 @@
 package interficie.ranking;
 
 import interficie.Menu;
+import java.util.ArrayList;
+import static drivers.Controlador.*;
 
 /**
  *
@@ -231,7 +233,19 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AltresEstadistiques(us).setVisible(true);
+                AltresEstadistiques ae = new AltresEstadistiques(us);
+                ArrayList<Integer> dades = new ArrayList<Integer>();
+                ObteRankingTotalAltres(dades);
+                //int a string
+                StringBuilder sb = new StringBuilder();
+                sb.append("");
+                sb.append(dades.get(1));
+                String strI = sb.toString();
+//
+                num_guard.setText(strI);
+                num_jug.setText(dades.get(2));
+                num_sol.setText(dades.get(3));
+                ae.setVisible(true);
             }
         });
     }

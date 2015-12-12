@@ -9,6 +9,7 @@ import interficie.Menu;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
+import static drivers.Controlador.*;
 
 /**
  *
@@ -309,7 +310,11 @@ public class RankingPersonal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RankingPersonal(us).setVisible(true);
+                RankingPersonal rp = new RankingPersonal(us);
+                
+                
+                
+                rp.setVisible(true);
             }
         });
     }
