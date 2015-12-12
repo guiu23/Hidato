@@ -6,6 +6,7 @@
 package interficie.jugar;
 
 import domini.BoardHidato;
+import drivers.Funcions;
 import interficie.Menu;
 
 /**
@@ -50,7 +51,7 @@ public class Jugar2 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        resoldre = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         listmarques = new javax.swing.JButton();
         addmarca = new javax.swing.JButton();
@@ -99,7 +100,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(210, 170, 60, 60);
+        c00.setBounds(220, 180, 80, 70);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -110,7 +111,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(270, 170, 60, 60);
+        c01.setBounds(300, 180, 80, 70);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -121,7 +122,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(210, 230, 60, 60);
+        c10.setBounds(220, 250, 80, 70);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -132,7 +133,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(270, 230, 60, 60);
+        c11.setBounds(300, 250, 80, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -281,9 +282,14 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(600, 420, 59, 23);
 
-        jButton10.setText("Resoldre");
-        getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
+        resoldre.setText("Resoldre");
+        resoldre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                resoldreMouseClicked(evt);
+            }
+        });
+        getContentPane().add(resoldre);
+        resoldre.setBounds(450, 370, 79, 23);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Marques:");
@@ -563,7 +569,9 @@ public class Jugar2 extends javax.swing.JFrame {
             }
             txtmarques.setText(ArrayData); 
     }//GEN-LAST:event_listmarquesMouseClicked
-
+    private void resoldreMouseClicked(java.awt.event.MouseEvent evt) {                                      
+        Funcions.solve_modifica(Taulell, 2, true); 
+    }
     private void c00PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_c00PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_c00PropertyChange
@@ -630,7 +638,6 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField c11;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -642,6 +649,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JButton listmarques;
     private javax.swing.JLabel numeros;
     private javax.swing.JLabel numeros1;
+    private javax.swing.JButton resoldre;
     private javax.swing.JTextArea titol;
     private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
