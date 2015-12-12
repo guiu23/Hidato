@@ -103,15 +103,11 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
-        if (i > 0 && i <= Taulell.getSize() && j > 0 && j <= Taulell.getSize()) {
-            if (!Taulell.getWrittenCell(i, j))  {
-                if (Taulell. getValidaCell(i,j)) {
-                    Taulell.setValueCell(valor, i, j);
-                    Funcions.CleanTemporal();
-                    HBD._temporal.add(Taulell);
-                    return 1; //Afegida correctament
-                }
-            }
+        if (i > 0 && i < Taulell.getSize() && j > 0 && j < Taulell.getSize()) {
+           Taulell.setValProvCell(valor, i-1, j-1);
+           Funcions.CleanTemporal();
+           HBD._temporal.add(Taulell);
+           return 1; //Afegida correctament 
         }
         return 0; //No es pot afegir (intenta ficarla fora del taulell o substituir un written o posarla en invalida)
     }
