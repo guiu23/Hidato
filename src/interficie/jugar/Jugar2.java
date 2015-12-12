@@ -21,6 +21,7 @@ public class Jugar2 extends javax.swing.JFrame {
      */
     public Jugar2() {
         initComponents();
+        afegirmarca = false;
     }
 
     /**
@@ -89,6 +90,11 @@ public class Jugar2 extends javax.swing.JFrame {
         c00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c00ActionPerformed(evt);
+            }
+        });
+        c00.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                c00PropertyChange(evt);
             }
         });
         getContentPane().add(c00);
@@ -284,6 +290,11 @@ public class Jugar2 extends javax.swing.JFrame {
         numeros1.setBounds(30, 200, 80, 40);
 
         listmarques.setText("Treure marca");
+        listmarques.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listmarquesMouseClicked(evt);
+            }
+        });
         getContentPane().add(listmarques);
         listmarques.setBounds(20, 160, 110, 23);
 
@@ -361,6 +372,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
         Casella = "c00";
+        afegirmarca = false;
     }//GEN-LAST:event_c00MouseClicked
 
     private void c00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c00ActionPerformed
@@ -368,36 +380,51 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00ActionPerformed
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        Casella = "c01";        // TODO add your handling code here:
+        Casella = "c01";     
+        afegirmarca = false;// TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        //funciobotogeneral(btn1Text);
         String btn1Text = jButton1.getText();
+        javax.swing.JTextField tf = new javax.swing.JTextField();
         if (Casella == "c00"){
-            c00.setText(c00.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText());
-            f = Casella.charAt(1);
-            c = Casella.charAt(2);
+            tf = c00;
+            //c00.setText(c00.getText() + btn1Text);
+            val = Integer.parseInt(c00.getText() + btn1Text);
+            f = Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c01"){
-            c01.setText(c01.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText());
-            f = Casella.charAt(1);
-            c = Casella.charAt(2);
+            tf = c01;
+            //c01.setText(c01.getText() + btn1Text);
+            val = Integer.parseInt(c00.getText() + btn1Text);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c10"){
-            c10.setText(c10.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText());
-            f = Casella.charAt(1);
-            c = Casella.charAt(2);
+            tf = c10;
+            //c10.setText(c10.getText() + btn1Text);
+            val = Integer.parseInt(c00.getText() + btn1Text);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c11"){
-            c11.setText(c11.getText() + btn1Text); // TODO add your handling code here:
-            val = Integer.parseInt(c00.getText());
-            f = Casella.charAt(1);
-            c = Casella.charAt(2);
+            tf = c11;
+            //c11.setText(c11.getText() + btn1Text); // TODO add your handling code here:
+            val = Integer.parseInt(c00.getText() + btn1Text);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
         }
-        Taulell.setValProvCell(val, f, c); //valor, fila i columna   
+        
+        if (afegirmarca){
+            val = Integer.parseInt(btn1Text);
+            Taulell.switchAnnotationCell(val, f, c);
+        }
+        else{
+            Taulell.setValueCell(val, f, c);
+        }
+        tf.setText(String.valueOf(Taulell.getValueCell(f,c)));    
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -500,15 +527,17 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
         Casella = "c10";// TODO add your handling code here:
+        afegirmarca = false;
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        Casella = "c11";        // TODO add your handling code here:
+        Casella = "c11";    
+        afegirmarca = false;// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
              String btnresetText = "";
-         if (Casella == "c00")
+        if (Casella == "c00")
             c00.setText(btnresetText);
         if (Casella == "c01")
             c01.setText(btnresetText); 
@@ -517,12 +546,26 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c11")
             c11.setText(btnresetText);
     }//GEN-LAST:event_EsborrarActionPerformed
-    private void llistar_marques(){
-        
-    }
+
     private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
-        
+        afegirmarca = true;
     }//GEN-LAST:event_addmarcaMouseClicked
+
+    private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
+            f = Character.getNumericValue(Casella.charAt(1));
+            c = Character.getNumericValue(Casella.charAt(2));
+            String ArrayData = null;
+            for (int i = 0; i < Taulell.consult_max_annotations(); ++i){
+                                if (Taulell.getAnnotationCell(i, f, c) == true){// System.out.println(i + " ");
+                                    ArrayData = ArrayData + ", " + String.valueOf(i);
+                                }
+            }
+            txtmarques.setText(ArrayData); 
+    }//GEN-LAST:event_listmarquesMouseClicked
+
+    private void c00PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_c00PropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c00PropertyChange
                                                                                
                                                                      
     
@@ -575,6 +618,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Esborrar;
@@ -601,6 +645,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Casella;
-    private int marca,val,f,c;
+    private boolean afegirmarca;
+    private int val,f,c;
     BoardHidato Taulell = new BoardHidato(2,"nom");
 }
