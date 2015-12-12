@@ -18,6 +18,9 @@ public class Generar2 extends javax.swing.JFrame {
      */
     public Generar2(String usuari) {
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
         us = usuari;
     }
 
@@ -70,7 +73,7 @@ public class Generar2 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 50, 260, 60);
+        titol.setBounds(360, 30, 260, 60);
 
         primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -80,31 +83,36 @@ public class Generar2 extends javax.swing.JFrame {
                 primeraMouseClicked(evt);
             }
         });
+        primera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                primeraActionPerformed(evt);
+            }
+        });
         getContentPane().add(primera);
-        primera.setBounds(160, 180, 90, 80);
+        primera.setBounds(230, 300, 110, 100);
 
         primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
-        primera1.setBounds(250, 180, 90, 80);
+        primera1.setBounds(340, 200, 110, 100);
 
         primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
-        primera2.setBounds(160, 260, 90, 80);
+        primera2.setBounds(230, 200, 110, 100);
 
         primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
-        primera3.setBounds(250, 260, 90, 80);
+        primera3.setBounds(340, 300, 110, 100);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(500, 100, 80, 40);
+        numeros.setBounds(650, 120, 80, 40);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +121,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 160, 50, 50);
+        jButton1.setBounds(600, 180, 60, 60);
 
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +130,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 160, 50, 50);
+        jButton2.setBounds(670, 180, 60, 60);
 
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +139,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 160, 50, 50);
+        jButton3.setBounds(740, 180, 60, 60);
 
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +148,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 230, 50, 50);
+        jButton4.setBounds(600, 250, 60, 60);
 
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +157,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(520, 230, 50, 50);
+        jButton5.setBounds(670, 250, 60, 60);
 
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -158,7 +166,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(590, 230, 50, 50);
+        jButton6.setBounds(740, 250, 60, 60);
 
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +175,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(450, 300, 50, 50);
+        jButton7.setBounds(600, 320, 60, 60);
 
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +184,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(520, 300, 50, 50);
+        jButton8.setBounds(670, 320, 60, 60);
 
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -185,7 +193,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(590, 300, 50, 50);
+        jButton9.setBounds(740, 320, 60, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,13 +209,13 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 65, 25);
+        enrere.setBounds(920, 540, 65, 25);
 
         jButton10.setText("Generar");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 25);
+        jButton10.setBounds(600, 410, 100, 40);
         getContentPane().add(fons);
-        fons.setBounds(0, 0, 860, 450);
+        fons.setBounds(0, 0, 1000, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -262,6 +270,10 @@ public class Generar2 extends javax.swing.JFrame {
     private void primeraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primeraMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_primeraMouseClicked
+
+    private void primeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_primeraActionPerformed
 
     
     /**
