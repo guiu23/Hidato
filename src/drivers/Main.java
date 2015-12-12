@@ -424,7 +424,7 @@ public class Main {
                                 val2 = input.nextInt();
                                 val3 = input.nextInt();
                                 if ((val2 >= TaulellAux.getSize()) || (val2 >= TaulellAux.getSize())) System.out.println("Has sortit fora del taulell.");
-                                else if (TaulellAux.getWrittenCell(val2,val3) == true)  System.out.println("Cela no modificable.");  //modificar això
+                                else if (TaulellAux.getWrittenCell(val2,val3) == true || TaulellAux.getValidaCell(val2,val3) == false)  System.out.println("Cela no modificable.");  //modificar això
                                 else {
                                     TaulellAux.setValProvCell(val1, val2, val3);
                                     Funcions.imprimeixValors(TaulellAux);

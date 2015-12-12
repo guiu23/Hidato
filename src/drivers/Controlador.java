@@ -104,13 +104,16 @@ public class Controlador {
         HBD.loadTemporal();
         BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
         Taulell.setValProvCell(valor, i, j);
+        
+        
+        
     }
     
     public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         HBD.loadPlayers();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
-        Player jug; 
+        Player jug = null; 
         
         for(int i = 0; i < HBD._players.size(); ++i) {
             if (HBD._players.get(i).getName() == user) jug = HBD._players.get(i);
