@@ -12,12 +12,13 @@ import interficie.Menu;
  * @author jordi.guiu.pujols
  */
 public class Jugar3 extends javax.swing.JFrame {
-
+    public static String us;
     /**
      * Creates new form Identificacio
      */
-    public Jugar3() {
+    public Jugar3(String usuari) {
         initComponents();
+        us = usuari;
     }
 
     /**
@@ -317,7 +318,7 @@ public class Jugar3 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
@@ -380,7 +381,7 @@ public class Jugar3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar3().setVisible(true);
+                new Jugar3(us).setVisible(true);
             }
         });
     }

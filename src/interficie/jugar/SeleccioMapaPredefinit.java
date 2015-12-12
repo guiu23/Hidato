@@ -12,15 +12,16 @@ import interficie.Menu;
  * @author Àlex
  */
 public class SeleccioMapaPredefinit extends javax.swing.JFrame {
-
+    public static String us;
     /**
      * Creates new form SeleccioMapaPredefinit
      */
-    public SeleccioMapaPredefinit() {
+    public SeleccioMapaPredefinit(String usuari) {
         initComponents();  
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+        us = usuari;
     }
 
     /**
@@ -101,7 +102,7 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu();
+        Menu obj = new Menu(us);
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrereActionPerformed
@@ -140,7 +141,7 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SeleccioMapaPredefinit().setVisible(true);
+                new SeleccioMapaPredefinit(us).setVisible(true);
             }
         });
     }
