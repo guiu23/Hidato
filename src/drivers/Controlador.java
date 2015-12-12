@@ -104,4 +104,46 @@ public class Controlador {
         BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
         Taulell.setValProvCell(valor, i, j);
     }
+    
+    public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+        HBD = new HidatoBD();
+        HBD.loadPlayers();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
+        Player jug; 
+        
+        for(int i = 0; i < HBD._players.size(); ++i) {
+            if (HBD._players.get(i).getName() == user) jug = HBD._players.get(i);
+        }
+        
+        ArrayList<Integer> valors = new ArrayList<>();
+        valors.add(_stats.countMatches(jug)); //Partides totals solucionades
+        valors.add(_stats.countSolvedDiff(1,jug)); //Taulells diferents solucionats facil
+        valors.add(_stats.countSolvedDiff(2,jug)); //Taulells diferents solucionats mitja
+        valors.add(_stats.countSolvedDiff(3,jug)); //Taulells diferents solucionats dificil
+        valors.add(_stats.rank(jug)+1); //Posicio al ranking (+1 perquè comença al 0)
+        valors.add(jug.getPuntuacio()); //Consulta puntuacio 
+        
+        return valors;
+    }
+    
+    public static Ranking ObteRankingGlobal(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+        HBD = new HidatoBD();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
+        
+        Ranking ranking = _stats.rankingGlobal();
+        
+        return ranking;
+    }
+    
+    public static ArrayList<Integer> ObteRankingTotalAltres(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+        HBD = new HidatoBD();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
+        
+        ArrayList<Integer> valors = new ArrayList<>();
+        valors.add(_stats.countPlayers()); //Num jugadors al programa
+        valors.add(_stats.countMatches()); //Num partides guardades totals al programa
+        valors.add(_stats.countSolvedMatches()); //Num partides solucionades al programa
+        
+        return valors;
+    }
 }
