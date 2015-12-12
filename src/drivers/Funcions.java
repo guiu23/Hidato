@@ -153,6 +153,71 @@ public class Funcions {
         return 1;
     }
     
+    public static int llegirTaulell2(BoardHidato Taulell)   {
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
+        int retorn = 0;
+        //int valor;
+        int valormax = 1;
+        Boolean correcte = false;
+        //Scanner input = new Scanner( System.in );
+        while (correcte == false) {
+            for (int i = 0; i < Taulell.getSize(); ++i) {
+                for (int j = 0; j < Taulell.getSize(); ++j) {
+                    //valor = input.nextInt();
+                    if (/*valor*/Taulell.getValueCell(i,j) == 1) {
+                        Taulell.setStart_i(i);
+                        Taulell.setStart_j(j);
+                        //Taulell.setValueCell(valor, i, j);
+                    } else if (/*valor*/Taulell.getValueCell(i,j) > valormax) {
+                        Taulell.setFinish_i(i);
+                        Taulell.setFinish_j(j);
+                        valormax = Taulell.getValueCell(i,j);
+                        //Taulell.setValueCell(valor, i, j);
+                    }
+                    else if (/*valor*/Taulell.getValueCell(i,j) == -1){
+                        //Taulell.setValProvCell(valor, i, j);
+                        Taulell.switchValidaCell(i,j);
+                    }
+
+                    /*else {
+                    Taulell.setValueCell(valor, i, j);
+                    }*/
+                }
+            }
+            correcte = true; //per fer que funcioni ara, dsp mes tard esborrar-ho
+            BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
+            copiarBoard(TaulellRes, Taulell);
+            solve_modifica(TaulellRes, TaulellRes.getSize(), false);
+                        
+            if (solution) {
+                correcte = true;
+                boolean jaExisteix = false;
+                for ( int i =0; i< HBD._boards.size() && !jaExisteix; ++i) {
+                    if (HBD._boards.get(i).equals(Taulell)) jaExisteix = true; 
+                }
+                if (!jaExisteix) {
+                    HBD._boards.add(Taulell);                    //taulell sense resoldre
+                    HBD._boardsResolts.add(TaulellRes);          //taulell resolt
+                    //System.out.println("Hidato possible de resoldre.");
+                    HBD.saveBoards();
+                    HBD.saveBoardsResolts();
+                    int dificultat = triaDificultat(Taulell);
+                    retorn = dificultat; //returns 1, 2 o 3
+                }
+                else retorn =  4; //"El taulell ja existeix."
+                
+            } else {
+                //System.out.println("Hidato sense solucio possible. Torna-ho a provar.");
+                //netejaBoard(Taulell);
+                //llegirTaulell(Taulell);
+                retorn = 5; //No te solucio
+            }
+            solution = false;
+        }
+        return retorn;
+    }
+    
     public static boolean ExisteixTaulell (String id) {
         HBD.loadBoards();
         boolean trobat = false;

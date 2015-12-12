@@ -110,5 +110,7 @@ public class BoardHidato extends Board {
     public int getFinish_j() {return finish_j;}
     
     public String getID() {return id;}
+    
+    public void setID(String nomT) {this.id = nomT;} 
 
 }

@@ -102,7 +102,7 @@ public class Controlador {
     public static int DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell 
         HBD = new HidatoBD();
         HBD.loadTemporal();
-        BoardHidato Taulell = Funcions.CarregarTemporal(); //S'HA D'ACAVAR 
+        BoardHidato Taulell = Funcions.CarregarTemporal(); 
         if (i > 0 && i < Taulell.getSize() && j > 0 && j < Taulell.getSize()) {
            Taulell.setValProvCell(valor, i-1, j-1);
            Funcions.CleanTemporal();
@@ -110,6 +110,35 @@ public class Controlador {
            return 1; //Afegida correctament 
         }
         return 0; //No es pot afegir (intenta ficarla fora del taulell o substituir un written o posarla en invalida)
+    }
+    
+    public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        Integer X[] = {0,1,1,1,0,-1,-1,-1};
+        Integer Y[] = {1,1,0,-1,-1,-1,0,1};
+        int size = Taulell.getSize();
+        int startx = 0;
+        int starty = 0;
+        int valor;
+        int valormax = 1;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j < size; ++j) {
+                if (Taulell.getValueCell(i,j) == -1) Taulell.switchValidaCell(i,j);
+                else if (Taulell.getValueCell(i,j) != 0) Taulell.switchWrittenCell(i, j);
+                if (Taulell.getValueCell(i,j) == 1) {
+                    startx = i;
+                    starty = j;
+                    Taulell.setStart_i(i);
+                    Taulell.setStart_j(j);
+                }
+            }
+        }
+        return Funcions.llegirTaulell2(Taulell); //return 1, 2 i 3 tauell correcte i treu dificultat (1,2,3)
+                                                 //return 4 el taulell ja existeix
+                                                 //return 5 el taulell no te solucio
     }
     
     
