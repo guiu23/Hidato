@@ -113,9 +113,6 @@ public class Controlador {
     }
     
     public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
-        HBD = new HidatoBD();
-        HBD.loadTemporal();
-        
         BoardHidato Taulell = Funcions.CarregarTemporal();
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
         Integer Y[] = {1,1,0,-1,-1,-1,0,1};
@@ -142,8 +139,6 @@ public class Controlador {
     }
     
     public static void crearTaulellAleatori(int size, int dificultat) { //sense return, nomes es crea
-        HBD = new HidatoBD();
-        HBD.loadTemporal();
         BoardHidato Taulell = new BoardHidato(size,"temporal");
         Funcions.colocar_celesinvalides(Taulell);
         Funcions.generar_written(Taulell,dificultat);
