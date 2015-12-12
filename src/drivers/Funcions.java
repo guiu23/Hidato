@@ -8,6 +8,7 @@ import static java.lang.System.out;
 
 public class Funcions {
     public static boolean solution = false;
+    public static boolean fi = false;
     public static int numfinal;
     private static HidatoBD HBD = new HidatoBD();
     private static int max_cont;
@@ -439,6 +440,30 @@ public class Funcions {
             }
         }
     }
+    
+    static void repassem_cantonades(BoardHidato Taulell) {
+        int size = Taulell.getSize();
+        if (Taulell.getValidaCell(0, 0)) {
+            if (!Taulell.getValidaCell(1, 0) && !Taulell.getValidaCell(0, 1)) {
+                Taulell.incrementar_celesinvalides(0, 0);
+            }
+        }
+        if (Taulell.getValidaCell(0, size-1)) {
+            if (!Taulell.getValidaCell(1, size-1) && !Taulell.getValidaCell(0, size-1-1)) {
+                Taulell.incrementar_celesinvalides(0, size-1);
+            }
+        }
+        if (Taulell.getValidaCell(size-1, size-1)) {
+            if (!Taulell.getValidaCell(size-1-1, size-1) && !Taulell.getValidaCell(size-1, size-1-1)) {
+                Taulell.incrementar_celesinvalides(size-1, size-1);
+            }
+        }
+        if (Taulell.getValidaCell(size-1,0 )) {
+            if (!Taulell.getValidaCell(size-1, 1) && !Taulell.getValidaCell(size-1-1, 0)) {
+                Taulell.incrementar_celesinvalides(size-1, 0);
+            }
+        }
+    }
 
     public static void colocar_celesinvalides(BoardHidato Taulell) {
         int posades, size ,numcelesinvalides;
@@ -452,23 +477,24 @@ public class Funcions {
         while (posades < maxinvalides) {
             int row = posi.nextInt(size);   //fila random entre totes les celes totals
             int column = posj.nextInt(size); //columan random entre totes les celes totals
-            if (Taulell.getValidaCell(row, column)) {   //la cela q hem triat aleatoriament, si no es invalida la posem
-                // la posem a invalida
-                Taulell.incrementar_celesinvalides(row, column);
-                ++posades;
+            if (column == 0 || column == size-1 || row == 0 || row == size-1) {
+                if (Taulell.getValidaCell(row, column)) {   //la cela q hem triat aleatoriament, si no es invalida la posem
+                    // la posem a invalida
+                    Taulell.incrementar_celesinvalides(row, column);
+                    ++posades;
+                }
             }
         }
         posa_start(Taulell);
+        repassem_cantonades(Taulell);
         //repassem_invalides(Taulell);
         numcelesinvalides = Taulell.consultar_num_celesinvalides();
         numfinal = numfinal - numcelesinvalides;
         posa_final(Taulell); //POSEM LA ULTIMA CELA AL TAULELL
-        imprimeixValors(Taulell); //xivato temporal
         BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
-        copiarBoard(TaulellRes, Taulell);
+        copiarBoard(TaulellRes, Taulell);       
         solve_modifica(TaulellRes, TaulellRes.getSize(), false); //¡¡AQUI SI NO TÉ SOLUCIO HAURIA DE PARAR!! 
         if (!solution) {
-            System.out.println("A generar un altre cop!"); //xivato temporal
             netejaBoard(Taulell);
             colocar_celesinvalides(Taulell);
             }
@@ -541,18 +567,20 @@ public class Funcions {
         return false;
     }
 
-    public static void backtrack_modifica(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure)   {
+    public static void backtrack_modifica(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure, long inicial)   {
         // Fent servir el taulell, la matriu de visitats, el punt de start i el punt de finish,
         // resoldre el taulell i posar els valors de caselles not written als que toquen
         Boolean canviat = false;
+        long val = 10000000L;
+        if (size > 9) val = 50000000L;
+        if ((System.nanoTime() - inicial) > val) fi = true;
         if (comprovar2(Taulell, X, Y, size, startx, starty)) {
             if(escriure) imprimeixValors(Taulell);
             solution = true;
         }
         else {
-            imprimeixValors(Taulell);
             for (int i = 0; i < 8; ++i) {
-                if (!solution) {
+                if (!solution && !fi) {
                     if (startx + X[i] >= 0 && startx + X[i] < size && starty + Y[i] >= 0 && starty + Y[i] < size) {
                         if (!visitats[startx + X[i]][starty + Y[i]]) {
                             if (!Taulell.getWrittenCell(startx + X[i], starty + Y[i]) || (Taulell.getWrittenCell(startx + X[i], starty + Y[i]) && Taulell.getValueCell(startx + X[i], starty + Y[i]) == current)) {
@@ -561,8 +589,8 @@ public class Funcions {
                                     canviat = true;
                                 }
                                 visitats[startx + X[i]][starty + Y[i]] = true;
-                                backtrack_modifica(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure);
-                                if (!solution) {
+                                backtrack_modifica(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure, inicial);
+                                if (!solution && !fi) {
                                     visitats[startx + X[i]][starty + Y[i]] = false;
                                     if (canviat) {
                                         Taulell.setValueCell(0, startx + X[i], starty + Y[i]);
@@ -605,8 +633,10 @@ public class Funcions {
                 else if (!Taulell.getValidaCell(i, j)) visitats[i][j] = true; //caselles invalides marcades com a "visitades"
             }
         }
-        int current = 2;
-        backtrack_modifica(Taulell, visitats, startx, starty, X, Y, current, size, escriure);  //resoldre taulell
+        int current = 2;  
+        long inicial = System.nanoTime();
+        backtrack_modifica(Taulell, visitats, startx, starty, X, Y, current, size, escriure, inicial);  //resoldre taulell
+        fi = false;
     }
     
     /*
