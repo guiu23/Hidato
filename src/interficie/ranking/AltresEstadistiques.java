@@ -231,7 +231,11 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AltresEstadistiques(us).setVisible(true);
+                AltresEstadistiques ae = new AltresEstadistiques(us);
+                
+                
+                
+                ae.setVisible(true);
             }
         });
     }
