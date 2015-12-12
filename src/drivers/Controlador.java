@@ -141,7 +141,7 @@ public class Controlador {
                                                  //return 5 el taulell no te solucio
     }
     
-    public static void crearTaulellAleatori(int size, int dificultat) {
+    public static void crearTaulellAleatori(int size, int dificultat) { //sense return, nomes es crea
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = new BoardHidato(size,"temporal");
