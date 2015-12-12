@@ -621,7 +621,7 @@ public class Main {
         }
     }
      
-     private static String num(int num, int digits)
+     public static String num(int num, int digits)
     {
         String numS = "";
         int zeros = digits - digits(num);
@@ -629,7 +629,7 @@ public class Main {
         return numS + num;
     }
 
-    private static int digits(int num)
+    public static int digits(int num)
     {
         int digits = 1;
         while (num > 9) {

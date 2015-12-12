@@ -289,7 +289,7 @@ public class Funcions {
             }
         }
     }
-
+/*
     public static void imprimeix_written(BoardHidato Taulell){
         for (int i = 0; i < Taulell.getSize(); ++i) {
             for (int j = 0; j < Taulell.getSize(); ++j) {
@@ -311,7 +311,7 @@ public class Funcions {
             out.println();
         }
     }
-
+*/
     public static void generar_written(BoardHidato Taulell, int dificultat) {//posem al taulell les celes que al ppi estaran escrites
         int numvisibles, posi, posj, size, valor;
         size = Taulell.getSize();
@@ -463,18 +463,18 @@ public class Funcions {
         numcelesinvalides = Taulell.consultar_num_celesinvalides();
         numfinal = numfinal - numcelesinvalides;
         posa_final(Taulell); //POSEM LA ULTIMA CELA AL TAULELL
-        imprimeixValors(Taulell);
+        imprimeixValors(Taulell); //xivato temporal
         BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
         copiarBoard(TaulellRes, Taulell);
-        solve_modifica(TaulellRes, TaulellRes.getSize(), false); //aquí si no té solució hauria de parar 
-        System.out.println("EPEP"); 
+        solve_modifica(TaulellRes, TaulellRes.getSize(), false); //¡¡AQUI SI NO TÉ SOLUCIO HAURIA DE PARAR!! 
         if (!solution) {
+            System.out.println("A generar un altre cop!"); //xivato temporal
             netejaBoard(Taulell);
             colocar_celesinvalides(Taulell);
             }
         solution = false;
     }
-
+/*
     public static boolean verificadorSolucio(BoardHidato Taulell) { //LA FUNCIO ESTA TAJA
         int actual_i = Taulell.getStart_i();
         int actual_j = Taulell.getStart_j();
@@ -509,7 +509,7 @@ public class Funcions {
             ++val_actual;
         }
         return verificat;
-    }
+    }*/
 
     public static boolean comprovar2 (BoardHidato Taulell, Integer X[], Integer Y[], int size, int startx, int starty) {
         int valides = 0;
@@ -550,6 +550,7 @@ public class Funcions {
             solution = true;
         }
         else {
+            imprimeixValors(Taulell);
             for (int i = 0; i < 8; ++i) {
                 if (!solution) {
                     if (startx + X[i] >= 0 && startx + X[i] < size && starty + Y[i] >= 0 && starty + Y[i] < size) {
@@ -608,7 +609,7 @@ public class Funcions {
         backtrack_modifica(Taulell, visitats, startx, starty, X, Y, current, size, escriure);  //resoldre taulell
     }
     
-    
+    /*
     public static void backtrack(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure, int cont)   {
         // Fent servir el taulell, la matriu de visitats, el punt de start i el punt de finish,
         // resoldre el taulell i posar els valors de caselles not written als que toquen
@@ -682,8 +683,24 @@ public class Funcions {
         int current = 2;
         max_cont = size*size;
         backtrack(Taulell, visitats, startx, starty, X, Y, current,size, escriure, 0);  //resoldre taulell
+    }*/
+   public static String num(int num, int digits)
+    {
+        String numS = "";
+        int zeros = digits - digits(num);
+        for (int i = 1; i <= zeros; ++i) numS = numS + "0";
+        return numS + num;
     }
-   
+
+    public static int digits(int num)
+    {
+        int digits = 1;
+        while (num > 9) {
+            ++digits;
+            num /= 10;
+        }
+        return digits;
+    }
 
 }
 
