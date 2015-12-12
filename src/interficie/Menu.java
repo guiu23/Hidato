@@ -59,6 +59,7 @@ public class Menu extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
+        fons = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -97,6 +98,7 @@ public class Menu extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(1000, 600));
+        getContentPane().setLayout(null);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
@@ -112,6 +114,8 @@ public class Menu extends javax.swing.JFrame {
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(titol);
+        titol.setBounds(340, 214, 320, 100);
 
         LogOut.setText("Tancar sessió");
         LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -124,6 +128,8 @@ public class Menu extends javax.swing.JFrame {
                 LogOutActionPerformed(evt);
             }
         });
+        getContentPane().add(LogOut);
+        LogOut.setBounds(860, 514, 120, 30);
 
         sortir.setText("SORTIR");
         sortir.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +137,12 @@ public class Menu extends javax.swing.JFrame {
                 sortirActionPerformed(evt);
             }
         });
+        getContentPane().add(sortir);
+        sortir.setBounds(30, 504, 90, 40);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -231,39 +243,6 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(Ranking);
 
         setJMenuBar(MenuPrincipal);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(340, 340, 340)
-                        .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(860, 860, 860)
-                        .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(sortir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(21, 21, 21))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(214, 214, 214)
-                        .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(514, 514, 514)
-                        .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(504, 504, 504)
-                        .addComponent(sortir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(56, 56, 56))
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -502,6 +481,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem RankingGlobal;
     private javax.swing.JMenuItem RankingPersonal;
     private javax.swing.JMenu RankingTotal;
+    private javax.swing.JLabel fons;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;
