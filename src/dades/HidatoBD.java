@@ -35,6 +35,9 @@ public class HidatoBD extends DB {
     
     /*Contains temporal random solved generateed board */
     static public Table<BoardHidato> _temporalResolts;
+    
+    /*Contains the player who is loged in */
+    static public Table<BoardHidato> _playerActual;
 
     /** Class constructor, by default loads all the data */
     public HidatoBD()
@@ -47,6 +50,7 @@ public class HidatoBD extends DB {
         _temporal = new Table<>();
         _boardsResolts = new Table<>();
         _temporalResolts = new Table<>();
+        _playerActual = new Table<>();
     }
 
     /** Returns the Players Administration class */
@@ -66,6 +70,7 @@ public class HidatoBD extends DB {
         _temporal.save(getOutputStream("temporal"));
         _temporalResolts.save(getOutputStream("temporalResolts"));
         _boardsResolts.save(getOutputStream("boardsResolts"));
+        _playerActual.save(getOutputStream("boardsResolts"));
     }
     
     public void savePlayers() {
@@ -98,6 +103,10 @@ public class HidatoBD extends DB {
     
     public void saveBoardsResolts() {
         _boardsResolts.save(getOutputStream("boardsResolts"));
+    }
+    
+    public void savePlayerActual() {
+        _playerActual.save(getOutputStream("boardsResolts"));
     }
 
     /** Load all data from disc */
@@ -140,6 +149,11 @@ public class HidatoBD extends DB {
         }
         try {
             _boardsResolts.load(getInputStream("boardsResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
+        try {
+            _playerActual.load(getInputStream("boardsResolts"));
         } catch (IOException e) {
             System.err.println("Table not found");
         }
@@ -206,6 +220,14 @@ public class HidatoBD extends DB {
         } catch (IOException e) {
             System.err.println("Table not found");
         }    
+    }
+    
+    public void loadPlayerActual() {
+        try {
+            _playerActual.load(getInputStream("boardsResolts"));
+        } catch (IOException e) {
+            System.err.println("Table not found");
+        }
     }
     
     
