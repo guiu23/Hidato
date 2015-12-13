@@ -11,6 +11,9 @@ import drivers.Funcions;
 import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -64,6 +67,7 @@ public class Jugar2 extends javax.swing.JFrame {
         addmarca = new javax.swing.JButton();
         txtmarques = new javax.swing.JTextField();
         Esborrar = new javax.swing.JButton();
+        comprovar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -295,8 +299,13 @@ public class Jugar2 extends javax.swing.JFrame {
                 resoldreMouseClicked(evt);
             }
         });
+        resoldre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resoldreActionPerformed(evt);
+            }
+        });
         getContentPane().add(resoldre);
-        resoldre.setBounds(700, 480, 79, 23);
+        resoldre.setBounds(680, 460, 110, 50);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Marques:");
@@ -332,7 +341,21 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Esborrar);
-        Esborrar.setBounds(800, 470, 100, 40);
+        Esborrar.setBounds(830, 470, 100, 40);
+
+        comprovar.setText("Comrpovar");
+        comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comprovarMouseClicked(evt);
+            }
+        });
+        comprovar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprovarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(comprovar);
+        comprovar.setBounds(680, 520, 110, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -642,6 +665,25 @@ public class Jugar2 extends javax.swing.JFrame {
     private void c00PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_c00PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_c00PropertyChange
+
+    private void resoldreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resoldreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resoldreActionPerformed
+
+    private void comprovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprovarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comprovarActionPerformed
+
+    private void comprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprovarMouseClicked
+        int r;
+        //r = comprovarhidato();
+        JFrame frame = new JFrame("");
+        if (r == 1) JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
+        else if (r == 0)
+            JOptionPane.showMessageDialog(frame,"Hidato mal resolt");
+        
+//cridem funcio del controlador que mira si el q tenim de moment es igual que la seva solucio
+    }//GEN-LAST:event_comprovarMouseClicked
                                                                                
                                                                      
     
@@ -703,6 +745,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c10;
     private javax.swing.JTextField c11;
+    private javax.swing.JButton comprovar;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
