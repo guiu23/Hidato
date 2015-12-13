@@ -76,7 +76,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 550, 65, 23);
+        enrere.setBounds(910, 540, 71, 25);
 
         jScrollPane1.setViewportView(list1);
 

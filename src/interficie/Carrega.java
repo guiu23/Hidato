@@ -67,7 +67,7 @@ public class Carrega extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(916, 547, 65, 23);
+        enrere.setBounds(890, 530, 71, 25);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));

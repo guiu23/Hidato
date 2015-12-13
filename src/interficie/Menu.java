@@ -140,7 +140,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sortir);
-        sortir.setBounds(900, 510, 90, 40);
+        sortir.setBounds(900, 500, 90, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));

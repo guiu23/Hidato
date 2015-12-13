@@ -103,7 +103,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(906, 566, 65, 23);
+        enrere.setBounds(900, 530, 71, 25);
 
         password.setText("jPasswordField1");
         getContentPane().add(password);
