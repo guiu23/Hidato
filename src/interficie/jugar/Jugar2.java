@@ -626,13 +626,13 @@ public class Jugar2 extends javax.swing.JFrame {
         for (int i = 0; i < Taulell.getSize();++i){
             for (int j = 0; j < Taulell.getSize(); ++j){
                 afegir = String.valueOf(Taulell.getValueCell(i,j));
-                if (i == 0 || j == 0)
+                if (i == 0 && j == 0)
                     c00.setText(afegir);
-                else if (i == 0 || j == 1)
+                else if (i == 0 && j == 1)
                     c01.setText(afegir);
-                else if (i == 1 || j == 0)
+                else if (i == 1 && j == 0)
                     c10.setText(afegir);
-                else if (i == 1 || j == 1)
+                else if (i == 1 && j == 1)
                     c11.setText(afegir);
             }
         }
