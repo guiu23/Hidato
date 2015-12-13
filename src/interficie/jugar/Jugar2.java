@@ -10,10 +10,10 @@ import static drivers.Controlador.crearTaulellAleatori;
 import drivers.Funcions;
 import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
+import java.awt.Color;
 
 /**
  *
- * @author jordi.guiu.pujols
  */
 public class Jugar2 extends javax.swing.JFrame {
     public static String us;
@@ -340,10 +340,31 @@ public class Jugar2 extends javax.swing.JFrame {
     private void myinitComponents() {
         crearTaulellAleatori(Taulell,2,dif);
         imprimeixValors(Taulell); //Xivato taulell generat
-        if (Taulell.getValueCell(0,0) != 0) c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
-        if (Taulell.getValueCell(0,1) != 0) c01.setText(Integer.toString(Taulell.getValueCell(0,1)));
-        if (Taulell.getValueCell(1,0) != 0) c10.setText(Integer.toString(Taulell.getValueCell(1,0)));
-        if (Taulell.getValueCell(1,1) != 0) c11.setText(Integer.toString(Taulell.getValueCell(1,1)));
+        int ultima = Taulell.getSize()*Taulell.getSize() - Taulell.consultar_num_celesinvalides();
+        
+        String lastnum = Integer.toString(ultima);
+        txtmarques.setText(lastnum);
+        Color color = Color.blue;
+        if (Taulell.getValueCell(0,0) != 0){
+            c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
+            if ("1".equals(c00.getText())) c00.setBackground(color);            
+            else if (c00.getText().equals(lastnum)) c00.setBackground(color);
+        }
+        if (Taulell.getValueCell(0,1) != 0){
+            c01.setText(Integer.toString(Taulell.getValueCell(0,1)));
+            if ("1".equals(c01.getText()))c01.setBackground(color);
+            else if (c01.getText().equals(lastnum)) c01.setBackground(color);
+        }
+        if (Taulell.getValueCell(1,0) != 0){
+            c10.setText(Integer.toString(Taulell.getValueCell(1,0)));
+            if ("1".equals(c10.getText())) c10.setBackground(color);
+            else if (c10.getText().equals(lastnum)) c10.setBackground(color);
+        }
+        if (Taulell.getValueCell(1,1) != 0){
+            c11.setText(Integer.toString(Taulell.getValueCell(1,1)));
+            if ("1".equals(c11.getText())) c11.setBackground(Color.GREEN);
+            else if (c11.getText().equals(lastnum)) c11.setBackground(Color.GREEN);
+        }
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -394,8 +415,11 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        Casella = "c00";
-        afegirmarca = false;
+
+        if (!Taulell.getWrittenCell(0,0)){
+            Casella = "c00";
+            afegirmarca = false;
+        }
     }//GEN-LAST:event_c00MouseClicked
 
     private void c00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c00ActionPerformed
@@ -403,8 +427,11 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00ActionPerformed
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        Casella = "c01";     
-        afegirmarca = false;// TODO add your handling code here:
+
+        if (!Taulell.getWrittenCell(0,1)){
+            Casella = "c01";
+            afegirmarca = false;
+        }
     }//GEN-LAST:event_c01MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -551,13 +578,19 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        Casella = "c10";// TODO add your handling code here:
-        afegirmarca = false;
+
+        if (!Taulell.getWrittenCell(0,1)){
+            Casella = "c10";
+            afegirmarca = false;
+        }
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        Casella = "c11";    
-        afegirmarca = false;// TODO add your handling code here:
+       
+        if (!Taulell.getWrittenCell(1,1)){
+            Casella = "c11";
+            afegirmarca = false;
+        }
     }//GEN-LAST:event_c11MouseClicked
 
     private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
