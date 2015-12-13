@@ -43,6 +43,8 @@ public class Crea extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
+        fons1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -147,6 +149,14 @@ public class Crea extends javax.swing.JFrame {
         getContentPane().add(text_contra);
         text_contra.setBounds(200, 350, 140, 50);
 
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(10, 0, 1000, 590);
+
+        fons1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons1);
+        fons1.setBounds(0, 0, 1000, 590);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -247,6 +257,8 @@ public class Crea extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Crea;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
+    private javax.swing.JLabel fons1;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;

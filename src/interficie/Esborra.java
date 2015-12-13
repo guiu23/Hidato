@@ -46,11 +46,13 @@ public class Esborra extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(688, 488));
+        getContentPane().setLayout(null);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
@@ -66,12 +68,18 @@ public class Esborra extends javax.swing.JFrame {
         titol.setRequestFocusEnabled(false);
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(titol);
+        titol.setBounds(310, 100, 340, 100);
+        titol.getAccessibleContext().setAccessibleName("");
+        titol.getAccessibleContext().setAccessibleDescription("");
 
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userActionPerformed(evt);
             }
         });
+        getContentPane().add(user);
+        user.setBounds(330, 270, 270, 50);
 
         Esborra.setText("Esborra");
         Esborra.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +87,8 @@ public class Esborra extends javax.swing.JFrame {
                 EsborraActionPerformed(evt);
             }
         });
+        getContentPane().add(Esborra);
+        Esborra.setBounds(680, 290, 110, 100);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,8 +103,12 @@ public class Esborra extends javax.swing.JFrame {
                 enrereKeyPressed(evt);
             }
         });
+        getContentPane().add(enrere);
+        enrere.setBounds(906, 566, 65, 23);
 
         password.setText("jPasswordField1");
+        getContentPane().add(password);
+        password.setBounds(400, 350, 210, 50);
 
         text_nom.setEditable(false);
         text_nom.setBackground(new java.awt.Color(0, 0, 0));
@@ -117,6 +131,8 @@ public class Esborra extends javax.swing.JFrame {
                 text_nomActionPerformed(evt);
             }
         });
+        getContentPane().add(text_nom);
+        text_nom.setBounds(200, 270, 80, 50);
 
         text_contra.setEditable(false);
         text_contra.setBackground(new java.awt.Color(0, 0, 0));
@@ -134,59 +150,12 @@ public class Esborra extends javax.swing.JFrame {
                 text_contraActionPerformed(evt);
             }
         });
+        getContentPane().add(text_contra);
+        text_contra.setBounds(200, 350, 140, 50);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(text_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(text_contra, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(70, 70, 70)
-                        .addComponent(Esborra, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(191, 191, 191))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(enrere)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(titol, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(text_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(text_contra, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Esborra, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                .addComponent(enrere)
-                .addContainerGap())
-        );
-
-        titol.getAccessibleContext().setAccessibleName("");
-        titol.getAccessibleContext().setAccessibleDescription("");
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -312,6 +281,7 @@ public class Esborra extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Esborra;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;

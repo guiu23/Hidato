@@ -50,7 +50,7 @@ public class Generar2 extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
+        fons1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -209,13 +209,15 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(920, 540, 65, 25);
+        enrere.setBounds(920, 540, 65, 23);
 
         jButton10.setText("Generar");
         getContentPane().add(jButton10);
         jButton10.setBounds(600, 410, 100, 40);
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1000, 600);
+
+        fons1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons1);
+        fons1.setBounds(0, 0, 1000, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -344,7 +346,7 @@ public class Generar2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
-    private javax.swing.JLabel fons;
+    private javax.swing.JLabel fons1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
