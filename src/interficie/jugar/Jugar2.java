@@ -573,8 +573,23 @@ public class Jugar2 extends javax.swing.JFrame {
             txtmarques.setText(ArrayData); 
     }//GEN-LAST:event_listmarquesMouseClicked
     private void resoldreMouseClicked(java.awt.event.MouseEvent evt) {                                      
-        Funcions.solve_modifica(Taulell, 2, true); 
+        Funcions.solve_modifica(Taulell, 2, true);
+        String afegir;
+        for (int i = 0; i < Taulell.getSize();++i){
+            for (int j = 0; j < Taulell.getSize(); ++j){
+                afegir = String.valueOf(Taulell.getValueCell(i,j));
+                if (i == 0 || j == 0)
+                    c00.setText(afegir);
+                else if (i == 0 || j == 1)
+                    c01.setText(afegir);
+                else if (i == 1 || j == 0)
+                    c10.setText(afegir);
+                else if (i == 1 || j == 1)
+                    c11.setText(afegir);
+            }
+        }
     }
+    
     private void c00PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_c00PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_c00PropertyChange
