@@ -5,7 +5,10 @@
  */
 package interficie.jugar;
 
+import domini.BoardHidato;
+import static drivers.Controlador.ObtenirMapesExistents;
 import interficie.Menu;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,6 +25,7 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        myInitComponents();
     }
 
     /**
@@ -35,6 +39,7 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         LlistarMapesPredefinits = new javax.swing.JScrollPane();
+        list1 = new java.awt.List();
         enrere = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +55,8 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
+
+        LlistarMapesPredefinits.setViewportView(list1);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,6 +105,15 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myInitComponents() {
+        ArrayList<BoardHidato> mapes = new ArrayList<BoardHidato>();
+        ObtenirMapesExistents(mapes);
+        
+        for (int i = 0; i < mapes.size(); ++i) {
+            list1.add( "    " +  mapes.get(i) +  "    " );
+        }
+    }
+    
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -152,5 +168,6 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
     private javax.swing.JScrollPane LlistarMapesPredefinits;
     private javax.swing.JButton enrere;
     private javax.swing.JTextField jTextField1;
+    private java.awt.List list1;
     // End of variables declaration//GEN-END:variables
 }
