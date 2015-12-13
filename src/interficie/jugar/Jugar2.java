@@ -343,27 +343,30 @@ public class Jugar2 extends javax.swing.JFrame {
         int ultima = Taulell.getSize()*Taulell.getSize() - Taulell.consultar_num_celesinvalides();
         
         String lastnum = Integer.toString(ultima);
-        txtmarques.setText(lastnum);
         Color color = Color.blue;
         if (Taulell.getValueCell(0,0) != 0){
             c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
             if ("1".equals(c00.getText())) c00.setBackground(color);            
             else if (c00.getText().equals(lastnum)) c00.setBackground(color);
+            else if ("-1".equals(c00.getText())) c00.setBackground(Color.black);
         }
         if (Taulell.getValueCell(0,1) != 0){
             c01.setText(Integer.toString(Taulell.getValueCell(0,1)));
             if ("1".equals(c01.getText()))c01.setBackground(color);
             else if (c01.getText().equals(lastnum)) c01.setBackground(color);
+            else if ("-1".equals(c01.getText())) c01.setBackground(Color.black);
         }
         if (Taulell.getValueCell(1,0) != 0){
             c10.setText(Integer.toString(Taulell.getValueCell(1,0)));
             if ("1".equals(c10.getText())) c10.setBackground(color);
             else if (c10.getText().equals(lastnum)) c10.setBackground(color);
+            else if ("-1".equals(c10.getText())) c10.setBackground(Color.black);
         }
         if (Taulell.getValueCell(1,1) != 0){
             c11.setText(Integer.toString(Taulell.getValueCell(1,1)));
-            if ("1".equals(c11.getText())) c11.setBackground(Color.GREEN);
-            else if (c11.getText().equals(lastnum)) c11.setBackground(Color.GREEN);
+            if ("1".equals(c11.getText())) c11.setBackground(color);
+            else if (c11.getText().equals(lastnum)) c11.setBackground(color);
+            else if ("-1".equals(c11.getText())) c11.setBackground(Color.black);
         }
     }
     
@@ -461,8 +464,6 @@ public class Jugar2 extends javax.swing.JFrame {
         }
         if (Casella == "c11"){
             tf = c11;
-            
-
             //c11.setText(c11.getText() + btn1Text); // TODO add your handling code here:
             val = Integer.parseInt(c00.getText() + btn1Text);
             f =  Character.getNumericValue(Casella.charAt(1));
