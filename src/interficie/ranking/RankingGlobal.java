@@ -140,13 +140,16 @@ public class RankingGlobal extends javax.swing.JFrame {
     private void myinitComponents() {
         ArrayList<struct> dades = new ArrayList<struct>();
         ObteRankingGlobal(dades);
-        //EL VECTOR dades TÉ EL RANKING PER ORDRE AMB ELS 3 VALS. 
-        //XIVATO PER VEURE QUÈ TÉ EL VECTOR
         for (int i = 0; i < dades.size(); ++i) {
-            if (dades.get(i).nom.equals(us)) System.out.println("Usuari actual");
-            list1.add(" - "+ dades.get(i).pos + ":        " + dades.get(i).nom + "        " + dades.get(i).punts);
+            String si = "";
+            if (dades.get(i).nom.equals(us)) si = " <- USUARI ACTUAL";
+            int j;
+            String nom = dades.get(i).nom;
+            for (j = dades.get(i).nom.length(); j < 16; j++) {
+                nom += " ";
+            }
+            list1.add(" - "+ dades.get(i).pos + ":        " + nom + dades.get(i).punts + si);
         }
-        //XIVATO PER VEURE QUÈ TÉ EL VECTOR 
     }
     
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
