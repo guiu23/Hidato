@@ -421,6 +421,8 @@ public class Jugar2 extends javax.swing.JFrame {
         }
         if (Casella == "c11"){
             tf = c11;
+            
+
             //c11.setText(c11.getText() + btn1Text); // TODO add your handling code here:
             val = Integer.parseInt(c00.getText() + btn1Text);
             f =  Character.getNumericValue(Casella.charAt(1));
