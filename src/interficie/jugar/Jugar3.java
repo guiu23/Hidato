@@ -57,7 +57,6 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -80,7 +79,7 @@ public class Jugar3 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(160, 50, 260, 60);
+        titol.setBounds(310, 50, 260, 60);
 
         primera.setEditable(false);
         primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -96,30 +95,30 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera);
-        primera.setBounds(210, 170, 60, 60);
+        primera.setBounds(330, 180, 70, 70);
 
         primera1.setEditable(false);
         primera1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera1);
-        primera1.setBounds(330, 170, 60, 60);
+        primera1.setBounds(470, 180, 70, 70);
 
         primera2.setEditable(false);
         primera2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera2);
-        primera2.setBounds(270, 170, 60, 60);
+        primera2.setBounds(400, 180, 70, 70);
 
         primera3.setEditable(false);
         primera3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera3);
-        primera3.setBounds(330, 290, 60, 60);
+        primera3.setBounds(470, 320, 70, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
+        numeros.setBounds(670, 120, 80, 40);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +127,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 160, 50, 50);
+        jButton1.setBounds(610, 180, 60, 60);
 
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +136,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 160, 50, 50);
+        jButton2.setBounds(680, 180, 60, 60);
 
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +145,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 160, 50, 50);
+        jButton3.setBounds(750, 180, 60, 60);
 
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +154,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 230, 50, 50);
+        jButton4.setBounds(610, 250, 60, 60);
 
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +163,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(520, 230, 50, 50);
+        jButton5.setBounds(680, 250, 60, 60);
 
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +172,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(590, 230, 50, 50);
+        jButton6.setBounds(750, 250, 60, 60);
 
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +181,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(450, 300, 50, 50);
+        jButton7.setBounds(610, 320, 60, 60);
 
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +190,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(520, 300, 50, 50);
+        jButton8.setBounds(680, 320, 60, 60);
 
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +199,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(590, 300, 50, 50);
+        jButton9.setBounds(750, 320, 60, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -216,66 +215,67 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(600, 420, 59, 23);
+        enrere.setBounds(910, 550, 65, 25);
 
         primera4.setEditable(false);
         primera4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera4);
-        primera4.setBounds(210, 230, 60, 60);
+        primera4.setBounds(330, 320, 70, 70);
 
         primera5.setEditable(false);
         primera5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera5);
-        primera5.setBounds(270, 230, 60, 60);
+        primera5.setBounds(400, 250, 70, 70);
 
         primera6.setEditable(false);
         primera6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera6);
-        primera6.setBounds(330, 230, 60, 60);
+        primera6.setBounds(470, 250, 70, 70);
 
         primera7.setEditable(false);
         primera7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera7);
-        primera7.setBounds(210, 290, 60, 60);
+        primera7.setBounds(330, 250, 70, 70);
 
         primera8.setEditable(false);
         primera8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         primera8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         getContentPane().add(primera8);
-        primera8.setBounds(270, 290, 60, 60);
+        primera8.setBounds(400, 320, 70, 70);
 
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
+        jButton10.setBounds(610, 390, 90, 40);
 
-        jButton11.setText("Afegir marca");
+        jButton11.setText("Esborrar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton11);
-        jButton11.setBounds(550, 370, 100, 23);
+        jButton11.setBounds(710, 390, 100, 40);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Marques:");
         getContentPane().add(numeros1);
-        numeros1.setBounds(30, 200, 80, 40);
+        numeros1.setBounds(170, 220, 80, 40);
 
         jButton12.setText("Treure marca");
         getContentPane().add(jButton12);
-        jButton12.setBounds(20, 160, 110, 23);
+        jButton12.setBounds(160, 180, 110, 40);
 
         jButton13.setText("Afegir marca");
         getContentPane().add(jButton13);
-        jButton13.setBounds(20, 120, 100, 23);
+        jButton13.setBounds(160, 130, 110, 40);
 
         jTextField1.setEditable(false);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(30, 250, 80, 140);
-
-        fons.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(20, 0, 860, 450);
+        jTextField1.setBounds(170, 270, 80, 140);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -335,6 +335,10 @@ public class Jugar3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_primeraActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -388,7 +392,6 @@ public class Jugar3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
-    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;

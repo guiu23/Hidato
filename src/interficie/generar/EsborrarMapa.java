@@ -5,7 +5,10 @@
  */
 package interficie.generar;
 
+import domini.BoardHidato;
+import static drivers.Controlador.ObtenirMapesExistents;
 import interficie.Menu;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,6 +25,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        myInitComponents();
     }
 
     /**
@@ -35,6 +39,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
 
         enrere = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
+        list1 = new java.awt.List();
         jTextField1 = new javax.swing.JTextField();
         titol = new javax.swing.JTextArea();
 
@@ -56,6 +61,9 @@ public class EsborrarMapa extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(910, 540, 71, 25);
+
+        jScrollPane1.setViewportView(list1);
+
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(175, 250, 654, 278);
 
@@ -93,6 +101,14 @@ public class EsborrarMapa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myInitComponents() {
+        ArrayList<BoardHidato> mapes = new ArrayList<BoardHidato>();
+        ObtenirMapesExistents(mapes);
+        for (int i = 0; i < mapes.size(); ++i) {
+            list1.add( "    " +  mapes.get(i) +  "    " );
+        }
+    }
+    
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
         Menu obj = new Menu(us);
@@ -147,6 +163,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private java.awt.List list1;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

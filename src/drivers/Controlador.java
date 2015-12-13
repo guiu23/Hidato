@@ -255,4 +255,12 @@ public class Controlador {
             mapes.set(i, HBD._boards.get(i));
         }
     }
+    
+    public static void ObtenirPartides(ArrayList<stubMatch> partides) {
+        HBD = new HidatoBD();
+        HBD.loadBoards();
+        for( int i = 0; i < HBD._matches.size(); ++i ) {
+            partides.set(i, HBD._matches.get(i));
+        }
+    }
 }

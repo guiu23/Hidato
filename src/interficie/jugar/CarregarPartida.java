@@ -5,7 +5,13 @@
  */
 package interficie.jugar;
 
+import domini.BoardHidato;
+import domini.Match;
+import domini.stats.stubMatch;
+import static drivers.Controlador.ObtenirMapesExistents;
+import static drivers.Controlador.ObtenirPartides;
 import interficie.Menu;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,6 +28,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        myInitComponents();
     }
 
     /**
@@ -36,6 +43,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         enrere = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
+        list1 = new java.awt.List();
         titol = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +73,9 @@ public class CarregarPartida extends javax.swing.JFrame {
         jTextField1.setFocusable(false);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(35, 116, 256, 28);
+
+        jScrollPane1.setViewportView(list1);
+
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(80, 150, 850, 380);
 
@@ -88,6 +99,15 @@ public class CarregarPartida extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myInitComponents() {
+        ArrayList<stubMatch> partides = new ArrayList<stubMatch>();
+        ObtenirPartides(partides);
+        
+        for (int i = 0; i < partides.size(); ++i) {
+            list1.add( "    " +  partides.get(i) +  "    " );
+        }
+    }
+    
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
         Menu obj = new Menu(us);
@@ -138,6 +158,7 @@ public class CarregarPartida extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private java.awt.List list1;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

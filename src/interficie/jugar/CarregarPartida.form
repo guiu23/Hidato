@@ -74,6 +74,10 @@
       </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="java.awt.List" name="list1">
+        </Component>
+      </SubComponents>
     </Container>
     <Component class="javax.swing.JTextArea" name="titol">
       <Properties>
