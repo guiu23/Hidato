@@ -218,7 +218,7 @@ public class Controlador {
             }
             else valors = null; //error de funcionament (no hauria de passar mai)
         }
-        return valors;
+        return valors; //sempre hauria de tornar els valors del taulell resolt en ordre
     }
     
     
