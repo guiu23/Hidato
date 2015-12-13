@@ -54,10 +54,12 @@ public class CarregarPartida extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setText("Selecciona la partida a carregar:");
+        jTextField1.setFocusable(false);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
