@@ -6,7 +6,9 @@
 package interficie.jugar;
 
 import domini.BoardHidato;
+import static drivers.Controlador.crearTaulellAleatori;
 import drivers.Funcions;
+import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
 
 /**
@@ -15,18 +17,20 @@ import interficie.Menu;
  */
 public class Jugar2 extends javax.swing.JFrame {
     public static String us;
+    public static int dif;
    
-
     /**
      * Creates new form Identificacio
      */
-    public Jugar2(String usuari) {
+    public Jugar2(String usuari, int dificultat) {
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
         afegirmarca = false;
         us = usuari;
+        dif = dificultat;
+        myinitComponents();
     }
 
     /**
@@ -333,6 +337,15 @@ public class Jugar2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myinitComponents() {
+        crearTaulellAleatori(Taulell,2,dif);
+        imprimeixValors(Taulell); //Xivato taulell generat
+        if (Taulell.getValueCell(0,0) != 0) c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
+        if (Taulell.getValueCell(0,1) != 0) c01.setText(Integer.toString(Taulell.getValueCell(0,1)));
+        if (Taulell.getValueCell(1,0) != 0) c10.setText(Integer.toString(Taulell.getValueCell(1,0)));
+        if (Taulell.getValueCell(1,1) != 0) c11.setText(Integer.toString(Taulell.getValueCell(1,1)));
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -643,7 +656,7 @@ public class Jugar2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar2(us).setVisible(true);
+                new Jugar2(us, dif).setVisible(true);
             }
         });
     }

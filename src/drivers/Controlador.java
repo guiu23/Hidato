@@ -138,8 +138,8 @@ public class Controlador {
                                                  //return 5 el taulell no te solucio
     }
     
-    public static void crearTaulellAleatori(int size, int dificultat) { //sense return, nomes es crea
-        BoardHidato Taulell = new BoardHidato(size,"temporal");
+    public static void crearTaulellAleatori(BoardHidato Taulell, int size, int dificultat) { //sense return, nomes es crea
+        //BoardHidato Taulell = new BoardHidato(size,"temporal");
         Funcions.colocar_celesinvalides(Taulell);
         Funcions.generar_written(Taulell,dificultat);
     }

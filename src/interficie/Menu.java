@@ -337,10 +337,10 @@ public class Menu extends javax.swing.JFrame {
         Object[] optDif = {"Fàcil", "Mitjà", "Difícil"};
         JFrame frame = new JFrame("Tamany Mapa");
         int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
-        if ( n == 0) {
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+        if (n == 0) {
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
-            Jugar2 obj = new Jugar2(us);
+            Jugar2 obj = new Jugar2(us, dificultat);
             obj.setVisible(true);
             dispose();
         }
