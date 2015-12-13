@@ -111,44 +111,48 @@ public class Controlador {
         }
         return 0; //No es pot afegir (intenta ficarla fora del taulell o substituir un written o posarla en invalida)
     }
-    public static int comprovarHidato(){
-        BoardHidato Taulell = Funcions.CarregarTemporal();
+    public static int comprovarHidato(BoardHidato Taulell){
+        //BoardHidato Taulell = Funcions.CarregarTemporal();
         int size = Taulell.getSize();
-          int startx=0;
-                            int starty=0;
-                        
-                            for (int i = 0; i < size; ++i)  {
-                                for (int j = 0; j < size; ++j)  {
-                                    if (Taulell.getValidaCell(i,j)) {
-                                        if (Taulell.getValueCell(i,j) == 1)   {
-                                                          //guardem casella start i la marquem com a visitada
-                                            startx = i;
-                                            starty = j;
-                                        }
-                                    }
-                                }
-                            }
-                            if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  //AQUI ANAVA LA FUNCIO TAJA 
-                                System.out.println("Ben resolt! Felicitats :)");
-                                System.out.println("Punts Partida: " + Partida.getResult()*size); 
-                                int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
-                                Jugador.SetPuntuacio(puntuacioF);
-                                m.setTime(1);
-                                HBD.loadPlayers();
-                                for (int i = 0; i < HBD._players.size(); ++i){
-                                    if (HBD._players.get(i).getName().equals(Jugador.getName())){ 
-                                        HBD._players.get(i).SetPuntuacio(puntuacioF);
-                                        b=true;
-                                        HBD.savePlayers();
-                                        System.out.println("Punts Totals de " + HBD._players.get(i).getName() + ": "+ HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
-                                    }
-                                }
-                                fi_joc = true;
-                            }
-                            else {
-                                System.out.println("Mal resolt :( Tornar-ho a intentar.");
-                            }
-                        } 
+        Integer X[] = {0,1,1,1,0,-1,-1,-1};
+        Integer Y[] = {1,1,0,-1,-1,-1,0,1};
+        int startx=0;
+        int starty=0;
+        
+        BoardHidato TaulellAux = new BoardHidato(size, "aux");
+        Funcions.copiarBoard(TaulellAux, Taulell);
+
+        for (int i = 0; i < size; ++i)  {
+            for (int j = 0; j < size; ++j)  {
+                if (Taulell.getValidaCell(i,j)) {
+                    if (Taulell.getValueCell(i,j) == 1)   { //guardem casella start i la marquem com a visitada             
+                        startx = i;
+                        starty = j;
+                    }
+                }
+            }
+        }
+        
+        if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  
+            return 1; //Si està ben resolt torna la puntuació
+            /*System.out.println("Punts Partida: " + Partida.getResult()*size); 
+            int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
+            Jugador.SetPuntuacio(puntuacioF);
+            m.setTime(1);
+            HBD.loadPlayers();
+            for (int i = 0; i < HBD._players.size(); ++i){
+                if (HBD._players.get(i).getName().equals(Jugador.getName())){ 
+                    HBD._players.get(i).SetPuntuacio(puntuacioF);
+                    b=true;
+                    HBD.savePlayers();
+                    System.out.println("Punts Totals de " + HBD._players.get(i).getName() + ": "+ HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
+                }
+            }*/
+        }
+        else {
+            return -1; //Mal resolt 
+        }
+    } 
     public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
         BoardHidato Taulell = Funcions.CarregarTemporal();
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
