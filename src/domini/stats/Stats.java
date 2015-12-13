@@ -12,6 +12,7 @@ public abstract class Stats {
     
     public Stats(Table<Player> players, Table<stubGame> games, Table<stubMatch> matches)
     {
+        HBD.loadPlayers();
         this.HBD._players = players;
         this.HBD._games = games;
         this.HBD._matches = matches;
@@ -47,11 +48,7 @@ public abstract class Stats {
         int rank = HBD._players.size();
         int score = player.getPuntuacio();
         int i;
-        /*for (i = 0; HBD._players.get(i) != player; ++i) {
-            System.out.println(HBD._players.get(i));
-            System.out.println(player);
-            if (score >= score(HBD._players.get(i))) --rank;
-        }*/
+        
         for (i = 0; i < HBD._players.size(); ++i)
             if (score >= HBD._players.get(i).getPuntuacio()) --rank; //>= perquè comenci dalt de tot dels iguals al 7 (com el 8)
         return rank;
@@ -81,20 +78,20 @@ public abstract class Stats {
     }
 
     public int countPlayers() { 
-        HBD.loadPlayers();
+        if (HBD._players.size() > 0) HBD.loadPlayers();
         return HBD._players.size(); 
     }
     public int countGames() {
-        HBD.loadGames();
+        if (HBD._games.size() > 0) HBD.loadGames();
         return HBD._games.size(); 
     }
     public int countMatches() {
-        HBD.loadMatches();
+        if (HBD._matches.size() > 0) HBD.loadMatches();
         return HBD._matches.size(); 
     }
     
     public int countSolvedMatches() {
-        HBD.loadSolvedMatches();
+        if (HBD._solvedmatches.size() > 0) HBD.loadSolvedMatches();
         return HBD._solvedmatches.size(); 
     }
 

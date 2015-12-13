@@ -24,6 +24,7 @@ public class RankingPersonal extends javax.swing.JFrame {
     public RankingPersonal(String usuari) {
         initComponents();
         us = usuari;
+        System.out.println("user: " + us);
         myinitComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
@@ -46,9 +47,7 @@ public class RankingPersonal extends javax.swing.JFrame {
         text3 = new javax.swing.JTextField();
         text4 = new javax.swing.JTextField();
         text5 = new javax.swing.JTextField();
-        text6 = new javax.swing.JTextField();
         text7 = new javax.swing.JTextField();
-        pos_rank = new javax.swing.JTextField();
         tot_sol = new javax.swing.JTextField();
         tot_diferents_sol = new javax.swing.JTextField();
         tot_diffclty_1 = new javax.swing.JTextField();
@@ -166,22 +165,6 @@ public class RankingPersonal extends javax.swing.JFrame {
         getContentPane().add(text5);
         text5.setBounds(193, 479, 160, 51);
 
-        text6.setEditable(false);
-        text6.setBackground(new java.awt.Color(0, 0, 0));
-        text6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        text6.setForeground(new java.awt.Color(255, 255, 255));
-        text6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text6.setText("Posició al ranking:");
-        text6.setFocusable(false);
-        text6.setRequestFocusEnabled(false);
-        text6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text6);
-        text6.setBounds(570, 220, 210, 65);
-
         text7.setEditable(false);
         text7.setBackground(new java.awt.Color(0, 0, 0));
         text7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -196,13 +179,7 @@ public class RankingPersonal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(text7);
-        text7.setBounds(650, 353, 130, 65);
-
-        pos_rank.setEditable(false);
-        pos_rank.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        pos_rank.setRequestFocusEnabled(false);
-        getContentPane().add(pos_rank);
-        pos_rank.setBounds(820, 220, 70, 70);
+        text7.setBounds(610, 290, 130, 65);
 
         tot_sol.setEditable(false);
         tot_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -238,7 +215,7 @@ public class RankingPersonal extends javax.swing.JFrame {
         pnts.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         pnts.setRequestFocusEnabled(false);
         getContentPane().add(pnts);
-        pnts.setBounds(820, 350, 70, 70);
+        pnts.setBounds(780, 290, 70, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -251,8 +228,7 @@ public class RankingPersonal extends javax.swing.JFrame {
         tot_diffclty_1.setText(dades.get(1));
         tot_diffclty_2.setText(dades.get(2));
         tot_diffclty_3.setText(dades.get(3));
-        pos_rank.setText(dades.get(4));
-        pnts.setText(dades.get(5));
+        pnts.setText(dades.get(4));
     }
     
     private void enrere1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrere1ActionPerformed
@@ -285,10 +261,6 @@ public class RankingPersonal extends javax.swing.JFrame {
     private void text5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text5ActionPerformed
-
-    private void text6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text6ActionPerformed
 
  void text7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text7ActionPerformed
         // TODO add your handling code here:
@@ -336,13 +308,11 @@ public class RankingPersonal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere1;
     private javax.swing.JTextField pnts;
-    private javax.swing.JTextField pos_rank;
     private javax.swing.JTextField text1;
     private javax.swing.JTextField text2;
     private javax.swing.JTextField text3;
     private javax.swing.JTextField text4;
     private javax.swing.JTextField text5;
-    private javax.swing.JTextField text6;
     private javax.swing.JTextField text7;
     private javax.swing.JTextField titol;
     private javax.swing.JTextField tot_diferents_sol;

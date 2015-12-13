@@ -25,9 +25,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
-        HBD.load();
+        HBD.loadPlayers();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
-        //HBD.load();
         admin = HBD.getPlayersAdmin();
         int size;
         int select;

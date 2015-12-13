@@ -189,38 +189,40 @@ public class Controlador {
     
     
     
-    public static ArrayList<Integer> ObteRankingPersonal(String user){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+    public static void ObteRankingPersonal(String user, ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         HBD.loadPlayers();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         Player jug = null; 
         
         for(int i = 0; i < HBD._players.size(); ++i) {
-            if (HBD._players.get(i).getName() == user) jug = HBD._players.get(i);
+            if (HBD._players.get(i).getName().equals(user)) {
+                jug = HBD._players.get(i);
+            }
         }
         
-        ArrayList<Integer> valors = new ArrayList<>();
-        valors.add(_stats.countMatches(jug)); //Partides totals solucionades
-        valors.add(_stats.countSolvedDiff(1,jug)); //Taulells diferents solucionats facil
-        valors.add(_stats.countSolvedDiff(2,jug)); //Taulells diferents solucionats mitja
-        valors.add(_stats.countSolvedDiff(3,jug)); //Taulells diferents solucionats dificil
-        valors.add(_stats.rank(jug)+1); //Posicio al ranking (+1 perquè comença al 0)
-        valors.add(jug.getPuntuacio()); //Consulta puntuacio 
+        String pr_tot = Integer.toString(_stats.countMatches(jug));
+        String fac = Integer.toString(_stats.countSolvedDiff(1,jug));
+        String mit = Integer.toString(_stats.countSolvedDiff(2,jug));
+        String dif = Integer.toString(_stats.countSolvedDiff(3,jug));
+        String pts = Integer.toString(jug.getPuntuacio());
         
-        return valors;
+        valors.add(pr_tot); //Partides totals solucionades
+        valors.add(fac); //Taulells diferents solucionats facil
+        valors.add(mit); //Taulells diferents solucionats mitja
+        valors.add(dif); //Taulells diferents solucionats dificil
+        valors.add(pts); //Consulta puntuacio 
     }
     
-    public static ArrayList<struct> ObteRankingGlobal(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+    public static void ObteRankingGlobal(ArrayList<struct> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
+        HBD.loadPlayers();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         
         Ranking ranking = _stats.rankingGlobal();
         
-        ArrayList<struct> valors = new ArrayList<>();
-        
         int size = ranking.getSize();
-        if (size == 0) return null; //ranking buit 
-        else {
+        if (size != 0) {
             int digits = digits(size);
             HBD.loadPlayers();
             for (int i = 0; i < size; ++i) {
@@ -228,21 +230,21 @@ public class Controlador {
                 s.setPos(num(i+1,digits)); //posició ranking del jugador 
                 s.setNom(ranking.getPlayer(i).getName()); //nom del jugador
                 s.setPunts(ranking.getValue(i)); //punts del jugador
+                valors.add(s);
             }
         }
-        
-        return valors; //vector amb ranking per posicions i = 0 (primer amb tot), i = 1 (segon amb tot), etc...
     }
     
-    public static ArrayList<Integer> ObteRankingTotalAltres(){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
+    public static void ObteRankingTotalAltres(ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
-        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
-        
-        ArrayList<Integer> valors = new ArrayList<>();
-        valors.add(_stats.countPlayers()); //Num jugadors al programa
-        valors.add(_stats.countMatches()); //Num partides guardades totals al programa
-        valors.add(_stats.countSolvedMatches()); //Num partides solucionades al programa
-        
-        return valors;
+        HBD.loadPlayers();
+        _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches); 
+        String num_jug = Integer.toString(_stats.countPlayers());
+        String num_guard = Integer.toString(_stats.countMatches());
+        String num_solu = Integer.toString(_stats.countSolvedMatches());
+
+        valors.add(num_jug); //Num jugadors al programa
+        valors.add(num_guard); //Num partides guardades totals al programa
+        valors.add(num_solu); //Num partides solucionades al programa
     }
 }

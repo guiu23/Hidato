@@ -5,7 +5,10 @@
  */
 package interficie.ranking;
 
+import static drivers.Controlador.ObteRankingGlobal;
+import drivers.struct;
 import interficie.Menu;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,10 +21,11 @@ public class RankingGlobal extends javax.swing.JFrame {
      */
     public RankingGlobal(String usuari) {
         initComponents();
+        us = usuari;
+        myinitComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
-        us = usuari;
     }
 
     /**
@@ -99,6 +103,18 @@ public class RankingGlobal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void myinitComponents() {
+        ArrayList<struct> dades = new ArrayList<struct>();
+        ObteRankingGlobal(dades);
+        //EL VECTOR dades TÉ EL RANKING PER ORDRE AMB ELS 3 VALS. 
+        //XIVATO PER VEURE QUÈ TÉ EL VECTOR
+        for (int i = 0; i < dades.size(); ++i) {
+            System.out.println("pos: " + dades.get(i).pos + " | nom: " + dades.get(i).nom + " | pts: " + dades.get(i).punts);
+            if (dades.get(i).nom.equals(us)) System.out.println("Usuari actual");
+        }
+        //XIVATO PER VEURE QUÈ TÉ EL VECTOR 
+    }
+    
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
         Menu obj = new Menu(us);
