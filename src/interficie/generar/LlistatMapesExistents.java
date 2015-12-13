@@ -5,7 +5,11 @@
  */
 package interficie.generar;
 
+import dades.HidatoBD;
+import domini.BoardHidato;
+import static drivers.Controlador.ObtenirMapesExistents;
 import interficie.Menu;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,6 +26,9 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        myInitComponents();
+   
+        
     }
 
     /**
@@ -34,8 +41,9 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
         enrere = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        list1 = new java.awt.List();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +73,8 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane1.setViewportView(list1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -73,22 +83,23 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
                 .addContainerGap(180, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(enrere)
-                            .addContainerGap())
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 681, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(139, 139, 139)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(737, 737, 737)
+                        .addComponent(enrere)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(124, 124, 124)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addComponent(enrere)
                 .addContainerGap())
         );
@@ -96,9 +107,16 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void myInitComponents() {
+        ArrayList<BoardHidato> mapes = new ArrayList<BoardHidato>();
+        ObtenirMapesExistents(mapes);
+        
+        for (int i = 0; i < mapes.size(); ++i) {
+            list1.add( "    " +  mapes.get(i) +  "    " );
+        }
+    }
+        
+        
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
@@ -110,6 +128,10 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,9 +168,11 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private java.awt.List list1;
     // End of variables declaration//GEN-END:variables
 }

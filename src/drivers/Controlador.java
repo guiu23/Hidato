@@ -247,4 +247,12 @@ public class Controlador {
         valors.add(num_guard); //Num partides guardades totals al programa
         valors.add(num_solu); //Num partides solucionades al programa
     }
+    
+    public static void ObtenirMapesExistents(ArrayList<BoardHidato> mapes) {
+        HBD = new HidatoBD();
+        HBD.loadBoards();
+        for( int i = 0; i < HBD._boards.size(); ++i ) {
+            mapes.set(i, HBD._boards.get(i));
+        }
+    }
 }

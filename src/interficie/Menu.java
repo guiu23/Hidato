@@ -27,6 +27,7 @@ import javax.swing.JPanel;
  */
 public class Menu extends javax.swing.JFrame {
     public static String us;
+    public int dificultat;
     /**
      * Creates new form Identificacio
      */
@@ -276,6 +277,7 @@ public class Menu extends javax.swing.JFrame {
             Generar2 obj = new Generar2(us);
             obj.setVisible(true);
             dispose();
+
         }
         else if (n == 1) {
             Generar3 obj = new Generar3(us);
@@ -332,44 +334,61 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         int num2=1;
         Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
+        Object[] optDif = {"Fàcil", "Mitjà", "Difícil"};
         JFrame frame = new JFrame("Tamany Mapa");
         int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
         if ( n == 0) {
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar2 obj = new Jugar2(us);
             obj.setVisible(true);
             dispose();
         }
-        else if (n == 1) {
+        else if (n == 1) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar3 obj = new Jugar3(us);
             obj.setVisible(true);
             dispose();
         }
-        else if ( n == 2) {
+        else if ( n == 2) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar4 obj = new Jugar4(us);
             obj.setVisible(true);
             dispose();
         }
-        else if (n == 3) {
+        else if (n == 3) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar5 obj = new Jugar5(us);
             obj.setVisible(true);
             dispose();
         }
-        else if ( n == 4) {
+        else if ( n == 4) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar6 obj = new Jugar6(us);
             obj.setVisible(true);
             dispose();
         }
-        else if (n == 5) {
+        else if (n == 5) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar7 obj = new Jugar7(us);
             obj.setVisible(true);
             dispose();
-        }
-        else if ( n == 6) {
+      }
+        else if ( n == 6) {            
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar8 obj = new Jugar8(us);
             obj.setVisible(true);
             dispose();
-        }
+      }
         else if (n == 7) {
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             Jugar9 obj = new Jugar9(us);
             obj.setVisible(true);
             dispose();
