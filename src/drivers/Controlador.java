@@ -141,11 +141,15 @@ public class Controlador {
     public static void crearTaulellAleatori(BoardHidato Taulell, int size, int dificultat) { //sense return, nomes es crea
         //BoardHidato Taulell = new BoardHidato(size,"temporal");
         Funcions.colocar_celesinvalides(Taulell);
-        Funcions.generar_written(Taulell,dificultat);
+        Funcions.generar_written(Taulell,dificultat); //dins la funcio es posa el Taulell al temporal per resoldrel
     }
     
     public static ArrayList<Integer> carregarTaulell (String nomT){
+        HBD = new HidatoBD();
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
         HBD.loadTemporal();
+        HBD.loadTemporalResolts();
         ArrayList<Integer> valors = new ArrayList<>();
         for (int i = 0; i < HBD._boards.size(); ++i){
             if (HBD._boards.get(i).getID().equals(nomT)) {
@@ -155,8 +159,19 @@ public class Controlador {
                         valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
                     }
                 }
+                
                 Funcions.CleanTemporal();
+                Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
+                
+                for (int j = 0; j < HBD._boardsResolts.size(); ++j) {
+                    if (HBD._boards.get(i).getID().equals(nomT)) {
+                        BoardHidato Taulell2 = HBD._boardsResolts.get(i);
+                        Taulell2.setID("temporal");
+                        HBD._temporalResolts.add(Taulell2); //posa solucio al temporalResolts per si la maquina ha de solucionar-ho
+                    }
+                }
+                
             }
             else {
                 valors = null; //el taulell no existeix a la base de dades
@@ -166,6 +181,7 @@ public class Controlador {
     }
     
     public static boolean esborrarTaulell(String nomT) {
+        HBD = new HidatoBD();
         HBD.loadBoards();
         HBD.loadBoardsResolts();
         boolean exit = false;
@@ -185,6 +201,24 @@ public class Controlador {
             else exit = false;
         }
         return exit;  //exit = true esborrat exitosament / exit = false no existeix el taulell que es vol esborrar
+    }
+    
+    public static ArrayList<Integer> CarregarSolucioTaulell () {
+        HBD = new HidatoBD();
+        HBD.loadTemporalResolts();
+        ArrayList<Integer> valors = new ArrayList<>();
+        for (int i = 0; i < HBD._temporalResolts.size(); ++i) {
+            if (HBD._temporalResolts.get(i).getID().equals("temporal")) {
+                BoardHidato Taulell = HBD._temporalResolts.get(i);
+                for (int j = 0; j < Taulell.getSize(); ++j) {
+                    for (int k = 0; k < Taulell.getSize(); ++k) {
+                        valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
+                    }
+                }
+            }
+            else valors = null; //error de funcionament (no hauria de passar mai)
+        }
+        return valors;
     }
     
     
