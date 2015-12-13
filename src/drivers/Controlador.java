@@ -42,6 +42,9 @@ public class Controlador {
         }  
         HBD._players = admin._players;
         HBD.savePlayers();
+        Funcions.CleanPlayerActual();
+        HBD._playerActual.add(Jugador);
+        HBD.savePlayerActual();
         return num;
     }
     
@@ -65,6 +68,9 @@ public class Controlador {
         }
         HBD._players = admin._players;
         HBD.savePlayers();
+        Funcions.CleanPlayerActual();
+        HBD._playerActual.add(Jugador);
+        HBD.savePlayerActual();
         return num;
     }
     

@@ -37,7 +37,7 @@ public class HidatoBD extends DB {
     static public Table<BoardHidato> _temporalResolts;
     
     /*Contains the player who is loged in */
-    static public Table<BoardHidato> _playerActual;
+    static public Table<Player> _playerActual;
 
     /** Class constructor, by default loads all the data */
     public HidatoBD()
