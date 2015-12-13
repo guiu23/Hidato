@@ -6,7 +6,7 @@
 package interficie.jugar;
 
 import domini.BoardHidato;
-import static drivers.Controlador.crearTaulellAleatori;
+import static drivers.Controlador.*;
 import drivers.Funcions;
 import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
@@ -343,7 +343,7 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(Esborrar);
         Esborrar.setBounds(830, 470, 100, 40);
 
-        comprovar.setText("Comrpovar");
+        comprovar.setText("Comprovar");
         comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 comprovarMouseClicked(evt);
@@ -501,18 +501,20 @@ public class Jugar2 extends javax.swing.JFrame {
             Taulell.setValueCell(val, f, c);
         }
         tf.setText(String.valueOf(Taulell.getValueCell(f,c)));    
+        Taulell.setValProvCell(val, f, c);
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
               String btn2Text = jButton2.getText();
-         if (Casella == "c00")
+         if (Casella == "c00") {
             c00.setText(c00.getText() + btn2Text);
+         }
         if (Casella == "c01")
             c01.setText(c01.getText() + btn2Text);
         if (Casella == "c10")
             c10.setText(c10.getText() + btn2Text); 
         if (Casella == "c11")
-           c11.setText(c11.getText() + btn2Text);        // TODO add your handling code here:
+           c11.setText(c11.getText() + btn2Text);        
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -524,7 +526,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
             c10.setText(c10.getText() + btn3Text);  
         if (Casella == "c11")
-            c11.setText(c11.getText() + btn3Text);        // TODO add your handling code here:
+            c11.setText(c11.getText() + btn3Text);        
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -536,7 +538,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
            c10.setText(c10.getText() + btn4Text);  
         if (Casella == "c11")
-           c11.setText(c11.getText() + btn4Text);       // TODO add your handling code here:
+           c11.setText(c11.getText() + btn4Text);       
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
@@ -548,7 +550,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
             c10.setText(c10.getText() + btn5Text); 
         if (Casella == "c11")
-            c11.setText(c11.getText() + btn5Text);        // TODO add your handling code here:
+            c11.setText(c11.getText() + btn5Text);       
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
@@ -572,8 +574,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
             c10.setText(c10.getText() + btn7Text);  
         if (Casella == "c11")
-            c11.setText(c11.getText() + btn7Text);
-                                   // TODO add your handling code here:
+            c11.setText(c11.getText() + btn7Text);                       
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
@@ -585,7 +586,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
            c10.setText(c10.getText() + btn8Text);  
         if (Casella == "c11")
-           c11.setText(c11.getText() + btn8Text);        // TODO add your handling code here:
+           c11.setText(c11.getText() + btn8Text);        
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
@@ -597,8 +598,7 @@ public class Jugar2 extends javax.swing.JFrame {
         if (Casella == "c10")
             c10.setText(c10.getText() + btn9Text);  
         if (Casella == "c11")
-            c11.setText(c11.getText() + btn9Text);
-                                                 // TODO add your handling code here:
+            c11.setText(c11.getText() + btn9Text);                             
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
@@ -676,9 +676,11 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void comprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprovarMouseClicked
         int r;
-        //r = comprovarhidato();
+        imprimeixValors(Taulell);
+        r = comprovarHidato(Taulell);
+        System.out.println("EI"); 
         JFrame frame = new JFrame("");
-        if (r == 1) JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
+        if (r >= 1) JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
         else if (r == 0)
             JOptionPane.showMessageDialog(frame,"Hidato mal resolt");
         
@@ -767,4 +769,5 @@ public class Jugar2 extends javax.swing.JFrame {
     private boolean afegirmarca;
     private int val,f,c;
     BoardHidato Taulell = new BoardHidato(2,"nom");
+
 }

@@ -376,7 +376,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="comprovar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Comrpovar"/>
+        <Property name="text" type="java.lang.String" value="Comprovar"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="comprovarMouseClicked"/>
