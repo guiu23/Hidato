@@ -44,7 +44,6 @@ public class RankingGlobal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -90,24 +89,17 @@ public class RankingGlobal extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(910, 540, 65, 23);
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POSICIÓ");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(72, 105, 50, 14);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("USUARI");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(141, 105, 50, 14);
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PUNTUACIÓ");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(197, 105, 70, 14);
-
-        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1001, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -180,7 +172,6 @@ public class RankingGlobal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane LlistarRankingGlobal;
     private javax.swing.JButton enrere;
-    private javax.swing.JLabel fons;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

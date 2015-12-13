@@ -45,7 +45,6 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         num_jug = new javax.swing.JTextField();
         num_guard = new javax.swing.JTextField();
         num_sol = new javax.swing.JTextField();
-        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -189,10 +188,6 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         getContentPane().add(num_sol);
         num_sol.setBounds(520, 420, 60, 50);
 
-        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1000, 590);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -298,7 +293,6 @@ public class AltresEstadistiques extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
-    private javax.swing.JLabel fons;
     private javax.swing.JTextField num_guard;
     private javax.swing.JTextField num_jug;
     private javax.swing.JTextField num_sol;

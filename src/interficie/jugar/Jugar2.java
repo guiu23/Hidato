@@ -60,7 +60,6 @@ public class Jugar2 extends javax.swing.JFrame {
         addmarca = new javax.swing.JButton();
         txtmarques = new javax.swing.JTextField();
         Esborrar = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -140,7 +139,6 @@ public class Jugar2 extends javax.swing.JFrame {
         c11.setBounds(460, 300, 120, 90);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros.setForeground(new java.awt.Color(255, 255, 255));
         numeros.setText("Números:");
         getContentPane().add(numeros);
         numeros.setBounds(770, 140, 80, 40);
@@ -297,7 +295,6 @@ public class Jugar2 extends javax.swing.JFrame {
         resoldre.setBounds(700, 480, 79, 23);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros1.setForeground(new java.awt.Color(255, 255, 255));
         numeros1.setText("Marques:");
         getContentPane().add(numeros1);
         numeros1.setBounds(80, 150, 80, 40);
@@ -332,10 +329,6 @@ public class Jugar2 extends javax.swing.JFrame {
         });
         getContentPane().add(Esborrar);
         Esborrar.setBounds(800, 470, 100, 40);
-
-        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1000, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -647,7 +640,6 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField c10;
     private javax.swing.JTextField c11;
     private javax.swing.JButton enrere;
-    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

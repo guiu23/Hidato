@@ -34,12 +34,10 @@ public class Identificacio extends javax.swing.JFrame {
         EsborraUsuari = new javax.swing.JButton();
         CrearUsuari = new javax.swing.JButton();
         CarregarUsuari = new javax.swing.JButton();
-        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
-        setMaximumSize(new java.awt.Dimension(690, 4490));
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
 
@@ -88,10 +86,6 @@ public class Identificacio extends javax.swing.JFrame {
         });
         getContentPane().add(CarregarUsuari);
         CarregarUsuari.setBounds(400, 350, 170, 60);
-
-        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
-        getContentPane().add(fons);
-        fons.setBounds(0, 0, 1000, 590);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,7 +151,6 @@ public class Identificacio extends javax.swing.JFrame {
     private javax.swing.JButton CarregarUsuari;
     private javax.swing.JButton CrearUsuari;
     private javax.swing.JButton EsborraUsuari;
-    private javax.swing.JLabel fons;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }
