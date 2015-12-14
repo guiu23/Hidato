@@ -5,7 +5,26 @@
  */
 package interficie.jugar;
 
+import static drivers.Controlador.CarregarSolucioTaulell;
+import static drivers.Controlador.DefineixCasella;
+import static drivers.Controlador.carregarTaulellTemporal;
+import static drivers.Controlador.començarJoc;
+import static drivers.Controlador.comprovarHidato;
+import static drivers.Controlador.crearTaulellAleatori;
+import static drivers.Controlador.es_ultim;
+import static drivers.Controlador.es_written;
+import static drivers.Controlador.getAnnotationCasella;
+import static drivers.Controlador.getCasella;
+import static drivers.Controlador.getMaxAnnotation;
+import static drivers.Controlador.partidaAcabada;
+import static drivers.Controlador.switchAnnotationCasella;
 import interficie.Menu;
+import static interficie.jugar.Jugar2.dif;
+import static interficie.jugar.Jugar2.us;
+import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,12 +32,43 @@ import interficie.Menu;
  */
 public class Jugar3 extends javax.swing.JFrame {
     public static String us;
+    public static int dif;
     /**
      * Creates new form Identificacio
      */
-    public Jugar3(String usuari) {
+    public Jugar3(String usuari, int dificultat) {
+        //txtField = {c00, c01, c02, c10, c11, c12, c20, c21, c22};
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
+        afegirmarca = false;
         us = usuari;
+        dif = dificultat;
+        myinitComponents();
+        
+    }
+    
+    
+    private void myinitComponents() {
+        crearTaulellAleatori(3,dif);
+        ArrayList<Integer> valors = carregarTaulellTemporal();
+        començarJoc(dif);
+        //for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
+        int ultima = es_ultim();
+        String lastnum = Integer.toString(ultima);
+        Color color = Color.cyan;
+        //for (int i = 0; i < 9; ++i) System.out.println(txtfield[i]);
+        for (int i = 0; i < valors.size(); ++i){
+            tf = txtField[i];
+             if (valors.get(i) != 0){
+                 System.out.println(tf);
+                tf.setText(Integer.toString(valors.get(0)));
+                if ("1".equals(tf.getText())) tf.setBackground(color);            
+                else if (tf.getText().equals(lastnum)) tf.setBackground(color);
+                else if ("-1".equals(tf.getText())) tf.setBackground(Color.black);
+        }
+    }
     }
 
     /**
@@ -51,12 +101,13 @@ public class Jugar3 extends javax.swing.JFrame {
         c12 = new javax.swing.JTextField();
         c10 = new javax.swing.JTextField();
         c21 = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
+        Comprovar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        listmarques = new javax.swing.JButton();
+        addmarca = new javax.swing.JButton();
+        txtmarques = new javax.swing.JTextField();
+        Autocompletar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -100,18 +151,33 @@ public class Jugar3 extends javax.swing.JFrame {
         c02.setEditable(false);
         c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c02MouseClicked(evt);
+            }
+        });
         getContentPane().add(c02);
         c02.setBounds(470, 180, 70, 70);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c01MouseClicked(evt);
+            }
+        });
         getContentPane().add(c01);
         c01.setBounds(400, 180, 70, 70);
 
         c22.setEditable(false);
         c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c22MouseClicked(evt);
+            }
+        });
         getContentPane().add(c22);
         c22.setBounds(470, 320, 70, 70);
 
@@ -121,6 +187,11 @@ public class Jugar3 extends javax.swing.JFrame {
         numeros.setBounds(670, 120, 80, 40);
 
         jButton1.setText("1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -193,6 +264,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton8.setBounds(680, 320, 60, 60);
 
         jButton9.setText("9");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -220,36 +296,66 @@ public class Jugar3 extends javax.swing.JFrame {
         c20.setEditable(false);
         c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c20MouseClicked(evt);
+            }
+        });
         getContentPane().add(c20);
         c20.setBounds(330, 320, 70, 70);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c11MouseClicked(evt);
+            }
+        });
         getContentPane().add(c11);
         c11.setBounds(400, 250, 70, 70);
 
         c12.setEditable(false);
         c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c12MouseClicked(evt);
+            }
+        });
         getContentPane().add(c12);
         c12.setBounds(470, 250, 70, 70);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c10MouseClicked(evt);
+            }
+        });
         getContentPane().add(c10);
         c10.setBounds(330, 250, 70, 70);
 
         c21.setEditable(false);
         c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c21MouseClicked(evt);
+            }
+        });
         getContentPane().add(c21);
         c21.setBounds(400, 320, 70, 70);
 
-        jButton10.setText("Resoldre");
-        getContentPane().add(jButton10);
-        jButton10.setBounds(610, 390, 90, 40);
+        Comprovar.setText("Comprovar");
+        Comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ComprovarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Comprovar);
+        Comprovar.setBounds(610, 390, 90, 40);
 
         jButton11.setText("Esborrar");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -265,23 +371,77 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(numeros1);
         numeros1.setBounds(170, 220, 80, 40);
 
-        jButton12.setText("Treure marca");
-        getContentPane().add(jButton12);
-        jButton12.setBounds(160, 180, 110, 40);
+        listmarques.setText("Treure marca");
+        listmarques.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listmarquesMouseClicked(evt);
+            }
+        });
+        getContentPane().add(listmarques);
+        listmarques.setBounds(160, 180, 110, 40);
 
-        jButton13.setText("Afegir marca");
-        getContentPane().add(jButton13);
-        jButton13.setBounds(160, 130, 110, 40);
+        addmarca.setText("Afegir marca");
+        addmarca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addmarcaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(addmarca);
+        addmarca.setBounds(160, 130, 110, 40);
 
-        jTextField1.setEditable(false);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(170, 270, 80, 140);
+        txtmarques.setEditable(false);
+        getContentPane().add(txtmarques);
+        txtmarques.setBounds(170, 270, 80, 140);
+
+        Autocompletar.setText("Autocompletar");
+        Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AutocompletarMouseClicked(evt);
+            }
+        });
+        Autocompletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AutocompletarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Autocompletar);
+        Autocompletar.setBounds(150, 460, 130, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+     private void boto(String textboto){
+        //array dstrings com tantes posicions como caselles. 
+        //a cada casella li passem a boto la seva posicio dins larray
+        String S = Caselles[i];
+        val = Integer.parseInt(tf.getText() + textboto);
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
+        if (textboto == "0") val = 0;
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
+        if (afegirmarca){
+            System.out.println(val);
+            val = Integer.parseInt(textboto);
+            System.out.println(f);
+            System.out.println(c);
+            switchAnnotationCasella(val, f, c);
+            System.out.println(getAnnotationCasella(val,f,c));
+        }
+        
+        else{
+            DefineixCasella(val, f, c);
+        }
+        String afegirstr;
+        int afegirint = getCasella(f,c);   
+        if (afegirint == 0) afegirstr = null;
+        else if (afegirint == -1) afegirstr = "X";
+        else afegirstr = String.valueOf(afegirint);
+        
+        tf.setText(afegirstr);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        //boto(jButton1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -328,7 +488,12 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        // TODO add your handling code here:
+        Casella = null;
+        if (!es_written(0,0)){
+            tf = c00;
+            i = 0;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c00ActionPerformed
@@ -338,6 +503,137 @@ public class Jugar3 extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void AutocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutocompletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AutocompletarActionPerformed
+
+    private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
+             ArrayList<Integer> valors = CarregarSolucioTaulell();
+        
+        String afegir;
+        
+        afegir = String.valueOf(valors.get(0));
+        c00.setText(afegir);
+        afegir = String.valueOf(valors.get(1));
+        c01.setText(afegir);
+        afegir = String.valueOf(valors.get(2));
+        c10.setText(afegir);
+        afegir = String.valueOf(valors.get(3));
+        c11.setText(afegir);        // TODO add your handling code here:
+    }//GEN-LAST:event_AutocompletarMouseClicked
+
+    private void ComprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprovarMouseClicked
+          int r;
+        r = comprovarHidato(dif);
+        JFrame frame = new JFrame("");
+        if (r >= 1) {
+            JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
+            partidaAcabada(r, us);
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (r == -1)
+            JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);        // TODO add your handling code here:
+    }//GEN-LAST:event_ComprovarMouseClicked
+
+    private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
+          String S = Caselles[i];
+            f = Character.getNumericValue(S.charAt(1));
+            c = Character.getNumericValue(S.charAt(2));
+            String ArrayData = null;
+            for (int i = 0; i < getMaxAnnotation(); ++i){
+                                if (getAnnotationCasella(i, f, c) == true){// System.out.println(i + " ");
+                                    ArrayData = ArrayData + ", " + String.valueOf(i);
+                                }
+            }
+            txtmarques.setText(ArrayData);         // TODO add your handling code here:
+    }//GEN-LAST:event_listmarquesMouseClicked
+
+    private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
+        afegirmarca = true;        // TODO add your handling code here:
+    }//GEN-LAST:event_addmarcaMouseClicked
+
+    private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
+        Casella = null;
+        if (!es_written(0,1)){
+            tf = c01;
+            i = 1;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c01MouseClicked
+
+    private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
+        Casella = null;
+        if (!es_written(0,2)){
+            tf = c02;
+            i = 2;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c02MouseClicked
+
+    private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
+        Casella = null;
+        if (!es_written(1,0)){
+            tf = c10;
+            i = 3;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c10MouseClicked
+
+    private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
+        Casella = null;
+        if (!es_written(1,1)){
+            tf = c11;
+            i = 4;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c11MouseClicked
+
+    private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
+        Casella = null;
+        if (!es_written(1,2)){
+            tf = c12;
+            i = 5;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c12MouseClicked
+
+    private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
+        Casella = null;
+        if (!es_written(2,0)){
+            tf = c20;
+            i = 6;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c20MouseClicked
+
+    private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
+        Casella = null;
+        if (!es_written(2,1)){
+            tf = c21;
+            i = 7;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c21MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
+        Casella = null;
+        if (!es_written(2,2)){
+            tf = c22;
+            i = 8;
+            afegirmarca = false;
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c22MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+            boto(jButton1.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
     
     /**
@@ -385,12 +681,15 @@ public class Jugar3 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar3(us).setVisible(true);
+                new Jugar3(us,dif).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Autocompletar;
+    private javax.swing.JButton Comprovar;
+    private javax.swing.JButton addmarca;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c02;
@@ -402,10 +701,7 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JTextField c22;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -414,12 +710,17 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton listmarques;
     private javax.swing.JLabel numeros;
     private javax.swing.JLabel numeros1;
     private javax.swing.JTextArea titol;
+    private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
+    private String Caselles[] = {"c00","c01","c02","c10","c11","c12","c20","c21","c22"};
+    private javax.swing.JTextField[] txtField = new javax.swing.JTextField[9];
+   // private javax.swing.JTextField txtfield[] = {c00,c01,c02,c10,c11,c12,c20,c21,c22};
+    javax.swing.JTextField tf = new javax.swing.JTextField();
     private String Casella;
     private boolean afegirmarca;
-    private int val,f,c;
+    private int val,f,c,i;
 }

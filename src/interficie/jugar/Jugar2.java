@@ -369,7 +369,7 @@ public class Jugar2 extends javax.swing.JFrame {
         String lastnum = Integer.toString(ultima);
         Color color = Color.cyan;
         
-        if (valors.get(0) != 0){
+       /* if (valors.get(0) != 0){
             c00.setText(Integer.toString(valors.get(0)));
             if ("1".equals(c00.getText())) c00.setBackground(color);            
             else if (c00.getText().equals(lastnum)) c00.setBackground(color);
@@ -392,6 +392,15 @@ public class Jugar2 extends javax.swing.JFrame {
             if ("1".equals(c11.getText())) c11.setBackground(color);
             else if (c11.getText().equals(lastnum)) c11.setBackground(color);
             else if ("-1".equals(c11.getText())) c11.setBackground(Color.black);
+        }*/
+        for (int i = 0; i < valors.size(); ++i){
+            tf = txtfield[i];
+            if (valors.get(i) != 0){
+                tf.setText(Integer.toString(valors.get(0)));
+                if ("1".equals(tf.getText())) tf.setBackground(color);            
+                else if (tf.getText().equals(lastnum)) tf.setBackground(color);
+                else if ("-1".equals(tf.getText())) tf.setBackground(Color.black);
+            }
         }
     }
     
@@ -585,8 +594,9 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_addmarcaMouseClicked
 
     private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
-            f = Character.getNumericValue(Casella.charAt(1));
-            c = Character.getNumericValue(Casella.charAt(2));
+            String S = Caselles[i];
+            f = Character.getNumericValue(S.charAt(1));
+            c = Character.getNumericValue(S.charAt(2));
             String ArrayData = null;
             for (int i = 0; i < getMaxAnnotation(); ++i){
                                 if (getAnnotationCasella(i, f, c) == true){// System.out.println(i + " ");
@@ -717,6 +727,7 @@ public class Jugar2 extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
     javax.swing.JTextField tf = new javax.swing.JTextField();
+    private javax.swing.JTextField txtfield[] = {c00,c01,c10,c11};
     private String Casella;
     private boolean afegirmarca;
     private int val,f,c,i;

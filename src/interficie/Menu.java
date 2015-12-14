@@ -363,8 +363,8 @@ public class Menu extends javax.swing.JFrame {
         }
         else if (n == 1) {            
             dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
-                    "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
-            Jugar3 obj = new Jugar3(us);
+            "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
+            Jugar3 obj = new Jugar3(us, dificultat);
             obj.setVisible(true);
             dispose();
         }
