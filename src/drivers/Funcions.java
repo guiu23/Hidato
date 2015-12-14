@@ -267,6 +267,8 @@ public class Funcions {
         for (int i=0;i < HBD._temporalResolts.size();++i){
             HBD._temporalResolts.remove(i);
         }
+        HBD.saveTemporal();
+        HBD.saveTemporalResolts();
     }
     
     public static BoardHidato CarregarTemporal() {

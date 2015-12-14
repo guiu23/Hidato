@@ -433,8 +433,36 @@ public class Controlador {
         }
     }
     
-    public static void carregarPartida(String nomP) {
+    public static ArrayList<Integer> carregarPartida(String us, String nomP) {
+        //retornar mida taulell carregat
+        //retornar -1 si existeix la partida
+        HBD = new HidatoBD();
+        HBD.loadMatches();
         
+        ArrayList<Integer> valors = new ArrayList<>();
+        
+        for (int i =0; i < HBD._matches.size(); ++i) {
+            if (HBD._matches.get(i).getNomM().equals(nomP)) {
+                if (HBD._matches.get(i).getPlayer().getName().equals(us)) {
+                    valors.add(HBD._matches.get(i).getGame().getSize());
+                    valors.add(HBD._matches.get(i).getGame().getDifficulty());
+                    BoardHidato Taulell = HBD._matches.get(i).getGame().getBoard();
+                    Funcions.CleanTemporal();
+                    BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
+                    copiarBoard(TaulellRes, Taulell);
+                    solve_modifica(TaulellRes, TaulellRes.getSize(), false);
+                    HBD.loadTemporal();
+                    HBD._temporal.add(Taulell);
+                    HBD.saveTemporal();
+                    HBD.loadTemporalResolts();
+                    HBD._temporalResolts.add(TaulellRes);
+                    HBD.saveTemporalResolts();
+                    
+                    return valors;
+                }
+            }
+        }
+        return null;
     }
     
     public static void ObteRankingPersonal(String user, ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)

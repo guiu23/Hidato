@@ -10,8 +10,13 @@ import domini.Match;
 import domini.stats.stubMatch;
 import static drivers.Controlador.ObtenirMapesExistents;
 import static drivers.Controlador.ObtenirPartides;
+import static drivers.Controlador.carregarPartida;
 import interficie.Menu;
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.YES_OPTION;
 
 /**
  *
@@ -45,6 +50,8 @@ public class CarregarPartida extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
         titol = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        on_vol_entrar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -74,16 +81,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(35, 116, 256, 28);
 
-        list1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                list1MouseClicked(evt);
-            }
-        });
-        list1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                list1ActionPerformed(evt);
-            }
-        });
+        list1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(list1);
 
         getContentPane().add(jScrollPane1);
@@ -106,17 +104,34 @@ public class CarregarPartida extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(305, 8, 338, 90);
 
+        jButton1.setText("Entra");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(870, 103, 59, 30);
+
+        on_vol_entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                on_vol_entrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(on_vol_entrar);
+        on_vol_entrar.setBounds(690, 100, 170, 30);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void myInitComponents() {
          
         ArrayList<stubMatch> partides = new ArrayList<stubMatch>();
-       
+
         ObtenirPartides(partides,us);
-        System.out.println("despres optenir"); 
+        
         for (int i = 0; i < partides.size(); ++i) {
-            list1.add( "- " +  partides.get(i).getNomM() +  "    " );
+            list1.add("- " +  partides.get(i).getNomM() +  "    ");
         }
     }
     
@@ -131,14 +146,57 @@ public class CarregarPartida extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
+    private void on_vol_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_on_vol_entrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_list1ActionPerformed
+    }//GEN-LAST:event_on_vol_entrarActionPerformed
 
-    private void list1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list1MouseClicked
-        // TODO add your handling code here:4
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        String nom = on_vol_entrar.getText(); 
         
-    }//GEN-LAST:event_list1MouseClicked
+        System.out.println("ea");
+         ArrayList<Integer> mida = carregarPartida(us, nom);
+        
+        JFrame frame = new JFrame("Sortir");
+        if (mida == null) JOptionPane.showMessageDialog(frame,"Partida no existeix, torna-ho a provar", "Partida no existeix",  JOptionPane.ERROR_MESSAGE);
+        else {
+            carregarPartida(us, nom);
+            System.out.println("ea");
+            if (mida.get(0) == 2) {
+                Jugar2 obj = new Jugar2(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } /*else if (mida.get(0) == 3) {   
+            Jugar3 obj = new Jugar3(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 4) {
+                Jugar4 obj = new Jugar4(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 5) {
+                Jugar5 obj = new Jugar5(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 6) {
+                Jugar6 obj = new Jugar6(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 7) {
+                Jugar7 obj = new Jugar7(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 8) {
+                Jugar8 obj = new Jugar8(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 9) {
+                Jugar9 obj = new Jugar9(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            }*/
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -177,9 +235,13 @@ public class CarregarPartida extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private java.awt.List list1;
+    private javax.swing.JTextField on_vol_entrar;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+
 }
+

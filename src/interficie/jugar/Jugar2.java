@@ -359,7 +359,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myinitComponents() {
-        crearTaulellAleatori(2,dif);
+        //crearTaulellAleatori(2,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
         for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
