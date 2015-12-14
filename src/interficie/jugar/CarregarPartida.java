@@ -74,6 +74,11 @@ public class CarregarPartida extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(35, 116, 256, 28);
 
+        list1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                list1ActionPerformed(evt);
+            }
+        });
         jScrollPane1.setViewportView(list1);
 
         getContentPane().add(jScrollPane1);
@@ -100,11 +105,13 @@ public class CarregarPartida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myInitComponents() {
+         
         ArrayList<stubMatch> partides = new ArrayList<stubMatch>();
-        ObtenirPartides(partides);
-        
+       
+        ObtenirPartides(partides,us);
+        System.out.println("despres optenir"); 
         for (int i = 0; i < partides.size(); ++i) {
-            list1.add( "    " +  partides.get(i) +  "    " );
+            list1.add( "- " +  partides.get(i).getNomM() +  "    " );
         }
     }
     
@@ -118,6 +125,10 @@ public class CarregarPartida extends javax.swing.JFrame {
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
+
+    private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_list1ActionPerformed
 
     /**
      * @param args the command line arguments
