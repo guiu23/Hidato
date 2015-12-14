@@ -42,6 +42,8 @@ public class EsborrarMapa extends javax.swing.JFrame {
         list1 = new java.awt.List();
         jTextField1 = new javax.swing.JTextField();
         titol = new javax.swing.JTextArea();
+        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -60,7 +62,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 540, 71, 25);
+        enrere.setBounds(910, 540, 65, 23);
 
         jScrollPane1.setViewportView(list1);
 
@@ -97,6 +99,12 @@ public class EsborrarMapa extends javax.swing.JFrame {
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
         titol.setBounds(328, 70, 341, 92);
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(570, 190, 170, 30);
+
+        jButton1.setText("Esborrar");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(760, 193, 73, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,8 +169,10 @@ public class EsborrarMapa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
+    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private java.awt.List list1;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
