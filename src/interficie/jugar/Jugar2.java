@@ -12,6 +12,7 @@ import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
 import static interficie.Menu.us;
 import java.awt.Color;
+import java.awt.event.MouseEvent;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
@@ -24,7 +25,7 @@ public class Jugar2 extends javax.swing.JFrame {
     public static int dif;
    
     /**
-     * Creates new form Identificacio
+     * 
      */
     public Jugar2(String usuari, int dificultat) {
         initComponents();
@@ -62,13 +63,13 @@ public class Jugar2 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        resoldre = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         listmarques = new javax.swing.JButton();
         addmarca = new javax.swing.JButton();
         txtmarques = new javax.swing.JTextField();
         Esborrar = new javax.swing.JButton();
         comprovar = new javax.swing.JButton();
+        autocompletar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -294,20 +295,6 @@ public class Jugar2 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(910, 550, 59, 23);
 
-        resoldre.setText("Resoldre");
-        resoldre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                resoldreMouseClicked(evt);
-            }
-        });
-        resoldre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resoldreActionPerformed(evt);
-            }
-        });
-        getContentPane().add(resoldre);
-        resoldre.setBounds(680, 460, 110, 50);
-
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Marques:");
         getContentPane().add(numeros1);
@@ -356,7 +343,16 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(comprovar);
-        comprovar.setBounds(680, 520, 110, 50);
+        comprovar.setBounds(680, 470, 130, 80);
+
+        autocompletar.setText("autocompletar");
+        autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                autocompletarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(autocompletar);
+        autocompletar.setBounds(70, 480, 130, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -488,8 +484,12 @@ public class Jugar2 extends javax.swing.JFrame {
         }
         
         if (afegirmarca){
+            System.out.println(val);
             val = Integer.parseInt(textboto);
+            System.out.println(f);
+            System.out.println(c);
             Taulell.switchAnnotationCell(val, f, c);
+            System.out.println(Taulell.getAnnotationCell(val,f,c));
         }
         else{
             Taulell.setValProvCell(val, f, c);
@@ -570,6 +570,8 @@ public class Jugar2 extends javax.swing.JFrame {
     private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
             f = Character.getNumericValue(Casella.charAt(1));
             c = Character.getNumericValue(Casella.charAt(2));
+            System.out.println(f);
+            System.out.println(c);
             String ArrayData = null;
             for (int i = 0; i < Taulell.consult_max_annotations(); ++i){
                                 if (Taulell.getAnnotationCell(i, f, c) == true){// System.out.println(i + " ");
@@ -578,31 +580,11 @@ public class Jugar2 extends javax.swing.JFrame {
             }
             txtmarques.setText(ArrayData); 
     }//GEN-LAST:event_listmarquesMouseClicked
-    private void resoldreMouseClicked(java.awt.event.MouseEvent evt) {                                      
-        Funcions.solve_modifica(Taulell, 2, true);
-        String afegir;
-        for (int i = 0; i < Taulell.getSize();++i){
-            for (int j = 0; j < Taulell.getSize(); ++j){
-                afegir = String.valueOf(Taulell.getValueCell(i,j));
-                if (i == 0 && j == 0)
-                    c00.setText(afegir);
-                else if (i == 0 && j == 1)
-                    c01.setText(afegir);
-                else if (i == 1 && j == 0)
-                    c10.setText(afegir);
-                else if (i == 1 && j == 1)
-                    c11.setText(afegir);
-            }
-        }
-    }
+   
     
     private void c00PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_c00PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_c00PropertyChange
-
-    private void resoldreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resoldreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resoldreActionPerformed
 
     private void comprovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprovarActionPerformed
         // TODO add your handling code here:
@@ -625,6 +607,24 @@ public class Jugar2 extends javax.swing.JFrame {
         
 //cridem funcio del controlador que mira si el q tenim de moment es igual que la seva solucio
     }//GEN-LAST:event_comprovarMouseClicked
+
+    private void autocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_autocompletarMouseClicked
+         Funcions.solve_modifica(Taulell, 2, true);
+        String afegir;
+        for (int i = 0; i < Taulell.getSize();++i){
+            for (int j = 0; j < Taulell.getSize(); ++j){
+                afegir = String.valueOf(Taulell.getValueCell(i,j));
+                if (i == 0 && j == 0)
+                    c00.setText(afegir);
+                else if (i == 0 && j == 1)
+                    c01.setText(afegir);
+                else if (i == 1 && j == 0)
+                    c10.setText(afegir);
+                else if (i == 1 && j == 1)
+                    c11.setText(afegir);
+            }
+        }
+    }//GEN-LAST:event_autocompletarMouseClicked
                                                                                
                                                                      
     
@@ -682,6 +682,7 @@ public class Jugar2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Esborrar;
     private javax.swing.JButton addmarca;
+    private javax.swing.JButton autocompletar;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c10;
@@ -700,7 +701,6 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JButton listmarques;
     private javax.swing.JLabel numeros;
     private javax.swing.JLabel numeros1;
-    private javax.swing.JButton resoldre;
     private javax.swing.JTextArea titol;
     private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
