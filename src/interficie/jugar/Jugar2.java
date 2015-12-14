@@ -367,7 +367,7 @@ public class Jugar2 extends javax.swing.JFrame {
         int ultima = es_ultim();
         
         String lastnum = Integer.toString(ultima);
-        Color color = Color.blue;
+        Color color = Color.cyan;
         
         if (valors.get(0) != 0){
             c00.setText(Integer.toString(valors.get(0)));
