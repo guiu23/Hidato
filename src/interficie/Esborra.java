@@ -8,6 +8,7 @@ package interficie;
 import dades.HidatoBD;
 import dades.PlayersAdmin;
 import drivers.Funcions;
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
@@ -86,6 +87,11 @@ public class Esborra extends javax.swing.JFrame {
                 EsborraActionPerformed(evt);
             }
         });
+        Esborra.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                EsborraKeyPressed(evt);
+            }
+        });
         getContentPane().add(Esborra);
         Esborra.setBounds(680, 290, 110, 100);
 
@@ -103,7 +109,7 @@ public class Esborra extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(900, 530, 71, 25);
+        enrere.setBounds(900, 530, 65, 23);
 
         password.setText("jPasswordField1");
         getContentPane().add(password);
@@ -205,6 +211,31 @@ public class Esborra extends javax.swing.JFrame {
     private void text_contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_contraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text_contraActionPerformed
+
+    private void EsborraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_EsborraKeyPressed
+        if (evt.getKeyCode()==KeyEvent.VK_ENTER){
+            HidatoBD HBD = new HidatoBD();
+            HBD.loadPlayers();
+            PlayersAdmin admin = HBD.getPlayersAdmin();
+            JFrame frame = new JFrame("Esborrar");
+            if (!admin.exists(user.getText())) JOptionPane.showMessageDialog(frame,"L'usuari no existeix", "Error!", ERROR_MESSAGE);
+            else {
+                if (admin.checkLogin(user.getText(), password.getText())) {
+                    //Funcions.borrarMatches(user.getText());  //BORRAR MATCHES DEL PLAYER
+                    //Funcions.borrarMatchesResolts(user.getText());  //BORRAR MATCHES RESOLTS DEL PLAYER
+                    admin.removePlayer(user.getText(), password.getText());   //BORRAR PLAYER
+                    HBD.save();
+                    JOptionPane.showMessageDialog(frame,"Usuari esborrat correctament");
+                    /*for(int i = 0; i<HBD._players.size(); ++i)                        PER MIRAR SI ESBORRA BÉ
+                        JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
+                    Identificacio obj = new Identificacio();
+                    obj.setVisible(true);
+                    dispose();
+                }
+                else JOptionPane.showMessageDialog(frame,"Constrassenya incorrecta");
+            }
+        }  
+    }//GEN-LAST:event_EsborraKeyPressed
 
     
     /**

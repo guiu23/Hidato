@@ -134,7 +134,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogOut);
-        LogOut.setBounds(30, 510, 120, 30);
+        LogOut.setBounds(10, 490, 120, 30);
 
         sortir.setText("SORTIR");
         sortir.addActionListener(new java.awt.event.ActionListener() {
@@ -143,16 +143,20 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sortir);
-        sortir.setBounds(900, 500, 90, 40);
+        sortir.setBounds(900, 470, 70, 50);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
+        MenuPrincipal.setPreferredSize(new java.awt.Dimension(197, 40));
 
         JugarPartida.setBackground(new java.awt.Color(0, 0, 0));
         JugarPartida.setText("Jugar Partida");
+        JugarPartida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         NovaPartida.setText("Nova Partida");
+        NovaPartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
+        MapaAleatori.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         MapaAleatori.setText("Mapa Aleatori");
         MapaAleatori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +165,7 @@ public class Menu extends javax.swing.JFrame {
         });
         NovaPartida.add(MapaAleatori);
 
+        EscollirMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         EscollirMapa.setText("Escollir Mapa Predefinit");
         EscollirMapa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,6 +176,7 @@ public class Menu extends javax.swing.JFrame {
 
         JugarPartida.add(NovaPartida);
 
+        CarregarPartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CarregarPartida.setText("Carregar Partida");
         CarregarPartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,7 +189,9 @@ public class Menu extends javax.swing.JFrame {
 
         CrearMapa.setBackground(new java.awt.Color(0, 0, 0));
         CrearMapa.setText("Crear Mapa");
+        CrearMapa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        CrearMapaNou.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CrearMapaNou.setText("Crear Mapa Nou");
         CrearMapaNou.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,6 +200,7 @@ public class Menu extends javax.swing.JFrame {
         });
         CrearMapa.add(CrearMapaNou);
 
+        ModificarMapaExistents.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ModificarMapaExistents.setText("Modificar Mapa Existent");
         ModificarMapaExistents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,6 +209,7 @@ public class Menu extends javax.swing.JFrame {
         });
         CrearMapa.add(ModificarMapaExistents);
 
+        EsborrarMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         EsborrarMapa.setText("Esborrar Mapa");
         EsborrarMapa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +222,9 @@ public class Menu extends javax.swing.JFrame {
 
         Ranking.setBackground(new java.awt.Color(0, 0, 0));
         Ranking.setText("Ranking");
+        Ranking.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        RankingPersonal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RankingPersonal.setText("Personal");
         RankingPersonal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,7 +234,9 @@ public class Menu extends javax.swing.JFrame {
         Ranking.add(RankingPersonal);
 
         RankingTotal.setText("Total");
+        RankingTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
+        RankingGlobal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RankingGlobal.setText("RankingGlobal");
         RankingGlobal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,6 +245,7 @@ public class Menu extends javax.swing.JFrame {
         });
         RankingTotal.add(RankingGlobal);
 
+        Estadistiques.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Estadistiques.setText("Altres Estadístiques");
         Estadistiques.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -352,7 +367,7 @@ public class Menu extends javax.swing.JFrame {
             dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(3,dificultat);
-            Jugar3 obj = new Jugar3(us);
+            Jugar3 obj = new Jugar3(us,dificultat);
             obj.setVisible(true);
             dispose();
         }
