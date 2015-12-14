@@ -30,6 +30,7 @@ public class Generar2 extends javax.swing.JFrame {
         setResizable(false);
         us = usuari;
         crea_taulell(2);
+        invalida = false;
     }
 
     /**
@@ -384,35 +385,36 @@ public class Generar2 extends javax.swing.JFrame {
         javax.swing.JTextField tf = new javax.swing.JTextField();
         if (Casella == "c00"){
             tf = c00;
-            val = Integer.parseInt(c00.getText() + textboto);
+            if (!invalida) val = Integer.parseInt(c00.getText() + textboto);
             f = Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c01"){
             tf = c01;
-            val = Integer.parseInt(c01.getText() + textboto);
+            if (!invalida) val = Integer.parseInt(c01.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c10"){
             tf = c10;
-            val = Integer.parseInt(c10.getText() + textboto);
+            if (!invalida) val = Integer.parseInt(c10.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c11"){
             tf = c11;
-            val = Integer.parseInt(c11.getText() + textboto);
+            if (!invalida) val = Integer.parseInt(c11.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (textboto == "0") val = 0;
-        if (textboto == "-1") val = -1;
-        System.out.println(val);
+        if (textboto == "-1") {
+            invalida = false;
+            val = -1;
+        }
         DefineixCasella(val, f, c);
         String afegirstr;
         int afegirint = getCasella(f,c);
-        System.out.println(afegirint);
         if (afegirint == 0){
             afegirstr = null;
             tf.setBackground(Color.WHITE);
@@ -510,7 +512,9 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        boto("-1");        // TODO add your handling code here:
+        invalida = true;
+        boto("-1"); 
+
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void esborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_esborrarMouseClicked
@@ -606,5 +610,6 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
     private String Casella;
+    private boolean invalida;
     private int val,f,c;
 }
