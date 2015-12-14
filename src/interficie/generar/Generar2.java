@@ -7,6 +7,12 @@ package interficie.generar;
 
 import static drivers.Controlador.*;
 import interficie.Menu;
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -53,6 +59,7 @@ public class Generar2 extends javax.swing.JFrame {
         enrere = new javax.swing.JButton();
         guardartaulell = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        esborrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -301,6 +308,15 @@ public class Generar2 extends javax.swing.JFrame {
         getContentPane().add(jButton11);
         jButton11.setBounds(830, 180, 90, 60);
 
+        esborrar.setText("Esborrar");
+        esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                esborrarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(esborrar);
+        esborrar.setBounds(830, 260, 100, 50);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -390,8 +406,26 @@ public class Generar2 extends javax.swing.JFrame {
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
+        if (textboto == "0") val = 0;
+        if (textboto == "-1") val = -1;
+        System.out.println(val);
         DefineixCasella(val, f, c);
-        tf.setText(String.valueOf(getCasella(f,c))); 
+        String afegirstr;
+        int afegirint = getCasella(f,c);
+        System.out.println(afegirint);
+        if (afegirint == 0){
+            afegirstr = null;
+            tf.setBackground(Color.WHITE);
+        }
+        else if (afegirint == -1){
+            afegirstr = null;
+            tf.setBackground(Color.BLACK);
+        }
+        else{
+            afegirstr = String.valueOf(afegirint);
+            tf.setBackground(Color.WHITE);
+        }
+        tf.setText(afegirstr); 
 }
         //System.out.println(Casella);
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -445,15 +479,29 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void guardartaulellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardartaulellMouseClicked
-        int result = ConfirmarBoardCreat("nom"); 
-        if (result == 1 || result == 2 || result == 3){
-            //missatge de ben creat
-        }
-        else if (result == 4){
-            //missatge de taulell ja existeix
+
+        JFrame frame = new JFrame();
+        String nomT = JOptionPane.showInputDialog(frame, "Escriu el nom del taulell", "Nom Taulell", INFORMATION_MESSAGE);
+        int result = ConfirmarBoardCreat(nomT); 
+        System.out.println(result);
+
+        if (result == 4){
+            JOptionPane.showMessageDialog(frame, "Aquest taulell ja existeix", "Atenciño!", WARNING_MESSAGE);
         }
         else if (result == 5){
-            //hidato mal creat
+            JOptionPane.showMessageDialog(frame, "Taulell incorrecte", "ERROR!", ERROR_MESSAGE);
+        }
+        else {
+            String dificultat = null;
+            if(result == 1) dificultat = "Fàcil";
+            else if(result == 2) dificultat = "Mitja";
+            else if (result == 3) dificultat = "Difícil";
+            JOptionPane.showMessageDialog(frame, "La dificultat del taulell és: " + dificultat, "Taulell creat", INFORMATION_MESSAGE);
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+
+                
         }
     }//GEN-LAST:event_guardartaulellMouseClicked
 
@@ -462,8 +510,12 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        boto("X");        // TODO add your handling code here:
+        boto("-1");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton11MouseClicked
+
+    private void esborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_esborrarMouseClicked
+        boto("0");        // TODO add your handling code here:
+    }//GEN-LAST:event_esborrarMouseClicked
 
     
     /**
@@ -538,6 +590,7 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JTextField c10;
     private javax.swing.JTextField c11;
     private javax.swing.JButton enrere;
+    private javax.swing.JButton esborrar;
     private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
