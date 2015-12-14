@@ -105,20 +105,43 @@ public class Controlador {
         HBD._temporal.add(Taulell);    
     }
     
-    public static int DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell 
+    public static void DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell 
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = Funcions.CarregarTemporal(); 
-        if (i > 0 && i < Taulell.getSize() && j > 0 && j < Taulell.getSize()) {
-           Taulell.setValProvCell(valor, i-1, j-1);
-           Funcions.CleanTemporal();
-           HBD._temporal.add(Taulell);
-           return 1; //Afegida correctament 
-        }
-        return 0; //No es pot afegir (intenta ficarla fora del taulell o substituir un written o posarla en invalida)
+        Taulell.setValProvCell(valor, i, j);
+        Funcions.CleanTemporal();
+        HBD._temporal.add(Taulell);
+        HBD.saveTemporal();
     }
-    public static int comprovarHidato(BoardHidato Taulell){
-        //BoardHidato Taulell = Funcions.CarregarTemporal();
+    
+    public static int getCasella(int i, int j){ //Posa el seu valor a una casella d'un Taulell 
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        return Taulell.getValueCell(i,j);
+    }
+    
+    public static void switchAnnotationCasella(int val, int f, int c){ //Posa el seu valor a una casella d'un Taulell 
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        Taulell.switchAnnotationCell(val, f, c);
+    }
+    
+    public static boolean getAnnotationCasella(int i, int f, int c){ //Posa el seu valor a una casella d'un Taulell 
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        return Taulell.getAnnotationCell(i, f, c);
+    }
+    
+    public static int getMaxAnnotation(){ //Posa el seu valor a una casella d'un Taulell 
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        return Taulell.consult_max_annotations();
+    }
+    
+    public static int comprovarHidato(){
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        imprimeixValors(Taulell); //XIVATO
         int size = Taulell.getSize();
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
         Integer Y[] = {1,1,0,-1,-1,-1,0,1};
@@ -186,10 +209,15 @@ public class Controlador {
                                                  //return 5 el taulell no te solucio
     }
     
-    public static void crearTaulellAleatori(BoardHidato Taulell, int size, int dificultat) { //sense return, nomes es crea
-        //BoardHidato Taulell = new BoardHidato(size,"temporal");
+    public static void crearTaulellAleatori(int size, int dificultat) { //sense return, nomes es crea
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        BoardHidato Taulell = new BoardHidato(size,"temporal");
+        Funcions.CleanTemporal();
+        
         Funcions.colocar_celesinvalides(Taulell);
         Funcions.generar_written(Taulell,dificultat); //dins la funcio es posa el Taulell al temporal per resoldrel
+        imprimeixValors(Taulell); //Xivato taulell generat
     }
     
     public static ArrayList<Integer> carregarTaulell (String nomT){
@@ -226,6 +254,44 @@ public class Controlador {
             }
         }
         return valors;
+    }
+    
+    public static ArrayList<Integer> carregarTaulellTemporal (){
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        ArrayList<Integer> valors = new ArrayList<>();
+        for (int i = 0; i < HBD._temporal.size(); ++i){
+            if (HBD._temporal.get(i).getID().equals("temporal")) {
+                BoardHidato Taulell = HBD._temporal.get(i);
+                for (int j = 0; j < Taulell.getSize(); ++j) {
+                    for (int k = 0; k < Taulell.getSize(); ++k) {
+                        valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
+                    }
+                } 
+            }
+            else {
+                valors = null; //el taulell no existeix a la base de dades
+            }
+        }
+        return valors;
+    }
+    
+    public static int es_ultim () {
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        return (Taulell.getSize()*Taulell.getSize() - Taulell.consultar_num_celesinvalides());
+    }
+    
+    public static boolean es_written (int j, int k) {
+        HBD = new HidatoBD();
+        HBD.loadTemporal();
+        
+        BoardHidato Taulell = Funcions.CarregarTemporal();
+        
+        return Taulell.getWrittenCell(j,k);
     }
     
     public static boolean esborrarTaulell(String nomT) {
