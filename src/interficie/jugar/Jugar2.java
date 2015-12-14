@@ -441,7 +441,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-
+        Casella = null;
         if (!Taulell.getWrittenCell(0,0)){
             Casella = "c00";
             afegirmarca = false;
@@ -453,164 +453,97 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00ActionPerformed
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-
+        Casella = null;
         if (!Taulell.getWrittenCell(0,1)){
             Casella = "c01";
             afegirmarca = false;
         }
     }//GEN-LAST:event_c01MouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        //funciobotogeneral(btn1Text);
-        String btn1Text = jButton1.getText();
+    private void boto(String textboto){
         javax.swing.JTextField tf = new javax.swing.JTextField();
         if (Casella == "c00"){
             tf = c00;
-            //c00.setText(c00.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText() + btn1Text);
+            val = Integer.parseInt(c00.getText() + textboto);
             f = Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c01"){
             tf = c01;
-            //c01.setText(c01.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText() + btn1Text);
+            val = Integer.parseInt(c01.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c10"){
             tf = c10;
-            //c10.setText(c10.getText() + btn1Text);
-            val = Integer.parseInt(c00.getText() + btn1Text);
+            val = Integer.parseInt(c10.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         if (Casella == "c11"){
             tf = c11;
-            //c11.setText(c11.getText() + btn1Text); // TODO add your handling code here:
-            val = Integer.parseInt(c00.getText() + btn1Text);
+            val = Integer.parseInt(c11.getText() + textboto);
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
         
         if (afegirmarca){
-            val = Integer.parseInt(btn1Text);
+            val = Integer.parseInt(textboto);
             Taulell.switchAnnotationCell(val, f, c);
         }
         else{
-            Taulell.setValueCell(val, f, c);
+            Taulell.setValProvCell(val, f, c);
         }
-        tf.setText(String.valueOf(Taulell.getValueCell(f,c)));    
-        Taulell.setValProvCell(val, f, c);
+        tf.setText(String.valueOf(Taulell.getValueCell(f,c)));   
+        //System.out.println(Casella);
+        
+    }
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        //funciobotogeneral(btn1Text);
+        boto(jButton1.getText());       
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-              String btn2Text = jButton2.getText();
-         if (Casella == "c00") {
-            c00.setText(c00.getText() + btn2Text);
-         }
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn2Text);
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn2Text); 
-        if (Casella == "c11")
-           c11.setText(c11.getText() + btn2Text);        
+         boto(jButton2.getText());     
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-             String btn3Text = jButton3.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn3Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn3Text);
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn3Text);  
-        if (Casella == "c11")
-            c11.setText(c11.getText() + btn3Text);        
+          boto(jButton3.getText());             
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-         String btn4Text = jButton4.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn4Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn4Text);
-        if (Casella == "c10")
-           c10.setText(c10.getText() + btn4Text);  
-        if (Casella == "c11")
-           c11.setText(c11.getText() + btn4Text);       
+       boto(jButton4.getText());       
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-           String btn5Text = jButton5.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn5Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn5Text);
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn5Text); 
-        if (Casella == "c11")
-            c11.setText(c11.getText() + btn5Text);       
+           boto(jButton5.getText());     
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-            String btn6Text = jButton6.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn6Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn6Text); 
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn6Text);  
-        if (Casella == "c11")
-            c11.setText(c11.getText() + btn6Text);
+           boto(jButton6.getText());     
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-             String btn7Text = jButton7.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn7Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn7Text); 
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn7Text);  
-        if (Casella == "c11")
-            c11.setText(c11.getText() + btn7Text);                       
+           boto(jButton7.getText());                       
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-           String btn8Text = jButton8.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn8Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn8Text); 
-        if (Casella == "c10")
-           c10.setText(c10.getText() + btn8Text);  
-        if (Casella == "c11")
-           c11.setText(c11.getText() + btn8Text);        
+          boto(jButton8.getText());     
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-              String btn9Text = jButton9.getText();
-         if (Casella == "c00")
-            c00.setText(c00.getText() + btn9Text);
-        if (Casella == "c01")
-            c01.setText(c01.getText() + btn9Text);
-        if (Casella == "c10")
-            c10.setText(c10.getText() + btn9Text);  
-        if (Casella == "c11")
-            c11.setText(c11.getText() + btn9Text);                             
+            boto(jButton9.getText());                               
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-
-        if (!Taulell.getWrittenCell(0,1)){
+        Casella = null;
+        if (!Taulell.getWrittenCell(1,0)){
             Casella = "c10";
             afegirmarca = false;
         }
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-       
+        Casella = null;
         if (!Taulell.getWrittenCell(1,1)){
             Casella = "c11";
             afegirmarca = false;
