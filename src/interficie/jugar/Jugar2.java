@@ -363,7 +363,7 @@ public class Jugar2 extends javax.swing.JFrame {
         int ultima = Taulell.getSize()*Taulell.getSize() - Taulell.consultar_num_celesinvalides();
         
         String lastnum = Integer.toString(ultima);
-        Color color = Color.blue;
+        Color color = Color.cyan;
         if (Taulell.getValueCell(0,0) != 0){
             c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
             if ("1".equals(c00.getText())) c00.setBackground(color);            
@@ -458,6 +458,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c01MouseClicked
     private void boto(String textboto){
         javax.swing.JTextField tf = new javax.swing.JTextField();
+        
         if (Casella == "c00"){
             tf = c00;
             val = Integer.parseInt(c00.getText() + textboto);
@@ -482,6 +483,7 @@ public class Jugar2 extends javax.swing.JFrame {
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
+        if (textboto == "0") val = 0;
         
         if (afegirmarca){
             System.out.println(val);
@@ -494,8 +496,12 @@ public class Jugar2 extends javax.swing.JFrame {
         else{
             Taulell.setValProvCell(val, f, c);
         }
-        tf.setText(String.valueOf(Taulell.getValueCell(f,c)));   
-        //System.out.println(Casella);
+        String afegirstr;
+        int afegirint = Taulell.getValueCell(f,c);   
+        if (afegirint == 0) afegirstr = null;
+        else if (afegirint == -1) afegirstr = "X";
+        else afegirstr = String.valueOf(afegirint);
+        tf.setText(afegirstr);
         
     }
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -552,15 +558,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
-             String btnresetText = "";
-        if (Casella == "c00")
-            c00.setText(btnresetText);
-        if (Casella == "c01")
-            c01.setText(btnresetText); 
-        if (Casella == "c10")
-            c10.setText(btnresetText); 
-        if (Casella == "c11")
-            c11.setText(btnresetText);
+        boto("0");    
     }//GEN-LAST:event_EsborrarActionPerformed
 
     private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
