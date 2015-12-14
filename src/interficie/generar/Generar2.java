@@ -5,6 +5,7 @@
  */
 package interficie.generar;
 
+import static drivers.Controlador.*;
 import interficie.Menu;
 
 /**
@@ -22,6 +23,7 @@ public class Generar2 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        crea_taulell(2);
     }
 
     /**
@@ -34,10 +36,10 @@ public class Generar2 extends javax.swing.JFrame {
     private void initComponents() {
 
         titol = new javax.swing.JTextArea();
-        primera = new javax.swing.JTextField();
-        primera1 = new javax.swing.JTextField();
-        primera2 = new javax.swing.JTextField();
-        primera3 = new javax.swing.JTextField();
+        c10 = new javax.swing.JTextField();
+        c01 = new javax.swing.JTextField();
+        c00 = new javax.swing.JTextField();
+        c11 = new javax.swing.JTextField();
         numeros = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -50,6 +52,7 @@ public class Generar2 extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -72,41 +75,56 @@ public class Generar2 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(360, 30, 260, 60);
+        titol.setBounds(350, 30, 240, 80);
 
-        primera.setEditable(false);
-        primera.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera.addMouseListener(new java.awt.event.MouseAdapter() {
+        c10.setEditable(false);
+        c10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primeraMouseClicked(evt);
+                c10MouseClicked(evt);
             }
         });
-        primera.addActionListener(new java.awt.event.ActionListener() {
+        c10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                primeraActionPerformed(evt);
+                c10ActionPerformed(evt);
             }
         });
-        getContentPane().add(primera);
-        primera.setBounds(230, 300, 110, 100);
+        getContentPane().add(c10);
+        c10.setBounds(230, 300, 110, 100);
 
-        primera1.setEditable(false);
-        primera1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera1);
-        primera1.setBounds(340, 200, 110, 100);
+        c01.setEditable(false);
+        c01.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c01MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c01);
+        c01.setBounds(340, 200, 110, 100);
 
-        primera2.setEditable(false);
-        primera2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera2);
-        primera2.setBounds(230, 200, 110, 100);
+        c00.setEditable(false);
+        c00.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c00.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c00MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c00);
+        c00.setBounds(230, 200, 110, 100);
 
-        primera3.setEditable(false);
-        primera3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera3);
-        primera3.setBounds(340, 300, 110, 100);
+        c11.setEditable(false);
+        c11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c11);
+        c11.setBounds(340, 300, 110, 100);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -114,6 +132,11 @@ public class Generar2 extends javax.swing.JFrame {
         numeros.setBounds(650, 120, 80, 40);
 
         jButton1.setText("1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -123,6 +146,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton1.setBounds(600, 180, 60, 60);
 
         jButton2.setText("2");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -132,6 +160,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton2.setBounds(670, 180, 60, 60);
 
         jButton3.setText("3");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -141,6 +174,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton3.setBounds(740, 180, 60, 60);
 
         jButton4.setText("4");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -150,6 +188,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton4.setBounds(600, 250, 60, 60);
 
         jButton5.setText("5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -159,6 +202,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton5.setBounds(670, 250, 60, 60);
 
         jButton6.setText("6");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -168,6 +216,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton6.setBounds(740, 250, 60, 60);
 
         jButton7.setText("7");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -177,6 +230,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton7.setBounds(600, 320, 60, 60);
 
         jButton8.setText("8");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -186,6 +244,11 @@ public class Generar2 extends javax.swing.JFrame {
         jButton8.setBounds(670, 320, 60, 60);
 
         jButton9.setText("9");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -210,9 +273,33 @@ public class Generar2 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(920, 540, 65, 23);
 
-        jButton10.setText("Generar");
+        jButton10.setText("Guardar Taulell");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton10);
-        jButton10.setBounds(600, 410, 100, 40);
+        jButton10.setBounds(600, 410, 180, 40);
+
+        jButton11.setText("Invalida");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11);
+        jButton11.setBounds(830, 180, 90, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -264,13 +351,125 @@ public class Generar2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void primeraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primeraMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primeraMouseClicked
+    private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
+        Casella = null;
+        if (!es_written(0,0)){
+            Casella = "c10";
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c10MouseClicked
 
-    private void primeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeraActionPerformed
+    private void c10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primeraActionPerformed
+    }//GEN-LAST:event_c10ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+    private void boto(String textboto){
+        javax.swing.JTextField tf = new javax.swing.JTextField();
+        if (Casella == "c00"){
+            tf = c00;
+            val = Integer.parseInt(c00.getText() + textboto);
+            f = Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
+        }
+        if (Casella == "c01"){
+            tf = c01;
+            val = Integer.parseInt(c01.getText() + textboto);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
+        }
+        if (Casella == "c10"){
+            tf = c10;
+            val = Integer.parseInt(c10.getText() + textboto);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
+        }
+        if (Casella == "c11"){
+            tf = c11;
+            val = Integer.parseInt(c11.getText() + textboto);
+            f =  Character.getNumericValue(Casella.charAt(1));
+            c =  Character.getNumericValue(Casella.charAt(2));
+        }
+        DefineixCasella(val, f, c);
+        tf.setText(String.valueOf(getCasella(f,c))); 
+}
+        //System.out.println(Casella);
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boto(jButton1.getText());
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        boto(jButton2.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        boto(jButton3.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        boto(jButton4.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        boto(jButton5.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        boto(jButton6.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        boto(jButton7.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        boto(jButton8.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        boto(jButton9.getText());// TODO add your handling code here:
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
+        Casella = null;
+        if (!es_written(0,0)){
+            Casella = "c00";
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_c00MouseClicked
+
+    private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
+        Casella = null;
+        if (!es_written(0,0))
+            Casella = "c01";// TODO add your handling code here:
+    }//GEN-LAST:event_c01MouseClicked
+
+    private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
+        Casella = null;
+        if (!es_written(0,0))
+            Casella = "c11";       // TODO add your handling code here:
+    }//GEN-LAST:event_c11MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        int result = ConfirmarBoardCreat("nom"); 
+        if (result == 1 || result == 2 || result == 3){
+            //missatge de ben creat
+        }
+        else if (result == 4){
+            //missatge de taulell ja existeix
+        }
+        else if (result == 5){
+            //hidato mal creat
+        }
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        boto("X");        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11MouseClicked
 
     
     /**
@@ -340,9 +539,14 @@ public class Generar2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField c00;
+    private javax.swing.JTextField c01;
+    private javax.swing.JTextField c10;
+    private javax.swing.JTextField c11;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -352,10 +556,8 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros;
-    private javax.swing.JTextField primera;
-    private javax.swing.JTextField primera1;
-    private javax.swing.JTextField primera2;
-    private javax.swing.JTextField primera3;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+    private String Casella;
+    private int val,f,c;
 }
