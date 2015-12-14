@@ -487,7 +487,7 @@ public class Controlador {
 
         valors.add(num_jug); //Num jugadors al programa
         valors.add(num_guard); //Num partides guardades totals al programa
-        valors.add(num_solu); //Num partides solucionades al programa
+        valors.add(num_solu); //Num partides solucionades al program
     }
     
     public static void ObtenirMapesExistents(ArrayList<BoardHidato> mapes) {
