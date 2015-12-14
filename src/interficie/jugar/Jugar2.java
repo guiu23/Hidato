@@ -13,6 +13,7 @@ import interficie.Menu;
 import static interficie.Menu.us;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
@@ -358,32 +359,36 @@ public class Jugar2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myinitComponents() {
-        crearTaulellAleatori(Taulell,2,dif);
-        imprimeixValors(Taulell); //Xivato taulell generat
-        int ultima = Taulell.getSize()*Taulell.getSize() - Taulell.consultar_num_celesinvalides();
+        crearTaulellAleatori(2,dif);
+        ArrayList<Integer> valors = carregarTaulellTemporal();
+        
+        for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
+        
+        int ultima = es_ultim();
         
         String lastnum = Integer.toString(ultima);
-        Color color = Color.cyan;
-        if (Taulell.getValueCell(0,0) != 0){
-            c00.setText(Integer.toString(Taulell.getValueCell(0,0)));
+        Color color = Color.blue;
+        
+        if (valors.get(0) != 0){
+            c00.setText(Integer.toString(valors.get(0)));
             if ("1".equals(c00.getText())) c00.setBackground(color);            
             else if (c00.getText().equals(lastnum)) c00.setBackground(color);
             else if ("-1".equals(c00.getText())) c00.setBackground(Color.black);
         }
-        if (Taulell.getValueCell(0,1) != 0){
-            c01.setText(Integer.toString(Taulell.getValueCell(0,1)));
+        if (valors.get(1) != 0){
+            c01.setText(Integer.toString(valors.get(1)));
             if ("1".equals(c01.getText()))c01.setBackground(color);
             else if (c01.getText().equals(lastnum)) c01.setBackground(color);
             else if ("-1".equals(c01.getText())) c01.setBackground(Color.black);
         }
-        if (Taulell.getValueCell(1,0) != 0){
-            c10.setText(Integer.toString(Taulell.getValueCell(1,0)));
+        if (valors.get(2) != 0){
+            c10.setText(Integer.toString(valors.get(2)));
             if ("1".equals(c10.getText())) c10.setBackground(color);
             else if (c10.getText().equals(lastnum)) c10.setBackground(color);
             else if ("-1".equals(c10.getText())) c10.setBackground(Color.black);
         }
-        if (Taulell.getValueCell(1,1) != 0){
-            c11.setText(Integer.toString(Taulell.getValueCell(1,1)));
+        if (valors.get(3) != 0){
+            c11.setText(Integer.toString(valors.get(3)));
             if ("1".equals(c11.getText())) c11.setBackground(color);
             else if (c11.getText().equals(lastnum)) c11.setBackground(color);
             else if ("-1".equals(c11.getText())) c11.setBackground(Color.black);
@@ -439,7 +444,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
         Casella = null;
-        if (!Taulell.getWrittenCell(0,0)){
+        if (!es_written(0,0)){
             Casella = "c00";
             afegirmarca = false;
         }
@@ -451,14 +456,14 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
         Casella = null;
-        if (!Taulell.getWrittenCell(0,1)){
+        if (!es_written(0,1)){
             Casella = "c01";
             afegirmarca = false;
         }
     }//GEN-LAST:event_c01MouseClicked
+    
     private void boto(String textboto){
         javax.swing.JTextField tf = new javax.swing.JTextField();
-        
         if (Casella == "c00"){
             tf = c00;
             val = Integer.parseInt(c00.getText() + textboto);
@@ -483,6 +488,7 @@ public class Jugar2 extends javax.swing.JFrame {
             f =  Character.getNumericValue(Casella.charAt(1));
             c =  Character.getNumericValue(Casella.charAt(2));
         }
+        
         if (textboto == "0") val = 0;
         
         if (afegirmarca){
@@ -490,20 +496,21 @@ public class Jugar2 extends javax.swing.JFrame {
             val = Integer.parseInt(textboto);
             System.out.println(f);
             System.out.println(c);
-            Taulell.switchAnnotationCell(val, f, c);
-            System.out.println(Taulell.getAnnotationCell(val,f,c));
+            switchAnnotationCasella(val, f, c);
+            System.out.println(getAnnotationCasella(val,f,c));
         }
+        
         else{
-            Taulell.setValProvCell(val, f, c);
+            DefineixCasella(val, f, c);
         }
         String afegirstr;
-        int afegirint = Taulell.getValueCell(f,c);   
+        int afegirint = getCasella(f,c);   
         if (afegirint == 0) afegirstr = null;
         else if (afegirint == -1) afegirstr = "X";
         else afegirstr = String.valueOf(afegirint);
         tf.setText(afegirstr);
-        
     }
+    
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         //funciobotogeneral(btn1Text);
         boto(jButton1.getText());       
@@ -543,7 +550,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
         Casella = null;
-        if (!Taulell.getWrittenCell(1,0)){
+        if (!es_written(1,0)){
             Casella = "c10";
             afegirmarca = false;
         }
@@ -551,7 +558,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
         Casella = null;
-        if (!Taulell.getWrittenCell(1,1)){
+        if (!es_written(1,1)){
             Casella = "c11";
             afegirmarca = false;
         }
@@ -568,11 +575,9 @@ public class Jugar2 extends javax.swing.JFrame {
     private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
             f = Character.getNumericValue(Casella.charAt(1));
             c = Character.getNumericValue(Casella.charAt(2));
-            System.out.println(f);
-            System.out.println(c);
             String ArrayData = null;
-            for (int i = 0; i < Taulell.consult_max_annotations(); ++i){
-                                if (Taulell.getAnnotationCell(i, f, c) == true){// System.out.println(i + " ");
+            for (int i = 0; i < getMaxAnnotation(); ++i){
+                                if (getAnnotationCasella(i, f, c) == true){// System.out.println(i + " ");
                                     ArrayData = ArrayData + ", " + String.valueOf(i);
                                 }
             }
@@ -590,38 +595,34 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void comprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprovarMouseClicked
         int r;
-        imprimeixValors(Taulell);
-        r = comprovarHidato(Taulell);
+        r = comprovarHidato();
         JFrame frame = new JFrame("");
         if (r >= 1) {
-            JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(frame,"Enhorabona");
             //que et digui la puntuació aconseguida
             Menu obj = new Menu(us);
             obj.setVisible(true);
             dispose();
         }
         else if (r == -1)
-            JOptionPane.showMessageDialog(frame,"Hidato mal resolt");
+            JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         
 //cridem funcio del controlador que mira si el q tenim de moment es igual que la seva solucio
     }//GEN-LAST:event_comprovarMouseClicked
 
     private void autocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_autocompletarMouseClicked
-         Funcions.solve_modifica(Taulell, 2, true);
+        ArrayList<Integer> valors = CarregarSolucioTaulell();
+        
         String afegir;
-        for (int i = 0; i < Taulell.getSize();++i){
-            for (int j = 0; j < Taulell.getSize(); ++j){
-                afegir = String.valueOf(Taulell.getValueCell(i,j));
-                if (i == 0 && j == 0)
-                    c00.setText(afegir);
-                else if (i == 0 && j == 1)
-                    c01.setText(afegir);
-                else if (i == 1 && j == 0)
-                    c10.setText(afegir);
-                else if (i == 1 && j == 1)
-                    c11.setText(afegir);
-            }
-        }
+        
+        afegir = String.valueOf(valors.get(0));
+        c00.setText(afegir);
+        afegir = String.valueOf(valors.get(1));
+        c01.setText(afegir);
+        afegir = String.valueOf(valors.get(0));
+        c10.setText(afegir);
+        afegir = String.valueOf(valors.get(0));
+        c11.setText(afegir);
     }//GEN-LAST:event_autocompletarMouseClicked
                                                                                
                                                                      
@@ -705,6 +706,8 @@ public class Jugar2 extends javax.swing.JFrame {
     private String Casella;
     private boolean afegirmarca;
     private int val,f,c;
-    BoardHidato Taulell = new BoardHidato(2,"nom");
-
 }
+
+
+                                 
+
