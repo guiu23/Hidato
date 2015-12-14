@@ -74,6 +74,11 @@ public class CarregarPartida extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(35, 116, 256, 28);
 
+        list1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                list1MouseClicked(evt);
+            }
+        });
         list1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 list1ActionPerformed(evt);
@@ -129,6 +134,11 @@ public class CarregarPartida extends javax.swing.JFrame {
     private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_list1ActionPerformed
+
+    private void list1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list1MouseClicked
+        // TODO add your handling code here:4
+        
+    }//GEN-LAST:event_list1MouseClicked
 
     /**
      * @param args the command line arguments
