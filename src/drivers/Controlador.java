@@ -314,7 +314,7 @@ public class Controlador {
         }
     }
     
-    public static void partidaAcabada() {
+    public static void partidaAcabada() { //no se si es del tot aixi
         HBD = new HidatoBD();
         HBD.loadGames();
         HBD.loadPlayerActual();
