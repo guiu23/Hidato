@@ -339,6 +339,7 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadGames();
         HBD.loadMatches();
+        HBD.loadPlayers();
         int GameID = 0;
         if (HBD._games.size() == 0) GameID = 1;
         else {
@@ -364,9 +365,20 @@ public class Controlador {
                 }
                 
                 stubMatch m = new stubMatch(Jug,g);
+                System.out.println(m.getPlayer().getName()); 
                 m.setNomM(nomP);
                 HBD._matches.add(m);
                 HBD.saveMatches();
+                
+                
+                /*for( int i = 0; i < HBD._matches.size(); ++i ) {
+            System.out.println("entra for"); 
+            System.out.println("XIVATO" + HBD._matches.get(i).getPlayer().getName()); 
+            System.out.println("entra for2"); 
+            
+        }*/
+                
+                
                 return 0;
             }
         }
@@ -498,11 +510,14 @@ public class Controlador {
         }
     }
     
-    public static void ObtenirPartides(ArrayList<stubMatch> partides) {
+    public static void ObtenirPartides(ArrayList<stubMatch> partides, String nom) {
         HBD = new HidatoBD();
-        HBD.loadBoards();
+        HBD.loadMatches();
         for( int i = 0; i < HBD._matches.size(); ++i ) {
-            partides.set(i, HBD._matches.get(i));
+            System.out.println("entra for"); 
+            //System.out.println(HBD._matches.get(i).getPlayer()); 
+            System.out.println("entra for2"); 
+            if (HBD._matches.get(i).getPlayer().getName().equals(nom)) partides.add(HBD._matches.get(i));
         }
     }
 }
