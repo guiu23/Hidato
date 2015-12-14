@@ -159,6 +159,7 @@ public class Controlador {
             return -1; //Mal resolt 
         }
     } 
+    
     public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
         BoardHidato Taulell = Funcions.CarregarTemporal();
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
@@ -268,7 +269,78 @@ public class Controlador {
         return valors; //sempre hauria de tornar els valors del taulell resolt en ordre
     }
     
+    public static void començarJoc() {
+        HBD = new HidatoBD();
+        HBD.loadGames();
+        HBD.loadTemporal();
+        int GameID = 0;
+        if (HBD._games.size() == 0) GameID = 1;
+        else {
+            for (int i = 0; i < HBD._games.size(); ++i){
+                if (HBD._games.get(i).getID() > GameID) GameID = HBD._games.get(i).getID();
+            }
+        }
+        for (int j = 0; j < HBD._temporal.size();++j){
+            if (HBD._temporal.get(j).getID().equals("temporal")){
+                BoardHidato Taulell = HBD._temporal.get(j);
+                HBD._games.add(new stubGame(GameID, Taulell.getSize(), Funcions.triaDificultat(Taulell), Taulell));
+                HBD.saveGames();
+            } 
+        }
+    }
     
+    public static void guardarPrtida(String nomP) {
+        HBD = new HidatoBD();
+        HBD.loadGames();
+        HBD.loadPlayerActual();
+        HBD.loadMatches();
+        int GameID = 0;
+        if (HBD._games.size() == 0) GameID = 1;
+        else {
+            for (int i = 0; i < HBD._games.size(); ++i){
+                if (HBD._games.get(i).getID() > GameID) GameID = HBD._games.get(i).getID();
+            }
+        }
+        for (int j=0; j < HBD._games.size(); ++j){
+            if (HBD._games.get(j).getID() == GameID){
+                stubGame g = HBD._games.get(j);
+                if (HBD._playerActual.size() != 0) {
+                    stubMatch m = new stubMatch(HBD._playerActual.get(0),g);
+                    m.setNomM(nomP);
+                    HBD._matches.add(m);
+                    HBD.saveMatches();
+                }    
+            }
+        }
+    }
+    
+    public static void partidaAcabada() {
+        HBD = new HidatoBD();
+        HBD.loadGames();
+        HBD.loadPlayerActual();
+        HBD.loadMatches();
+        int GameID = 0;
+        if (HBD._games.size() == 0) GameID = 1;
+        else {
+            for (int i = 0; i < HBD._games.size(); ++i){
+                if (HBD._games.get(i).getID() > GameID) GameID = HBD._games.get(i).getID();
+            }
+        }
+        for (int j=0; j < HBD._games.size(); ++j){
+            if (HBD._games.get(j).getID() == GameID){
+                stubGame g = HBD._games.get(j);
+                if (HBD._playerActual.size() != 0) {
+                    stubMatch m = new stubMatch(HBD._playerActual.get(0),g);
+                    HBD._solvedmatches.add(m);
+                    HBD.saveSolvedMatches();
+                }    
+            }
+        }
+    }
+    
+    public static void carregarPartida(String nomP) {
+        
+    }
     
     public static void ObteRankingPersonal(String user, ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
