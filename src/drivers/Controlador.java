@@ -100,7 +100,7 @@ public class Controlador {
     public static void crea_taulell(int size)   { //Prepara un Taulell amb tot a 0 per posarli caselles a la base de dades temporal, no cal resposta
         HBD = new HidatoBD();
         HBD.loadTemporal();
-        BoardHidato Taulell = new BoardHidato(size,"temporal");
+        BoardHidato Taulell = new BoardHidato(size,"temporal"); 
         Funcions.CleanTemporal();
         HBD._temporal.add(Taulell);    
     }
@@ -213,7 +213,7 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = new BoardHidato(size,"temporal");
-        Funcions.CleanTemporal();
+        Funcions.CleanTemporal(); 
         
         Funcions.colocar_celesinvalides(Taulell);
         Funcions.generar_written(Taulell,dificultat); //dins la funcio es posa el Taulell al temporal per resoldrel

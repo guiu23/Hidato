@@ -398,10 +398,10 @@ public class Funcions {
         solve_modifica(Taulell, size, false);
         copiarBoard(TaulellRes, Taulell);
         
-                //GUARDA ELS TAULELLS A LA BD
+        //GUARDA ELS TAULELLS A LA BD
         HBD._temporalResolts.add(TaulellRes);
+        System.out.println(HBD._temporalResolts.size());
         HBD.saveTemporalResolts();
-        
         
         solution = false;
         reset_written(Taulell);//posem a written = false totes les celes menys linici i el fi
@@ -805,6 +805,5 @@ public class Funcions {
     }
 
 }
-
 
 
