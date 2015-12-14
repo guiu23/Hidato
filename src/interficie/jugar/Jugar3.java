@@ -31,10 +31,10 @@ public class Jugar3 extends javax.swing.JFrame {
     private void initComponents() {
 
         titol = new javax.swing.JTextArea();
-        primera = new javax.swing.JTextField();
-        primera1 = new javax.swing.JTextField();
-        primera2 = new javax.swing.JTextField();
-        primera3 = new javax.swing.JTextField();
+        c00 = new javax.swing.JTextField();
+        c02 = new javax.swing.JTextField();
+        c01 = new javax.swing.JTextField();
+        c22 = new javax.swing.JTextField();
         numeros = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -46,11 +46,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        primera4 = new javax.swing.JTextField();
-        primera5 = new javax.swing.JTextField();
-        primera6 = new javax.swing.JTextField();
-        primera7 = new javax.swing.JTextField();
-        primera8 = new javax.swing.JTextField();
+        c20 = new javax.swing.JTextField();
+        c11 = new javax.swing.JTextField();
+        c12 = new javax.swing.JTextField();
+        c10 = new javax.swing.JTextField();
+        c21 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
@@ -81,39 +81,39 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(310, 50, 260, 60);
 
-        primera.setEditable(false);
-        primera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera.addMouseListener(new java.awt.event.MouseAdapter() {
+        c00.setEditable(false);
+        c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c00.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primeraMouseClicked(evt);
+                c00MouseClicked(evt);
             }
         });
-        primera.addActionListener(new java.awt.event.ActionListener() {
+        c00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                primeraActionPerformed(evt);
+                c00ActionPerformed(evt);
             }
         });
-        getContentPane().add(primera);
-        primera.setBounds(330, 180, 70, 70);
+        getContentPane().add(c00);
+        c00.setBounds(330, 180, 70, 70);
 
-        primera1.setEditable(false);
-        primera1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera1);
-        primera1.setBounds(470, 180, 70, 70);
+        c02.setEditable(false);
+        c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c02);
+        c02.setBounds(470, 180, 70, 70);
 
-        primera2.setEditable(false);
-        primera2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera2);
-        primera2.setBounds(400, 180, 70, 70);
+        c01.setEditable(false);
+        c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c01);
+        c01.setBounds(400, 180, 70, 70);
 
-        primera3.setEditable(false);
-        primera3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera3);
-        primera3.setBounds(470, 320, 70, 70);
+        c22.setEditable(false);
+        c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c22);
+        c22.setBounds(470, 320, 70, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
@@ -215,37 +215,37 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 550, 65, 25);
+        enrere.setBounds(910, 550, 59, 23);
 
-        primera4.setEditable(false);
-        primera4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera4);
-        primera4.setBounds(330, 320, 70, 70);
+        c20.setEditable(false);
+        c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c20);
+        c20.setBounds(330, 320, 70, 70);
 
-        primera5.setEditable(false);
-        primera5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera5);
-        primera5.setBounds(400, 250, 70, 70);
+        c11.setEditable(false);
+        c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c11);
+        c11.setBounds(400, 250, 70, 70);
 
-        primera6.setEditable(false);
-        primera6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera6);
-        primera6.setBounds(470, 250, 70, 70);
+        c12.setEditable(false);
+        c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c12);
+        c12.setBounds(470, 250, 70, 70);
 
-        primera7.setEditable(false);
-        primera7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera7);
-        primera7.setBounds(330, 250, 70, 70);
+        c10.setEditable(false);
+        c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c10);
+        c10.setBounds(330, 250, 70, 70);
 
-        primera8.setEditable(false);
-        primera8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        primera8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(primera8);
-        primera8.setBounds(400, 320, 70, 70);
+        c21.setEditable(false);
+        c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        getContentPane().add(c21);
+        c21.setBounds(400, 320, 70, 70);
 
         jButton10.setText("Resoldre");
         getContentPane().add(jButton10);
@@ -327,13 +327,13 @@ public class Jugar3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void primeraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primeraMouseClicked
+    private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_primeraMouseClicked
+    }//GEN-LAST:event_c00MouseClicked
 
-    private void primeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primeraActionPerformed
+    private void c00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c00ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primeraActionPerformed
+    }//GEN-LAST:event_c00ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
@@ -391,6 +391,15 @@ public class Jugar3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField c00;
+    private javax.swing.JTextField c01;
+    private javax.swing.JTextField c02;
+    private javax.swing.JTextField c10;
+    private javax.swing.JTextField c11;
+    private javax.swing.JTextField c12;
+    private javax.swing.JTextField c20;
+    private javax.swing.JTextField c21;
+    private javax.swing.JTextField c22;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -408,15 +417,9 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
     private javax.swing.JLabel numeros1;
-    private javax.swing.JTextField primera;
-    private javax.swing.JTextField primera1;
-    private javax.swing.JTextField primera2;
-    private javax.swing.JTextField primera3;
-    private javax.swing.JTextField primera4;
-    private javax.swing.JTextField primera5;
-    private javax.swing.JTextField primera6;
-    private javax.swing.JTextField primera7;
-    private javax.swing.JTextField primera8;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+    private String Casella;
+    private boolean afegirmarca;
+    private int val,f,c;
 }
