@@ -619,9 +619,9 @@ public class Jugar2 extends javax.swing.JFrame {
         c00.setText(afegir);
         afegir = String.valueOf(valors.get(1));
         c01.setText(afegir);
-        afegir = String.valueOf(valors.get(0));
+        afegir = String.valueOf(valors.get(2));
         c10.setText(afegir);
-        afegir = String.valueOf(valors.get(0));
+        afegir = String.valueOf(valors.get(3));
         c11.setText(afegir);
     }//GEN-LAST:event_autocompletarMouseClicked
                                                                                
