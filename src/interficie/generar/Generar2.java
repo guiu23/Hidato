@@ -51,7 +51,7 @@ public class Generar2 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        guardartaulell = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -273,19 +273,19 @@ public class Generar2 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(920, 540, 65, 23);
 
-        jButton10.setText("Guardar Taulell");
-        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+        guardartaulell.setText("Guardar Taulell");
+        guardartaulell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton10MouseClicked(evt);
+                guardartaulellMouseClicked(evt);
             }
         });
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        guardartaulell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                guardartaulellActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton10);
-        jButton10.setBounds(600, 410, 180, 40);
+        getContentPane().add(guardartaulell);
+        guardartaulell.setBounds(600, 410, 180, 40);
 
         jButton11.setText("Invalida");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -352,19 +352,18 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        Casella = null;
-        if (!es_written(0,0)){
+        
             Casella = "c10";
-        }        // TODO add your handling code here:
+              // TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
     private void c10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_c10ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void guardartaulellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardartaulellActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_guardartaulellActionPerformed
     private void boto(String textboto){
         javax.swing.JTextField tf = new javax.swing.JTextField();
         if (Casella == "c00"){
@@ -432,25 +431,20 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        Casella = null;
-        if (!es_written(0,0)){
-            Casella = "c00";
-        }        // TODO add your handling code here:
+       Casella = "c00";
+            // TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        Casella = null;
-        if (!es_written(0,0))
+
             Casella = "c01";// TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        Casella = null;
-        if (!es_written(0,0))
             Casella = "c11";       // TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
-    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+    private void guardartaulellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardartaulellMouseClicked
         int result = ConfirmarBoardCreat("nom"); 
         if (result == 1 || result == 2 || result == 3){
             //missatge de ben creat
@@ -461,7 +455,7 @@ public class Generar2 extends javax.swing.JFrame {
         else if (result == 5){
             //hidato mal creat
         }
-    }//GEN-LAST:event_jButton10MouseClicked
+    }//GEN-LAST:event_guardartaulellMouseClicked
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
@@ -544,8 +538,8 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JTextField c10;
     private javax.swing.JTextField c11;
     private javax.swing.JButton enrere;
+    private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
