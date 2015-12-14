@@ -10,6 +10,7 @@ import static drivers.Controlador.*;
 import drivers.Funcions;
 import static drivers.Funcions.imprimeixValors;
 import interficie.Menu;
+import static interficie.Menu.us;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
@@ -611,10 +612,15 @@ public class Jugar2 extends javax.swing.JFrame {
         int r;
         imprimeixValors(Taulell);
         r = comprovarHidato(Taulell);
-        System.out.println("EI"); 
         JFrame frame = new JFrame("");
-        if (r >= 1) JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
-        else if (r == 0)
+        if (r >= 1) {
+            JOptionPane.showMessageDialog(frame,"Enhorabona", "Hidato ben resolt", WARNING_MESSAGE);
+            //que et digui la puntuació aconseguida
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        }
+        else if (r == -1)
             JOptionPane.showMessageDialog(frame,"Hidato mal resolt");
         
 //cridem funcio del controlador que mira si el q tenim de moment es igual que la seva solucio
