@@ -6,7 +6,6 @@ import domini.stats.HidatoStats;
 import domini.stats.Ranking;
 import domini.stats.stubGame;
 import domini.stats.stubMatch;
-import static drivers.Controlador.HBD;
 import static drivers.Funcions.*;
 import static drivers.Main.HBD;
 import static drivers.Main._stats;
