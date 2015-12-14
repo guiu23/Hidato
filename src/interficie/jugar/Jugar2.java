@@ -624,14 +624,7 @@ public class Jugar2 extends javax.swing.JFrame {
         JFrame frame = new JFrame("");
         if (r >= 1) {
             JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
-            
-            System.out.println("ei");
-            
             partidaAcabada(r, us);
-            
-            System.out.println("ei2");
-            
-            //que et digui la puntuació aconseguida
             Menu obj = new Menu(us);
             obj.setVisible(true);
             dispose();
