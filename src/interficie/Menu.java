@@ -37,6 +37,8 @@ public class Menu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
+        
+        
         /*setIconImage(new ImageIcon(getClass().getResource("/imatges/fonspng.png")).getImage());
         ((JPanel)getContentPane()).setOpaque(false); 
         ImageIcon uno=new ImageIcon(this.getClass().getResource("/imatges/fonspng.png")); 

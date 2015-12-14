@@ -78,20 +78,21 @@ public abstract class Stats {
     }
 
     public int countPlayers() { 
-        if (HBD._players.size() > 0) HBD.loadPlayers();
+        HBD.loadPlayers();
         return HBD._players.size(); 
     }
     public int countGames() {
-        if (HBD._games.size() > 0) HBD.loadGames();
+        HBD.loadGames();
         return HBD._games.size(); 
     }
     public int countMatches() {
-        if (HBD._matches.size() > 0) HBD.loadMatches();
+        HBD.loadMatches();
         return HBD._matches.size(); 
     }
     
     public int countSolvedMatches() {
-        if (HBD._solvedmatches.size() > 0) HBD.loadSolvedMatches();
+        HBD.loadSolvedMatches();
+        System.out.println("Mida SolvedMatchesDins Stats"+HBD._solvedmatches.size()); 
         return HBD._solvedmatches.size(); 
     }
 

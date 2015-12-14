@@ -486,7 +486,7 @@ public class Generar2 extends javax.swing.JFrame {
         System.out.println(result);
 
         if (result == 4){
-            JOptionPane.showMessageDialog(frame, "Aquest taulell ja existeix", "Atenciño!", WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(frame, "Aquest taulell ja existeix", "Atencio!", WARNING_MESSAGE);
         }
         else if (result == 5){
             JOptionPane.showMessageDialog(frame, "Taulell incorrecte", "ERROR!", ERROR_MESSAGE);

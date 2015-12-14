@@ -257,13 +257,6 @@ public class Funcions {
             }
         }
     }
-
-    public static void CleanPlayerActual() {
-        HBD.loadPlayerActual();
-        for (int i = 0; i < HBD._playerActual.size(); ++i){
-            HBD._playerActual.remove(i);
-        }
-    }
     
     public static void CleanTemporal() {
         HBD.loadTemporal();

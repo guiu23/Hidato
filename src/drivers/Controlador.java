@@ -13,9 +13,9 @@ import static drivers.Main.admin;
 
 import java.util.*;
 
-/**
+/** 
  *
- * @author jordi.guiu.pujols
+ *
  */
 public class Controlador {
     static HidatoBD HBD;
@@ -41,9 +41,6 @@ public class Controlador {
         }  
         HBD._players = admin._players;
         HBD.savePlayers();
-        Funcions.CleanPlayerActual();
-        HBD._playerActual.add(Jugador);
-        HBD.savePlayerActual();
         return num;
     }
     
@@ -67,9 +64,6 @@ public class Controlador {
         }
         HBD._players = admin._players;
         HBD.savePlayers();
-        Funcions.CleanPlayerActual();
-        HBD._playerActual.add(Jugador);
-        HBD.savePlayerActual();
         return num;
     }
     
@@ -138,7 +132,7 @@ public class Controlador {
         return Taulell.consult_max_annotations();
     }
     
-    public static int comprovarHidato(){
+    public static int comprovarHidato(int dif){
         BoardHidato Taulell = Funcions.CarregarTemporal();
         imprimeixValors(Taulell); //XIVATO
         int size = Taulell.getSize();
@@ -162,20 +156,7 @@ public class Controlador {
         }
         
         if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  
-            return 1; //Si està ben resolt torna la puntuació
-            /*System.out.println("Punts Partida: " + Partida.getResult()*size); 
-            int puntuacioF = Jugador.getPuntuacio() + (Partida.getResult()*size);
-            Jugador.SetPuntuacio(puntuacioF);
-            m.setTime(1);
-            HBD.loadPlayers();
-            for (int i = 0; i < HBD._players.size(); ++i){
-                if (HBD._players.get(i).getName().equals(Jugador.getName())){ 
-                    HBD._players.get(i).SetPuntuacio(puntuacioF);
-                    b=true;
-                    HBD.savePlayers();
-                    System.out.println("Punts Totals de " + HBD._players.get(i).getName() + ": "+ HBD._players.get(i).getPuntuacio());       //#NEVERFORGET
-                }
-            }*/
+            return (dif*size);
         }
         else {
             return -1; //Mal resolt 
@@ -334,7 +315,7 @@ public class Controlador {
         return valors; //sempre hauria de tornar els valors del taulell resolt en ordre
     }
     
-    public static void començarJoc() {
+    public static void començarJoc(int dif) {
         HBD = new HidatoBD();
         HBD.loadGames();
         HBD.loadTemporal();
@@ -348,16 +329,15 @@ public class Controlador {
         for (int j = 0; j < HBD._temporal.size();++j){
             if (HBD._temporal.get(j).getID().equals("temporal")){
                 BoardHidato Taulell = HBD._temporal.get(j);
-                HBD._games.add(new stubGame(GameID, Taulell.getSize(), Funcions.triaDificultat(Taulell), Taulell));
+                HBD._games.add(new stubGame(GameID+1, Taulell.getSize(), dif, Taulell));
                 HBD.saveGames();
             } 
         }
     }
     
-    public static void guardarPrtida(String nomP) {
+    public static int guardarPartida(String user, String nomP) {
         HBD = new HidatoBD();
         HBD.loadGames();
-        HBD.loadPlayerActual();
         HBD.loadMatches();
         int GameID = 0;
         if (HBD._games.size() == 0) GameID = 1;
@@ -369,21 +349,36 @@ public class Controlador {
         for (int j=0; j < HBD._games.size(); ++j){
             if (HBD._games.get(j).getID() == GameID){
                 stubGame g = HBD._games.get(j);
-                if (HBD._playerActual.size() != 0) {
-                    stubMatch m = new stubMatch(HBD._playerActual.get(0),g);
-                    m.setNomM(nomP);
-                    HBD._matches.add(m);
-                    HBD.saveMatches();
-                }    
+                
+                Player Jug = null;
+                
+                for (int i = 0; i < HBD._players.size(); ++i){
+                    if (HBD._players.get(i).getName().equals(user)){   
+                    Jug = HBD._players.get(i);
+                    }
+                }
+                
+                for (int i = 0; i < HBD._matches.size(); ++i) {
+                    if (HBD._matches.get(i).getNomM().equals(nomP))
+                        return 1;
+                }
+                
+                stubMatch m = new stubMatch(Jug,g);
+                m.setNomM(nomP);
+                HBD._matches.add(m);
+                HBD.saveMatches();
+                return 0;
             }
         }
+        return -1;
     }
     
-    public static void partidaAcabada() { //no se si es del tot aixi
+    public static void partidaAcabada(int pts, String user) { //no se si es del tot aixi
         HBD = new HidatoBD();
         HBD.loadGames();
-        HBD.loadPlayerActual();
         HBD.loadMatches();
+        HBD.loadPlayers();
+        HBD.loadSolvedMatches();
         int GameID = 0;
         if (HBD._games.size() == 0) GameID = 1;
         else {
@@ -391,14 +386,37 @@ public class Controlador {
                 if (HBD._games.get(i).getID() > GameID) GameID = HBD._games.get(i).getID();
             }
         }
+        System.out.println("Mida games: " + HBD._games.size()); 
         for (int j=0; j < HBD._games.size(); ++j){
+            System.out.println("Mida games2"); 
             if (HBD._games.get(j).getID() == GameID){
                 stubGame g = HBD._games.get(j);
-                if (HBD._playerActual.size() != 0) {
-                    stubMatch m = new stubMatch(HBD._playerActual.get(0),g);
-                    HBD._solvedmatches.add(m);
-                    HBD.saveSolvedMatches();
-                }    
+                
+                Player Jug = null;
+                
+                for (int i = 0; i < HBD._players.size(); ++i){
+                    if (HBD._players.get(i).getName().equals(user)){   
+                    Jug = HBD._players.get(i);
+                    }
+                }
+                
+                int puntuacioF = Jug.getPuntuacio() + pts;
+
+                for (int i = 0; i < HBD._players.size(); ++i){
+                    if (HBD._players.get(i).getName().equals(Jugador.getName())){ 
+                        HBD._players.get(i).SetPuntuacio(puntuacioF);
+                        System.out.println(HBD._players.get(i).getPuntuacio());
+                        HBD.savePlayers();
+                    }
+                }
+                
+                
+                stubMatch m = new stubMatch(Jug,g);
+                m.setTime(1); 
+                System.out.println(HBD._solvedmatches.size()); 
+                HBD._solvedmatches.add(m);
+                System.out.println(HBD._solvedmatches.size());  
+                HBD.saveSolvedMatches();   
             }
         }
     }
@@ -410,6 +428,8 @@ public class Controlador {
     public static void ObteRankingPersonal(String user, ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         HBD.loadPlayers();
+        HBD.loadMatches();
+        HBD.loadGames();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
         Player jug = null; 
         
@@ -456,6 +476,10 @@ public class Controlador {
     public static void ObteRankingTotalAltres(ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         HBD.loadPlayers();
+        HBD.loadMatches();
+        HBD.loadSolvedMatches();
+        System.out.println("Mida SolvedMatches"+HBD._solvedmatches.size()); 
+        HBD.loadGames();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches); 
         String num_jug = Integer.toString(_stats.countPlayers());
         String num_guard = Integer.toString(_stats.countMatches());

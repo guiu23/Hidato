@@ -361,7 +361,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private void myinitComponents() {
         crearTaulellAleatori(2,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
-        
+        començarJoc(dif);
         for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
         
         int ultima = es_ultim();
@@ -433,9 +433,34 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu(us);
-        obj.setVisible(true);
-        dispose();
+         Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+        JFrame frame = new JFrame("");
+
+        int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        
+        if (n == 0) { //Guardar
+            boolean bool = false;
+            while (!bool) {
+                
+                //QUE LI PREGUNTI EL NOM EL NOM
+                String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+
+                int g = guardarPartida(us,nomP);
+
+                if (g == 0) {
+                    bool = true;
+                    Menu obj = new Menu(us);
+                    obj.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                }
+            }
+        } else if (n == 1) { //Sortir sense guardar
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        } 
     }//GEN-LAST:event_enrereActionPerformed
 
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
@@ -595,10 +620,17 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void comprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprovarMouseClicked
         int r;
-        r = comprovarHidato();
+        r = comprovarHidato(dif);
         JFrame frame = new JFrame("");
         if (r >= 1) {
-            JOptionPane.showMessageDialog(frame,"Enhorabona");
+            JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
+            
+            System.out.println("ei");
+            
+            partidaAcabada(r, us);
+            
+            System.out.println("ei2");
+            
             //que et digui la puntuació aconseguida
             Menu obj = new Menu(us);
             obj.setVisible(true);

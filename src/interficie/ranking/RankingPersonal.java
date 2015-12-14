@@ -49,7 +49,6 @@ public class RankingPersonal extends javax.swing.JFrame {
         text5 = new javax.swing.JTextField();
         text7 = new javax.swing.JTextField();
         tot_sol = new javax.swing.JTextField();
-        tot_diferents_sol = new javax.swing.JTextField();
         tot_diffclty_1 = new javax.swing.JTextField();
         tot_diffclty_2 = new javax.swing.JTextField();
         tot_diffclty_3 = new javax.swing.JTextField();
@@ -187,12 +186,6 @@ public class RankingPersonal extends javax.swing.JFrame {
         getContentPane().add(tot_sol);
         tot_sol.setBounds(380, 160, 50, 50);
 
-        tot_diferents_sol.setEditable(false);
-        tot_diferents_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tot_diferents_sol.setRequestFocusEnabled(false);
-        getContentPane().add(tot_diferents_sol);
-        tot_diferents_sol.setBounds(380, 260, 50, 50);
-
         tot_diffclty_1.setEditable(false);
         tot_diffclty_1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tot_diffclty_1.setRequestFocusEnabled(false);
@@ -315,7 +308,6 @@ public class RankingPersonal extends javax.swing.JFrame {
     private javax.swing.JTextField text5;
     private javax.swing.JTextField text7;
     private javax.swing.JTextField titol;
-    private javax.swing.JTextField tot_diferents_sol;
     private javax.swing.JTextField tot_diffclty_1;
     private javax.swing.JTextField tot_diffclty_2;
     private javax.swing.JTextField tot_diffclty_3;
