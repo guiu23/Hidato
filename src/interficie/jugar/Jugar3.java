@@ -64,6 +64,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }
     
     private void myinitComponents() {
+        apretat = false;
         crearTaulellAleatori(3,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
@@ -563,6 +564,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_AutocompletarActionPerformed
 
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
+        apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
@@ -572,18 +574,22 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_AutocompletarMouseClicked
 
     private void ComprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprovarMouseClicked
-        int r;
-        r = comprovarHidato(dif);
         JFrame frame = new JFrame("");
-        if (r >= 1) {
-            JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
-            partidaAcabada(r, us);
-            Menu obj = new Menu(us);
-            obj.setVisible(true);
-            dispose();
-        }
-        else if (r == -1)
-            JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);        // TODO add your handling code here:
+        if (apretat == true) {
+            JOptionPane.showMessageDialog(frame,"Un cop autocompletat, no pots comprovar un Hidato. Ja pots sortir de la partida.", "No et passis de llest",  JOptionPane.ERROR_MESSAGE);
+        } else {
+            int r;
+            r = comprovarHidato(dif);
+            if (r >= 1) {
+                JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
+                partidaAcabada(r, us);
+                Menu obj = new Menu(us);
+                obj.setVisible(true);
+                dispose();
+            }
+            else if (r == -1)
+                JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
+        }      // TODO add your handling code here:
     }//GEN-LAST:event_ComprovarMouseClicked
 
     private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
@@ -800,5 +806,6 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
     javax.swing.JTextField tf = new javax.swing.JTextField();
     private boolean afegirmarca;
+    private boolean apretat;
     private int val,f,c,i;
 }

@@ -372,6 +372,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myinitComponents() {
+        apretat = false;
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
         int ultima = es_ultim();
@@ -601,23 +602,27 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_comprovarActionPerformed
 
     private void comprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprovarMouseClicked
-        int r;
-        r = comprovarHidato(dif);
         JFrame frame = new JFrame("");
-        if (r >= 1) {
-            JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
-            partidaAcabada(r, us);
-            Menu obj = new Menu(us);
-            obj.setVisible(true);
-            dispose();
+        if (apretat == true) {
+            JOptionPane.showMessageDialog(frame,"Un cop autocompletat, no pots comprovar un Hidato. Ja pots sortir de la partida.", "No et passis de llest",  JOptionPane.ERROR_MESSAGE);
+        } else {
+            int r;
+            r = comprovarHidato(dif);
+            if (r >= 1) {
+                JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
+                partidaAcabada(r, us);
+                Menu obj = new Menu(us);
+                obj.setVisible(true);
+                dispose();
+            }
+            else if (r == -1)
+                JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }
-        else if (r == -1)
-            JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
-        
 //cridem funcio del controlador que mira si el q tenim de moment es igual que la seva solucio
     }//GEN-LAST:event_comprovarMouseClicked
 
     private void autocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_autocompletarMouseClicked
+        apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
@@ -711,6 +716,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
     javax.swing.JTextField tf = new javax.swing.JTextField();
     private boolean afegirmarca;
+    private boolean apretat;
     private int val,f,c,i;
 }
 
