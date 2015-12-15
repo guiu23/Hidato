@@ -97,7 +97,7 @@ public class Jugar2 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(380, 50, 230, 70);
+        titol.setBounds(340, 50, 270, 70);
 
         c00.setEditable(false);
         c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -357,8 +357,8 @@ public class Jugar2 extends javax.swing.JFrame {
                     tf.setBackground(Color.black);
                     tf.setText("X");
                 }
-        }
-    }
+            }
+        }   
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -399,7 +399,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-         Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+        Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
         JFrame frame = new JFrame("");
 
         int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);

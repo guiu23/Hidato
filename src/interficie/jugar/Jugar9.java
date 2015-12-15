@@ -5,7 +5,19 @@
  */
 package interficie.jugar;
 
+import static drivers.Controlador.CarregarSolucioTaulell;
+import static drivers.Controlador.carregarTaulellTemporal;
+import static drivers.Controlador.començarJoc;
+import static drivers.Controlador.comprovarHidato;
+import static drivers.Controlador.es_ultim;
+import static drivers.Controlador.guardarPartida;
+import static drivers.Controlador.partidaAcabada;
 import interficie.Menu;
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -13,12 +25,124 @@ import interficie.Menu;
  */
 public class Jugar9 extends javax.swing.JFrame {
     public static String us;
+    public static int dif;
     /**
      * Creates new form Identificacio
      */
-    public Jugar9(String usuari) {
+    public Jugar9(String usuari, int dificultat) {
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
         us = usuari;
+        dif = dificultat;
+        initialitzararraytextfield();
+        myinitComponents();
+    }
+    
+    void initialitzararraytextfield(){
+        txtField[0] = c00;
+        txtField[1] = c01;
+        txtField[2] = c02;
+        txtField[3] = c03;
+        txtField[4] = c04;
+        txtField[5] = c05;
+        txtField[6] = c06;
+        txtField[7] = c07;
+        txtField[8] = c08;
+        txtField[9] = c10;
+        txtField[10] = c11;
+        txtField[11] = c12;
+        txtField[12] = c13;
+        txtField[13] = c14;
+        txtField[14] = c15;
+        txtField[15] = c16;
+        txtField[16] = c17;
+        txtField[17] = c18;
+        txtField[18] = c20;
+        txtField[19] = c21;
+        txtField[20] = c22;
+        txtField[21] = c23;
+        txtField[22] = c24;
+        txtField[23] = c25;
+        txtField[24] = c26;
+        txtField[25] = c27;
+        txtField[26] = c28;
+        txtField[27] = c30;
+        txtField[28] = c31;
+        txtField[29] = c32;
+        txtField[30] = c33;
+        txtField[31] = c34;
+        txtField[32] = c35;
+        txtField[33] = c36;
+        txtField[34] = c37;
+        txtField[35] = c38;
+        txtField[36] = c40;
+        txtField[37] = c41;
+        txtField[38] = c42;
+        txtField[39] = c43;
+        txtField[40] = c44;
+        txtField[41] = c45;
+        txtField[42] = c46;
+        txtField[43] = c47;
+        txtField[44] = c48;
+        txtField[45] = c50;
+        txtField[46] = c51;
+        txtField[47] = c52;
+        txtField[48] = c53;
+        txtField[49] = c54;
+        txtField[50] = c55;
+        txtField[51] = c56;
+        txtField[52] = c57;
+        txtField[53] = c58;
+        txtField[54] = c60;
+        txtField[55] = c61;
+        txtField[56] = c62;
+        txtField[57] = c63;
+        txtField[58] = c64;
+        txtField[59] = c65;
+        txtField[60] = c66;
+        txtField[61] = c67;
+        txtField[62] = c68;
+        txtField[63] = c70;
+        txtField[64] = c71;
+        txtField[65] = c72;
+        txtField[66] = c73;
+        txtField[67] = c74;
+        txtField[68] = c75;
+        txtField[69] = c76;
+        txtField[70] = c77;
+        txtField[71] = c78;
+        txtField[72] = c80;
+        txtField[73] = c81;
+        txtField[74] = c82;
+        txtField[75] = c83;
+        txtField[76] = c84;
+        txtField[77] = c85;
+        txtField[78] = c86;
+        txtField[79] = c87;
+        txtField[80] = c88;
+    }
+    
+    private void myinitComponents() {
+        apretat = false;
+        ArrayList<Integer> valors = carregarTaulellTemporal();
+        començarJoc(dif);
+        int ultima = es_ultim();
+        String lastnum = Integer.toString(ultima);
+        Color color = Color.cyan;
+        for (int i = 0; i < valors.size(); ++i){
+            tf = txtField[i];
+             if (valors.get(i) != 0){
+                tf.setText(Integer.toString(valors.get(i)));
+                if ("1".equals(tf.getText())) tf.setBackground(color);            
+                else if (tf.getText().equals(lastnum)) tf.setBackground(color);
+                else if ("-1".equals(tf.getText())){
+                    tf.setBackground(Color.black);
+                    tf.setText("X");
+                }
+            }
+        }   
     }
 
     /**
@@ -126,6 +250,7 @@ public class Jugar9 extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         Autocompletar = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1067,9 +1192,14 @@ public class Jugar9 extends javax.swing.JFrame {
         getContentPane().add(primera163);
         primera163.setBounds(150, 360, 30, 30);
 
-        jButton10.setText("Resoldre");
+        jButton10.setText("Comprovar");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 23);
+        jButton10.setBounds(450, 370, 90, 23);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Números:");
@@ -1089,6 +1219,10 @@ public class Jugar9 extends javax.swing.JFrame {
         });
         getContentPane().add(Autocompletar);
         Autocompletar.setBounds(20, 240, 110, 60);
+
+        jButton11.setText("Esborrar");
+        getContentPane().add(jButton11);
+        jButton11.setBounds(560, 370, 73, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1131,9 +1265,34 @@ public class Jugar9 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu(us);
-        obj.setVisible(true);
-        dispose();
+        Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+        JFrame frame = new JFrame("");
+
+        int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        
+        if (n == 0) { //Guardar
+            boolean bool = false;
+            while (!bool) {
+                
+                //QUE LI PREGUNTI EL NOM EL NOM
+                String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+
+                int g = guardarPartida(us,nomP);
+
+                if (g == 0) {
+                    bool = true;
+                    Menu obj = new Menu(us);
+                    obj.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                }
+            }
+        } else if (n == 1) { //Sortir sense guardar
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        } 
     }//GEN-LAST:event_enrereActionPerformed
 
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
@@ -1481,6 +1640,26 @@ public class Jugar9 extends javax.swing.JFrame {
     private void AutocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutocompletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AutocompletarActionPerformed
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        // TODO add your handling code here:
+        JFrame frame = new JFrame("");
+        if (apretat == true) {
+            JOptionPane.showMessageDialog(frame,"Un cop autocompletat, no pots comprovar un Hidato. Ja pots sortir de la partida.", "No et passis de llest",  JOptionPane.ERROR_MESSAGE);
+        } else {
+            int r;
+            r = comprovarHidato(dif);
+            if (r >= 1) {
+                JOptionPane.showMessageDialog(frame,"Enhorabona. Tens " + r + " punts més!");
+                partidaAcabada(r, us);
+                Menu obj = new Menu(us);
+                obj.setVisible(true);
+                dispose();
+            }
+            else if (r == -1)
+                JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton10MouseClicked
 
     
     /**
@@ -2536,7 +2715,7 @@ public class Jugar9 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Jugar9(us).setVisible(true);
+                new Jugar9(us, dif).setVisible(true);
             }
         });
     }
@@ -2546,6 +2725,7 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2639,4 +2819,9 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JTextField primera99;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+    private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c08","c10","c11","c12","c13","c14","c15","c16","c17","c18","c20","c21","c22","c23","c24","c25","c26","c27","c28","c30","c31","c32","c33","c34","c35","c36","c37","c38","c40","c41","c42","c43","c44","c45","c46","c47","c48","c50","c51","c52","c53","c54","c55","c56","c57","c58","c60","c61","c62","c63","c64","c65","c66","c67","c68","c70","c71","c72","c73","c74","c75","c76","c77","c78","c80","c81","c82","c83","c84","c85","c86","c87","c88"};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[81];
+    javax.swing.JTextField tf = new javax.swing.JTextField();
+    private boolean apretat;
+    private int val,f,c,i;
 }

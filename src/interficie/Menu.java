@@ -374,7 +374,7 @@ public class Menu extends javax.swing.JFrame {
             dispose();
         }
         else if (n == 1) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(3,dificultat);
             Jugar3 obj = new Jugar3(us,dificultat);
@@ -382,50 +382,50 @@ public class Menu extends javax.swing.JFrame {
             dispose();
         }
         else if ( n == 2) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(4,dificultat);
-            Jugar4 obj = new Jugar4(us);
+            Jugar4 obj = new Jugar4(us,dificultat);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 3) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(5,dificultat);
-            Jugar5 obj = new Jugar5(us);
+            Jugar5 obj = new Jugar5(us,dificultat);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 4) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(6,dificultat);
-            Jugar6 obj = new Jugar6(us);
+            Jugar6 obj = new Jugar6(us,dificultat);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 5) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(7,dificultat);
-            Jugar7 obj = new Jugar7(us);
+            Jugar7 obj = new Jugar7(us,dificultat);
             obj.setVisible(true);
             dispose();
       }
         else if ( n == 6) {            
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(8,dificultat);
-            Jugar8 obj = new Jugar8(us);
+            Jugar8 obj = new Jugar8(us,dificultat);
             obj.setVisible(true);
             dispose();
       }
         else if (n == 7) {
-            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escullla dificultat",
+            dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);
             crearTaulellAleatori(9,dificultat);
-            Jugar9 obj = new Jugar9(us);
+            Jugar9 obj = new Jugar9(us,dificultat);
             obj.setVisible(true);
             dispose();
         }

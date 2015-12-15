@@ -16,6 +16,7 @@ import static drivers.Controlador.es_written;
 import static drivers.Controlador.getAnnotationCasella;
 import static drivers.Controlador.getCasella;
 import static drivers.Controlador.getMaxAnnotation;
+import static drivers.Controlador.guardarPartida;
 import static drivers.Controlador.partidaAcabada;
 import static drivers.Controlador.switchAnnotationCasella;
 import interficie.Menu;
@@ -25,6 +26,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
@@ -65,7 +67,6 @@ public class Jugar3 extends javax.swing.JFrame {
     
     private void myinitComponents() {
         apretat = false;
-        crearTaulellAleatori(3,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
         int ultima = es_ultim();
@@ -400,6 +401,11 @@ public class Jugar3 extends javax.swing.JFrame {
                 ComprovarMouseClicked(evt);
             }
         });
+        Comprovar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComprovarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Comprovar);
         Comprovar.setBounds(610, 390, 90, 40);
 
@@ -502,9 +508,34 @@ public class Jugar3 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Menu obj = new Menu(us);
-        obj.setVisible(true);
-        dispose();
+        Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+        JFrame frame = new JFrame("");
+
+        int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        
+        if (n == 0) { //Guardar
+            boolean bool = false;
+            while (!bool) {
+                
+                //QUE LI PREGUNTI EL NOM EL NOM
+                String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+
+                int g = guardarPartida(us,nomP);
+
+                if (g == 0) {
+                    bool = true;
+                    Menu obj = new Menu(us);
+                    obj.setVisible(true);
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                }
+            }
+        } else if (n == 1) { //Sortir sense guardar
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        } 
     }//GEN-LAST:event_enrereActionPerformed
 
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
@@ -558,7 +589,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
             else if (r == -1)
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
-        }      // TODO add your handling code here:
+        }      
     }//GEN-LAST:event_ComprovarMouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
@@ -672,6 +703,10 @@ public class Jugar3 extends javax.swing.JFrame {
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
             boto("0");          // TODO add your handling code here:
     }//GEN-LAST:event_jButton11MouseClicked
+
+    private void ComprovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprovarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComprovarActionPerformed
 
     
     /**
