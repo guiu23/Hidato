@@ -8,8 +8,11 @@ package interficie.generar;
 import dades.HidatoBD;
 import domini.BoardHidato;
 import static drivers.Controlador.ObtenirMapesExistents;
+import static drivers.Controlador.carregarTaulell;
 import interficie.Menu;
 import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,7 +47,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         enrere = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
-        jTextField2 = new javax.swing.JTextField();
+        on_vol_entrar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,10 +87,15 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(142, 220, 731, 229);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(610, 140, 190, 40);
+        getContentPane().add(on_vol_entrar);
+        on_vol_entrar.setBounds(610, 140, 190, 40);
 
         jButton1.setText("Escull");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(810, 133, 60, 50);
 
@@ -96,6 +104,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
 
     private void myInitComponents() {
         ArrayList<BoardHidato> mapes = new ArrayList<BoardHidato>();
+        
         ObtenirMapesExistents(mapes);
         
         for (int i = 0; i < mapes.size(); ++i) {
@@ -119,6 +128,52 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        String nom = on_vol_entrar.getText(); 
+        
+        System.out.println("ea");
+        Integer mida = carregarTaulell(us,nom);
+        
+        JFrame frame = new JFrame("Sortir");
+        if (mida == null) JOptionPane.showMessageDialog(frame,"Taulell no existeix, torna-ho a provar", "Taulell no existeix",  JOptionPane.ERROR_MESSAGE);
+        else {
+            if (mida == 2) {
+                Generar2 obj = new Generar2(us);
+                obj.setVisible(true);
+                dispose();
+            } /*else if (mida.get(0) == 3) {   
+                Jugar3 obj = new Jugar3(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 4) {
+                Jugar4 obj = new Jugar4(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 5) {
+                Jugar5 obj = new Jugar5(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 6) {
+                Jugar6 obj = new Jugar6(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 7) {
+                Jugar7 obj = new Jugar7(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 8) {
+                Jugar8 obj = new Jugar8(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            } else if (mida.get(0) == 9) {
+                Jugar9 obj = new Jugar9(us, mida.get(1));
+                obj.setVisible(true);
+                dispose();
+            }*/
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -161,7 +216,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private java.awt.List list1;
+    private javax.swing.JTextField on_vol_entrar;
     // End of variables declaration//GEN-END:variables
 }

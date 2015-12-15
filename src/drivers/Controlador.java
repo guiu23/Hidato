@@ -467,6 +467,24 @@ public class Controlador {
         return null;
     }
     
+    public static Integer carregarTaulell(String us, String nomT) {
+        HBD = new HidatoBD();
+        HBD.loadBoards();
+        HBD.loadBoardsResolts();
+        
+        Integer mida = null;
+        
+        for (int i = 0; i < HBD._boards.size(); ++i){
+            if (HBD._boards.get(i).getID().equals(nomT)) {
+                mida = HBD._boards.get(i).size;
+                Funcions.CleanTemporal();
+                HBD._temporal.add(HBD._boards.get(i));
+                HBD.saveTemporal();
+            }
+        }
+        return mida;
+    }
+    
     public static void ObteRankingPersonal(String user, ArrayList<String> valors){ //Posa el seu valor a una casella d'un Taulell (nomes per crearlo)
         HBD = new HidatoBD();
         HBD.loadPlayers();
