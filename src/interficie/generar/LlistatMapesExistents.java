@@ -108,7 +108,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         ObtenirMapesExistents(mapes);
         
         for (int i = 0; i < mapes.size(); ++i) {
-            list1.add( "    " +  mapes.get(i) +  "    " );
+            list1.add( "    " +  mapes.get(i).getID() +  "    " );
         }
     }
         
@@ -135,7 +135,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         
         System.out.println("ea");
         Integer mida = carregarTaulell(us,nom);
-        
+        System.out.println("ea2");
         JFrame frame = new JFrame("Sortir");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Taulell no existeix, torna-ho a provar", "Taulell no existeix",  JOptionPane.ERROR_MESSAGE);
         else {

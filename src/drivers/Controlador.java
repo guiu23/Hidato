@@ -473,15 +473,20 @@ public class Controlador {
         HBD.loadBoardsResolts();
         
         Integer mida = null;
-        
+        System.out.println("es");
         for (int i = 0; i < HBD._boards.size(); ++i){
+            System.out.println("edf");
             if (HBD._boards.get(i).getID().equals(nomT)) {
+                System.out.println("aquest el fa");
                 mida = HBD._boards.get(i).size;
                 Funcions.CleanTemporal();
+                System.out.println("efdsag");
                 HBD._temporal.add(HBD._boards.get(i));
+                System.out.println("edfasfda");
                 HBD.saveTemporal();
             }
         }
+        System.out.println("ef");
         return mida;
     }
     
