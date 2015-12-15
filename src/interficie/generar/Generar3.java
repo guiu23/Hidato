@@ -71,6 +71,7 @@ public class Generar3 extends javax.swing.JFrame {
         txtField[7] = c21;
         txtField[8] = c22;
     }
+    //
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
