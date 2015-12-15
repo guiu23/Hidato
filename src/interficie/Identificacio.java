@@ -5,16 +5,14 @@
  */
 package interficie;
 
-/**
- *
- * @author jordi.guiu.pujols
- */
+
 public class Identificacio extends javax.swing.JFrame {
 
     /**
      * Creates new form Identificacio
      */
     public Identificacio() {
+        
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);

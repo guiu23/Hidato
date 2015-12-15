@@ -156,6 +156,11 @@ public class Generar2 extends javax.swing.JFrame {
                 c11MouseClicked(evt);
             }
         });
+        c11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(c11);
         c11.setBounds(340, 300, 110, 100);
 
@@ -341,7 +346,7 @@ public class Generar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(esborrar);
-        esborrar.setBounds(830, 260, 100, 50);
+        esborrar.setBounds(830, 260, 90, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -529,6 +534,10 @@ public class Generar2 extends javax.swing.JFrame {
     private void esborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_esborrarMouseClicked
         boto("0");        // TODO add your handling code here:
     }//GEN-LAST:event_esborrarMouseClicked
+
+    private void c11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c11ActionPerformed
 
     
     /**
