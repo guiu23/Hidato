@@ -110,6 +110,11 @@ public class CarregarPartida extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(870, 103, 59, 30);
 
@@ -160,7 +165,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         JFrame frame = new JFrame("Sortir");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Partida no existeix, torna-ho a provar", "Partida no existeix",  JOptionPane.ERROR_MESSAGE);
         else {
-            carregarPartida(us, nom);
+            //carregarPartida(us, nom);
             System.out.println("ea");
             if (mida.get(0) == 2) {
                 Jugar2 obj = new Jugar2(us, mida.get(1));
@@ -197,6 +202,10 @@ public class CarregarPartida extends javax.swing.JFrame {
             }*/
         }
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

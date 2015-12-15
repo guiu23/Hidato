@@ -101,7 +101,7 @@ public class Jugar2 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(380, 50, 310, 70);
+        titol.setBounds(380, 50, 230, 70);
 
         c00.setEditable(false);
         c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -360,6 +360,11 @@ public class Jugar2 extends javax.swing.JFrame {
                 autocompletarMouseClicked(evt);
             }
         });
+        autocompletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                autocompletarActionPerformed(evt);
+            }
+        });
         getContentPane().add(autocompletar);
         autocompletar.setBounds(70, 480, 130, 60);
 
@@ -367,7 +372,6 @@ public class Jugar2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myinitComponents() {
-        crearTaulellAleatori(2,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
         int ultima = es_ultim();
@@ -619,8 +623,13 @@ public class Jugar2 extends javax.swing.JFrame {
         for (int i = 0; i < valors.size(); ++i){
             afegir = String.valueOf(valors.get(i)); 
             txtField[i].setText(afegir);
+        }
     }//GEN-LAST:event_autocompletarMouseClicked
-    }                                                                       
+
+    private void autocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autocompletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_autocompletarActionPerformed
+                                                                           
                                                                
     /**
      * @param args the command line arguments

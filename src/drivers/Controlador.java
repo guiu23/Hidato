@@ -344,6 +344,7 @@ public class Controlador {
         HBD.loadGames();
         HBD.loadMatches();
         HBD.loadPlayers();
+        HBD.loadTemporal();
         int GameID = 0;
         if (HBD._games.size() == 0) GameID = 1;
         else {
@@ -354,6 +355,7 @@ public class Controlador {
         for (int j=0; j < HBD._games.size(); ++j){
             if (HBD._games.get(j).getID() == GameID){
                 stubGame g = HBD._games.get(j);
+                g.setBoard(HBD._temporal.get(0));
                 
                 Player Jug = null;
                 
@@ -446,8 +448,7 @@ public class Controlador {
         ArrayList<Integer> valors = new ArrayList<>();
         
         for (int i =0; i < HBD._matches.size(); ++i) {
-            if (HBD._matches.get(i).getNomM().equals(nomP)) {
-                if (HBD._matches.get(i).getPlayer().getName().equals(us)) {
+            if (HBD._matches.get(i).getNomM().equals(nomP) && HBD._matches.get(i).getPlayer().getName().equals(us)) {
                     valors.add(HBD._matches.get(i).getGame().getSize());
                     valors.add(HBD._matches.get(i).getGame().getDifficulty());
                     BoardHidato Taulell = HBD._matches.get(i).getGame().getBoard();
@@ -463,7 +464,6 @@ public class Controlador {
                     HBD.saveTemporalResolts();
                     
                     return valors;
-                }
             }
         }
         return null;
@@ -522,7 +522,6 @@ public class Controlador {
         HBD.loadPlayers();
         HBD.loadMatches();
         HBD.loadSolvedMatches();
-        System.out.println("Mida SolvedMatches"+HBD._solvedmatches.size()); 
         HBD.loadGames();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches); 
         String num_jug = Integer.toString(_stats.countPlayers());
@@ -546,9 +545,6 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadMatches();
         for( int i = 0; i < HBD._matches.size(); ++i ) {
-            System.out.println("entra for"); 
-            //System.out.println(HBD._matches.get(i).getPlayer()); 
-            System.out.println("entra for2"); 
             if (HBD._matches.get(i).getPlayer().getName().equals(nom)) partides.add(HBD._matches.get(i));
         }
     }
