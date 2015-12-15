@@ -153,7 +153,7 @@ public class Funcions {
         return 1;
     }
     
-    public static int llegirTaulell2(BoardHidato Taulell)   {
+    public static int llegirTaulell2(BoardHidato Taulell, String nomT)   {
         HBD.loadBoards();
         HBD.loadBoardsResolts();
         int retorn = 0;
@@ -197,6 +197,8 @@ public class Funcions {
                     if (HBD._boards.get(i).equals(Taulell)) jaExisteix = true; 
                 }
                 if (!jaExisteix) {
+                    Taulell.setID(nomT);
+                    TaulellRes.setID(nomT);
                     HBD._boards.add(Taulell);                    //taulell sense resoldre
                     HBD._boardsResolts.add(TaulellRes);          //taulell resolt
                     //System.out.println("Hidato possible de resoldre.");

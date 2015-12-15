@@ -7,8 +7,12 @@ package interficie.generar;
 
 import domini.BoardHidato;
 import static drivers.Controlador.ObtenirMapesExistents;
+import static drivers.Controlador.esborrarTaulell;
 import interficie.Menu;
+import interficie.jugar.Jugar2;
 import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -42,7 +46,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
         list1 = new java.awt.List();
         jTextField1 = new javax.swing.JTextField();
         titol = new javax.swing.JTextArea();
-        jTextField2 = new javax.swing.JTextField();
+        on_vol_entrar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,6 +68,11 @@ public class EsborrarMapa extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(910, 540, 65, 23);
 
+        list1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                list1ActionPerformed(evt);
+            }
+        });
         jScrollPane1.setViewportView(list1);
 
         getContentPane().add(jScrollPane1);
@@ -99,10 +108,20 @@ public class EsborrarMapa extends javax.swing.JFrame {
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
         titol.setBounds(328, 70, 341, 92);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(570, 190, 170, 30);
+        getContentPane().add(on_vol_entrar);
+        on_vol_entrar.setBounds(570, 190, 170, 30);
 
         jButton1.setText("Esborrar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(760, 193, 73, 30);
 
@@ -111,9 +130,11 @@ public class EsborrarMapa extends javax.swing.JFrame {
 
     private void myInitComponents() {
         ArrayList<BoardHidato> mapes = new ArrayList<BoardHidato>();
+
         ObtenirMapesExistents(mapes);
+        
         for (int i = 0; i < mapes.size(); ++i) {
-            list1.add( "    " +  mapes.get(i) +  "    " );
+            list1.add( "    " +  mapes.get(i).getID() +  "    " );
         }
     }
     
@@ -131,6 +152,31 @@ public class EsborrarMapa extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void list1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_list1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_list1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        String nom = on_vol_entrar.getText(); 
+        
+        System.out.println("ea");
+        boolean taulell = esborrarTaulell(nom);
+        
+        JFrame frame = new JFrame("Sortir");
+        if (taulell == false) JOptionPane.showMessageDialog(frame,"Taulell no existeix, torna-ho a provar", "Taulell no existeix",  JOptionPane.ERROR_MESSAGE);
+        else {
+            JOptionPane.showMessageDialog(frame,"Taulell ben esborrat!", "Taulell esborrat", JOptionPane.INFORMATION_MESSAGE);
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -172,8 +218,8 @@ public class EsborrarMapa extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private java.awt.List list1;
+    private javax.swing.JTextField on_vol_entrar;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

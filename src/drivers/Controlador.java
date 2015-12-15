@@ -188,7 +188,7 @@ public class Controlador {
                 }
             }
         }
-        return Funcions.llegirTaulell2(Taulell); //return 1, 2 i 3 tauell correcte i treu dificultat (1,2,3)
+        return Funcions.llegirTaulell2(Taulell,nomT); //return 1, 2 i 3 tauell correcte i treu dificultat (1,2,3)
                                                  //return 4 el taulell ja existeix
                                                  //return 5 el taulell no te solucio
     }
@@ -293,10 +293,8 @@ public class Controlador {
         for (int i = 0; i < HBD._boardsResolts.size(); ++i){
             if (HBD._boardsResolts.get(i).getID().equals(nomT)) {
                 HBD._boardsResolts.remove(i);
-                exit = true;
                 HBD.saveBoardsResolts();
             }
-            else exit = false;
         }
         return exit;  //exit = true esborrat exitosament / exit = false no existeix el taulell que es vol esborrar
     }
@@ -537,7 +535,7 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadBoards();
         for( int i = 0; i < HBD._boards.size(); ++i ) {
-            mapes.set(i, HBD._boards.get(i));
+            mapes.add(HBD._boards.get(i));
         }
     }
     
