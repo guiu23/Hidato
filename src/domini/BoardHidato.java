@@ -29,6 +29,8 @@ public class BoardHidato extends Board {
 
             }
         }
+       // System.out.println("mida que se li passa al taulell");
+        //System.out.println(size);
         max_annotations = size*size; //Si taulell hi han 25 caselles podrà anar-hi del 1 al 25 en una casella.
         this.id = id;
     }

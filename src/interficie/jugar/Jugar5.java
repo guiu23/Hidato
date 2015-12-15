@@ -16,6 +16,7 @@ import static drivers.Controlador.getCasella;
 import static drivers.Controlador.guardarPartida;
 import static drivers.Controlador.partidaAcabada;
 import static drivers.Controlador.switchAnnotationCasella;
+import drivers.Funcions;
 import interficie.Menu;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -870,6 +871,7 @@ public class Jugar5 extends javax.swing.JFrame {
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
         apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
+       // Funcions.imprimeixValors(valors);
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
             afegir = String.valueOf(valors.get(i));

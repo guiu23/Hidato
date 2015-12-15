@@ -32,10 +32,14 @@ public class CellHidato extends Cell {
     }
 
     public void switchAnnotation(int value) {
+        //System.out.println("mida anotacio");
+        //System.out.println(BoardHidato.consult_max_annotations());
+        //System.out.println(annotations.length);
         this.annotations[value] ^= true;
     }
 
     public void setAnnotation(int value, boolean annotation) {
+        
         this.annotations[value] = annotation;
     }
 
