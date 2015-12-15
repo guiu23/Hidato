@@ -138,7 +138,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         System.out.println("ea2");
         JFrame frame = new JFrame("Sortir");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Taulell no existeix, torna-ho a provar", "Taulell no existeix",  JOptionPane.ERROR_MESSAGE);
-        else {
+        else {//
             if (mida == 2) {
                 Generar2 obj = new Generar2(us);
                 obj.setVisible(true);
