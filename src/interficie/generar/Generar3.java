@@ -90,7 +90,7 @@ public class Generar3 extends javax.swing.JFrame {
         c21 = new javax.swing.JTextField();
         guardartaulell = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        esborrar = new javax.swing.JButton();
+        Esborrar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -100,6 +100,7 @@ public class Generar3 extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -270,16 +271,16 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(770, 160, 90, 60);
+        jButton11.setBounds(770, 150, 90, 60);
 
-        esborrar.setText("Esborrar");
-        esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Esborrar.setText("Esborrar");
+        Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                esborrarMouseClicked(evt);
+                EsborrarMouseClicked(evt);
             }
         });
-        getContentPane().add(esborrar);
-        esborrar.setBounds(770, 240, 90, 60);
+        getContentPane().add(Esborrar);
+        Esborrar.setBounds(770, 220, 90, 60);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -407,6 +408,15 @@ public class Generar3 extends javax.swing.JFrame {
         getContentPane().add(jButton9);
         jButton9.setBounds(690, 290, 60, 60);
 
+        jButton10.setText("0");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton10);
+        jButton10.setBounds(770, 290, 60, 60);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -436,9 +446,9 @@ public class Generar3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void esborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_esborrarMouseClicked
-        boto("0");        // TODO add your handling code here:
-    }//GEN-LAST:event_esborrarMouseClicked
+    private void EsborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsborrarMouseClicked
+        boto(Esborrar.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_EsborrarMouseClicked
 
     private void guardartaulellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardartaulellActionPerformed
         // TODO add your handling code here:
@@ -590,13 +600,17 @@ public class Generar3 extends javax.swing.JFrame {
         tf = c22;
         i = 8;
     }//GEN-LAST:event_c22MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        boto(jButton10.getText());// TODO add your handling code here:
+    }//GEN-LAST:event_jButton10MouseClicked
    
     private void boto(String textboto){
         String S = Caselles[i];
         if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
-        if (textboto == "0") val = 0;
+        if (textboto == "Esborrar") val = 0;
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
@@ -721,6 +735,7 @@ public class Generar3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Esborrar;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c02;
@@ -731,9 +746,9 @@ public class Generar3 extends javax.swing.JFrame {
     private javax.swing.JTextField c21;
     private javax.swing.JTextField c22;
     private javax.swing.JButton enrere;
-    private javax.swing.JButton esborrar;
     private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
