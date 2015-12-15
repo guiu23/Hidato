@@ -212,10 +212,9 @@ public class Controlador {
         HBD.loadTemporal();
         HBD.loadTemporalResolts();
         ArrayList<Integer> valors = new ArrayList<>(); //mida0 size mida1 dif
-
-        valors = null;
         
         for (int i = 0; i < HBD._boards.size(); ++i){
+            System.out.println("jeje");
             if (HBD._boards.get(i).getID().equals(nomT)) {
                 System.out.println("easasdsd");
                 BoardHidato Taulell = HBD._boards.get(i);
@@ -238,10 +237,10 @@ public class Controlador {
                         HBD.saveTemporalResolts();
                     }
                 }
-                
+                return valors;
             }
         }
-        return valors;
+        return null;
     }
     
     public static ArrayList<Integer> carregarTaulellTemporal (){
