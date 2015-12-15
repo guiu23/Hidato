@@ -5,12 +5,8 @@
  */
 package interficie.jugar;
 
-import static drivers.Controlador.carregarTaulellTemporal;
-import static drivers.Controlador.començarJoc;
-import static drivers.Controlador.comprovarHidato;
-import static drivers.Controlador.es_ultim;
-import static drivers.Controlador.guardarPartida;
-import static drivers.Controlador.partidaAcabada;
+
+import static drivers.Controlador.*;
 import interficie.Menu;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -117,8 +113,12 @@ public class Jugar4 extends javax.swing.JFrame {
         c31 = new javax.swing.JTextField();
         c32 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
+        Esborrar = new javax.swing.JButton();
         Autocompletar = new javax.swing.JButton();
+        addmarca = new javax.swing.JButton();
+        llistarmarques = new javax.swing.JButton();
+        txtmarques = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -428,11 +428,16 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 100, 23);
+        jButton10.setBounds(40, 390, 110, 40);
 
-        jButton11.setText("Esborrar");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(570, 370, 80, 23);
+        Esborrar.setText("Esborrar");
+        Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EsborrarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Esborrar);
+        Esborrar.setBounds(570, 370, 80, 23);
 
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -446,45 +451,101 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(30, 240, 120, 60);
+        Autocompletar.setBounds(40, 330, 110, 50);
+
+        addmarca.setText("Afegir Marca");
+        addmarca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addmarcaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(addmarca);
+        addmarca.setBounds(40, 140, 100, 30);
+
+        llistarmarques.setText("Llistar Marques");
+        llistarmarques.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                llistarmarquesMouseClicked(evt);
+            }
+        });
+        getContentPane().add(llistarmarques);
+        llistarmarques.setBounds(40, 180, 100, 30);
+        getContentPane().add(txtmarques);
+        txtmarques.setBounds(50, 220, 90, 90);
+
+        jButton12.setText("0");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton12);
+        jButton12.setBounds(450, 370, 50, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void boto(String textboto){
+        //array dstrings com tantes posicions como caselles. 
+        //a cada casella li passem a boto la seva posicio dins larray
+        String S = Caselles[i];
+        val = Integer.parseInt(tf.getText() + textboto);
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
+        if (textboto == "borrar") val = 0;
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
+        if (afegirmarca){ 
+            val = Integer.parseInt(textboto);
+            switchAnnotationCasella(val, f, c);
+            afegirmarca = false;
+        }
+        else{
+            DefineixCasella(val, f, c);
+            String afegirstr;
+            int afegirint = getCasella(f,c);   
+            if (afegirint == 0) afegirstr = null;
+            else if (afegirint == -1) afegirstr = "X";
+            else afegirstr = String.valueOf(afegirint);
+            tf.setText(afegirstr);
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton1.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton2.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton3.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton4.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton5.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton6.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton7.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton8.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton9.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
@@ -524,67 +585,115 @@ public class Jugar4 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,3)){
+            tf = c33;
+            i = 15;
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_c33MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,0)){
+            tf = c00;
+            i = 0;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        // TODO add your handling code here:
+       if (!es_written(0,1)){
+            tf = c01;
+            i = 1;
+        } // TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,2)){
+            tf = c02;
+            i = 2;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c02MouseClicked
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,3)){
+            tf = c03;
+            i = 3;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c03MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,1)){
+            tf = c10;
+            i = 4;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,1)){
+            tf = c11;
+            i = 5;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,2)){
+            tf = c12;
+            i = 6;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,3)){
+            tf = c13;
+            i = 7;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c13MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,0)){
+            tf = c20;
+            i = 8;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c20MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,1)){
+            tf = c21;
+            i = 9;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c21MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,2)){
+            tf = c22;
+            i = 10;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c22MouseClicked
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,3)){
+            tf = c23;
+            i = 11;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c23MouseClicked
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,0)){
+            tf = c30;
+            i = 12;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c30MouseClicked
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,1)){
+            tf = c31;
+            i = 13;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c31MouseClicked
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,2)){
+            tf = c32;
+            i = 14;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c32MouseClicked
 
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
@@ -620,6 +729,36 @@ public class Jugar4 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }    
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
+            afegirmarca = true;        // TODO add your handling code here:
+    }//GEN-LAST:event_addmarcaMouseClicked
+
+    private void llistarmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_llistarmarquesMouseClicked
+        String S = Caselles[i];
+        f = Character.getNumericValue(S.charAt(1));
+        c = Character.getNumericValue(S.charAt(2));
+        String ArrayData = " ";
+        boolean primera = true;
+        for (int i = 0; i < getMaxAnnotation(); ++i){
+            if (getAnnotationCasella(i, f, c)){
+                if (primera)
+                    ArrayData += String.valueOf(i);
+                else 
+                    ArrayData += ", " + String.valueOf(i);
+                primera = false;
+                }
+            }
+            txtmarques.setText(ArrayData);        // TODO add your handling code here:
+    }//GEN-LAST:event_llistarmarquesMouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        boto(jButton12.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12MouseClicked
+
+    private void EsborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsborrarMouseClicked
+        boto("esborrar");        // TODO add your handling code here:
+    }//GEN-LAST:event_EsborrarMouseClicked
 
     
     /**
@@ -690,6 +829,8 @@ public class Jugar4 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Autocompletar;
+    private javax.swing.JButton Esborrar;
+    private javax.swing.JButton addmarca;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c02;
@@ -709,7 +850,7 @@ public class Jugar4 extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -718,16 +859,17 @@ public class Jugar4 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton llistarmarques;
     private javax.swing.JLabel numeros;
     private javax.swing.JTextArea titol;
+    private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c03","c10","c11","c12","c13","c20","c21","c22","c23","c30","c31","c32","c33"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[16];
     javax.swing.JTextField tf = new javax.swing.JTextField();
-    private boolean apretat;
+    private boolean apretat, afegirmarca;
     private int val,f,c,i;
 
-    private ArrayList<Integer> CarregarSolucioTaulell() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //private ArrayList<Integer> CarregarSolucioTaulell() {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 }

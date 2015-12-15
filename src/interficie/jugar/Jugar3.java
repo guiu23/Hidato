@@ -123,6 +123,7 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         llistarmarques = new javax.swing.JButton();
         txtmarques = new javax.swing.JTextField();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -410,7 +411,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Comprovar);
-        Comprovar.setBounds(610, 390, 90, 40);
+        Comprovar.setBounds(70, 510, 130, 60);
 
         jButton11.setText("Esborrar");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -424,7 +425,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(710, 390, 100, 40);
+        jButton11.setBounds(700, 400, 100, 40);
 
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -438,7 +439,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(70, 470, 130, 70);
+        Autocompletar.setBounds(70, 430, 130, 70);
 
         jButton10.setText("Afegir Marca");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -458,7 +459,6 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(llistarmarques);
         llistarmarques.setBounds(70, 170, 110, 50);
 
-        txtmarques.setText("jTextField1");
         txtmarques.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtmarquesActionPerformed(evt);
@@ -466,6 +466,15 @@ public class Jugar3 extends javax.swing.JFrame {
         });
         getContentPane().add(txtmarques);
         txtmarques.setBounds(70, 240, 120, 170);
+
+        jButton12.setText("0");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton12);
+        jButton12.setBounds(610, 400, 60, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -476,7 +485,7 @@ public class Jugar3 extends javax.swing.JFrame {
         val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
-        if (textboto == "0") val = 0;
+        if (textboto == "Esborrar") val = 0;
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
@@ -725,7 +734,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-            boto("0");          // TODO add your handling code here:
+            boto("Esborrar");          // TODO add your handling code here:
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void ComprovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprovarActionPerformed
@@ -757,6 +766,10 @@ public class Jugar3 extends javax.swing.JFrame {
     private void txtmarquesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmarquesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtmarquesActionPerformed
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+            boto(jButton12.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12MouseClicked
 
     
     /**
@@ -825,6 +838,7 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
