@@ -143,35 +143,35 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
                 Generar2 obj = new Generar2(us);
                 obj.setVisible(true);
                 dispose();
-            } /*else if (mida.get(0) == 3) {   
-                Jugar3 obj = new Jugar3(us, mida.get(1));
+            } else if (mida == 3) {   
+                Generar3 obj = new Generar3(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 4) {
-                Jugar4 obj = new Jugar4(us, mida.get(1));
+            } else if (mida == 4) {
+                Generar4 obj = new Generar4(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 5) {
-                Jugar5 obj = new Jugar5(us, mida.get(1));
+            } else if (mida == 5) {
+                Generar5 obj = new Generar5(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 6) {
-                Jugar6 obj = new Jugar6(us, mida.get(1));
+            } else if (mida == 6) {
+                Generar6 obj = new Generar6(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 7) {
-                Jugar7 obj = new Jugar7(us, mida.get(1));
+            } else if (mida == 7) {
+                Generar7 obj = new Generar7(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 8) {
-                Jugar8 obj = new Jugar8(us, mida.get(1));
+            } else if (mida == 8) {
+                Generar8 obj = new Generar8(us);
                 obj.setVisible(true);
                 dispose();
-            } else if (mida.get(0) == 9) {
-                Jugar9 obj = new Jugar9(us, mida.get(1));
+            } else if (mida == 9) {
+                Generar9 obj = new Generar9(us);
                 obj.setVisible(true);
                 dispose();
-            }*/
+            }
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
