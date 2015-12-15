@@ -77,6 +77,7 @@ public class Jugar2 extends javax.swing.JFrame {
         addmarca = new javax.swing.JButton();
         llistarmques = new javax.swing.JButton();
         txtmarques = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -323,7 +324,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(comprovar);
-        comprovar.setBounds(680, 470, 130, 80);
+        comprovar.setBounds(60, 480, 130, 80);
 
         autocompletar.setText("Autocompletar");
         autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -358,6 +359,15 @@ public class Jugar2 extends javax.swing.JFrame {
         llistarmques.setBounds(69, 173, 110, 40);
         getContentPane().add(txtmarques);
         txtmarques.setBounds(70, 240, 110, 130);
+
+        jButton10.setText("0");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton10);
+        jButton10.setBounds(680, 470, 70, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -482,7 +492,7 @@ public class Jugar2 extends javax.swing.JFrame {
         val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
-        if (textboto == "0") val = 0;
+        if (textboto == "Esborrar") val = 0;
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
@@ -556,7 +566,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
-        boto("0");    
+        boto("Esborrar");    
     }//GEN-LAST:event_EsborrarActionPerformed
    
     
@@ -623,6 +633,10 @@ public class Jugar2 extends javax.swing.JFrame {
             }
             txtmarques.setText(ArrayData);// TODO add your handling code here:
     }//GEN-LAST:event_llistarmquesMouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+            boto(jButton10.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10MouseClicked
                                                                            
                                                                
     /**
@@ -687,6 +701,7 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JButton comprovar;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
