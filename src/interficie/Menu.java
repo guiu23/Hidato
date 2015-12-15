@@ -64,6 +64,7 @@ public class Menu extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -144,6 +145,15 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(sortir);
         sortir.setBounds(900, 470, 70, 50);
+
+        jButton1.setText("Com jugar-hi?");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(440, 490, 110, 23);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -469,6 +479,15 @@ public class Menu extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_EstadistiquesActionPerformed
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+       // Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
+       // Object[] optDif = {"Fàcil", "Mitjà", "Difícil"};
+        JFrame frame = new JFrame("Sobre l'Hidato");
+        JOptionPane.showMessageDialog(frame,"Hidato és un joc de lògica creat pel Dr. Gyora Benedek, un matemàtic israelià.", "Història", JOptionPane.INFORMATION_MESSAGE);    
+        JOptionPane.showMessageDialog(frame,"El objectiu de l'Hidato és omplenar el taulell amb numeros consecutius que es connecten horitzontalment, vertical o diagonalment.", "Com s'hi juga", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton1MouseClicked
+
     
     /**
      * @param args the command line arguments
@@ -523,6 +542,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem RankingGlobal;
     private javax.swing.JMenuItem RankingPersonal;
     private javax.swing.JMenu RankingTotal;
+    private javax.swing.JButton jButton1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
     private javax.swing.JTextArea titol;
