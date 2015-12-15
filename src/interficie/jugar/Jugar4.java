@@ -436,6 +436,11 @@ public class Jugar4 extends javax.swing.JFrame {
                 EsborrarMouseClicked(evt);
             }
         });
+        Esborrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EsborrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Esborrar);
         Esborrar.setBounds(570, 370, 80, 23);
 
@@ -479,6 +484,11 @@ public class Jugar4 extends javax.swing.JFrame {
                 jButton12MouseClicked(evt);
             }
         });
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton12);
         jButton12.setBounds(450, 370, 50, 50);
 
@@ -493,7 +503,7 @@ public class Jugar4 extends javax.swing.JFrame {
         val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
-        if (textboto == "borrar") val = 0;
+        if (textboto == "Esborrar") val = 0;
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
@@ -757,8 +767,16 @@ public class Jugar4 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12MouseClicked
 
     private void EsborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsborrarMouseClicked
-        boto("esborrar");        // TODO add your handling code here:
+        boto(Esborrar.getText());        // TODO add your handling code here:
     }//GEN-LAST:event_EsborrarMouseClicked
+
+    private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EsborrarActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     
     /**

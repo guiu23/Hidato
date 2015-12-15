@@ -572,7 +572,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void EsborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EsborrarActionPerformed
-        boto("Esborrar");    
+        boto(Esborrar.getText());    
     }//GEN-LAST:event_EsborrarActionPerformed
    
     

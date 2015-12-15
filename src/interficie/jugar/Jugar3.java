@@ -734,7 +734,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-            boto("Esborrar");          // TODO add your handling code here:
+            boto(jButton11.getText());          // TODO add your handling code here:
     }//GEN-LAST:event_jButton11MouseClicked
 
     private void ComprovarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprovarActionPerformed
