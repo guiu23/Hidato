@@ -38,17 +38,16 @@ public class Generar2 extends javax.swing.JFrame {
     
     public void myinitcomponents() {
          ArrayList<Integer> valors = carregarTaulellTemporal();
-         
-         for (int i = 0; i < valors.size(); ++i) {
-             System.out.println(valors.get(i));
-         }
-         
-         for (int i = 0; i < valors.size(); ++i){
+        for (int i = 0; i < valors.size(); ++i){
             tf = txtField[i];
              if (valors.get(i) != 0){
-                tf.setText(Integer.toString(valors.get(i)));
+                tf.setText(Integer.toString(valors.get(i)));           
+                if ("-1".equals(tf.getText())){
+                    tf.setBackground(Color.black);
+                    tf.setText("X");
+                }
             }
-        }
+        }   
     }
     
     void initialitzararraytextfield(){

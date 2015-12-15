@@ -145,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sortir);
-        sortir.setBounds(900, 470, 70, 50);
+        sortir.setBounds(880, 480, 90, 40);
 
         jButton1.setText("Com jugar-hi?");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
