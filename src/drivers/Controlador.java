@@ -169,6 +169,7 @@ public class Controlador {
     
     public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
         BoardHidato Taulell = Funcions.CarregarTemporal();
+        imprimeixValors(Taulell);
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
         Integer Y[] = {1,1,0,-1,-1,-1,0,1};
         int size = Taulell.getSize();
@@ -223,12 +224,14 @@ public class Controlador {
                 Funcions.CleanTemporal();
                 Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
+                HBD.saveTemporal();
                 
                 for (int j = 0; j < HBD._boardsResolts.size(); ++j) {
                     if (HBD._boards.get(i).getID().equals(nomT)) {
                         BoardHidato Taulell2 = HBD._boardsResolts.get(i);
                         Taulell2.setID("temporal");
                         HBD._temporalResolts.add(Taulell2); //posa solucio al temporalResolts per si la maquina ha de solucionar-ho
+                        HBD.saveTemporalResolts();
                     }
                 }
                 
@@ -478,9 +481,11 @@ public class Controlador {
             System.out.println("edf");
             if (HBD._boards.get(i).getID().equals(nomT)) {
                 System.out.println("aquest el fa");
+                HBD._boards.get(i).setID("temporal");
                 mida = HBD._boards.get(i).size;
                 Funcions.CleanTemporal();
                 System.out.println("efdsag");
+                imprimeixValors(HBD._boards.get(i));
                 HBD._temporal.add(HBD._boards.get(i));
                 System.out.println("edfasfda");
                 HBD.saveTemporal();

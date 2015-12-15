@@ -9,6 +9,7 @@ package interficie.generar;
 import static drivers.Controlador.*;
 import interficie.Menu;
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
@@ -30,8 +31,31 @@ public class Generar2 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
-        crea_taulell(2);
         invalida = false;
+        initialitzararraytextfield();
+        myinitcomponents();
+    }
+    
+    public void myinitcomponents() {
+         ArrayList<Integer> valors = carregarTaulellTemporal();
+         
+         for (int i = 0; i < valors.size(); ++i) {
+             System.out.println(valors.get(i));
+         }
+         
+         for (int i = 0; i < valors.size(); ++i){
+            tf = txtField[i];
+             if (valors.get(i) != 0){
+                tf.setText(Integer.toString(valors.get(i)));
+            }
+        }
+    }
+    
+    void initialitzararraytextfield(){
+        txtField[0] = c00;
+        txtField[1] = c01;
+        txtField[2] = c10;
+        txtField[3] = c11;
     }
 
     /**
@@ -595,6 +619,7 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
     private boolean invalida;
     private int val,f,c,i;
     javax.swing.JTextField tf = new javax.swing.JTextField();

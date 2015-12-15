@@ -5,6 +5,7 @@
  */
 package interficie;
 
+import static drivers.Controlador.crea_taulell;
 import static drivers.Controlador.crearTaulellAleatori;
 import interficie.jugar.SeleccioMapaPredefinit;
 import interficie.*;
@@ -302,42 +303,50 @@ public class Menu extends javax.swing.JFrame {
         JFrame frame = new JFrame("Tamany Mapa");
         int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
         if ( n == 0) {
+            crea_taulell(2);
             Generar2 obj = new Generar2(us);
             obj.setVisible(true);
             dispose();
 
         }
         else if (n == 1) {
+            crea_taulell(3);
             Generar3 obj = new Generar3(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 2) {
+            crea_taulell(4);
             Generar4 obj = new Generar4(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 3) {
+            crea_taulell(5);
             Generar5 obj = new Generar5(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 4) {
+            crea_taulell(6);
             Generar6 obj = new Generar6(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 5) {
+            crea_taulell(7);
             Generar7 obj = new Generar7(us);
             obj.setVisible(true);
             dispose();
         }
         else if ( n == 6) {
+            crea_taulell(8);
             Generar8 obj = new Generar8(us);
             obj.setVisible(true);
             dispose();
         }
         else if (n == 7) {
+            crea_taulell(9);
             Generar9 obj = new Generar9(us);
             obj.setVisible(true);
             dispose();
