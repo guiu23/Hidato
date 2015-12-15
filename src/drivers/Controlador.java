@@ -212,13 +212,20 @@ public class Controlador {
         HBD.loadTemporal();
         HBD.loadTemporalResolts();
         ArrayList<Integer> valors = new ArrayList<>(); //mida0 size mida1 dif
+
+        valors = null;
+        
         for (int i = 0; i < HBD._boards.size(); ++i){
             if (HBD._boards.get(i).getID().equals(nomT)) {
+                System.out.println("easasdsd");
                 BoardHidato Taulell = HBD._boards.get(i);
+                System.out.println("easadsdsad");
                 int dificultat = triaDificultat(Taulell);
+                System.out.println("aeasad");
                 valors.add(HBD._boards.get(i).size);
                 valors.add(dificultat);
                 Funcions.CleanTemporal();
+                System.out.println("easad");
                 Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
                 HBD.saveTemporal();
@@ -232,9 +239,6 @@ public class Controlador {
                     }
                 }
                 
-            }
-            else {
-                valors = null; //el taulell no existeix a la base de dades
             }
         }
         return valors;
