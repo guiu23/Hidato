@@ -10,7 +10,7 @@ import static drivers.Controlador.DefineixCasella;
 import static drivers.Controlador.carregarTaulellTemporal;
 import static drivers.Controlador.getCasella;
 import interficie.Menu;
-import static interficie.generar.Generar2.us;
+import static interficie.generar.Generar3.us;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JFrame;
@@ -63,8 +63,13 @@ public class Generar3 extends javax.swing.JFrame {
     void initialitzararraytextfield(){
         txtField[0] = c00;
         txtField[1] = c01;
-        txtField[2] = c10;
-        txtField[3] = c11;
+        txtField[2] = c02;
+        txtField[3] = c10;
+        txtField[4] = c11;
+        txtField[5] = c12;
+        txtField[6] = c20;
+        txtField[7] = c21;
+        txtField[8] = c22;
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -132,18 +137,33 @@ public class Generar3 extends javax.swing.JFrame {
         c02.setEditable(false);
         c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c02MouseClicked(evt);
+            }
+        });
         getContentPane().add(c02);
         c02.setBounds(290, 170, 60, 60);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c01MouseClicked(evt);
+            }
+        });
         getContentPane().add(c01);
         c01.setBounds(230, 170, 60, 60);
 
         c22.setEditable(false);
         c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c22MouseClicked(evt);
+            }
+        });
         getContentPane().add(c22);
         c22.setBounds(290, 290, 60, 60);
 
@@ -171,30 +191,55 @@ public class Generar3 extends javax.swing.JFrame {
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c10MouseClicked(evt);
+            }
+        });
         getContentPane().add(c10);
         c10.setBounds(170, 230, 60, 60);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c11MouseClicked(evt);
+            }
+        });
         getContentPane().add(c11);
         c11.setBounds(230, 230, 60, 60);
 
         c12.setEditable(false);
         c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c12MouseClicked(evt);
+            }
+        });
         getContentPane().add(c12);
         c12.setBounds(290, 230, 60, 60);
 
         c20.setEditable(false);
         c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c20MouseClicked(evt);
+            }
+        });
         getContentPane().add(c20);
         c20.setBounds(170, 290, 60, 60);
 
         c21.setEditable(false);
         c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c21MouseClicked(evt);
+            }
+        });
         getContentPane().add(c21);
         c21.setBounds(230, 290, 60, 60);
 
@@ -403,7 +448,7 @@ public class Generar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // TODO aboto(jButton1.getText());dd your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
@@ -496,6 +541,55 @@ public class Generar3 extends javax.swing.JFrame {
                 
         }
     }//GEN-LAST:event_guardartaulellMouseClicked
+
+    private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
+        // TODO add your handling code here:
+        tf = c01;
+        i = 1;
+    }//GEN-LAST:event_c01MouseClicked
+
+    private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
+        // TODO add your handling code here:
+        tf = c02;
+        i = 2;
+    }//GEN-LAST:event_c02MouseClicked
+
+    private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
+        // TODO add your handling code here:
+        tf = c10;
+        i = 3;
+    }//GEN-LAST:event_c10MouseClicked
+
+    private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
+        // TODO add your handling code here:
+        tf = c11;
+        i = 4;
+    }//GEN-LAST:event_c11MouseClicked
+
+    private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
+        // TODO add your handling code here:
+        tf = c12;
+        i = 5;
+    }//GEN-LAST:event_c12MouseClicked
+
+    private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
+        // TODO add your handling code here:
+        tf = c20;
+        i = 6;
+    }//GEN-LAST:event_c20MouseClicked
+
+    private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
+        // TODO add your handling code here:
+        tf = c21;
+        i = 7;
+    }//GEN-LAST:event_c21MouseClicked
+
+    private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
+        // TODO add your handling code here:
+        tf = c22;
+        i = 8;
+    }//GEN-LAST:event_c22MouseClicked
+   
     private void boto(String textboto){
         String S = Caselles[i];
         if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
