@@ -394,71 +394,77 @@ public class Jugar2 extends javax.swing.JFrame {
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton1.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton2.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton3.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton4.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton5.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton6.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton7.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton8.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton9.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
-        JFrame frame = new JFrame("");
+        if (!apretat) {
+            Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+            JFrame frame = new JFrame("");
 
-        int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
-        
-        if (n == 0) { //Guardar
-            boolean bool = false;
-            while (!bool) {
-                
-                //QUE LI PREGUNTI EL NOM EL NOM
-                String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+            int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
 
-                int g = guardarPartida(us,nomP);
+            if (n == 0) { //Guardar
+                boolean bool = false;
+                while (!bool) {
 
-                if (g == 0) {
-                    bool = true;
-                    Menu obj = new Menu(us);
-                    obj.setVisible(true);
-                    dispose();
-                } else {
-                    JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                    //QUE LI PREGUNTI EL NOM EL NOM
+                    String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+
+                    int g = guardarPartida(us,nomP);
+
+                    if (g == 0) {
+                        bool = true;
+                        Menu obj = new Menu(us);
+                        obj.setVisible(true);
+                        dispose();
+                    } else {
+                        JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                    }
                 }
-            }
-        } else if (n == 1) { //Sortir sense guardar
+            } else if (n == 1) { //Sortir sense guardar
+                Menu obj = new Menu(us);
+                obj.setVisible(true);
+                dispose();
+            } 
+        } else {
             Menu obj = new Menu(us);
             obj.setVisible(true);
             dispose();
-        } 
+        }
     }//GEN-LAST:event_enrereActionPerformed
 
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed

@@ -164,13 +164,11 @@ public class CarregarPartida extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nom = on_vol_entrar.getText(); 
         
-        System.out.println("ea");
          ArrayList<Integer> mida = carregarPartida(us, nom);
         
         JFrame frame = new JFrame("Sortir");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Partida no existeix, torna-ho a provar", "Partida no existeix",  JOptionPane.ERROR_MESSAGE);
         else {
-            System.out.println("ea");
             if (mida.get(0) == 2) {
                 Jugar2 obj = new Jugar2(us, mida.get(1));
                 obj.setVisible(true);

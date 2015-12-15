@@ -212,20 +212,14 @@ public class Controlador {
         HBD.loadTemporal();
         HBD.loadTemporalResolts();
         ArrayList<Integer> valors = new ArrayList<>(); //mida0 size mida1 dif
-
-        valors = null;
         
         for (int i = 0; i < HBD._boards.size(); ++i){
             if (HBD._boards.get(i).getID().equals(nomT)) {
-                System.out.println("easasdsd");
                 BoardHidato Taulell = HBD._boards.get(i);
-                System.out.println("easadsdsad");
                 int dificultat = triaDificultat(Taulell);
-                System.out.println("aeasad");
                 valors.add(HBD._boards.get(i).size);
                 valors.add(dificultat);
                 Funcions.CleanTemporal();
-                System.out.println("easad");
                 Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
                 HBD.saveTemporal();
@@ -238,10 +232,10 @@ public class Controlador {
                         HBD.saveTemporalResolts();
                     }
                 }
-                
+                return valors;
             }
         }
-        return valors;
+        return null;
     }
     
     public static ArrayList<Integer> carregarTaulellTemporal (){
@@ -477,22 +471,16 @@ public class Controlador {
         HBD.loadBoardsResolts();
         
         Integer mida = null;
-        System.out.println("es");
         for (int i = 0; i < HBD._boards.size(); ++i){
-            System.out.println("edf");
             if (HBD._boards.get(i).getID().equals(nomT)) {
-                System.out.println("aquest el fa");
                 HBD._boards.get(i).setID("temporal");
                 mida = HBD._boards.get(i).size;
                 Funcions.CleanTemporal();
-                System.out.println("efdsag");
                 imprimeixValors(HBD._boards.get(i));
                 HBD._temporal.add(HBD._boards.get(i));
-                System.out.println("edfasfda");
                 HBD.saveTemporal();
             }
         }
-        System.out.println("ef");
         return mida;
     }
     

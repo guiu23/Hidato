@@ -188,7 +188,10 @@ public class Funcions {
             correcte = true; //per fer que funcioni ara, dsp mes tard esborrar-ho
             BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
             copiarBoard(TaulellRes, Taulell);
+
             solve_modifica(TaulellRes, TaulellRes.getSize(), false);
+            
+            imprimeixValors(TaulellRes);
                         
             if (solution) {
                 correcte = true;

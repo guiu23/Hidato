@@ -153,9 +153,7 @@ public class SeleccioMapaPredefinit extends javax.swing.JFrame {
         // TODO add your handling code here:
         String nomT = on_vol_entrar.getText(); 
         
-        System.out.println("ea");
         ArrayList<Integer> mida = carregarPredefinit(us, nomT);
-        System.out.println("ea2");
         JFrame frame = new JFrame("No existeix");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Taulell no existeix, torna-ho a provar", "Taulell no existeix",  JOptionPane.ERROR_MESSAGE);
         else {

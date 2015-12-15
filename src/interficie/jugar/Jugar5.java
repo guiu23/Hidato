@@ -10,6 +10,7 @@ import static drivers.Controlador.carregarTaulellTemporal;
 import static drivers.Controlador.començarJoc;
 import static drivers.Controlador.comprovarHidato;
 import static drivers.Controlador.es_ultim;
+import static drivers.Controlador.es_written;
 import static drivers.Controlador.guardarPartida;
 import static drivers.Controlador.partidaAcabada;
 import interficie.Menu;
@@ -179,6 +180,11 @@ public class Jugar5 extends javax.swing.JFrame {
         numeros.setBounds(510, 100, 80, 40);
 
         jButton1.setText("1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -646,15 +652,24 @@ public class Jugar5 extends javax.swing.JFrame {
     }//GEN-LAST:event_c33MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,0)){
+            tf = c00;
+            i = 0;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,1)){
+            tf = c01;
+            i = 1;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,2)){
+            tf = c02;
+            i = 3;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c02MouseClicked
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
@@ -662,11 +677,17 @@ public class Jugar5 extends javax.swing.JFrame {
     }//GEN-LAST:event_c40MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,0)){
+            tf = c10;
+            i = 6;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,1)){
+            tf = c11;
+            i = 7;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
@@ -774,6 +795,10 @@ public class Jugar5 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_comprovaMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+            boto(jButton1.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
     
     /**
