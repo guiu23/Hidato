@@ -170,13 +170,12 @@ public class CarregarPartida extends javax.swing.JFrame {
         JFrame frame = new JFrame("Sortir");
         if (mida == null) JOptionPane.showMessageDialog(frame,"Partida no existeix, torna-ho a provar", "Partida no existeix",  JOptionPane.ERROR_MESSAGE);
         else {
-            //carregarPartida(us, nom);
             System.out.println("ea");
             if (mida.get(0) == 2) {
                 Jugar2 obj = new Jugar2(us, mida.get(1));
                 obj.setVisible(true);
                 dispose();
-            } /*else if (mida.get(0) == 3) {   
+            } else if (mida.get(0) == 3) {   
             Jugar3 obj = new Jugar3(us, mida.get(1));
                 obj.setVisible(true);
                 dispose();
@@ -204,7 +203,7 @@ public class CarregarPartida extends javax.swing.JFrame {
                 Jugar9 obj = new Jugar9(us, mida.get(1));
                 obj.setVisible(true);
                 dispose();
-            }*/
+            }
         }
     }//GEN-LAST:event_jButton1MouseClicked
 

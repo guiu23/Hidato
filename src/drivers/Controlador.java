@@ -205,22 +205,19 @@ public class Controlador {
         imprimeixValors(Taulell); //Xivato taulell generat
     }
     
-    public static ArrayList<Integer> carregarTaulell (String nomT){
+    public static ArrayList<Integer> carregarPredefinit (String user, String nomT){
         HBD = new HidatoBD();
         HBD.loadBoards();
         HBD.loadBoardsResolts();
         HBD.loadTemporal();
         HBD.loadTemporalResolts();
-        ArrayList<Integer> valors = new ArrayList<>();
+        ArrayList<Integer> valors = new ArrayList<>(); //mida0 size mida1 dif
         for (int i = 0; i < HBD._boards.size(); ++i){
             if (HBD._boards.get(i).getID().equals(nomT)) {
                 BoardHidato Taulell = HBD._boards.get(i);
-                for (int j = 0; j < Taulell.getSize(); ++j) {
-                    for (int k = 0; k < Taulell.getSize(); ++k) {
-                        valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
-                    }
-                }
-                
+                int dificultat = triaDificultat(Taulell);
+                valors.add(HBD._boards.get(i).size);
+                valors.add(dificultat);
                 Funcions.CleanTemporal();
                 Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
