@@ -37,8 +37,7 @@ public class Jugar2 extends javax.swing.JFrame {
         us = usuari;
         dif = dificultat;
         initialitzararraytextfield();
-        myinitComponents();
-        
+        myinitComponents();   
     }
     void initialitzararraytextfield(){
         txtField[0] = c00;
@@ -75,6 +74,9 @@ public class Jugar2 extends javax.swing.JFrame {
         Esborrar = new javax.swing.JButton();
         comprovar = new javax.swing.JButton();
         autocompletar = new javax.swing.JButton();
+        addmarca = new javax.swing.JButton();
+        llistarmques = new javax.swing.JButton();
+        txtmarques = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -335,7 +337,27 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(autocompletar);
-        autocompletar.setBounds(60, 280, 130, 60);
+        autocompletar.setBounds(60, 410, 130, 60);
+
+        addmarca.setText("Afegir Marca");
+        addmarca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addmarcaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(addmarca);
+        addmarca.setBounds(70, 120, 110, 30);
+
+        llistarmques.setText("Llistar Marques");
+        llistarmques.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                llistarmquesMouseClicked(evt);
+            }
+        });
+        getContentPane().add(llistarmques);
+        llistarmques.setBounds(69, 173, 110, 40);
+        getContentPane().add(txtmarques);
+        txtmarques.setBounds(70, 240, 110, 130);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -438,7 +460,6 @@ public class Jugar2 extends javax.swing.JFrame {
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
-            afegirmarca = false;
         }
     }//GEN-LAST:event_c00MouseClicked
 
@@ -451,7 +472,6 @@ public class Jugar2 extends javax.swing.JFrame {
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
-            afegirmarca = false;
         }
     }//GEN-LAST:event_c01MouseClicked
     
@@ -467,22 +487,19 @@ public class Jugar2 extends javax.swing.JFrame {
         System.out.println(f);
         System.out.println(c);
         if (afegirmarca){
-            System.out.println(val);
             val = Integer.parseInt(textboto);
-            System.out.println(f);
-            System.out.println(c);
             switchAnnotationCasella(val, f, c);
-            System.out.println(getAnnotationCasella(val,f,c));
+            afegirmarca = false;
         }
         else{
             DefineixCasella(val, f, c);
+            String afegirstr;
+            int afegirint = getCasella(f,c);   
+            if (afegirint == 0) afegirstr = null;
+            else if (afegirint == -1) afegirstr = "X";
+            else afegirstr = String.valueOf(afegirint);
+            tf.setText(afegirstr);
         }
-        String afegirstr;
-        int afegirint = getCasella(f,c);   
-        if (afegirint == 0) afegirstr = null;
-        else if (afegirint == -1) afegirstr = "X";
-        else afegirstr = String.valueOf(afegirint);
-        tf.setText(afegirstr);
     }
     
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -527,7 +544,6 @@ public class Jugar2 extends javax.swing.JFrame {
         if (!es_written(1,0)){
             tf = c10;
             i = 2;
-            afegirmarca = false;
         }
     }//GEN-LAST:event_c10MouseClicked
 
@@ -536,7 +552,6 @@ public class Jugar2 extends javax.swing.JFrame {
         if (!es_written(1,1)){
             i = 3;
             tf = c11;
-            afegirmarca = false;
         }
     }//GEN-LAST:event_c11MouseClicked
 
@@ -586,6 +601,28 @@ public class Jugar2 extends javax.swing.JFrame {
     private void autocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autocompletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_autocompletarActionPerformed
+
+    private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
+        afegirmarca = true;        // TODO add your handling code here:
+    }//GEN-LAST:event_addmarcaMouseClicked
+
+    private void llistarmquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_llistarmquesMouseClicked
+        String S = Caselles[i];
+        f = Character.getNumericValue(S.charAt(1));
+        c = Character.getNumericValue(S.charAt(2));
+        String ArrayData = " ";
+        boolean primera = true;
+        for (int i = 0; i < getMaxAnnotation(); ++i){
+            if (getAnnotationCasella(i, f, c)){
+                if (primera)
+                    ArrayData +=  String.valueOf(i);
+                else 
+                    ArrayData += ", " + String.valueOf(i);
+                primera = false;
+                }
+            }
+            txtmarques.setText(ArrayData);// TODO add your handling code here:
+    }//GEN-LAST:event_llistarmquesMouseClicked
                                                                            
                                                                
     /**
@@ -641,6 +678,7 @@ public class Jugar2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Esborrar;
+    private javax.swing.JButton addmarca;
     private javax.swing.JButton autocompletar;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
@@ -657,8 +695,10 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton llistarmques;
     private javax.swing.JLabel numeros;
     private javax.swing.JTextArea titol;
+    private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
