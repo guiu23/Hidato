@@ -36,7 +36,15 @@ public class Jugar2 extends javax.swing.JFrame {
         afegirmarca = false;
         us = usuari;
         dif = dificultat;
+        initialitzararraytextfield();
         myinitComponents();
+        
+    }
+    void initialitzararraytextfield(){
+        txtField[0] = c00;
+        txtField[1] = c01;
+        txtField[2] = c10;
+        txtField[3] = c11;
     }
 
     /**
@@ -359,49 +367,24 @@ public class Jugar2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void myinitComponents() {
-        //crearTaulellAleatori(2,dif);
+        crearTaulellAleatori(2,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
-        for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
-        
         int ultima = es_ultim();
-        
         String lastnum = Integer.toString(ultima);
         Color color = Color.cyan;
-        
-       /* if (valors.get(0) != 0){
-            c00.setText(Integer.toString(valors.get(0)));
-            if ("1".equals(c00.getText())) c00.setBackground(color);            
-            else if (c00.getText().equals(lastnum)) c00.setBackground(color);
-            else if ("-1".equals(c00.getText())) c00.setBackground(Color.black);
-        }
-        if (valors.get(1) != 0){
-            c01.setText(Integer.toString(valors.get(1)));
-            if ("1".equals(c01.getText()))c01.setBackground(color);
-            else if (c01.getText().equals(lastnum)) c01.setBackground(color);
-            else if ("-1".equals(c01.getText())) c01.setBackground(Color.black);
-        }
-        if (valors.get(2) != 0){
-            c10.setText(Integer.toString(valors.get(2)));
-            if ("1".equals(c10.getText())) c10.setBackground(color);
-            else if (c10.getText().equals(lastnum)) c10.setBackground(color);
-            else if ("-1".equals(c10.getText())) c10.setBackground(Color.black);
-        }
-        if (valors.get(3) != 0){
-            c11.setText(Integer.toString(valors.get(3)));
-            if ("1".equals(c11.getText())) c11.setBackground(color);
-            else if (c11.getText().equals(lastnum)) c11.setBackground(color);
-            else if ("-1".equals(c11.getText())) c11.setBackground(Color.black);
-        }*/
         for (int i = 0; i < valors.size(); ++i){
-            tf = txtfield[i];
-            if (valors.get(i) != 0){
-                tf.setText(Integer.toString(valors.get(0)));
+            tf = txtField[i];
+             if (valors.get(i) != 0){
+                tf.setText(Integer.toString(valors.get(i)));
                 if ("1".equals(tf.getText())) tf.setBackground(color);            
                 else if (tf.getText().equals(lastnum)) tf.setBackground(color);
-                else if ("-1".equals(tf.getText())) tf.setBackground(Color.black);
-            }
+                else if ("-1".equals(tf.getText())){
+                    tf.setBackground(Color.black);
+                    tf.setText("X");
+                }
         }
+    }
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -477,7 +460,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        Casella = null;
+        //Casella = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -490,7 +473,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00ActionPerformed
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        Casella = null;
+        //Casella = null;
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
@@ -517,7 +500,6 @@ public class Jugar2 extends javax.swing.JFrame {
             switchAnnotationCasella(val, f, c);
             System.out.println(getAnnotationCasella(val,f,c));
         }
-        
         else{
             DefineixCasella(val, f, c);
         }
@@ -526,7 +508,6 @@ public class Jugar2 extends javax.swing.JFrame {
         if (afegirint == 0) afegirstr = null;
         else if (afegirint == -1) afegirstr = "X";
         else afegirstr = String.valueOf(afegirint);
-        
         tf.setText(afegirstr);
     }
     
@@ -568,7 +549,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        Casella = null;
+        //Casella = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 2;
@@ -577,7 +558,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        Casella = null;
+        //Casella = null;
         if (!es_written(1,1)){
             i = 3;
             tf = c11;
@@ -599,7 +580,7 @@ public class Jugar2 extends javax.swing.JFrame {
             c = Character.getNumericValue(S.charAt(2));
             String ArrayData = null;
             for (int i = 0; i < getMaxAnnotation(); ++i){
-                                if (getAnnotationCasella(i, f, c) == true){// System.out.println(i + " ");
+                                if (getAnnotationCasella(i, f, c)){// System.out.println(i + " ");
                                     ArrayData = ArrayData + ", " + String.valueOf(i);
                                 }
             }
@@ -634,21 +615,13 @@ public class Jugar2 extends javax.swing.JFrame {
 
     private void autocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_autocompletarMouseClicked
         ArrayList<Integer> valors = CarregarSolucioTaulell();
-        
         String afegir;
-        
-        afegir = String.valueOf(valors.get(0));
-        c00.setText(afegir);
-        afegir = String.valueOf(valors.get(1));
-        c01.setText(afegir);
-        afegir = String.valueOf(valors.get(2));
-        c10.setText(afegir);
-        afegir = String.valueOf(valors.get(3));
-        c11.setText(afegir);
+        for (int i = 0; i < valors.size(); ++i){
+            afegir = String.valueOf(valors.get(i)); 
+            txtField[i].setText(afegir);
     }//GEN-LAST:event_autocompletarMouseClicked
-                                                                               
-                                                                     
-    
+    }                                                                       
+                                                               
     /**
      * @param args the command line arguments
      */
@@ -726,9 +699,8 @@ public class Jugar2 extends javax.swing.JFrame {
     private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
     javax.swing.JTextField tf = new javax.swing.JTextField();
-    private javax.swing.JTextField txtfield[] = {c00,c01,c10,c11};
-    private String Casella;
     private boolean afegirmarca;
     private int val,f,c,i;
 }

@@ -370,8 +370,8 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        
-            Casella = "c10";
+        i = 2;
+        tf = c10;
               // TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
@@ -383,32 +383,14 @@ public class Generar2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_guardartaulellActionPerformed
     private void boto(String textboto){
-        javax.swing.JTextField tf = new javax.swing.JTextField();
-        if (Casella == "c00"){
-            tf = c00;
-            if (!invalida) val = Integer.parseInt(c00.getText() + textboto);
-            f = Character.getNumericValue(Casella.charAt(1));
-            c =  Character.getNumericValue(Casella.charAt(2));
-        }
-        if (Casella == "c01"){
-            tf = c01;
-            if (!invalida) val = Integer.parseInt(c01.getText() + textboto);
-            f =  Character.getNumericValue(Casella.charAt(1));
-            c =  Character.getNumericValue(Casella.charAt(2));
-        }
-        if (Casella == "c10"){
-            tf = c10;
-            if (!invalida) val = Integer.parseInt(c10.getText() + textboto);
-            f =  Character.getNumericValue(Casella.charAt(1));
-            c =  Character.getNumericValue(Casella.charAt(2));
-        }
-        if (Casella == "c11"){
-            tf = c11;
-            if (!invalida) val = Integer.parseInt(c11.getText() + textboto);
-            f =  Character.getNumericValue(Casella.charAt(1));
-            c =  Character.getNumericValue(Casella.charAt(2));
-        }
+        String S = Caselles[i];
+        if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "0") val = 0;
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
         if (textboto == "-1") {
             invalida = false;
             val = -1;
@@ -468,17 +450,19 @@ public class Generar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-       Casella = "c00";
+       tf = c00;
+        i = 0;
             // TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-
-            Casella = "c01";// TODO add your handling code here:
+            tf = c01;
+            i = 1;// TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-            Casella = "c11";       // TODO add your handling code here:
+        tf = c11;    
+        i = 3;       // TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void guardartaulellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardartaulellMouseClicked
@@ -610,7 +594,8 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JLabel numeros;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
-    private String Casella;
+    private String Caselles[] = {"c00","c01","c10","c11"};
     private boolean invalida;
-    private int val,f,c;
+    private int val,f,c,i;
+    javax.swing.JTextField tf = new javax.swing.JTextField();
 }

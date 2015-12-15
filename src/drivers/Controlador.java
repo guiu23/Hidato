@@ -143,6 +143,7 @@ public class Controlador {
         
         BoardHidato TaulellAux = new BoardHidato(size, "aux");
         Funcions.copiarBoard(TaulellAux, Taulell);
+        imprimeixValors(TaulellAux);
 
         for (int i = 0; i < size; ++i)  {
             for (int j = 0; j < size; ++j)  {
@@ -156,6 +157,9 @@ public class Controlador {
         }
         
         if(Funcions.comprovar2(TaulellAux, X, Y, TaulellAux.getSize(), startx, starty)) {  
+            System.out.println("ben comprovat");
+            System.out.println(dif);;
+            
             return (dif*size);
         }
         else {

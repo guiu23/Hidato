@@ -37,7 +37,6 @@ public class Jugar3 extends javax.swing.JFrame {
      * Creates new form Identificacio
      */
     public Jugar3(String usuari, int dificultat) {
-        //txtField = {c00, c01, c02, c10, c11, c12, c20, c21, c22};
         initComponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
@@ -45,28 +44,43 @@ public class Jugar3 extends javax.swing.JFrame {
         afegirmarca = false;
         us = usuari;
         dif = dificultat;
+        initialitzararraytextfield();
         myinitComponents();
+        //for (int i = 0; i < 9;++i){
+       
+        //}
         
     }
-    
+    void initialitzararraytextfield(){
+        txtField[0] = c00;
+        txtField[1] = c01;
+        txtField[2] = c02;
+        txtField[3] = c10;
+        txtField[4] = c11;
+        txtField[5] = c12;
+        txtField[6] = c20;
+        txtField[7] = c21;
+        txtField[8] = c22;   
+    }
     
     private void myinitComponents() {
         crearTaulellAleatori(3,dif);
         ArrayList<Integer> valors = carregarTaulellTemporal();
         començarJoc(dif);
-        //for(int i = 0; i < 4; ++i) System.out.println(valors.get(i)); 
         int ultima = es_ultim();
         String lastnum = Integer.toString(ultima);
         Color color = Color.cyan;
-        //for (int i = 0; i < 9; ++i) System.out.println(txtfield[i]);
         for (int i = 0; i < valors.size(); ++i){
             tf = txtField[i];
              if (valors.get(i) != 0){
-                 System.out.println(tf);
-                tf.setText(Integer.toString(valors.get(0)));
+                System.out.println(tf);
+                tf.setText(Integer.toString(valors.get(i)));
                 if ("1".equals(tf.getText())) tf.setBackground(color);            
                 else if (tf.getText().equals(lastnum)) tf.setBackground(color);
-                else if ("-1".equals(tf.getText())) tf.setBackground(Color.black);
+                else if ("-1".equals(tf.getText())){
+                    tf.setBackground(Color.black);
+                    tf.setText("X");
+                }
         }
     }
     }
@@ -201,6 +215,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton1.setBounds(610, 180, 60, 60);
 
         jButton2.setText("2");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -210,6 +229,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton2.setBounds(680, 180, 60, 60);
 
         jButton3.setText("3");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -219,6 +243,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton3.setBounds(750, 180, 60, 60);
 
         jButton4.setText("4");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -228,6 +257,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton4.setBounds(610, 250, 60, 60);
 
         jButton5.setText("5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -237,6 +271,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton5.setBounds(680, 250, 60, 60);
 
         jButton6.setText("6");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -246,6 +285,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton6.setBounds(750, 250, 60, 60);
 
         jButton7.setText("7");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -255,6 +299,11 @@ public class Jugar3 extends javax.swing.JFrame {
         jButton7.setBounds(610, 320, 60, 60);
 
         jButton8.setText("8");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -358,6 +407,11 @@ public class Jugar3 extends javax.swing.JFrame {
         Comprovar.setBounds(610, 390, 90, 40);
 
         jButton11.setText("Esborrar");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -488,7 +542,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -509,22 +563,16 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_AutocompletarActionPerformed
 
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
-             ArrayList<Integer> valors = CarregarSolucioTaulell();
-        
+        ArrayList<Integer> valors = CarregarSolucioTaulell();
         String afegir;
-        
-        afegir = String.valueOf(valors.get(0));
-        c00.setText(afegir);
-        afegir = String.valueOf(valors.get(1));
-        c01.setText(afegir);
-        afegir = String.valueOf(valors.get(2));
-        c10.setText(afegir);
-        afegir = String.valueOf(valors.get(3));
-        c11.setText(afegir);        // TODO add your handling code here:
+        for (int i = 0; i < valors.size(); ++i){
+            afegir = String.valueOf(valors.get(i)); 
+            txtField[i].setText(afegir);
+        }
     }//GEN-LAST:event_AutocompletarMouseClicked
 
     private void ComprovarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComprovarMouseClicked
-          int r;
+        int r;
         r = comprovarHidato(dif);
         JFrame frame = new JFrame("");
         if (r >= 1) {
@@ -556,7 +604,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_addmarcaMouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
@@ -565,7 +613,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(0,2)){
             tf = c02;
             i = 2;
@@ -574,7 +622,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c02MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 3;
@@ -583,7 +631,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(1,1)){
             tf = c11;
             i = 4;
@@ -592,7 +640,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(1,2)){
             tf = c12;
             i = 5;
@@ -601,7 +649,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c12MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(2,0)){
             tf = c20;
             i = 6;
@@ -610,7 +658,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c20MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(2,1)){
             tf = c21;
             i = 7;
@@ -619,11 +667,11 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c21MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-        // TODO add your handling code here:
+            boto(jButton9.getText());          // TODO add your handling code here:
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        Casella = null;
+        //tf = null;
         if (!es_written(2,2)){
             tf = c22;
             i = 8;
@@ -634,6 +682,38 @@ public class Jugar3 extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
             boto(jButton1.getText());        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+            boto(jButton2.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+            boto(jButton3.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+            boto(jButton4.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+            boto(jButton5.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+            boto(jButton6.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+            boto(jButton7.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+            boto(jButton8.getText());          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+            boto("0");          // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11MouseClicked
 
     
     /**
@@ -717,10 +797,8 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c10","c11","c12","c20","c21","c22"};
-    private javax.swing.JTextField[] txtField = new javax.swing.JTextField[9];
-   // private javax.swing.JTextField txtfield[] = {c00,c01,c02,c10,c11,c12,c20,c21,c22};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
     javax.swing.JTextField tf = new javax.swing.JTextField();
-    private String Casella;
     private boolean afegirmarca;
     private int val,f,c,i;
 }
