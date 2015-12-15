@@ -118,10 +118,6 @@ public class Jugar3 extends javax.swing.JFrame {
         c21 = new javax.swing.JTextField();
         Comprovar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        numeros1 = new javax.swing.JLabel();
-        listmarques = new javax.swing.JButton();
-        addmarca = new javax.swing.JButton();
-        txtmarques = new javax.swing.JTextField();
         Autocompletar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -421,33 +417,6 @@ public class Jugar3 extends javax.swing.JFrame {
         getContentPane().add(jButton11);
         jButton11.setBounds(710, 390, 100, 40);
 
-        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros1.setText("Marques:");
-        getContentPane().add(numeros1);
-        numeros1.setBounds(170, 220, 80, 40);
-
-        listmarques.setText("Treure marca");
-        listmarques.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                listmarquesMouseClicked(evt);
-            }
-        });
-        getContentPane().add(listmarques);
-        listmarques.setBounds(160, 180, 110, 40);
-
-        addmarca.setText("Afegir marca");
-        addmarca.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                addmarcaMouseClicked(evt);
-            }
-        });
-        getContentPane().add(addmarca);
-        addmarca.setBounds(160, 130, 110, 40);
-
-        txtmarques.setEditable(false);
-        getContentPane().add(txtmarques);
-        txtmarques.setBounds(170, 270, 80, 140);
-
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -460,7 +429,7 @@ public class Jugar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(150, 460, 130, 70);
+        Autocompletar.setBounds(70, 250, 130, 70);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -591,23 +560,6 @@ public class Jugar3 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }      // TODO add your handling code here:
     }//GEN-LAST:event_ComprovarMouseClicked
-
-    private void listmarquesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listmarquesMouseClicked
-          String S = Caselles[i];
-            f = Character.getNumericValue(S.charAt(1));
-            c = Character.getNumericValue(S.charAt(2));
-            String ArrayData = null;
-            for (int i = 0; i < getMaxAnnotation(); ++i){
-                                if (getAnnotationCasella(i, f, c) == true){// System.out.println(i + " ");
-                                    ArrayData = ArrayData + ", " + String.valueOf(i);
-                                }
-            }
-            txtmarques.setText(ArrayData);         // TODO add your handling code here:
-    }//GEN-LAST:event_listmarquesMouseClicked
-
-    private void addmarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addmarcaMouseClicked
-        afegirmarca = true;        // TODO add your handling code here:
-    }//GEN-LAST:event_addmarcaMouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
         //tf = null;
@@ -775,7 +727,6 @@ public class Jugar3 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Autocompletar;
     private javax.swing.JButton Comprovar;
-    private javax.swing.JButton addmarca;
     private javax.swing.JTextField c00;
     private javax.swing.JTextField c01;
     private javax.swing.JTextField c02;
@@ -796,11 +747,8 @@ public class Jugar3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JButton listmarques;
     private javax.swing.JLabel numeros;
-    private javax.swing.JLabel numeros1;
     private javax.swing.JTextArea titol;
-    private javax.swing.JTextField txtmarques;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c10","c11","c12","c20","c21","c22"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];

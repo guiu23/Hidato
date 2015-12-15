@@ -68,10 +68,7 @@ public class Jugar5 extends javax.swing.JFrame {
         primera31 = new javax.swing.JTextField();
         primera32 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        numeros1 = new javax.swing.JLabel();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        Autocompletar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -477,22 +474,19 @@ public class Jugar5 extends javax.swing.JFrame {
         getContentPane().add(jButton10);
         jButton10.setBounds(450, 370, 79, 23);
 
-        numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros1.setText("Marques:");
-        getContentPane().add(numeros1);
-        numeros1.setBounds(30, 200, 80, 40);
-
-        jButton11.setText("Treure marca");
-        getContentPane().add(jButton11);
-        jButton11.setBounds(20, 160, 110, 23);
-
-        jButton12.setText("Afegir marca");
-        getContentPane().add(jButton12);
-        jButton12.setBounds(20, 120, 100, 23);
-
-        jTextField1.setEditable(false);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(30, 250, 80, 140);
+        Autocompletar.setText("Autocompletar");
+        Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AutocompletarMouseClicked(evt);
+            }
+        });
+        Autocompletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AutocompletarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Autocompletar);
+        Autocompletar.setBounds(20, 240, 110, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -644,6 +638,20 @@ public class Jugar5 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_primera32MouseClicked
 
+    private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
+        apretat = true;
+        ArrayList<Integer> valors = CarregarSolucioTaulell();
+        String afegir;
+        for (int i = 0; i < valors.size(); ++i){
+            afegir = String.valueOf(valors.get(i));
+            txtField[i].setText(afegir);
+        }
+    }//GEN-LAST:event_AutocompletarMouseClicked
+
+    private void AutocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutocompletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AutocompletarActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -744,11 +752,10 @@ public class Jugar5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Autocompletar;
     private javax.swing.JButton enrere;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -757,9 +764,7 @@ public class Jugar5 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel numeros;
-    private javax.swing.JLabel numeros1;
     private javax.swing.JTextField primera;
     private javax.swing.JTextField primera10;
     private javax.swing.JTextField primera11;
