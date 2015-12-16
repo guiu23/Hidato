@@ -66,7 +66,7 @@ public class RankingPersonal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere1);
-        enrere1.setBounds(925, 551, 65, 23);
+        enrere1.setBounds(870, 510, 110, 50);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));

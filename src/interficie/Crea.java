@@ -64,7 +64,7 @@ public class Crea extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(900, 530, 71, 25);
+        enrere.setBounds(870, 510, 100, 50);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));

@@ -71,7 +71,7 @@ public class RankingGlobal extends javax.swing.JFrame {
         LlistarRankingGlobal.setViewportView(list1);
 
         getContentPane().add(LlistarRankingGlobal);
-        LlistarRankingGlobal.setBounds(63, 130, 839, 384);
+        LlistarRankingGlobal.setBounds(63, 130, 810, 384);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,19 +87,19 @@ public class RankingGlobal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 540, 71, 25);
+        enrere.setBounds(890, 500, 90, 50);
 
         jLabel1.setText("POSICIÓ");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(72, 105, 50, 16);
+        jLabel1.setBounds(72, 105, 50, 14);
 
         jLabel2.setText("USUARI");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(141, 105, 50, 16);
+        jLabel2.setBounds(141, 105, 50, 14);
 
         jLabel3.setText("PUNTUACIÓ");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(197, 105, 70, 16);
+        jLabel3.setBounds(197, 105, 70, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

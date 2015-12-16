@@ -63,7 +63,7 @@ public class AltresEstadistiques extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(920, 540, 65, 23);
+        enrere.setBounds(870, 500, 100, 50);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));

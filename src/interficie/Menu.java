@@ -136,7 +136,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(LogOut);
-        LogOut.setBounds(10, 490, 120, 30);
+        LogOut.setBounds(20, 480, 130, 40);
 
         sortir.setText("SORTIR");
         sortir.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +145,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sortir);
-        sortir.setBounds(880, 480, 90, 40);
+        sortir.setBounds(860, 470, 110, 50);
 
         jButton1.setText("Com jugar-hi?");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,19 +154,27 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(440, 490, 110, 23);
+        jButton1.setBounds(420, 470, 160, 40);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
         MenuPrincipal.setPreferredSize(new java.awt.Dimension(197, 40));
 
         JugarPartida.setBackground(new java.awt.Color(0, 0, 0));
+        JugarPartida.setForeground(new java.awt.Color(255, 255, 255));
         JugarPartida.setText("Jugar Partida");
         JugarPartida.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        JugarPartida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JugarPartida.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        JugarPartida.setIconTextGap(14);
+        JugarPartida.setInheritsPopupMenu(true);
+        JugarPartida.setPreferredSize(new java.awt.Dimension(130, 22));
 
+        NovaPartida.setBackground(new java.awt.Color(255, 255, 255));
         NovaPartida.setText("Nova Partida");
         NovaPartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
+        MapaAleatori.setBackground(new java.awt.Color(255, 255, 255));
         MapaAleatori.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         MapaAleatori.setText("Taulell Aleatori");
         MapaAleatori.addActionListener(new java.awt.event.ActionListener() {
@@ -176,6 +184,7 @@ public class Menu extends javax.swing.JFrame {
         });
         NovaPartida.add(MapaAleatori);
 
+        EscollirMapa.setBackground(new java.awt.Color(255, 255, 255));
         EscollirMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         EscollirMapa.setText("Escollir Taulell Predefinit");
         EscollirMapa.addActionListener(new java.awt.event.ActionListener() {
@@ -187,6 +196,7 @@ public class Menu extends javax.swing.JFrame {
 
         JugarPartida.add(NovaPartida);
 
+        CarregarPartida.setBackground(new java.awt.Color(255, 255, 255));
         CarregarPartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CarregarPartida.setText("Carregar Partida");
         CarregarPartida.addActionListener(new java.awt.event.ActionListener() {
@@ -199,9 +209,13 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(JugarPartida);
 
         CrearMapa.setBackground(new java.awt.Color(0, 0, 0));
+        CrearMapa.setForeground(new java.awt.Color(255, 255, 255));
         CrearMapa.setText("Crear Taulell");
         CrearMapa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        CrearMapa.setIconTextGap(14);
+        CrearMapa.setPreferredSize(new java.awt.Dimension(130, 22));
 
+        CrearMapaNou.setBackground(new java.awt.Color(255, 255, 255));
         CrearMapaNou.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CrearMapaNou.setText("Crear Taulell Nou");
         CrearMapaNou.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +225,7 @@ public class Menu extends javax.swing.JFrame {
         });
         CrearMapa.add(CrearMapaNou);
 
+        ModificarMapaExistents.setBackground(new java.awt.Color(255, 255, 255));
         ModificarMapaExistents.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ModificarMapaExistents.setText("Modificar Taulell Existent");
         ModificarMapaExistents.addActionListener(new java.awt.event.ActionListener() {
@@ -220,6 +235,7 @@ public class Menu extends javax.swing.JFrame {
         });
         CrearMapa.add(ModificarMapaExistents);
 
+        EsborrarMapa.setBackground(new java.awt.Color(255, 255, 255));
         EsborrarMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         EsborrarMapa.setText("Esborrar Taulell");
         EsborrarMapa.addActionListener(new java.awt.event.ActionListener() {
@@ -232,9 +248,13 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(CrearMapa);
 
         Ranking.setBackground(new java.awt.Color(0, 0, 0));
+        Ranking.setForeground(new java.awt.Color(255, 255, 255));
         Ranking.setText("Ranking");
         Ranking.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Ranking.setIconTextGap(31);
+        Ranking.setPreferredSize(new java.awt.Dimension(130, 22));
 
+        RankingPersonal.setBackground(new java.awt.Color(255, 255, 255));
         RankingPersonal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RankingPersonal.setText("Personal");
         RankingPersonal.addActionListener(new java.awt.event.ActionListener() {
@@ -244,9 +264,11 @@ public class Menu extends javax.swing.JFrame {
         });
         Ranking.add(RankingPersonal);
 
+        RankingTotal.setBackground(new java.awt.Color(255, 255, 255));
         RankingTotal.setText("Total");
         RankingTotal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
+        RankingGlobal.setBackground(new java.awt.Color(255, 255, 255));
         RankingGlobal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RankingGlobal.setText("RankingGlobal");
         RankingGlobal.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +278,7 @@ public class Menu extends javax.swing.JFrame {
         });
         RankingTotal.add(RankingGlobal);
 
+        Estadistiques.setBackground(new java.awt.Color(255, 255, 255));
         Estadistiques.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Estadistiques.setText("Altres Estadístiques");
         Estadistiques.addActionListener(new java.awt.event.ActionListener() {

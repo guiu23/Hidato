@@ -66,7 +66,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 540, 65, 23);
+        enrere.setBounds(885, 513, 90, 50);
 
         list1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +123,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(760, 193, 73, 30);
+        jButton1.setBounds(760, 180, 110, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

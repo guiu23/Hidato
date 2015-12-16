@@ -81,7 +81,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 540, 65, 23);
+        enrere.setBounds(865, 513, 110, 50);
 
         jScrollPane1.setViewportView(list1);
 
@@ -97,7 +97,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(810, 133, 60, 50);
+        jButton1.setBounds(810, 133, 100, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

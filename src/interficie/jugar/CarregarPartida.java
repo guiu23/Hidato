@@ -70,7 +70,7 @@ public class CarregarPartida extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(907, 536, 70, 30);
+        enrere.setBounds(890, 510, 90, 50);
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
@@ -90,7 +90,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         jScrollPane1.setViewportView(list1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(80, 150, 850, 380);
+        jScrollPane1.setBounds(80, 160, 780, 350);
 
         titol.setEditable(false);
         titol.setBackground(new java.awt.Color(0, 0, 0));
@@ -121,7 +121,7 @@ public class CarregarPartida extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(870, 103, 59, 30);
+        jButton1.setBounds(870, 90, 90, 50);
 
         on_vol_entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
