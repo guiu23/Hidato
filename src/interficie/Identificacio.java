@@ -12,11 +12,18 @@ public class Identificacio extends javax.swing.JFrame {
      * Creates new form Identificacio
      */
     public Identificacio() {
-        
         initComponents();
+        myinitcomponents();
         setSize(1000,600);
         setLocationRelativeTo(null);
         setResizable(false);
+    }
+    
+    private void myinitcomponents() {
+        fons = new javax.swing.JLabel();
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
     }
 
     /**
@@ -149,6 +156,7 @@ public class Identificacio extends javax.swing.JFrame {
     private javax.swing.JButton CarregarUsuari;
     private javax.swing.JButton CrearUsuari;
     private javax.swing.JButton EsborraUsuari;
+    private javax.swing.JLabel fons;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

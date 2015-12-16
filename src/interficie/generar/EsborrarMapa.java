@@ -48,6 +48,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         on_vol_entrar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -124,6 +125,10 @@ public class EsborrarMapa extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(760, 180, 110, 50);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -215,6 +220,7 @@ public class EsborrarMapa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;

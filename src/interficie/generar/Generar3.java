@@ -101,6 +101,7 @@ public class Generar3 extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -416,6 +417,10 @@ public class Generar3 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton10);
         jButton10.setBounds(710, 380, 60, 60);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -749,6 +754,7 @@ public class Generar3 extends javax.swing.JFrame {
     private javax.swing.JTextField c21;
     private javax.swing.JTextField c22;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

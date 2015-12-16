@@ -238,6 +238,7 @@ public class Generar9 extends javax.swing.JFrame {
         c83 = new javax.swing.JTextField();
         c81 = new javax.swing.JTextField();
         c80 = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1265,6 +1266,10 @@ public class Generar9 extends javax.swing.JFrame {
         getContentPane().add(c80);
         c80.setBounds(320, 400, 30, 30);
 
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -2120,6 +2125,7 @@ public class Generar9 extends javax.swing.JFrame {
     private javax.swing.JTextField c87;
     private javax.swing.JTextField c88;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

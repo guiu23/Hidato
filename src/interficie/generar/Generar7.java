@@ -174,6 +174,7 @@ public class Generar7 extends javax.swing.JFrame {
         c63 = new javax.swing.JTextField();
         c62 = new javax.swing.JTextField();
         c61 = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -881,6 +882,10 @@ public class Generar7 extends javax.swing.JFrame {
         getContentPane().add(c61);
         c61.setBounds(330, 390, 40, 40);
 
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1482,6 +1487,7 @@ public class Generar7 extends javax.swing.JFrame {
     private javax.swing.JTextField c65;
     private javax.swing.JTextField c66;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

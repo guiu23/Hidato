@@ -53,6 +53,7 @@ public class RankingPersonal extends javax.swing.JFrame {
         tot_diffclty_2 = new javax.swing.JTextField();
         tot_diffclty_3 = new javax.swing.JTextField();
         pnts = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -210,6 +211,10 @@ public class RankingPersonal extends javax.swing.JFrame {
         getContentPane().add(pnts);
         pnts.setBounds(780, 290, 70, 70);
 
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -300,6 +305,7 @@ public class RankingPersonal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere1;
+    private javax.swing.JLabel fons;
     private javax.swing.JTextField pnts;
     private javax.swing.JTextField text1;
     private javax.swing.JTextField text2;

@@ -44,6 +44,7 @@ public class RankingGlobal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -100,6 +101,10 @@ public class RankingGlobal extends javax.swing.JFrame {
         jLabel3.setText("PUNTUACIÓ");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(197, 105, 70, 14);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,6 +177,7 @@ public class RankingGlobal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane LlistarRankingGlobal;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

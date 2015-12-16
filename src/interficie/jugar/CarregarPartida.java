@@ -52,6 +52,7 @@ public class CarregarPartida extends javax.swing.JFrame {
         titol = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         on_vol_entrar = new javax.swing.JTextField();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -130,6 +131,10 @@ public class CarregarPartida extends javax.swing.JFrame {
         });
         getContentPane().add(on_vol_entrar);
         on_vol_entrar.setBounds(690, 100, 170, 30);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -250,6 +255,7 @@ public class CarregarPartida extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;

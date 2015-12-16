@@ -66,6 +66,7 @@ public class Menu extends javax.swing.JFrame {
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        fons = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
         NovaPartida = new javax.swing.JMenu();
@@ -155,6 +156,10 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(420, 470, 160, 40);
+
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
         MenuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
@@ -574,6 +579,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem RankingGlobal;
     private javax.swing.JMenuItem RankingPersonal;
     private javax.swing.JMenu RankingTotal;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
