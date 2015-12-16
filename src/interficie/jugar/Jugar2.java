@@ -24,7 +24,8 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
 public class Jugar2 extends javax.swing.JFrame {
     public static String us;
     public static int dif;
-   
+    public static int size = 2;
+
     /**
      * 
      */
@@ -508,7 +509,7 @@ public class Jugar2 extends javax.swing.JFrame {
             afegirmarca = false;
         }
         else{
-            DefineixCasella(val, f, c);
+            DefineixCasella(val, f, c, size);
             String afegirstr;
             int afegirint = getCasella(f,c);   
             if (afegirint == 0) afegirstr = null;

@@ -22,6 +22,7 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
  */
 public class Generar2 extends javax.swing.JFrame {
     public static String us;
+    public static int size = 2;
     /**
      * Creates new form 
      */
@@ -423,7 +424,7 @@ public class Generar2 extends javax.swing.JFrame {
             invalida = false;
             val = -1;
         }
-        DefineixCasella(val, f, c);
+        DefineixCasella(val, f, c, size);
         String afegirstr;
         int afegirint = getCasella(f,c);
         if (afegirint == 0){

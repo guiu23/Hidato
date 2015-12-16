@@ -26,6 +26,8 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
 public class Jugar9 extends javax.swing.JFrame {
     public static String us;
     public static int dif;
+    public static int size = 9;
+
     /**
      * Creates new form Identificacio
      */

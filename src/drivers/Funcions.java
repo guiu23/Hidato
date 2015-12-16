@@ -276,6 +276,17 @@ public class Funcions {
         HBD.saveTemporalResolts();
     }
     
+    public static BoardHidato CarregarTemporal(int size) {
+       HBD.loadTemporal();
+       BoardHidato Taulell = new BoardHidato(size,"temporal");
+       boolean trobat = false;
+       for (int i=0;i < HBD._temporal.size() && !trobat;++i){
+            Taulell =  HBD._temporal.get(i);
+            trobat = true;
+        }
+       return Taulell;
+    }
+    
     public static BoardHidato CarregarTemporal() {
        HBD.loadTemporal();
        BoardHidato Taulell = new BoardHidato(2,"temporal");
@@ -286,7 +297,6 @@ public class Funcions {
         }
        return Taulell;
     }
-    
     
     public static boolean perafegir(BoardHidato Taulell, int row, int column){
         if (Taulell.getValidaCell(row, column) && Taulell.getValueCell(row,column) == 0) return true;

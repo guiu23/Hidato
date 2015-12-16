@@ -25,6 +25,7 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
  */
 public class Generar3 extends javax.swing.JFrame {
     public static String us;
+    public static Integer size = 3;
     /**
      * Creates new form Identificacio
      */
@@ -618,7 +619,7 @@ public class Generar3 extends javax.swing.JFrame {
             invalida = false;
             val = -1;
         }
-        DefineixCasella(val, f, c);
+        DefineixCasella(val, f, c, size);
         String afegirstr;
         int afegirint = getCasella(f,c);
         if (afegirint == 0){

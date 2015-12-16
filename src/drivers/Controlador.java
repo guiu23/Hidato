@@ -98,10 +98,10 @@ public class Controlador {
         HBD._temporal.add(Taulell);    
     }
     
-    public static void DefineixCasella(int valor, int i, int j){ //Posa el seu valor a una casella d'un Taulell 
+    public static void DefineixCasella(int valor, int i, int j,int size){ //Posa el seu valor a una casella d'un Taulell 
         HBD = new HidatoBD();
         HBD.loadTemporal();
-        BoardHidato Taulell = Funcions.CarregarTemporal(); 
+        BoardHidato Taulell = Funcions.CarregarTemporal(size); 
         Taulell.setValProvCell(valor, i, j);
         Funcions.CleanTemporal();
         HBD._temporal.add(Taulell);
