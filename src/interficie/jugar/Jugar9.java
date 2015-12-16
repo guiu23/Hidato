@@ -5,13 +5,7 @@
  */
 package interficie.jugar;
 
-import static drivers.Controlador.CarregarSolucioTaulell;
-import static drivers.Controlador.carregarTaulellTemporal;
-import static drivers.Controlador.començarJoc;
-import static drivers.Controlador.comprovarHidato;
-import static drivers.Controlador.es_ultim;
-import static drivers.Controlador.guardarPartida;
-import static drivers.Controlador.partidaAcabada;
+import static drivers.Controlador.*;
 import interficie.Menu;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -253,6 +247,7 @@ public class Jugar9 extends javax.swing.JFrame {
         numeros1 = new javax.swing.JLabel();
         Autocompletar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1200,8 +1195,13 @@ public class Jugar9 extends javax.swing.JFrame {
                 jButton10MouseClicked(evt);
             }
         });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 90, 23);
+        jButton10.setBounds(20, 370, 110, 50);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros1.setText("Números:");
@@ -1220,49 +1220,89 @@ public class Jugar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(20, 240, 110, 60);
+        Autocompletar.setBounds(20, 300, 110, 60);
 
         jButton11.setText("Esborrar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton11);
         jButton11.setBounds(560, 370, 73, 23);
 
+        jButton12.setText("0");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton12);
+        jButton12.setBounds(450, 370, 50, 50);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+     private void boto(String textboto){
+        //array dstrings com tantes posicions como caselles. 
+        //a cada casella li passem a boto la seva posicio dins larray
+        String S = Caselles[i];
+        
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
+        if (textboto == "Esborrar") val = 0;
+        else val = Integer.parseInt(tf.getText() + textboto);
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
+        if (afegirmarca){
+            val = Integer.parseInt(textboto);
+            switchAnnotationCasella(val, f, c);
+            afegirmarca = false;
+        }
+        else{
+            DefineixCasella(val, f, c, size);
+            String afegirstr;
+            int afegirint = getCasella(f,c);   
+            if (afegirint == 0) afegirstr = null;
+            else if (afegirint == -1) afegirstr = "X";
+            else afegirstr = String.valueOf(afegirint);
+            tf.setText(afegirstr);
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton1.getText());        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton2.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton3.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton4.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton5.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton6.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton7.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton8.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        boto(jButton9.getText());// TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
@@ -1308,327 +1348,570 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c53MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,3)){
+            tf = c53;
+            i = 48;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c53MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,0)){
+            tf = c00;
+            i = 0;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,1)){
+                    tf = c01;
+                    i = 1;
+                }
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,2)){
+            tf = c02;
+            i = 2;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c02MouseClicked
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,3)){
+            tf = c03;
+            i = 3;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c03MouseClicked
 
     private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,4)){
+            tf = c04;
+            i = 4;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c04MouseClicked
 
     private void c05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c05MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,5)){
+            tf = c05;
+            i = 5;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c05MouseClicked
 
     private void c06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c06MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,6)){
+            tf = c06;
+            i = 6;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c06MouseClicked
 
     private void c82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c82MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,2)){
+            tf = c74;
+            i = 0;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c82MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,0)){
+            tf = c10;
+            i = 9;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,0)){
+            tf = c20;
+            i = 18;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c20MouseClicked
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,0)){
+            tf = c30;
+            i = 27;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c30MouseClicked
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,0)){
+            tf = c40;
+            i = 36;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c40MouseClicked
 
     private void c50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c50MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,0)){
+            tf = c50;
+            i = 45;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c50MouseClicked
 
     private void c60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c60MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,0)){
+            tf = c60;
+            i = 54;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c60MouseClicked
 
     private void c70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c70MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,0)){
+            tf = c70;
+            i = 63;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c70MouseClicked
 
     private void c71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c71MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,1)){
+            tf = c71;
+            i = 64;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c71MouseClicked
 
     private void c72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c72MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,2)){
+            tf = c72;
+            i = 65;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c72MouseClicked
 
     private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,1)){
+            tf = c61;
+            i = 55;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c61MouseClicked
 
     private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,1)){
+            tf = c51;
+            i = 46;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c51MouseClicked
 
     private void c41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c41MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,1)){
+            tf = c41;
+            i = 37;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c41MouseClicked
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,1)){
+            tf = c31;
+            i = 28;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c31MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,1)){
+            tf = c21;
+            i = 19;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c21MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,1)){
+            tf = c11;
+            i = 10;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,2)){
+            tf = c12;
+            i = 11;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,3)){
+            tf = c13;
+            i = 12;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c13MouseClicked
 
     private void c14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c14MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,4)){
+            tf = c14;
+            i = 13;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c14MouseClicked
 
     private void c15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c15MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,5)){
+            tf = c15;
+            i = 14;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c15MouseClicked
 
     private void c16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c16MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,6)){
+            tf = c16;
+            i = 15;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c16MouseClicked
 
     private void c17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c17MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,7)){
+            tf = c17;
+            i = 16;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c17MouseClicked
 
     private void c27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c27MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,7)){
+            tf = c27;
+            i = 26;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c27MouseClicked
 
     private void c37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c37MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,7)){
+            tf = c37;
+            i = 34;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c37MouseClicked
 
     private void c47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c47MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,7)){
+            tf = c47;
+            i = 43;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c47MouseClicked
 
     private void c57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c57MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,7)){
+            tf = c57;
+            i = 52;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c57MouseClicked
 
     private void c67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c67MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,7)){
+            tf = c67;
+            i = 61;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c67MouseClicked
 
     private void c77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c77MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,7)){
+            tf = c77;
+            i = 70;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c77MouseClicked
 
     private void c76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c76MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,6)){
+            tf = c76;
+            i = 69;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c76MouseClicked
 
     private void c75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c75MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,5)){
+            tf = c75;
+            i = 68;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c75MouseClicked
 
     private void c74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c74MouseClicked
-        // TODO add your handling code here:
+       if (!es_written(7,4)){
+            tf = c74;
+            i = 67;
+        } // TODO add your handling code here:
     }//GEN-LAST:event_c74MouseClicked
 
     private void c73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c73MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,3)){
+            tf = c73;
+            i = 66;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c73MouseClicked
 
     private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,2)){
+            tf = c62;
+            i = 56;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c62MouseClicked
 
     private void c63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c63MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,3)){
+            tf = c63;
+            i = 57;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c63MouseClicked
 
     private void c64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c64MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,4)){
+            tf = c64;
+            i = 58;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c64MouseClicked
 
     private void c65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c65MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,5)){
+            tf = c65;
+            i = 59;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c65MouseClicked
 
     private void c66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c66MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,6)){
+            tf = c66;
+            i = 60;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c66MouseClicked
 
     private void c56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c56MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,6)){
+            tf = c56;
+            i = 51;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c56MouseClicked
 
     private void c46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c46MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,6)){
+            tf = c46;
+            i = 42;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c46MouseClicked
 
     private void c36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c36MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,6)){
+            tf = c36;
+            i = 33;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c36MouseClicked
 
     private void c26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c26MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,6)){
+            tf = c26;
+            i = 24;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c26MouseClicked
 
     private void c25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c25MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,5)){
+            tf = c25;
+            i = 23;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c25MouseClicked
 
     private void c35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c35MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,5)){
+            tf = c35;
+            i = 32;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c35MouseClicked
 
     private void c45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c45MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,5)){
+            tf = c45;
+            i = 41;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c45MouseClicked
 
     private void c55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c55MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,5)){
+            tf = c55;
+            i = 50;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c55MouseClicked
 
     private void c54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c54MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,4)){
+            tf = c54;
+            i = 49;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c54MouseClicked
 
     private void c44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c44MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,4)){
+            tf = c44;
+            i = 40;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c44MouseClicked
 
     private void c34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c34MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,4)){
+            tf = c34;
+            i = 31;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c34MouseClicked
 
     private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,4)){
+            tf = c24;
+            i = 22;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c24MouseClicked
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,3)){
+            tf = c23;
+            i = 21;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c23MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,2)){
+            tf = c22;
+            i = 20;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c22MouseClicked
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,2)){
+            tf = c32;
+            i = 29;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c32MouseClicked
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,3)){
+            tf = c33;
+            i = 30;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c33MouseClicked
 
     private void c43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c43MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,3)){
+            tf = c43;
+            i = 39;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c43MouseClicked
 
     private void c42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c42MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,2)){
+            tf = c42;
+            i = 38;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c42MouseClicked
 
     private void c52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c52MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,2)){
+            tf = c52;
+            i = 47;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c52MouseClicked
 
     private void c07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c07MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,7)){
+            tf = c07;
+            i = 7;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c07MouseClicked
 
     private void c08MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c08MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,8)){
+            tf = c08;
+            i = 8;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c08MouseClicked
 
     private void c18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c18MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(1,8)){
+            tf = c18;
+            i = 17;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c18MouseClicked
 
     private void c28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c28MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(2,8)){
+            tf = c28;
+            i = 26;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c28MouseClicked
 
     private void c38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c38MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(3,8)){
+            tf = c38;
+            i = 35;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c38MouseClicked
 
     private void c48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c48MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,8)){
+            tf = c48;
+            i = 44;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c48MouseClicked
 
     private void c58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c58MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(5,8)){
+            tf = c58;
+            i = 53;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c58MouseClicked
 
     private void c68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c68MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(6,8)){
+            tf = c68;
+            i = 62;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c68MouseClicked
 
     private void c78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c78MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(7,8)){
+            tf = c78;
+            i = 71;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c78MouseClicked
 
     private void c88MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c88MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,8)){
+            tf = c88;
+            i = 80;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c88MouseClicked
 
     private void c87MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c87MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,7)){
+            tf = c87;
+            i = 79;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c87MouseClicked
 
     private void c86MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c86MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,6)){
+            tf = c86;
+            i = 78;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c86MouseClicked
 
     private void c85MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c85MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,5)){
+            tf = c85;
+            i = 77;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c85MouseClicked
 
     private void c84MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c84MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,4)){
+            tf = c84;
+            i = 76;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c84MouseClicked
 
     private void c83MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c83MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,3)){
+            tf = c83;
+            i = 75;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c83MouseClicked
 
     private void c81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c81MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(8,1)){
+            tf = c81;
+            i = 73;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c81MouseClicked
 
     private void c80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c80MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(0,0)){
+            tf = c80;
+            i = 72;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_c80MouseClicked
 
     private void primera163MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera163MouseClicked
@@ -1668,6 +1951,18 @@ public class Jugar9 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        boto("Esborrar");        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        boto(jButton12.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     
     /**
@@ -1798,6 +2093,7 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1813,6 +2109,6 @@ public class Jugar9 extends javax.swing.JFrame {
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c08","c10","c11","c12","c13","c14","c15","c16","c17","c18","c20","c21","c22","c23","c24","c25","c26","c27","c28","c30","c31","c32","c33","c34","c35","c36","c37","c38","c40","c41","c42","c43","c44","c45","c46","c47","c48","c50","c51","c52","c53","c54","c55","c56","c57","c58","c60","c61","c62","c63","c64","c65","c66","c67","c68","c70","c71","c72","c73","c74","c75","c76","c77","c78","c80","c81","c82","c83","c84","c85","c86","c87","c88"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[81];
     javax.swing.JTextField tf = new javax.swing.JTextField();
-    private boolean apretat;
+    private boolean apretat,afegirmarca;
     private int val,f,c,i;
 }
