@@ -40,8 +40,8 @@ public class Crea extends javax.swing.JFrame {
         user = new javax.swing.JTextField();
         Crea = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
-        text_nom = new javax.swing.JTextField();
-        text_contra = new javax.swing.JTextField();
+        titol = new javax.swing.JLabel();
+        titol1 = new javax.swing.JLabel();
         titols = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
@@ -88,48 +88,17 @@ public class Crea extends javax.swing.JFrame {
         getContentPane().add(password);
         password.setBounds(400, 350, 210, 50);
 
-        text_nom.setEditable(false);
-        text_nom.setBackground(new java.awt.Color(0, 0, 0));
-        text_nom.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
-        text_nom.setForeground(new java.awt.Color(255, 255, 255));
-        text_nom.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text_nom.setText("nom:");
-        text_nom.setBorder(null);
-        text_nom.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        text_nom.setRequestFocusEnabled(false);
-        text_nom.setSelectionColor(new java.awt.Color(153, 153, 153));
-        text_nom.setVerifyInputWhenFocusTarget(false);
-        text_nom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                text_nomMouseClicked(evt);
-            }
-        });
-        text_nom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_nomActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text_nom);
-        text_nom.setBounds(200, 270, 80, 50);
+        titol.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setText("contrasenya:");
+        getContentPane().add(titol);
+        titol.setBounds(210, 360, 130, 23);
 
-        text_contra.setEditable(false);
-        text_contra.setBackground(new java.awt.Color(0, 0, 0));
-        text_contra.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
-        text_contra.setForeground(new java.awt.Color(255, 255, 255));
-        text_contra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text_contra.setText("contrasenya:");
-        text_contra.setBorder(null);
-        text_contra.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        text_contra.setRequestFocusEnabled(false);
-        text_contra.setSelectionColor(new java.awt.Color(153, 153, 153));
-        text_contra.setVerifyInputWhenFocusTarget(false);
-        text_contra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_contraActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text_contra);
-        text_contra.setBounds(200, 350, 140, 50);
+        titol1.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        titol1.setForeground(new java.awt.Color(255, 255, 255));
+        titol1.setText("nom:");
+        getContentPane().add(titol1);
+        titol1.setBounds(210, 280, 44, 23);
 
         titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 80)); // NOI18N
         titols.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,18 +143,6 @@ public class Crea extends javax.swing.JFrame {
             /*for(int i = 0; i<HBD._players.size(); ++i)                PER MIRAR SI EL CREA BÉ
                 JOptionPane.showMessageDialog(frame,HBD._players.get(i).getName());*/
     }//GEN-LAST:event_CreaActionPerformed
-
-    private void text_nomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_text_nomMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_nomMouseClicked
-
-    private void text_nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_nomActionPerformed
-
-    private void text_contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_contraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_contraActionPerformed
 
     
     /**
@@ -243,8 +200,8 @@ public class Crea extends javax.swing.JFrame {
     private javax.swing.JButton enrere;
     private javax.swing.JLabel fons;
     private javax.swing.JPasswordField password;
-    private javax.swing.JTextField text_contra;
-    private javax.swing.JTextField text_nom;
+    private javax.swing.JLabel titol;
+    private javax.swing.JLabel titol1;
     private javax.swing.JLabel titols;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables

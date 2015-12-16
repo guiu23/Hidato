@@ -43,30 +43,16 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
         enrere = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
         on_vol_entrar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        titol = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Escull el taulell a modificar:");
-        jTextField1.setFocusable(false);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(166, 124, 260, 54);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,7 +75,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(142, 220, 731, 229);
         getContentPane().add(on_vol_entrar);
-        on_vol_entrar.setBounds(610, 140, 190, 40);
+        on_vol_entrar.setBounds(550, 140, 230, 40);
 
         jButton1.setText("Escull");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,6 +85,12 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(810, 133, 100, 60);
+
+        titol.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setText("Escull el taulell a modificar:");
+        getContentPane().add(titol);
+        titol.setBounds(150, 150, 340, 23);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -129,10 +121,6 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
@@ -221,8 +209,8 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
     private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private java.awt.List list1;
     private javax.swing.JTextField on_vol_entrar;
+    private javax.swing.JLabel titol;
     // End of variables declaration//GEN-END:variables
 }

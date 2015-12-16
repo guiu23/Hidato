@@ -37,27 +37,17 @@ public class RankingGlobal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
         LlistarRankingGlobal = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
         enrere = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        titol4 = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Ranking Global");
-        jTextField1.setFocusable(false);
-        jTextField1.setRequestFocusEnabled(false);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(383, 20, 220, 74);
 
         LlistarRankingGlobal.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         LlistarRankingGlobal.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -101,6 +91,12 @@ public class RankingGlobal extends javax.swing.JFrame {
         jLabel3.setText("PUNTUACIÓ");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(197, 105, 70, 14);
+
+        titol4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        titol4.setForeground(new java.awt.Color(255, 255, 255));
+        titol4.setText("Ranking Global");
+        getContentPane().add(titol4);
+        titol4.setBounds(340, 50, 250, 50);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -181,7 +177,7 @@ public class RankingGlobal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
     private java.awt.List list1;
+    private javax.swing.JLabel titol4;
     // End of variables declaration//GEN-END:variables
 }

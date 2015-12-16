@@ -41,18 +41,18 @@ public class RankingPersonal extends javax.swing.JFrame {
     private void initComponents() {
 
         enrere1 = new javax.swing.JButton();
-        titol = new javax.swing.JTextField();
-        text1 = new javax.swing.JTextField();
-        text2 = new javax.swing.JTextField();
-        text3 = new javax.swing.JTextField();
-        text4 = new javax.swing.JTextField();
-        text5 = new javax.swing.JTextField();
-        text7 = new javax.swing.JTextField();
         tot_sol = new javax.swing.JTextField();
         tot_diffclty_1 = new javax.swing.JTextField();
         tot_diffclty_2 = new javax.swing.JTextField();
         tot_diffclty_3 = new javax.swing.JTextField();
+        titol4 = new javax.swing.JLabel();
         pnts = new javax.swing.JTextField();
+        titol2 = new javax.swing.JLabel();
+        titol3 = new javax.swing.JLabel();
+        titol6 = new javax.swing.JLabel();
+        titol5 = new javax.swing.JLabel();
+        titol7 = new javax.swing.JLabel();
+        titol8 = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,118 +68,6 @@ public class RankingPersonal extends javax.swing.JFrame {
         });
         getContentPane().add(enrere1);
         enrere1.setBounds(870, 510, 110, 50);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        titol.setText("Estadístiques personals");
-        titol.setFocusable(false);
-        titol.setRequestFocusEnabled(false);
-        titol.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                titolActionPerformed(evt);
-            }
-        });
-        getContentPane().add(titol);
-        titol.setBounds(314, 29, 330, 89);
-
-        text1.setEditable(false);
-        text1.setBackground(new java.awt.Color(0, 0, 0));
-        text1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text1.setForeground(new java.awt.Color(255, 255, 255));
-        text1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text1.setText("Partides totals solucionades:");
-        text1.setFocusable(false);
-        text1.setRequestFocusEnabled(false);
-        text1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text1);
-        text1.setBounds(107, 161, 238, 51);
-
-        text2.setEditable(false);
-        text2.setBackground(new java.awt.Color(0, 0, 0));
-        text2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text2.setForeground(new java.awt.Color(255, 255, 255));
-        text2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text2.setText("Taulells diferents solucionats:");
-        text2.setFocusable(false);
-        text2.setRequestFocusEnabled(false);
-        text2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text2);
-        text2.setBounds(107, 258, 246, 51);
-
-        text3.setEditable(false);
-        text3.setBackground(new java.awt.Color(0, 0, 0));
-        text3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text3.setForeground(new java.awt.Color(255, 255, 255));
-        text3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text3.setText("En dificultat fàcil: ");
-        text3.setFocusable(false);
-        text3.setRequestFocusEnabled(false);
-        text3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text3);
-        text3.setBounds(200, 340, 156, 51);
-
-        text4.setEditable(false);
-        text4.setBackground(new java.awt.Color(0, 0, 0));
-        text4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text4.setForeground(new java.awt.Color(255, 255, 255));
-        text4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text4.setText("En dificultat mitja: ");
-        text4.setFocusable(false);
-        text4.setRequestFocusEnabled(false);
-        text4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text4);
-        text4.setBounds(193, 410, 160, 51);
-
-        text5.setEditable(false);
-        text5.setBackground(new java.awt.Color(0, 0, 0));
-        text5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text5.setForeground(new java.awt.Color(255, 255, 255));
-        text5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text5.setText("En dificultat difícil: ");
-        text5.setFocusable(false);
-        text5.setRequestFocusEnabled(false);
-        text5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text5);
-        text5.setBounds(193, 479, 160, 51);
-
-        text7.setEditable(false);
-        text7.setBackground(new java.awt.Color(0, 0, 0));
-        text7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        text7.setForeground(new java.awt.Color(255, 255, 255));
-        text7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        text7.setText("Puntuació:");
-        text7.setFocusable(false);
-        text7.setRequestFocusEnabled(false);
-        text7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text7);
-        text7.setBounds(610, 290, 130, 65);
 
         tot_sol.setEditable(false);
         tot_sol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -205,11 +93,53 @@ public class RankingPersonal extends javax.swing.JFrame {
         getContentPane().add(tot_diffclty_3);
         tot_diffclty_3.setBounds(380, 480, 50, 50);
 
+        titol4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        titol4.setForeground(new java.awt.Color(255, 255, 255));
+        titol4.setText("Estadístiques personals");
+        getContentPane().add(titol4);
+        titol4.setBounds(310, 50, 370, 50);
+
         pnts.setEditable(false);
         pnts.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         pnts.setRequestFocusEnabled(false);
         getContentPane().add(pnts);
         pnts.setBounds(780, 290, 70, 70);
+
+        titol2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol2.setForeground(new java.awt.Color(255, 255, 255));
+        titol2.setText("Partides totals solucionades:");
+        getContentPane().add(titol2);
+        titol2.setBounds(110, 170, 230, 22);
+
+        titol3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol3.setForeground(new java.awt.Color(255, 255, 255));
+        titol3.setText("Taulells diferents solucionats:");
+        getContentPane().add(titol3);
+        titol3.setBounds(110, 270, 250, 22);
+
+        titol6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol6.setForeground(new java.awt.Color(255, 255, 255));
+        titol6.setText("En dificultat mitja:");
+        getContentPane().add(titol6);
+        titol6.setBounds(200, 430, 150, 22);
+
+        titol5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol5.setForeground(new java.awt.Color(255, 255, 255));
+        titol5.setText("En dificultat fàcil:");
+        getContentPane().add(titol5);
+        titol5.setBounds(210, 350, 140, 30);
+
+        titol7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol7.setForeground(new java.awt.Color(255, 255, 255));
+        titol7.setText("En dificultat difícil:");
+        getContentPane().add(titol7);
+        titol7.setBounds(200, 490, 160, 22);
+
+        titol8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        titol8.setForeground(new java.awt.Color(255, 255, 255));
+        titol8.setText("Puntuació:");
+        getContentPane().add(titol8);
+        titol8.setBounds(620, 310, 120, 29);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -235,34 +165,6 @@ public class RankingPersonal extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_enrere1ActionPerformed
-
-    private void titolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titolActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_titolActionPerformed
-
-    private void text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text1ActionPerformed
-
-    private void text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text2ActionPerformed
-
-    private void text3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text3ActionPerformed
-
-    private void text4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text4ActionPerformed
-
-    private void text5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text5ActionPerformed
-
- void text7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -307,13 +209,13 @@ public class RankingPersonal extends javax.swing.JFrame {
     private javax.swing.JButton enrere1;
     private javax.swing.JLabel fons;
     private javax.swing.JTextField pnts;
-    private javax.swing.JTextField text1;
-    private javax.swing.JTextField text2;
-    private javax.swing.JTextField text3;
-    private javax.swing.JTextField text4;
-    private javax.swing.JTextField text5;
-    private javax.swing.JTextField text7;
-    private javax.swing.JTextField titol;
+    private javax.swing.JLabel titol2;
+    private javax.swing.JLabel titol3;
+    private javax.swing.JLabel titol4;
+    private javax.swing.JLabel titol5;
+    private javax.swing.JLabel titol6;
+    private javax.swing.JLabel titol7;
+    private javax.swing.JLabel titol8;
     private javax.swing.JTextField tot_diffclty_1;
     private javax.swing.JTextField tot_diffclty_2;
     private javax.swing.JTextField tot_diffclty_3;

@@ -46,11 +46,11 @@ public class CarregarPartida extends javax.swing.JFrame {
     private void initComponents() {
 
         enrere = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
         jButton1 = new javax.swing.JButton();
         on_vol_entrar = new javax.swing.JTextField();
+        titol = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,15 +71,6 @@ public class CarregarPartida extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(890, 510, 90, 50);
-
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Selecciona la partida a carregar:");
-        jTextField1.setFocusable(false);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(35, 116, 256, 28);
 
         list1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         list1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +95,7 @@ public class CarregarPartida extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(870, 90, 90, 50);
+        jButton1.setBounds(800, 90, 90, 50);
 
         on_vol_entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +103,13 @@ public class CarregarPartida extends javax.swing.JFrame {
             }
         });
         getContentPane().add(on_vol_entrar);
-        on_vol_entrar.setBounds(690, 100, 170, 30);
+        on_vol_entrar.setBounds(540, 100, 210, 30);
+
+        titol.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
+        titol.setForeground(new java.awt.Color(255, 255, 255));
+        titol.setText("Selecciona la partida a carregar:");
+        getContentPane().add(titol);
+        titol.setBounds(90, 110, 340, 23);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -240,9 +237,9 @@ public class CarregarPartida extends javax.swing.JFrame {
     private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
     private java.awt.List list1;
     private javax.swing.JTextField on_vol_entrar;
+    private javax.swing.JLabel titol;
     // End of variables declaration//GEN-END:variables
 
 }

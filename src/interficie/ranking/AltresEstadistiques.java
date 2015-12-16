@@ -38,13 +38,13 @@ public class AltresEstadistiques extends javax.swing.JFrame {
     private void initComponents() {
 
         enrere = new javax.swing.JButton();
-        titol = new javax.swing.JTextField();
-        text1 = new javax.swing.JTextField();
-        text2 = new javax.swing.JTextField();
-        text3 = new javax.swing.JTextField();
         num_jug = new javax.swing.JTextField();
         num_guard = new javax.swing.JTextField();
         num_sol = new javax.swing.JTextField();
+        titol4 = new javax.swing.JLabel();
+        titol1 = new javax.swing.JLabel();
+        titol2 = new javax.swing.JLabel();
+        titol3 = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,67 +65,6 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         });
         getContentPane().add(enrere);
         enrere.setBounds(870, 500, 100, 50);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        titol.setText("Altres Estadístiques");
-        titol.setFocusable(false);
-        titol.setRequestFocusEnabled(false);
-        titol.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                titolActionPerformed(evt);
-            }
-        });
-        getContentPane().add(titol);
-        titol.setBounds(336, 38, 270, 78);
-
-        text1.setEditable(false);
-        text1.setBackground(new java.awt.Color(0, 0, 0));
-        text1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text1.setForeground(new java.awt.Color(255, 255, 255));
-        text1.setText("Número de jugadors del joc:");
-        text1.setFocusable(false);
-        text1.setRequestFocusEnabled(false);
-        text1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text1);
-        text1.setBounds(150, 190, 240, 51);
-
-        text2.setEditable(false);
-        text2.setBackground(new java.awt.Color(0, 0, 0));
-        text2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text2.setForeground(new java.awt.Color(255, 255, 255));
-        text2.setText("Número de partides guardades al joc:");
-        text2.setFocusable(false);
-        text2.setRequestFocusEnabled(false);
-        text2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text2);
-        text2.setBounds(150, 310, 310, 51);
-
-        text3.setEditable(false);
-        text3.setBackground(new java.awt.Color(0, 0, 0));
-        text3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        text3.setForeground(new java.awt.Color(255, 255, 255));
-        text3.setText("Número de partides solucionades del joc:");
-        text3.setFocusable(false);
-        text3.setRequestFocusEnabled(false);
-        text3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(text3);
-        text3.setBounds(150, 420, 340, 51);
 
         num_jug.setEditable(false);
         num_jug.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -189,6 +128,30 @@ public class AltresEstadistiques extends javax.swing.JFrame {
         getContentPane().add(num_sol);
         num_sol.setBounds(520, 420, 60, 50);
 
+        titol4.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        titol4.setForeground(new java.awt.Color(255, 255, 255));
+        titol4.setText("Altres Estadístiques");
+        getContentPane().add(titol4);
+        titol4.setBounds(330, 60, 320, 50);
+
+        titol1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol1.setForeground(new java.awt.Color(255, 255, 255));
+        titol1.setText("Número de partides solucionades del joc:");
+        getContentPane().add(titol1);
+        titol1.setBounds(150, 430, 340, 22);
+
+        titol2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol2.setForeground(new java.awt.Color(255, 255, 255));
+        titol2.setText("Número de jugadors del joc:");
+        getContentPane().add(titol2);
+        titol2.setBounds(150, 200, 230, 22);
+
+        titol3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        titol3.setForeground(new java.awt.Color(255, 255, 255));
+        titol3.setText("Número de partides guardades al joc:");
+        getContentPane().add(titol3);
+        titol3.setBounds(150, 320, 310, 22);
+
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
         fons.setBounds(0, 0, 1000, 600);
@@ -214,22 +177,6 @@ public class AltresEstadistiques extends javax.swing.JFrame {
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
-
-    private void titolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_titolActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_titolActionPerformed
-
-    private void text1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text1ActionPerformed
-
-    private void text2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text2ActionPerformed
-
-    private void text3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text3ActionPerformed
 
     private void num_jugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_jugActionPerformed
         // TODO add your handling code here:
@@ -302,9 +249,9 @@ public class AltresEstadistiques extends javax.swing.JFrame {
     private javax.swing.JTextField num_guard;
     private javax.swing.JTextField num_jug;
     private javax.swing.JTextField num_sol;
-    private javax.swing.JTextField text1;
-    private javax.swing.JTextField text2;
-    private javax.swing.JTextField text3;
-    private javax.swing.JTextField titol;
+    private javax.swing.JLabel titol1;
+    private javax.swing.JLabel titol2;
+    private javax.swing.JLabel titol3;
+    private javax.swing.JLabel titol4;
     // End of variables declaration//GEN-END:variables
 }
