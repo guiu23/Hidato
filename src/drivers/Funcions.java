@@ -189,7 +189,7 @@ public class Funcions {
             BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
             copiarBoard(TaulellRes, Taulell);
 
-            solve_modifica(TaulellRes, TaulellRes.getSize(), false);
+            solve_genera(TaulellRes, TaulellRes.getSize(), false);
             
             imprimeixValors(TaulellRes);
                         
@@ -730,23 +730,24 @@ public class Funcions {
         fi = false;
     }
     
-    /*
-    public static void backtrack(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure, int cont)   {
+    public static void backtrack_genera(BoardHidato Taulell, boolean[][] visitats,int startx, int starty, Integer X[], Integer Y[], int current, int size, boolean escriure, long inicial)   {
         // Fent servir el taulell, la matriu de visitats, el punt de start i el punt de finish,
         // resoldre el taulell i posar els valors de caselles not written als que toquen
         Boolean canviat = false;
-        //imprimeixValors(Taulell);
-        if (cont >= max_cont) {
-            //System.out.println("OUT");
-            return;
-        }
-        else if (comprovar2(Taulell, X, Y, size, startx, starty)) {
-            if (escriure) imprimeixValors(Taulell);
+        long val = 50000000L;
+        if (size == 5) val = 250000000L;
+        if (size == 6) val = 500000000L;
+        if (size == 7) val = 5000000000L; //FALTA AQUÍ
+        if (size == 8) val = 5000000000L; //FALTA AQUÍ
+        if (size == 9) val = 10000000000L; //FALTA AQUÍ
+        if ((System.nanoTime() - inicial) > val) fi = true;
+        if (comprovar2(Taulell, X, Y, size, startx, starty)) {
+            if(escriure) imprimeixValors(Taulell);
             solution = true;
         }
         else {
-            if (!solution) {
-                for (int i = 0; i < 8; ++i) {
+            for (int i = 0; i < 8; ++i) {
+                if (!solution && !fi) {
                     if (startx + X[i] >= 0 && startx + X[i] < size && starty + Y[i] >= 0 && starty + Y[i] < size) {
                         if (!visitats[startx + X[i]][starty + Y[i]]) {
                             if (!Taulell.getWrittenCell(startx + X[i], starty + Y[i]) || (Taulell.getWrittenCell(startx + X[i], starty + Y[i]) && Taulell.getValueCell(startx + X[i], starty + Y[i]) == current)) {
@@ -755,15 +756,14 @@ public class Funcions {
                                     canviat = true;
                                 }
                                 visitats[startx + X[i]][starty + Y[i]] = true;
-                                //System.out.println("X "+(startx + X[i]));
-                                //System.out.println("Y "+(startx + Y[i]));
-                                //System.out.println(cont);
-                                backtrack(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure, cont+1);
-                                visitats[startx + X[i]][starty + Y[i]] = false;
-                                if (canviat) {
-                                    Taulell.setValueCell(0, startx + X[i], starty + Y[i]);
-                                    Taulell.switchWrittenCell(startx + X[i], starty + Y[i]);
-                                    canviat = false;
+                                backtrack_genera(Taulell, visitats,startx + X[i], starty + Y[i], X, Y, current + 1, size, escriure, inicial);
+                                if (!solution && !fi) {
+                                    visitats[startx + X[i]][starty + Y[i]] = false;
+                                    if (canviat) {
+                                        Taulell.setValueCell(0, startx + X[i], starty + Y[i]);
+                                        Taulell.switchWrittenCell(startx + X[i], starty + Y[i]);
+                                        canviat = false;
+                                    }
                                 }
                             }
                         }
@@ -773,8 +773,7 @@ public class Funcions {
         }
     }
 
-
-    public static void solve (BoardHidato Taulell, int size, boolean escriure)    {   
+    public static void solve_genera(BoardHidato Taulell, int size, boolean escriure)    {   //de moment ho farem amb un taulell arbitrari
         int startx = 0;  //i de la primera cela
         int starty = 0;  //j de la ultima cela
         int finish = 1;
@@ -801,10 +800,13 @@ public class Funcions {
                 else if (!Taulell.getValidaCell(i, j)) visitats[i][j] = true; //caselles invalides marcades com a "visitades"
             }
         }
-        int current = 2;
-        max_cont = size*size;
-        backtrack(Taulell, visitats, startx, starty, X, Y, current,size, escriure, 0);  //resoldre taulell
-    }*/
+        int current = 2;  
+        long inicial = System.nanoTime();
+        backtrack_genera(Taulell, visitats, startx, starty, X, Y, current, size, escriure, inicial);  //resoldre taulell
+        fi = false;
+    }
+    
+    
    public static String num(int num, int digits)
     {
         String numS = "";
