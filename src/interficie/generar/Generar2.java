@@ -639,7 +639,7 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JLabel titols;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
-    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[4];
     private boolean invalida;
     private int val,f,c,i;
     javax.swing.JTextField tf = new javax.swing.JTextField();
