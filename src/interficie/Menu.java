@@ -168,7 +168,7 @@ public class Menu extends javax.swing.JFrame {
         NovaPartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         MapaAleatori.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        MapaAleatori.setText("Mapa Aleatori");
+        MapaAleatori.setText("Taulell Aleatori");
         MapaAleatori.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MapaAleatoriActionPerformed(evt);
@@ -177,7 +177,7 @@ public class Menu extends javax.swing.JFrame {
         NovaPartida.add(MapaAleatori);
 
         EscollirMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        EscollirMapa.setText("Escollir Mapa Predefinit");
+        EscollirMapa.setText("Escollir Taulell Predefinit");
         EscollirMapa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EscollirMapaActionPerformed(evt);
@@ -199,11 +199,11 @@ public class Menu extends javax.swing.JFrame {
         MenuPrincipal.add(JugarPartida);
 
         CrearMapa.setBackground(new java.awt.Color(0, 0, 0));
-        CrearMapa.setText("Crear Mapa");
+        CrearMapa.setText("Crear Taulell");
         CrearMapa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         CrearMapaNou.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        CrearMapaNou.setText("Crear Mapa Nou");
+        CrearMapaNou.setText("Crear Taulell Nou");
         CrearMapaNou.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CrearMapaNouActionPerformed(evt);
@@ -212,7 +212,7 @@ public class Menu extends javax.swing.JFrame {
         CrearMapa.add(CrearMapaNou);
 
         ModificarMapaExistents.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        ModificarMapaExistents.setText("Modificar Mapa Existent");
+        ModificarMapaExistents.setText("Modificar Taulell Existent");
         ModificarMapaExistents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarMapaExistentsActionPerformed(evt);
@@ -221,7 +221,7 @@ public class Menu extends javax.swing.JFrame {
         CrearMapa.add(ModificarMapaExistents);
 
         EsborrarMapa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        EsborrarMapa.setText("Esborrar Mapa");
+        EsborrarMapa.setText("Esborrar Taulell");
         EsborrarMapa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EsborrarMapaActionPerformed(evt);
@@ -372,8 +372,8 @@ public class Menu extends javax.swing.JFrame {
         int num2=1;
         Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
         Object[] optDif = {"Fàcil", "Mitjà", "Difícil"};
-        JFrame frame = new JFrame("Tamany Mapa");
-        int n = JOptionPane.showOptionDialog(frame,"Escull el tamany del mapa", "Tamany mapa",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
+        JFrame frame = new JFrame("Tamany Taulell");
+        int n = JOptionPane.showOptionDialog(frame,"Escull la mida del Taulell", "Mida Taulell",num2, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
         if (n == 0) {
             dificultat = 1 + JOptionPane.showOptionDialog(frame,"Escull la dificultat",
                     "Dificultat",num2, JOptionPane.INFORMATION_MESSAGE, null,optDif,optDif[0]);

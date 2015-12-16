@@ -5,7 +5,13 @@
  */
 package interficie.generar;
 
+import static drivers.Controlador.*;
+import static javax.swing.JOptionPane.*;
 import interficie.Menu;
+import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,12 +19,85 @@ import interficie.Menu;
  */
 public class Generar7 extends javax.swing.JFrame {
     public static String us;
+    public static Integer size = 7;
     /**
      * Creates new form Identificacio
      */
     public Generar7(String usuari) {
         initComponents();
+        setSize(1000,600);
+        setLocationRelativeTo(null);
+        setResizable(false);
         us = usuari;
+        initialitzararraytextfield();
+        myinitcomponents();
+    }
+    
+    public void myinitcomponents() {
+         ArrayList<Integer> valors = carregarTaulellTemporal();
+         
+         for (int i = 0; i < valors.size(); ++i) {
+             System.out.println(valors.get(i));
+         }
+         
+         for (int i = 0; i < valors.size(); ++i){
+            tf = txtField[i];
+             if (valors.get(i) != 0){
+                tf.setText(Integer.toString(valors.get(i)));
+            }
+        }
+    }
+    
+    void initialitzararraytextfield(){
+        txtField[0] = c00;
+        txtField[1] = c01;
+        txtField[2] = c02;
+        txtField[3] = c03;
+        txtField[4] = c04;
+        txtField[5] = c05;
+        txtField[6] = c06;
+        txtField[7] = c10;
+        txtField[8] = c11;
+        txtField[9] = c12;
+        txtField[10] = c13;
+        txtField[11] = c14;
+        txtField[12] = c15;
+        txtField[13] = c16;
+        txtField[14] = c20;
+        txtField[15] = c21;
+        txtField[16] = c22;
+        txtField[17] = c23;
+        txtField[18] = c24;
+        txtField[19] = c25;
+        txtField[20] = c26;
+        txtField[21] = c30;
+        txtField[22] = c31;
+        txtField[23] = c32;
+        txtField[24] = c33;
+        txtField[25] = c34;
+        txtField[26] = c35;
+        txtField[27] = c36;
+        txtField[28] = c40;
+        txtField[29] = c41;
+        txtField[30] = c42;
+        txtField[31] = c43;
+        txtField[32] = c44;
+        txtField[33] = c45;
+        txtField[34] = c46;
+        txtField[35] = c50;
+        txtField[36] = c51;
+        txtField[37] = c52;
+        txtField[38] = c53;
+        txtField[39] = c54;
+        txtField[40] = c55;
+        txtField[41] = c56;
+        txtField[42] = c60;
+        txtField[43] = c61;
+        txtField[44] = c62;
+        txtField[45] = c63;
+        txtField[46] = c64;
+        txtField[47] = c65;
+        txtField[48] = c66;
     }
 
     /**
@@ -31,69 +110,72 @@ public class Generar7 extends javax.swing.JFrame {
     private void initComponents() {
 
         titol = new javax.swing.JTextArea();
-        numeros = new javax.swing.JLabel();
+        enrere = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        guardartaulell = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        enrere = new javax.swing.JButton();
-        primera9 = new javax.swing.JTextField();
-        primera33 = new javax.swing.JTextField();
-        primera34 = new javax.swing.JTextField();
-        primera35 = new javax.swing.JTextField();
-        primera36 = new javax.swing.JTextField();
-        primera37 = new javax.swing.JTextField();
-        primera38 = new javax.swing.JTextField();
-        primera39 = new javax.swing.JTextField();
-        primera40 = new javax.swing.JTextField();
-        primera41 = new javax.swing.JTextField();
-        primera42 = new javax.swing.JTextField();
-        primera43 = new javax.swing.JTextField();
-        primera44 = new javax.swing.JTextField();
-        primera45 = new javax.swing.JTextField();
-        primera46 = new javax.swing.JTextField();
-        primera47 = new javax.swing.JTextField();
-        primera48 = new javax.swing.JTextField();
-        primera49 = new javax.swing.JTextField();
-        primera50 = new javax.swing.JTextField();
-        primera51 = new javax.swing.JTextField();
-        primera52 = new javax.swing.JTextField();
-        primera53 = new javax.swing.JTextField();
-        primera54 = new javax.swing.JTextField();
-        primera55 = new javax.swing.JTextField();
-        primera56 = new javax.swing.JTextField();
-        primera57 = new javax.swing.JTextField();
-        primera58 = new javax.swing.JTextField();
-        primera59 = new javax.swing.JTextField();
-        primera60 = new javax.swing.JTextField();
-        primera61 = new javax.swing.JTextField();
-        primera62 = new javax.swing.JTextField();
-        primera63 = new javax.swing.JTextField();
-        primera64 = new javax.swing.JTextField();
-        primera65 = new javax.swing.JTextField();
-        primera66 = new javax.swing.JTextField();
-        primera67 = new javax.swing.JTextField();
-        primera68 = new javax.swing.JTextField();
-        primera69 = new javax.swing.JTextField();
-        primera70 = new javax.swing.JTextField();
-        primera71 = new javax.swing.JTextField();
-        primera72 = new javax.swing.JTextField();
-        primera73 = new javax.swing.JTextField();
-        primera74 = new javax.swing.JTextField();
-        primera75 = new javax.swing.JTextField();
-        primera76 = new javax.swing.JTextField();
-        primera77 = new javax.swing.JTextField();
-        primera78 = new javax.swing.JTextField();
-        primera79 = new javax.swing.JTextField();
-        primera80 = new javax.swing.JTextField();
-        primera81 = new javax.swing.JTextField();
-        primera82 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
+        Esborrar = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        numeros = new javax.swing.JLabel();
+        c52 = new javax.swing.JTextField();
+        c00 = new javax.swing.JTextField();
+        c01 = new javax.swing.JTextField();
+        c02 = new javax.swing.JTextField();
+        c03 = new javax.swing.JTextField();
+        c04 = new javax.swing.JTextField();
+        c60 = new javax.swing.JTextField();
+        c10 = new javax.swing.JTextField();
+        c20 = new javax.swing.JTextField();
+        c30 = new javax.swing.JTextField();
+        c40 = new javax.swing.JTextField();
+        c50 = new javax.swing.JTextField();
+        primera44 = new javax.swing.JTextField();
+        c51 = new javax.swing.JTextField();
+        c41 = new javax.swing.JTextField();
+        c31 = new javax.swing.JTextField();
+        c21 = new javax.swing.JTextField();
+        c11 = new javax.swing.JTextField();
+        c12 = new javax.swing.JTextField();
+        c13 = new javax.swing.JTextField();
+        c14 = new javax.swing.JTextField();
+        c15 = new javax.swing.JTextField();
+        c25 = new javax.swing.JTextField();
+        c35 = new javax.swing.JTextField();
+        c45 = new javax.swing.JTextField();
+        c55 = new javax.swing.JTextField();
+        c54 = new javax.swing.JTextField();
+        c44 = new javax.swing.JTextField();
+        c34 = new javax.swing.JTextField();
+        c24 = new javax.swing.JTextField();
+        c23 = new javax.swing.JTextField();
+        c22 = new javax.swing.JTextField();
+        c33 = new javax.swing.JTextField();
+        c32 = new javax.swing.JTextField();
+        c42 = new javax.swing.JTextField();
+        c43 = new javax.swing.JTextField();
+        c53 = new javax.swing.JTextField();
+        c05 = new javax.swing.JTextField();
+        c06 = new javax.swing.JTextField();
+        c16 = new javax.swing.JTextField();
+        c26 = new javax.swing.JTextField();
+        c36 = new javax.swing.JTextField();
+        c46 = new javax.swing.JTextField();
+        c56 = new javax.swing.JTextField();
+        c66 = new javax.swing.JTextField();
+        c65 = new javax.swing.JTextField();
+        c64 = new javax.swing.JTextField();
+        c63 = new javax.swing.JTextField();
+        c62 = new javax.swing.JTextField();
+        c61 = new javax.swing.JTextField();
+        primera82 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -118,92 +200,6 @@ public class Generar7 extends javax.swing.JFrame {
         getContentPane().add(titol);
         titol.setBounds(120, 50, 260, 60);
 
-        numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        numeros.setText("Números:");
-        getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
-
-        jButton1.setText("1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(450, 160, 50, 50);
-
-        jButton2.setText("2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(520, 160, 50, 50);
-
-        jButton3.setText("3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(590, 160, 50, 50);
-
-        jButton4.setText("4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(450, 230, 50, 50);
-
-        jButton5.setText("5");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(520, 230, 50, 50);
-
-        jButton6.setText("6");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(590, 230, 50, 50);
-
-        jButton7.setText("7");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton7);
-        jButton7.setBounds(450, 300, 50, 50);
-
-        jButton8.setText("8");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton8);
-        jButton8.setBounds(520, 300, 50, 50);
-
-        jButton9.setText("9");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton9);
-        jButton9.setBounds(590, 300, 50, 50);
-
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
         enrere.setText("Sortir");
@@ -220,125 +216,302 @@ public class Generar7 extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(610, 430, 59, 23);
 
-        primera9.setEditable(false);
-        primera9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera9.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton1.setText("1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera9MouseClicked(evt);
+                jButton1MouseClicked(evt);
             }
         });
-        getContentPane().add(primera9);
-        primera9.setBounds(190, 330, 40, 40);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(460, 140, 60, 60);
 
-        primera33.setEditable(false);
-        primera33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera33.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4.setText("4");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera33MouseClicked(evt);
+                jButton4MouseClicked(evt);
             }
         });
-        getContentPane().add(primera33);
-        primera33.setBounds(110, 130, 40, 40);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(460, 210, 60, 60);
 
-        primera34.setEditable(false);
-        primera34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera34.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton7.setText("7");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera34MouseClicked(evt);
+                jButton7MouseClicked(evt);
             }
         });
-        getContentPane().add(primera34);
-        primera34.setBounds(150, 130, 40, 40);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(460, 280, 60, 60);
 
-        primera35.setEditable(false);
-        primera35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera35.addMouseListener(new java.awt.event.MouseAdapter() {
+        guardartaulell.setText("Guardar Taulell");
+        guardartaulell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera35MouseClicked(evt);
+                guardartaulellMouseClicked(evt);
             }
         });
-        getContentPane().add(primera35);
-        primera35.setBounds(190, 130, 40, 40);
+        guardartaulell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardartaulellActionPerformed(evt);
+            }
+        });
+        getContentPane().add(guardartaulell);
+        guardartaulell.setBounds(460, 360, 190, 40);
 
-        primera36.setEditable(false);
-        primera36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera36.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton8.setText("8");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera36MouseClicked(evt);
+                jButton8MouseClicked(evt);
             }
         });
-        getContentPane().add(primera36);
-        primera36.setBounds(230, 130, 40, 40);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8);
+        jButton8.setBounds(530, 280, 60, 60);
 
-        primera37.setEditable(false);
-        primera37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera37.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton5.setText("5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera37MouseClicked(evt);
+                jButton5MouseClicked(evt);
             }
         });
-        getContentPane().add(primera37);
-        primera37.setBounds(270, 130, 40, 40);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(530, 210, 60, 60);
 
-        primera38.setEditable(false);
-        primera38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera38.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton2.setText("2");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera38MouseClicked(evt);
+                jButton2MouseClicked(evt);
             }
         });
-        getContentPane().add(primera38);
-        primera38.setBounds(110, 370, 40, 40);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(530, 140, 60, 60);
 
-        primera39.setEditable(false);
-        primera39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera39.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton3.setText("3");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera39MouseClicked(evt);
+                jButton3MouseClicked(evt);
             }
         });
-        getContentPane().add(primera39);
-        primera39.setBounds(110, 170, 40, 40);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(600, 140, 60, 60);
 
-        primera40.setEditable(false);
-        primera40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera40.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton6.setText("6");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera40MouseClicked(evt);
+                jButton6MouseClicked(evt);
             }
         });
-        getContentPane().add(primera40);
-        primera40.setBounds(110, 210, 40, 40);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6);
+        jButton6.setBounds(600, 210, 60, 60);
 
-        primera41.setEditable(false);
-        primera41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera41.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton9.setText("9");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera41MouseClicked(evt);
+                jButton9MouseClicked(evt);
             }
         });
-        getContentPane().add(primera41);
-        primera41.setBounds(110, 250, 40, 40);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(600, 280, 60, 60);
 
-        primera42.setEditable(false);
-        primera42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera42.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton10.setText("0");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera42MouseClicked(evt);
+                jButton10MouseClicked(evt);
             }
         });
-        getContentPane().add(primera42);
-        primera42.setBounds(110, 290, 40, 40);
+        getContentPane().add(jButton10);
+        jButton10.setBounds(680, 280, 60, 60);
 
-        primera43.setEditable(false);
-        primera43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera43.addMouseListener(new java.awt.event.MouseAdapter() {
+        Esborrar.setText("Esborrar");
+        Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera43MouseClicked(evt);
+                EsborrarMouseClicked(evt);
             }
         });
-        getContentPane().add(primera43);
-        primera43.setBounds(110, 330, 40, 40);
+        getContentPane().add(Esborrar);
+        Esborrar.setBounds(680, 210, 90, 60);
+
+        jButton11.setText("Invalida");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton11);
+        jButton11.setBounds(680, 140, 90, 60);
+
+        numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros.setText("Números:");
+        getContentPane().add(numeros);
+        numeros.setBounds(520, 80, 90, 50);
+
+        c52.setEditable(false);
+        c52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c52.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c52MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c52);
+        c52.setBounds(190, 350, 40, 40);
+
+        c00.setEditable(false);
+        c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c00.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c00MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c00);
+        c00.setBounds(110, 150, 40, 40);
+
+        c01.setEditable(false);
+        c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c01MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c01);
+        c01.setBounds(150, 150, 40, 40);
+
+        c02.setEditable(false);
+        c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c02MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c02);
+        c02.setBounds(190, 150, 40, 40);
+
+        c03.setEditable(false);
+        c03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c03.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c03MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c03);
+        c03.setBounds(230, 150, 40, 40);
+
+        c04.setEditable(false);
+        c04.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c04.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c04MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c04);
+        c04.setBounds(270, 150, 40, 40);
+
+        c60.setEditable(false);
+        c60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c60.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c60MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c60);
+        c60.setBounds(110, 390, 40, 40);
+
+        c10.setEditable(false);
+        c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c10MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c10);
+        c10.setBounds(110, 190, 40, 40);
+
+        c20.setEditable(false);
+        c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c20MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c20);
+        c20.setBounds(110, 230, 40, 40);
+
+        c30.setEditable(false);
+        c30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c30MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c30);
+        c30.setBounds(110, 270, 40, 40);
+
+        c40.setEditable(false);
+        c40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c40MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c40);
+        c40.setBounds(110, 310, 40, 40);
+
+        c50.setEditable(false);
+        c50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c50.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c50MouseClicked(evt);
+            }
+        });
+        getContentPane().add(c50);
+        c50.setBounds(110, 350, 40, 40);
 
         primera44.setEditable(false);
         primera44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -348,377 +521,377 @@ public class Generar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera44);
-        primera44.setBounds(110, 330, 40, 40);
+        primera44.setBounds(110, 350, 40, 40);
 
-        primera45.setEditable(false);
-        primera45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera45.addMouseListener(new java.awt.event.MouseAdapter() {
+        c51.setEditable(false);
+        c51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c51.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera45MouseClicked(evt);
+                c51MouseClicked(evt);
             }
         });
-        getContentPane().add(primera45);
-        primera45.setBounds(150, 330, 40, 40);
+        getContentPane().add(c51);
+        c51.setBounds(150, 350, 40, 40);
 
-        primera46.setEditable(false);
-        primera46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera46.addMouseListener(new java.awt.event.MouseAdapter() {
+        c41.setEditable(false);
+        c41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera46MouseClicked(evt);
+                c41MouseClicked(evt);
             }
         });
-        getContentPane().add(primera46);
-        primera46.setBounds(150, 290, 40, 40);
+        getContentPane().add(c41);
+        c41.setBounds(150, 310, 40, 40);
 
-        primera47.setEditable(false);
-        primera47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera47.addMouseListener(new java.awt.event.MouseAdapter() {
+        c31.setEditable(false);
+        c31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera47MouseClicked(evt);
+                c31MouseClicked(evt);
             }
         });
-        getContentPane().add(primera47);
-        primera47.setBounds(150, 250, 40, 40);
+        getContentPane().add(c31);
+        c31.setBounds(150, 270, 40, 40);
 
-        primera48.setEditable(false);
-        primera48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera48.addMouseListener(new java.awt.event.MouseAdapter() {
+        c21.setEditable(false);
+        c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera48MouseClicked(evt);
+                c21MouseClicked(evt);
             }
         });
-        getContentPane().add(primera48);
-        primera48.setBounds(150, 210, 40, 40);
+        getContentPane().add(c21);
+        c21.setBounds(150, 230, 40, 40);
 
-        primera49.setEditable(false);
-        primera49.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera49.addMouseListener(new java.awt.event.MouseAdapter() {
+        c11.setEditable(false);
+        c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera49MouseClicked(evt);
+                c11MouseClicked(evt);
             }
         });
-        getContentPane().add(primera49);
-        primera49.setBounds(150, 170, 40, 40);
+        getContentPane().add(c11);
+        c11.setBounds(150, 190, 40, 40);
 
-        primera50.setEditable(false);
-        primera50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera50.addMouseListener(new java.awt.event.MouseAdapter() {
+        c12.setEditable(false);
+        c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera50MouseClicked(evt);
+                c12MouseClicked(evt);
             }
         });
-        getContentPane().add(primera50);
-        primera50.setBounds(190, 170, 40, 40);
+        getContentPane().add(c12);
+        c12.setBounds(190, 190, 40, 40);
 
-        primera51.setEditable(false);
-        primera51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera51.addMouseListener(new java.awt.event.MouseAdapter() {
+        c13.setEditable(false);
+        c13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera51MouseClicked(evt);
+                c13MouseClicked(evt);
             }
         });
-        getContentPane().add(primera51);
-        primera51.setBounds(230, 170, 40, 40);
+        getContentPane().add(c13);
+        c13.setBounds(230, 190, 40, 40);
 
-        primera52.setEditable(false);
-        primera52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera52.addMouseListener(new java.awt.event.MouseAdapter() {
+        c14.setEditable(false);
+        c14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera52MouseClicked(evt);
+                c14MouseClicked(evt);
             }
         });
-        getContentPane().add(primera52);
-        primera52.setBounds(270, 170, 40, 40);
+        getContentPane().add(c14);
+        c14.setBounds(270, 190, 40, 40);
 
-        primera53.setEditable(false);
-        primera53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera53.addMouseListener(new java.awt.event.MouseAdapter() {
+        c15.setEditable(false);
+        c15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera53MouseClicked(evt);
+                c15MouseClicked(evt);
             }
         });
-        getContentPane().add(primera53);
-        primera53.setBounds(310, 170, 40, 40);
+        getContentPane().add(c15);
+        c15.setBounds(310, 190, 40, 40);
 
-        primera54.setEditable(false);
-        primera54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera54.addMouseListener(new java.awt.event.MouseAdapter() {
+        c25.setEditable(false);
+        c25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera54MouseClicked(evt);
+                c25MouseClicked(evt);
             }
         });
-        getContentPane().add(primera54);
-        primera54.setBounds(310, 210, 40, 40);
+        getContentPane().add(c25);
+        c25.setBounds(310, 230, 40, 40);
 
-        primera55.setEditable(false);
-        primera55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera55.addMouseListener(new java.awt.event.MouseAdapter() {
+        c35.setEditable(false);
+        c35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera55MouseClicked(evt);
+                c35MouseClicked(evt);
             }
         });
-        getContentPane().add(primera55);
-        primera55.setBounds(310, 250, 40, 40);
+        getContentPane().add(c35);
+        c35.setBounds(310, 270, 40, 40);
 
-        primera56.setEditable(false);
-        primera56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera56.addMouseListener(new java.awt.event.MouseAdapter() {
+        c45.setEditable(false);
+        c45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c45.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera56MouseClicked(evt);
+                c45MouseClicked(evt);
             }
         });
-        getContentPane().add(primera56);
-        primera56.setBounds(310, 290, 40, 40);
+        getContentPane().add(c45);
+        c45.setBounds(310, 310, 40, 40);
 
-        primera57.setEditable(false);
-        primera57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera57.addMouseListener(new java.awt.event.MouseAdapter() {
+        c55.setEditable(false);
+        c55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera57MouseClicked(evt);
+                c55MouseClicked(evt);
             }
         });
-        getContentPane().add(primera57);
-        primera57.setBounds(310, 330, 40, 40);
+        getContentPane().add(c55);
+        c55.setBounds(310, 350, 40, 40);
 
-        primera58.setEditable(false);
-        primera58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera58.addMouseListener(new java.awt.event.MouseAdapter() {
+        c54.setEditable(false);
+        c54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c54.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera58MouseClicked(evt);
+                c54MouseClicked(evt);
             }
         });
-        getContentPane().add(primera58);
-        primera58.setBounds(270, 330, 40, 40);
+        getContentPane().add(c54);
+        c54.setBounds(270, 350, 40, 40);
 
-        primera59.setEditable(false);
-        primera59.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera59.addMouseListener(new java.awt.event.MouseAdapter() {
+        c44.setEditable(false);
+        c44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c44.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera59MouseClicked(evt);
+                c44MouseClicked(evt);
             }
         });
-        getContentPane().add(primera59);
-        primera59.setBounds(270, 290, 40, 40);
+        getContentPane().add(c44);
+        c44.setBounds(270, 310, 40, 40);
 
-        primera60.setEditable(false);
-        primera60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera60.addMouseListener(new java.awt.event.MouseAdapter() {
+        c34.setEditable(false);
+        c34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera60MouseClicked(evt);
+                c34MouseClicked(evt);
             }
         });
-        getContentPane().add(primera60);
-        primera60.setBounds(270, 250, 40, 40);
+        getContentPane().add(c34);
+        c34.setBounds(270, 270, 40, 40);
 
-        primera61.setEditable(false);
-        primera61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera61.addMouseListener(new java.awt.event.MouseAdapter() {
+        c24.setEditable(false);
+        c24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera61MouseClicked(evt);
+                c24MouseClicked(evt);
             }
         });
-        getContentPane().add(primera61);
-        primera61.setBounds(270, 210, 40, 40);
+        getContentPane().add(c24);
+        c24.setBounds(270, 230, 40, 40);
 
-        primera62.setEditable(false);
-        primera62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera62.addMouseListener(new java.awt.event.MouseAdapter() {
+        c23.setEditable(false);
+        c23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera62MouseClicked(evt);
+                c23MouseClicked(evt);
             }
         });
-        getContentPane().add(primera62);
-        primera62.setBounds(230, 210, 40, 40);
+        getContentPane().add(c23);
+        c23.setBounds(230, 230, 40, 40);
 
-        primera63.setEditable(false);
-        primera63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera63.addMouseListener(new java.awt.event.MouseAdapter() {
+        c22.setEditable(false);
+        c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera63MouseClicked(evt);
+                c22MouseClicked(evt);
             }
         });
-        getContentPane().add(primera63);
-        primera63.setBounds(190, 210, 40, 40);
+        getContentPane().add(c22);
+        c22.setBounds(190, 230, 40, 40);
 
-        primera64.setEditable(false);
-        primera64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera64.addMouseListener(new java.awt.event.MouseAdapter() {
+        c33.setEditable(false);
+        c33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera64MouseClicked(evt);
+                c33MouseClicked(evt);
             }
         });
-        getContentPane().add(primera64);
-        primera64.setBounds(230, 250, 40, 40);
+        getContentPane().add(c33);
+        c33.setBounds(230, 270, 40, 40);
 
-        primera65.setEditable(false);
-        primera65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera65.addMouseListener(new java.awt.event.MouseAdapter() {
+        c32.setEditable(false);
+        c32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera65MouseClicked(evt);
+                c32MouseClicked(evt);
             }
         });
-        getContentPane().add(primera65);
-        primera65.setBounds(190, 250, 40, 40);
+        getContentPane().add(c32);
+        c32.setBounds(190, 270, 40, 40);
 
-        primera66.setEditable(false);
-        primera66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera66.addMouseListener(new java.awt.event.MouseAdapter() {
+        c42.setEditable(false);
+        c42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera66MouseClicked(evt);
+                c42MouseClicked(evt);
             }
         });
-        getContentPane().add(primera66);
-        primera66.setBounds(190, 290, 40, 40);
+        getContentPane().add(c42);
+        c42.setBounds(190, 310, 40, 40);
 
-        primera67.setEditable(false);
-        primera67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera67.addMouseListener(new java.awt.event.MouseAdapter() {
+        c43.setEditable(false);
+        c43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c43.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera67MouseClicked(evt);
+                c43MouseClicked(evt);
             }
         });
-        getContentPane().add(primera67);
-        primera67.setBounds(230, 290, 40, 40);
+        getContentPane().add(c43);
+        c43.setBounds(230, 310, 40, 40);
 
-        primera68.setEditable(false);
-        primera68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera68.addMouseListener(new java.awt.event.MouseAdapter() {
+        c53.setEditable(false);
+        c53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c53.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera68MouseClicked(evt);
+                c53MouseClicked(evt);
             }
         });
-        getContentPane().add(primera68);
-        primera68.setBounds(230, 330, 40, 40);
+        getContentPane().add(c53);
+        c53.setBounds(230, 350, 40, 40);
 
-        primera69.setEditable(false);
-        primera69.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera69.addMouseListener(new java.awt.event.MouseAdapter() {
+        c05.setEditable(false);
+        c05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c05.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera69MouseClicked(evt);
+                c05MouseClicked(evt);
             }
         });
-        getContentPane().add(primera69);
-        primera69.setBounds(310, 130, 40, 40);
+        getContentPane().add(c05);
+        c05.setBounds(310, 150, 40, 40);
 
-        primera70.setEditable(false);
-        primera70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera70.addMouseListener(new java.awt.event.MouseAdapter() {
+        c06.setEditable(false);
+        c06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c06.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera70MouseClicked(evt);
+                c06MouseClicked(evt);
             }
         });
-        getContentPane().add(primera70);
-        primera70.setBounds(350, 130, 40, 40);
+        getContentPane().add(c06);
+        c06.setBounds(350, 150, 40, 40);
 
-        primera71.setEditable(false);
-        primera71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera71.addMouseListener(new java.awt.event.MouseAdapter() {
+        c16.setEditable(false);
+        c16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera71MouseClicked(evt);
+                c16MouseClicked(evt);
             }
         });
-        getContentPane().add(primera71);
-        primera71.setBounds(350, 170, 40, 40);
+        getContentPane().add(c16);
+        c16.setBounds(350, 190, 40, 40);
 
-        primera72.setEditable(false);
-        primera72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera72.addMouseListener(new java.awt.event.MouseAdapter() {
+        c26.setEditable(false);
+        c26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera72MouseClicked(evt);
+                c26MouseClicked(evt);
             }
         });
-        getContentPane().add(primera72);
-        primera72.setBounds(350, 210, 40, 40);
+        getContentPane().add(c26);
+        c26.setBounds(350, 230, 40, 40);
 
-        primera73.setEditable(false);
-        primera73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera73.addMouseListener(new java.awt.event.MouseAdapter() {
+        c36.setEditable(false);
+        c36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c36.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera73MouseClicked(evt);
+                c36MouseClicked(evt);
             }
         });
-        getContentPane().add(primera73);
-        primera73.setBounds(350, 250, 40, 40);
+        getContentPane().add(c36);
+        c36.setBounds(350, 270, 40, 40);
 
-        primera74.setEditable(false);
-        primera74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera74.addMouseListener(new java.awt.event.MouseAdapter() {
+        c46.setEditable(false);
+        c46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c46.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera74MouseClicked(evt);
+                c46MouseClicked(evt);
             }
         });
-        getContentPane().add(primera74);
-        primera74.setBounds(350, 290, 40, 40);
+        getContentPane().add(c46);
+        c46.setBounds(350, 310, 40, 40);
 
-        primera75.setEditable(false);
-        primera75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera75.addMouseListener(new java.awt.event.MouseAdapter() {
+        c56.setEditable(false);
+        c56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c56.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera75MouseClicked(evt);
+                c56MouseClicked(evt);
             }
         });
-        getContentPane().add(primera75);
-        primera75.setBounds(350, 330, 40, 40);
+        getContentPane().add(c56);
+        c56.setBounds(350, 350, 40, 40);
 
-        primera76.setEditable(false);
-        primera76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera76.addMouseListener(new java.awt.event.MouseAdapter() {
+        c66.setEditable(false);
+        c66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c66.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera76MouseClicked(evt);
+                c66MouseClicked(evt);
             }
         });
-        getContentPane().add(primera76);
-        primera76.setBounds(350, 370, 40, 40);
+        getContentPane().add(c66);
+        c66.setBounds(350, 390, 40, 40);
 
-        primera77.setEditable(false);
-        primera77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera77.addMouseListener(new java.awt.event.MouseAdapter() {
+        c65.setEditable(false);
+        c65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c65.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera77MouseClicked(evt);
+                c65MouseClicked(evt);
             }
         });
-        getContentPane().add(primera77);
-        primera77.setBounds(310, 370, 40, 40);
+        getContentPane().add(c65);
+        c65.setBounds(310, 390, 40, 40);
 
-        primera78.setEditable(false);
-        primera78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera78.addMouseListener(new java.awt.event.MouseAdapter() {
+        c64.setEditable(false);
+        c64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c64.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera78MouseClicked(evt);
+                c64MouseClicked(evt);
             }
         });
-        getContentPane().add(primera78);
-        primera78.setBounds(270, 370, 40, 40);
+        getContentPane().add(c64);
+        c64.setBounds(270, 390, 40, 40);
 
-        primera79.setEditable(false);
-        primera79.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera79.addMouseListener(new java.awt.event.MouseAdapter() {
+        c63.setEditable(false);
+        c63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c63.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera79MouseClicked(evt);
+                c63MouseClicked(evt);
             }
         });
-        getContentPane().add(primera79);
-        primera79.setBounds(230, 370, 40, 40);
+        getContentPane().add(c63);
+        c63.setBounds(230, 390, 40, 40);
 
-        primera80.setEditable(false);
-        primera80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera80.addMouseListener(new java.awt.event.MouseAdapter() {
+        c62.setEditable(false);
+        c62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c62.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera80MouseClicked(evt);
+                c62MouseClicked(evt);
             }
         });
-        getContentPane().add(primera80);
-        primera80.setBounds(190, 370, 40, 40);
+        getContentPane().add(c62);
+        c62.setBounds(190, 390, 40, 40);
 
-        primera81.setEditable(false);
-        primera81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera81.addMouseListener(new java.awt.event.MouseAdapter() {
+        c61.setEditable(false);
+        c61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        c61.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera81MouseClicked(evt);
+                c61MouseClicked(evt);
             }
         });
-        getContentPane().add(primera81);
-        primera81.setBounds(150, 370, 40, 40);
+        getContentPane().add(c61);
+        c61.setBounds(150, 390, 40, 40);
 
         primera82.setEditable(false);
         primera82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -728,50 +901,10 @@ public class Generar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera82);
-        primera82.setBounds(150, 370, 40, 40);
-
-        jButton10.setText("Generar");
-        getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 79, 30);
+        primera82.setBounds(150, 390, 40, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
@@ -784,210 +917,512 @@ public class Generar7 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_enrereKeyPressed
 
-    private void primera9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera9MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera9MouseClicked
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boto(jButton1.getText());
+    }//GEN-LAST:event_jButton1MouseClicked
 
-    private void primera33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera33MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera33MouseClicked
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO aboto(jButton1.getText());dd your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void primera34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera34MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera34MouseClicked
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        boto(jButton4.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseClicked
 
-    private void primera35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera35MouseClicked
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primera35MouseClicked
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void primera36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera36MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera36MouseClicked
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        boto(jButton7.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7MouseClicked
 
-    private void primera37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera37MouseClicked
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primera37MouseClicked
+    }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void primera38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera38MouseClicked
+    private void guardartaulellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardartaulellMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_primera38MouseClicked
+        JFrame frame = new JFrame();
+        String nomT = JOptionPane.showInputDialog(frame, "Escriu el nom del taulell", "Nom Taulell", INFORMATION_MESSAGE);
+        int result = ConfirmarBoardCreat(nomT);
+        System.out.println(result);
 
-    private void primera39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera39MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera39MouseClicked
+        if (result == 4){
+            JOptionPane.showMessageDialog(frame, "Aquest taulell ja existeix", "Atencio!", WARNING_MESSAGE);
+        }
+        else if (result == 5){
+            JOptionPane.showMessageDialog(frame, "Taulell incorrecte", "ERROR!", ERROR_MESSAGE);
+        }
+        else {
+            String dificultat = null;
+            if(result == 1) dificultat = "Fàcil";
+            else if(result == 2) dificultat = "Mitja";
+            else if (result == 3) dificultat = "Difícil";
+            JOptionPane.showMessageDialog(frame, "La dificultat del taulell és: " + dificultat, "Taulell creat", INFORMATION_MESSAGE);
+            Menu obj = new Menu(us);
+            obj.setVisible(true);
+            dispose();
 
-    private void primera40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera40MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera40MouseClicked
+        }
+    }//GEN-LAST:event_guardartaulellMouseClicked
 
-    private void primera41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera41MouseClicked
+    private void guardartaulellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardartaulellActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primera41MouseClicked
+    }//GEN-LAST:event_guardartaulellActionPerformed
 
-    private void primera42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera42MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera42MouseClicked
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        boto(jButton8.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8MouseClicked
 
-    private void primera43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera43MouseClicked
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_primera43MouseClicked
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        boto(jButton5.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        boto(jButton2.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        boto(jButton3.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        boto(jButton6.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        boto(jButton9.getText());// TODO add your handling code here:
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        boto(jButton10.getText());// TODO add your handling code here:
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void EsborrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EsborrarMouseClicked
+        boto(Esborrar.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_EsborrarMouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        //invalida = true;
+        boto("-1");
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void c52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c52MouseClicked
+        if (!es_written(5,2)){
+            tf = c52;
+            i = 37;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c52MouseClicked
+
+    private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
+        if (!es_written(0,0)){
+            tf = c00;
+            i = 0;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c00MouseClicked
+
+    private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
+        if (!es_written(0,1)){
+            tf = c01;
+            i = 1;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c01MouseClicked
+
+    private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
+        if (!es_written(0,2)){
+            tf = c02;
+            i = 2;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c02MouseClicked
+
+    private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
+        if (!es_written(0,3)){
+            tf = c03;
+            i = 03;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c03MouseClicked
+
+    private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
+        if (!es_written(0,4)){
+            tf = c04;
+            i = 4;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c04MouseClicked
+
+    private void c60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c60MouseClicked
+        if (!es_written(6,0)){
+            tf = c60;
+            i = 42;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c60MouseClicked
+
+    private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
+        if (!es_written(1,0)){
+            tf = c10;
+            i = 7;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c10MouseClicked
+
+    private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
+        if (!es_written(2,0)){
+            tf = c20;
+            i = 14;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c20MouseClicked
+
+    private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
+        if (!es_written(3,0)){
+            tf = c30;
+            i = 21;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c30MouseClicked
+
+    private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
+        if (!es_written(4,0)){
+            tf = c40;
+            i = 28;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c40MouseClicked
+
+    private void c50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c50MouseClicked
+        if (!es_written(5,0)){
+            tf = c50;
+            i = 35;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c50MouseClicked
 
     private void primera44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera44MouseClicked
-        // TODO add your handling code here:
+        if (!es_written(4,4)){
+            tf = c44;
+            i = 32;
+        }// TODO add your handling code here:
     }//GEN-LAST:event_primera44MouseClicked
 
-    private void primera45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera45MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera45MouseClicked
+    private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
+        if (!es_written(5,1)){
+            tf = c51;
+            i = 36;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c51MouseClicked
 
-    private void primera46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera46MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera46MouseClicked
+    private void c41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c41MouseClicked
+        if (!es_written(4,1)){
+            tf = c41;
+            i = 29;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c41MouseClicked
 
-    private void primera47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera47MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera47MouseClicked
+    private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
+        if (!es_written(3,1)){
+            tf = c31;
+            i = 22;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c31MouseClicked
 
-    private void primera48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera48MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera48MouseClicked
+    private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
+        if (!es_written(2,1)){
+            tf = c21;
+            i = 15;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c21MouseClicked
 
-    private void primera49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera49MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera49MouseClicked
+    private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
+        if (!es_written(1,1)){
+            tf = c11;
+            i = 8;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c11MouseClicked
 
-    private void primera50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera50MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera50MouseClicked
+    private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
+        if (!es_written(1,2)){
+            tf = c12;
+            i = 9;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c12MouseClicked
 
-    private void primera51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera51MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera51MouseClicked
+    private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
+        if (!es_written(1,3)){
+            tf = c13;
+            i = 10;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c13MouseClicked
 
-    private void primera52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera52MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera52MouseClicked
+    private void c14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c14MouseClicked
+        if (!es_written(1,4)){
+            tf = c14;
+            i = 11;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c14MouseClicked
 
-    private void primera53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera53MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera53MouseClicked
+    private void c15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c15MouseClicked
+        if (!es_written(1,5)){
+            tf = c15;
+            i = 12;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c15MouseClicked
 
-    private void primera54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera54MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera54MouseClicked
+    private void c25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c25MouseClicked
+        if (!es_written(2,5)){
+            tf = c25;
+            i = 19;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c25MouseClicked
 
-    private void primera55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera55MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera55MouseClicked
+    private void c35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c35MouseClicked
+        if (!es_written(3,5)){
+            tf = c35;
+            i = 26;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c35MouseClicked
 
-    private void primera56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera56MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera56MouseClicked
+    private void c45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c45MouseClicked
+        if (!es_written(4,5)){
+            tf = c45;
+            i = 33;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c45MouseClicked
 
-    private void primera57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera57MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera57MouseClicked
+    private void c55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c55MouseClicked
+        if (!es_written(5,5)){
+            tf = c55;
+            i = 40;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c55MouseClicked
 
-    private void primera58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera58MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera58MouseClicked
+    private void c54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c54MouseClicked
+        if (!es_written(5,4)){
+            tf = c54;
+            i = 39;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c54MouseClicked
 
-    private void primera59MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera59MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera59MouseClicked
+    private void c44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c44MouseClicked
+        if (!es_written(4,4)){
+            tf = c44;
+            i = 32;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c44MouseClicked
 
-    private void primera60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera60MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera60MouseClicked
+    private void c34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c34MouseClicked
+        if (!es_written(3,4)){
+            tf = c33;
+            i = 25;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c34MouseClicked
 
-    private void primera61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera61MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera61MouseClicked
+    private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
+        if (!es_written(2,4)){
+            tf = c24;
+            i = 18;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c24MouseClicked
 
-    private void primera62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera62MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera62MouseClicked
+    private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
+        if (!es_written(2,3)){
+            tf = c23;
+            i = 17;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c23MouseClicked
 
-    private void primera63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera63MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera63MouseClicked
+    private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
+        if (!es_written(2,2)){
+            tf = c22;
+            i = 19;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c22MouseClicked
 
-    private void primera64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera64MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera64MouseClicked
+    private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
+        if (!es_written(3,3)){
+            tf = c33;
+            i = 24;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c33MouseClicked
 
-    private void primera65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera65MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera65MouseClicked
+    private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
+        if (!es_written(3,2)){
+            tf = c32;
+            i = 23;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c32MouseClicked
 
-    private void primera66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera66MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera66MouseClicked
+    private void c42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c42MouseClicked
+        if (!es_written(4,2)){
+            tf = c42;
+            i = 30;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c42MouseClicked
 
-    private void primera67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera67MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera67MouseClicked
+    private void c43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c43MouseClicked
+        if (!es_written(4,3)){
+            tf = c43;
+            i = 31;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c43MouseClicked
 
-    private void primera68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera68MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera68MouseClicked
+    private void c53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c53MouseClicked
+        if (!es_written(5,3)){
+            tf = c53;
+            i = 38;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c53MouseClicked
 
-    private void primera69MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera69MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera69MouseClicked
+    private void c05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c05MouseClicked
+        if (!es_written(0,5)){
+            tf = c05;
+            i = 5;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c05MouseClicked
 
-    private void primera70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera70MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera70MouseClicked
+    private void c06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c06MouseClicked
+        if (!es_written(0,6)){
+            tf = c06;
+            i = 6;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c06MouseClicked
 
-    private void primera71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera71MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera71MouseClicked
+    private void c16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c16MouseClicked
+        if (!es_written(1,6)){
+            tf = c16;
+            i = 15;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c16MouseClicked
 
-    private void primera72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera72MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera72MouseClicked
+    private void c26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c26MouseClicked
+        if (!es_written(2,6)){
+            tf = c26;
+            i = 20;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c26MouseClicked
 
-    private void primera73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera73MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera73MouseClicked
+    private void c36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c36MouseClicked
+        if (!es_written(3,6)){
+            tf = c36;
+            i = 27;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c36MouseClicked
 
-    private void primera74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera74MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera74MouseClicked
+    private void c46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c46MouseClicked
+        if (!es_written(4,6)){
+            tf = c46;
+            i = 34;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c46MouseClicked
 
-    private void primera75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera75MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera75MouseClicked
+    private void c56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c56MouseClicked
+        if (!es_written(5,6)){
+            tf = c56;
+            i = 41;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c56MouseClicked
 
-    private void primera76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera76MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera76MouseClicked
+    private void c66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c66MouseClicked
+        if (!es_written(6,6)){
+            tf = c66;
+            i = 48;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c66MouseClicked
 
-    private void primera77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera77MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera77MouseClicked
+    private void c65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c65MouseClicked
+        if (!es_written(5,6)){
+            tf = c65;
+            i = 47;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c65MouseClicked
 
-    private void primera78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera78MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera78MouseClicked
+    private void c64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c64MouseClicked
+        if (!es_written(6,4)){
+            tf = c64;
+            i = 46;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c64MouseClicked
 
-    private void primera79MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera79MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera79MouseClicked
+    private void c63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c63MouseClicked
+        if (!es_written(6,3)){
+            tf = c63;
+            i = 45;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c63MouseClicked
 
-    private void primera80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera80MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera80MouseClicked
+    private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
+        if (!es_written(6,2)){
+            tf = c64;
+            i = 44;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c62MouseClicked
 
-    private void primera81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera81MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera81MouseClicked
+    private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
+        if (!es_written(6,1)){
+            tf = c61;
+            i = 43;
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_c61MouseClicked
 
     private void primera82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera82MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_primera82MouseClicked
 
+    private void boto(String textboto){
+        String S = Caselles[i];
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
+        if (textboto == "Esborrar") val = 0;
+        else if (textboto == "-1") {
+            //invalida = false;
+            val = -1;
+        }
+        else{
+            val = Integer.parseInt(tf.getText() + textboto);
+        }
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
+        
+        DefineixCasella(val, f, c, size);
+        String afegirstr;
+        int afegirint = getCasella(f,c);
+        if (afegirint == 0){
+            afegirstr = null;
+            tf.setBackground(Color.WHITE);
+        }
+        else if (afegirint == -1){
+            afegirstr = null;
+            tf.setBackground(Color.BLACK);
+        }
+        else{
+            afegirstr = String.valueOf(afegirint);
+            tf.setBackground(Color.WHITE);
+        }
+        tf.setText(afegirstr); 
+    }
     
     /**
      * @param args the command line arguments
@@ -1019,1025 +1454,6 @@ public class Generar7 extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -2048,9 +1464,61 @@ public class Generar7 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Esborrar;
+    private javax.swing.JTextField c00;
+    private javax.swing.JTextField c01;
+    private javax.swing.JTextField c02;
+    private javax.swing.JTextField c03;
+    private javax.swing.JTextField c04;
+    private javax.swing.JTextField c05;
+    private javax.swing.JTextField c06;
+    private javax.swing.JTextField c10;
+    private javax.swing.JTextField c11;
+    private javax.swing.JTextField c12;
+    private javax.swing.JTextField c13;
+    private javax.swing.JTextField c14;
+    private javax.swing.JTextField c15;
+    private javax.swing.JTextField c16;
+    private javax.swing.JTextField c20;
+    private javax.swing.JTextField c21;
+    private javax.swing.JTextField c22;
+    private javax.swing.JTextField c23;
+    private javax.swing.JTextField c24;
+    private javax.swing.JTextField c25;
+    private javax.swing.JTextField c26;
+    private javax.swing.JTextField c30;
+    private javax.swing.JTextField c31;
+    private javax.swing.JTextField c32;
+    private javax.swing.JTextField c33;
+    private javax.swing.JTextField c34;
+    private javax.swing.JTextField c35;
+    private javax.swing.JTextField c36;
+    private javax.swing.JTextField c40;
+    private javax.swing.JTextField c41;
+    private javax.swing.JTextField c42;
+    private javax.swing.JTextField c43;
+    private javax.swing.JTextField c44;
+    private javax.swing.JTextField c45;
+    private javax.swing.JTextField c46;
+    private javax.swing.JTextField c50;
+    private javax.swing.JTextField c51;
+    private javax.swing.JTextField c52;
+    private javax.swing.JTextField c53;
+    private javax.swing.JTextField c54;
+    private javax.swing.JTextField c55;
+    private javax.swing.JTextField c56;
+    private javax.swing.JTextField c60;
+    private javax.swing.JTextField c61;
+    private javax.swing.JTextField c62;
+    private javax.swing.JTextField c63;
+    private javax.swing.JTextField c64;
+    private javax.swing.JTextField c65;
+    private javax.swing.JTextField c66;
     private javax.swing.JButton enrere;
+    private javax.swing.JButton guardartaulell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2060,57 +1528,12 @@ public class Generar7 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros;
-    private javax.swing.JTextField primera33;
-    private javax.swing.JTextField primera34;
-    private javax.swing.JTextField primera35;
-    private javax.swing.JTextField primera36;
-    private javax.swing.JTextField primera37;
-    private javax.swing.JTextField primera38;
-    private javax.swing.JTextField primera39;
-    private javax.swing.JTextField primera40;
-    private javax.swing.JTextField primera41;
-    private javax.swing.JTextField primera42;
-    private javax.swing.JTextField primera43;
     private javax.swing.JTextField primera44;
-    private javax.swing.JTextField primera45;
-    private javax.swing.JTextField primera46;
-    private javax.swing.JTextField primera47;
-    private javax.swing.JTextField primera48;
-    private javax.swing.JTextField primera49;
-    private javax.swing.JTextField primera50;
-    private javax.swing.JTextField primera51;
-    private javax.swing.JTextField primera52;
-    private javax.swing.JTextField primera53;
-    private javax.swing.JTextField primera54;
-    private javax.swing.JTextField primera55;
-    private javax.swing.JTextField primera56;
-    private javax.swing.JTextField primera57;
-    private javax.swing.JTextField primera58;
-    private javax.swing.JTextField primera59;
-    private javax.swing.JTextField primera60;
-    private javax.swing.JTextField primera61;
-    private javax.swing.JTextField primera62;
-    private javax.swing.JTextField primera63;
-    private javax.swing.JTextField primera64;
-    private javax.swing.JTextField primera65;
-    private javax.swing.JTextField primera66;
-    private javax.swing.JTextField primera67;
-    private javax.swing.JTextField primera68;
-    private javax.swing.JTextField primera69;
-    private javax.swing.JTextField primera70;
-    private javax.swing.JTextField primera71;
-    private javax.swing.JTextField primera72;
-    private javax.swing.JTextField primera73;
-    private javax.swing.JTextField primera74;
-    private javax.swing.JTextField primera75;
-    private javax.swing.JTextField primera76;
-    private javax.swing.JTextField primera77;
-    private javax.swing.JTextField primera78;
-    private javax.swing.JTextField primera79;
-    private javax.swing.JTextField primera80;
-    private javax.swing.JTextField primera81;
     private javax.swing.JTextField primera82;
-    private javax.swing.JTextField primera9;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
+    private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c10","c11","c12","c13","c14","c15","c16","c20","c21","c22","c23","c24","c25","c26","c30","c31","c32","c33","c34","c35","c36","c40","c41","c42","c43","c44","c45","c46","c50","c51","c52","c53","c54","c55","c56","c60","c61","c62","c63","c64","c65","c66"};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[49];
+    private int val,f,c,i;
+    javax.swing.JTextField tf = new javax.swing.JTextField();
 }

@@ -35,7 +35,6 @@ public class Generar3 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
-       // invalida = false;
         initialitzararraytextfield();
         myinitcomponents();
     }
@@ -765,9 +764,8 @@ public class Generar3 extends javax.swing.JFrame {
     private javax.swing.JLabel numeros;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
-    private String Caselles[] = {"c00","c01","c02","c10","c11","c12","c20","c21","c22"};
-    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
-   // private boolean invalida;
+    private String Caselles[] = {"c00","c01","c02","c03","c10","c11","c12","c13","c20","c21","c22","c23","c30","c31","c32","c33"};
+    private javax.swing.JTextField txtField[] = new javax.swing.JTextField[16];
     private int val,f,c,i;
     javax.swing.JTextField tf = new javax.swing.JTextField();
 }

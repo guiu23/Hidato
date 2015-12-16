@@ -57,7 +57,7 @@ public class LlistatMapesExistents extends javax.swing.JFrame {
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("Escull el mapa a modificar:");
+        jTextField1.setText("Escull el taulell a modificar:");
         jTextField1.setFocusable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
