@@ -263,7 +263,7 @@ public class Funcions {
         }
     }
     
-    public static void CleanTemporal() {
+    public static void CleanTemporals() {
         HBD.loadTemporal();
         HBD.loadTemporalResolts();
         for (int i=0;i < HBD._temporal.size();++i){
@@ -274,6 +274,15 @@ public class Funcions {
         }
         HBD.saveTemporal();
         HBD.saveTemporalResolts();
+    }
+    
+    public static void CleanTemporal() {
+        HBD.loadTemporal();
+        for (int i=0;i < HBD._temporal.size();++i){
+            HBD._temporal.remove(i);
+        }
+        
+        HBD.saveTemporal();
     }
     
     public static BoardHidato CarregarTemporal(int size) {

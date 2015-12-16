@@ -6,12 +6,15 @@
 package interficie.jugar;
 
 import static drivers.Controlador.CarregarSolucioTaulell;
+import static drivers.Controlador.DefineixCasella;
 import static drivers.Controlador.carregarTaulellTemporal;
 import static drivers.Controlador.començarJoc;
 import static drivers.Controlador.comprovarHidato;
 import static drivers.Controlador.es_ultim;
+import static drivers.Controlador.getCasella;
 import static drivers.Controlador.guardarPartida;
 import static drivers.Controlador.partidaAcabada;
+import static drivers.Controlador.switchAnnotationCasella;
 import interficie.Menu;
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -218,6 +221,7 @@ public class Jugar8 extends javax.swing.JFrame {
         jButton10 = new javax.swing.JButton();
         Autocompletar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -991,7 +995,7 @@ public class Jugar8 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(450, 370, 90, 23);
+        jButton10.setBounds(30, 340, 90, 23);
 
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1008,46 +1012,101 @@ public class Jugar8 extends javax.swing.JFrame {
         Autocompletar.setBounds(20, 240, 110, 60);
 
         jButton11.setText("Esborrar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton11);
         jButton11.setBounds(560, 370, 73, 23);
+
+        jButton12.setText("0");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton12);
+        jButton12.setBounds(450, 370, 50, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void boto(String textboto){
+        //array dstrings com tantes posicions como caselles. 
+        //a cada casella li passem a boto la seva posicio dins larray
+        String S = Caselles[i];
+        f = Character.getNumericValue(S.charAt(1));
+        c =  Character.getNumericValue(S.charAt(2));
+        if (textboto == "Esborrar") val = 0;
+        else val = Integer.parseInt(tf.getText() + textboto);
+        System.out.println(val);
+        System.out.println(f);
+        System.out.println(c);
+        if (afegirmarca){ 
+            val = Integer.parseInt(textboto);
+            switchAnnotationCasella(val, f, c);
+            afegirmarca = false;
+        }
+        else{
+            DefineixCasella(val, f, c,size);
+            String afegirstr;
+            int afegirint = getCasella(f,c);   
+            if (afegirint == 0) afegirstr = null;
+            else if (afegirint == -1) afegirstr = "X";
+            else afegirstr = String.valueOf(afegirint);
+            tf.setText(afegirstr);
+        }
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        boto(jButton1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        boto(jButton2.getText());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        boto(jButton3.getText());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        boto(jButton4.getText());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        boto(jButton5.getText());
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        boto(jButton6.getText());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        boto(jButton7.getText());
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        boto(jButton8.getText());
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        boto(jButton9.getText());
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
@@ -1381,6 +1440,19 @@ public class Jugar8 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(frame,"Hidato mal resolt, torna-ho a intentar", "No ben resolt",  JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        boto(jButton12.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        boto("Esborrar"); 
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     
     /**
@@ -1999,6 +2071,7 @@ public class Jugar8 extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -2013,6 +2086,6 @@ public class Jugar8 extends javax.swing.JFrame {
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c10","c11","c12","c13","c14","c15","c16","c17","c20","c21","c22","c23","c24","c25","c26","c27","c30","c31","c32","c33","c34","c35","c36","c37","c40","c41","c42","c43","c44","c45","c46","c47","c50","c51","c52","c53","c54","c55","c56","c57","c60","c61","c62","c63","c64","c65","c66","c67","c70","c71","c72","c73","c74","c75","c76","c77"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[64];
     javax.swing.JTextField tf = new javax.swing.JTextField();
-    private boolean apretat;
+    private boolean apretat, afegirmarca;
     private int val,f,c,i;
 }

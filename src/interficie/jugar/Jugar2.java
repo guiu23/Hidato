@@ -607,13 +607,13 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_comprovarMouseClicked
 
     private void autocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_autocompletarMouseClicked
-        apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
             afegir = String.valueOf(valors.get(i)); 
             txtField[i].setText(afegir);
         }
+        apretat = true;
     }//GEN-LAST:event_autocompletarMouseClicked
 
     private void autocompletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autocompletarActionPerformed

@@ -94,7 +94,7 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = new BoardHidato(size,"temporal"); 
-        Funcions.CleanTemporal();
+        Funcions.CleanTemporals();
         HBD._temporal.add(Taulell);    
     }
     
@@ -198,7 +198,7 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadTemporal();
         BoardHidato Taulell = new BoardHidato(size,"temporal");
-        Funcions.CleanTemporal(); 
+        Funcions.CleanTemporals(); 
         
         Funcions.colocar_celesinvalides(Taulell);
         Funcions.generar_written(Taulell,dificultat); //dins la funcio es posa el Taulell al temporal per resoldrel
@@ -219,7 +219,7 @@ public class Controlador {
                 int dificultat = triaDificultat(Taulell);
                 valors.add(HBD._boards.get(i).size);
                 valors.add(dificultat);
-                Funcions.CleanTemporal();
+                Funcions.CleanTemporals();
                 Taulell.setID("temporal");
                 HBD._temporal.add(Taulell); //posa el taulell al temporal per poguer començar a resoldrel o modificarlo
                 HBD.saveTemporal();
@@ -301,9 +301,11 @@ public class Controlador {
         HBD = new HidatoBD();
         HBD.loadTemporalResolts();
         ArrayList<Integer> valors = new ArrayList<>();
+         System.out.println("Mida temporals resolts: " + HBD._temporalResolts.size()); 
         for (int i = 0; i < HBD._temporalResolts.size(); ++i) {
             if (HBD._temporalResolts.get(i).getID().equals("temporal")) {
                 BoardHidato Taulell = HBD._temporalResolts.get(i);
+                imprimeixValors(Taulell);
                 for (int j = 0; j < Taulell.getSize(); ++j) {
                     for (int k = 0; k < Taulell.getSize(); ++k) {
                         valors.add(Taulell.getValueCell(j, k)); //Passa els valors del taulell per poderlo mostrar en la interficie
@@ -448,7 +450,7 @@ public class Controlador {
                     valors.add(HBD._matches.get(i).getGame().getSize());
                     valors.add(HBD._matches.get(i).getGame().getDifficulty());
                     BoardHidato Taulell = HBD._matches.get(i).getGame().getBoard();
-                    Funcions.CleanTemporal();
+                    Funcions.CleanTemporals();
                     BoardHidato TaulellRes = new BoardHidato(Taulell.getSize(), Taulell.getID());
                     copiarBoard(TaulellRes, Taulell);
                     solve_modifica(TaulellRes, TaulellRes.getSize(), false);
@@ -475,7 +477,7 @@ public class Controlador {
             if (HBD._boards.get(i).getID().equals(nomT)) {
                 HBD._boards.get(i).setID("temporal");
                 mida = HBD._boards.get(i).size;
-                Funcions.CleanTemporal();
+                Funcions.CleanTemporals();
                 imprimeixValors(HBD._boards.get(i));
                 HBD._temporal.add(HBD._boards.get(i));
                 HBD.saveTemporal();
