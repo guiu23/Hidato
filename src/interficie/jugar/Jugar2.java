@@ -122,7 +122,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(340, 210, 120, 90);
+        c00.setBounds(340, 180, 120, 90);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -133,7 +133,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(460, 210, 120, 90);
+        c01.setBounds(460, 180, 120, 90);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -144,7 +144,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(340, 300, 120, 90);
+        c10.setBounds(340, 270, 120, 90);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -155,12 +155,12 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(460, 300, 120, 90);
+        c11.setBounds(460, 270, 120, 90);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(770, 140, 80, 40);
+        numeros.setBounds(770, 110, 80, 40);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -174,7 +174,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(680, 200, 70, 70);
+        jButton1.setBounds(680, 170, 70, 70);
 
         jButton2.setText("2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -188,7 +188,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(770, 200, 70, 70);
+        jButton2.setBounds(770, 170, 70, 70);
 
         jButton3.setText("3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,7 +202,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(860, 200, 70, 70);
+        jButton3.setBounds(860, 170, 70, 70);
 
         jButton4.setText("4");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -216,7 +216,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(680, 290, 70, 70);
+        jButton4.setBounds(680, 260, 70, 70);
 
         jButton5.setText("5");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -230,7 +230,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(770, 290, 70, 70);
+        jButton5.setBounds(770, 260, 70, 70);
 
         jButton6.setText("6");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -244,7 +244,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(860, 290, 70, 70);
+        jButton6.setBounds(860, 260, 70, 70);
 
         jButton7.setText("7");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -258,7 +258,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(680, 380, 70, 70);
+        jButton7.setBounds(680, 350, 70, 70);
 
         jButton8.setText("8");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -272,7 +272,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(770, 380, 70, 70);
+        jButton8.setBounds(770, 350, 70, 70);
 
         jButton9.setText("9");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -286,7 +286,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(860, 380, 70, 70);
+        jButton9.setBounds(860, 350, 70, 70);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -302,7 +302,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 550, 59, 23);
+        enrere.setBounds(860, 500, 100, 50);
 
         Esborrar.setText("Esborrar");
         Esborrar.addActionListener(new java.awt.event.ActionListener() {
@@ -311,7 +311,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Esborrar);
-        Esborrar.setBounds(830, 470, 100, 40);
+        Esborrar.setBounds(830, 440, 100, 40);
 
         comprovar.setText("Comprovar");
         comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -325,7 +325,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(comprovar);
-        comprovar.setBounds(60, 480, 130, 80);
+        comprovar.setBounds(340, 400, 240, 50);
 
         autocompletar.setText("Autocompletar");
         autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -339,7 +339,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(autocompletar);
-        autocompletar.setBounds(60, 410, 130, 60);
+        autocompletar.setBounds(70, 400, 130, 60);
 
         addmarca.setText("Afegir Marca");
         addmarca.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -348,7 +348,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(addmarca);
-        addmarca.setBounds(70, 120, 110, 30);
+        addmarca.setBounds(70, 110, 130, 50);
 
         llistarmques.setText("Llistar Marques");
         llistarmques.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -357,9 +357,9 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(llistarmques);
-        llistarmques.setBounds(69, 173, 110, 40);
+        llistarmques.setBounds(69, 173, 130, 50);
         getContentPane().add(txtmarques);
-        txtmarques.setBounds(70, 240, 110, 130);
+        txtmarques.setBounds(80, 240, 110, 130);
 
         jButton10.setText("0");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -368,7 +368,7 @@ public class Jugar2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(680, 470, 70, 60);
+        jButton10.setBounds(680, 440, 70, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

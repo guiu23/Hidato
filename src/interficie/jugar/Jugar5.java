@@ -168,7 +168,7 @@ public class Jugar5 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(150, 50, 260, 60);
+        titol.setBounds(290, 40, 260, 60);
 
         c33.setEditable(false);
         c33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -179,12 +179,12 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c33);
-        c33.setBounds(310, 290, 50, 50);
+        c33.setBounds(450, 310, 50, 50);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
+        numeros.setBounds(710, 100, 90, 50);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,7 +198,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 160, 50, 50);
+        jButton1.setBounds(660, 170, 60, 60);
 
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +207,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 160, 50, 50);
+        jButton2.setBounds(730, 170, 60, 60);
 
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -216,7 +216,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 160, 50, 50);
+        jButton3.setBounds(800, 170, 60, 60);
 
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +225,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 230, 50, 50);
+        jButton4.setBounds(660, 240, 60, 60);
 
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -234,7 +234,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(520, 230, 50, 50);
+        jButton5.setBounds(730, 240, 60, 60);
 
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +243,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(590, 230, 50, 50);
+        jButton6.setBounds(800, 240, 60, 60);
 
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +252,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(450, 300, 50, 50);
+        jButton7.setBounds(660, 310, 60, 60);
 
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +261,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(520, 300, 50, 50);
+        jButton8.setBounds(730, 310, 60, 60);
 
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -270,7 +270,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(590, 300, 50, 50);
+        jButton9.setBounds(800, 310, 60, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -286,7 +286,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(600, 420, 59, 23);
+        enrere.setBounds(850, 490, 110, 60);
 
         c00.setEditable(false);
         c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -296,13 +296,8 @@ public class Jugar5 extends javax.swing.JFrame {
                 c00MouseClicked(evt);
             }
         });
-        c00.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                c00ActionPerformed(evt);
-            }
-        });
         getContentPane().add(c00);
-        c00.setBounds(160, 140, 50, 50);
+        c00.setBounds(300, 160, 50, 50);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -313,7 +308,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(210, 140, 50, 50);
+        c01.setBounds(350, 160, 50, 50);
 
         c02.setEditable(false);
         c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -324,7 +319,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(260, 140, 50, 50);
+        c02.setBounds(400, 160, 50, 50);
 
         c40.setEditable(false);
         c40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -335,7 +330,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c40);
-        c40.setBounds(160, 340, 50, 50);
+        c40.setBounds(300, 360, 50, 50);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -346,7 +341,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(160, 190, 50, 50);
+        c10.setBounds(300, 210, 50, 50);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -357,7 +352,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(210, 190, 50, 50);
+        c11.setBounds(350, 210, 50, 50);
 
         c12.setEditable(false);
         c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -368,7 +363,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(260, 190, 50, 50);
+        c12.setBounds(400, 210, 50, 50);
 
         c13.setEditable(false);
         c13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -379,7 +374,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c13);
-        c13.setBounds(310, 190, 50, 50);
+        c13.setBounds(450, 210, 50, 50);
 
         c20.setEditable(false);
         c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -390,7 +385,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(160, 240, 50, 50);
+        c20.setBounds(300, 260, 50, 50);
 
         c21.setEditable(false);
         c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -401,7 +396,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(210, 240, 50, 50);
+        c21.setBounds(350, 260, 50, 50);
 
         c22.setEditable(false);
         c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -412,7 +407,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(260, 240, 50, 50);
+        c22.setBounds(400, 260, 50, 50);
 
         c23.setEditable(false);
         c23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -423,7 +418,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c23);
-        c23.setBounds(310, 240, 50, 50);
+        c23.setBounds(450, 260, 50, 50);
 
         c30.setEditable(false);
         c30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -434,7 +429,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c30);
-        c30.setBounds(160, 290, 50, 50);
+        c30.setBounds(300, 310, 50, 50);
 
         c31.setEditable(false);
         c31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -445,7 +440,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c31);
-        c31.setBounds(210, 290, 50, 50);
+        c31.setBounds(350, 310, 50, 50);
 
         c32.setEditable(false);
         c32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -456,7 +451,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c32);
-        c32.setBounds(260, 290, 50, 50);
+        c32.setBounds(400, 310, 50, 50);
 
         c03.setEditable(false);
         c03.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -467,7 +462,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c03);
-        c03.setBounds(310, 140, 50, 50);
+        c03.setBounds(450, 160, 50, 50);
 
         c04.setEditable(false);
         c04.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -478,7 +473,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c04);
-        c04.setBounds(360, 140, 50, 50);
+        c04.setBounds(500, 160, 50, 50);
 
         c14.setEditable(false);
         c14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -489,7 +484,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c14);
-        c14.setBounds(360, 190, 50, 50);
+        c14.setBounds(500, 210, 50, 50);
 
         c24.setEditable(false);
         c24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -500,7 +495,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c24);
-        c24.setBounds(360, 240, 50, 50);
+        c24.setBounds(500, 260, 50, 50);
 
         c34.setEditable(false);
         c34.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -511,7 +506,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c34);
-        c34.setBounds(360, 290, 50, 50);
+        c34.setBounds(500, 310, 50, 50);
 
         c44.setEditable(false);
         c44.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -522,7 +517,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c44);
-        c44.setBounds(360, 340, 50, 50);
+        c44.setBounds(500, 360, 50, 50);
 
         c43.setEditable(false);
         c43.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -533,7 +528,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c43);
-        c43.setBounds(310, 340, 50, 50);
+        c43.setBounds(450, 360, 50, 50);
 
         c42.setEditable(false);
         c42.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -544,7 +539,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c42);
-        c42.setBounds(260, 340, 50, 50);
+        c42.setBounds(400, 360, 50, 50);
 
         c41.setEditable(false);
         c41.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -555,7 +550,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c41);
-        c41.setBounds(210, 340, 50, 50);
+        c41.setBounds(350, 360, 50, 50);
 
         comprova.setText("Comprovar");
         comprova.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -564,7 +559,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(comprova);
-        comprova.setBounds(20, 330, 110, 60);
+        comprova.setBounds(300, 440, 250, 50);
 
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -578,7 +573,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(20, 240, 110, 60);
+        Autocompletar.setBounds(70, 420, 120, 70);
 
         jButton10.setText("Esborrar");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -587,7 +582,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(543, 370, 90, 30);
+        jButton10.setBounds(750, 380, 110, 60);
 
         jButton11.setText("0");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -596,7 +591,7 @@ public class Jugar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(450, 370, 50, 50);
+        jButton11.setBounds(660, 380, 60, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

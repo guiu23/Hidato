@@ -206,12 +206,12 @@ public class Jugar7 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(160, 40, 260, 60);
+        titol.setBounds(280, 30, 260, 60);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 100, 80, 40);
+        numeros.setBounds(710, 100, 90, 50);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -220,7 +220,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 160, 50, 50);
+        jButton1.setBounds(650, 160, 60, 60);
 
         jButton2.setText("2");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +229,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 160, 50, 50);
+        jButton2.setBounds(720, 160, 60, 60);
 
         jButton3.setText("3");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +238,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 160, 50, 50);
+        jButton3.setBounds(790, 160, 60, 60);
 
         jButton4.setText("4");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -247,7 +247,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 230, 50, 50);
+        jButton4.setBounds(650, 230, 60, 60);
 
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -256,7 +256,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(520, 230, 50, 50);
+        jButton5.setBounds(720, 230, 60, 60);
 
         jButton6.setText("6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -265,7 +265,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(590, 230, 50, 50);
+        jButton6.setBounds(790, 230, 60, 60);
 
         jButton7.setText("7");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +274,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(450, 300, 50, 50);
+        jButton7.setBounds(650, 300, 60, 60);
 
         jButton8.setText("8");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -283,7 +283,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(520, 300, 50, 50);
+        jButton8.setBounds(720, 300, 60, 60);
 
         jButton9.setText("9");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -292,7 +292,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(590, 300, 50, 50);
+        jButton9.setBounds(790, 300, 60, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -308,7 +308,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(600, 420, 59, 23);
+        enrere.setBounds(850, 490, 110, 60);
 
         c52.setEditable(false);
         c52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -318,7 +318,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c52);
-        c52.setBounds(230, 320, 40, 40);
+        c52.setBounds(350, 360, 40, 40);
 
         c00.setEditable(false);
         c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -328,7 +328,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(150, 120, 40, 40);
+        c00.setBounds(270, 160, 40, 40);
 
         c01.setEditable(false);
         c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -338,7 +338,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(190, 120, 40, 40);
+        c01.setBounds(310, 160, 40, 40);
 
         c02.setEditable(false);
         c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -348,7 +348,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(230, 120, 40, 40);
+        c02.setBounds(350, 160, 40, 40);
 
         c03.setEditable(false);
         c03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -358,7 +358,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c03);
-        c03.setBounds(270, 120, 40, 40);
+        c03.setBounds(390, 160, 40, 40);
 
         c04.setEditable(false);
         c04.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -368,7 +368,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c04);
-        c04.setBounds(310, 120, 40, 40);
+        c04.setBounds(430, 160, 40, 40);
 
         c60.setEditable(false);
         c60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -378,7 +378,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c60);
-        c60.setBounds(150, 360, 40, 40);
+        c60.setBounds(270, 400, 40, 40);
 
         c10.setEditable(false);
         c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -388,7 +388,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(150, 160, 40, 40);
+        c10.setBounds(270, 200, 40, 40);
 
         c20.setEditable(false);
         c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -398,7 +398,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(150, 200, 40, 40);
+        c20.setBounds(270, 240, 40, 40);
 
         c30.setEditable(false);
         c30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -408,7 +408,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c30);
-        c30.setBounds(150, 240, 40, 40);
+        c30.setBounds(270, 280, 40, 40);
 
         c40.setEditable(false);
         c40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -418,7 +418,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c40);
-        c40.setBounds(150, 280, 40, 40);
+        c40.setBounds(270, 320, 40, 40);
 
         c50.setEditable(false);
         c50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -428,7 +428,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c50);
-        c50.setBounds(150, 320, 40, 40);
+        c50.setBounds(270, 360, 40, 40);
 
         c51.setEditable(false);
         c51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -438,7 +438,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c51);
-        c51.setBounds(190, 320, 40, 40);
+        c51.setBounds(310, 360, 40, 40);
 
         c41.setEditable(false);
         c41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -448,7 +448,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c41);
-        c41.setBounds(190, 280, 40, 40);
+        c41.setBounds(310, 320, 40, 40);
 
         c31.setEditable(false);
         c31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -458,7 +458,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c31);
-        c31.setBounds(190, 240, 40, 40);
+        c31.setBounds(310, 280, 40, 40);
 
         c21.setEditable(false);
         c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -468,7 +468,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(190, 200, 40, 40);
+        c21.setBounds(310, 240, 40, 40);
 
         c11.setEditable(false);
         c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -478,7 +478,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(190, 160, 40, 40);
+        c11.setBounds(310, 200, 40, 40);
 
         c12.setEditable(false);
         c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -488,7 +488,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(230, 160, 40, 40);
+        c12.setBounds(350, 200, 40, 40);
 
         c13.setEditable(false);
         c13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -498,7 +498,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c13);
-        c13.setBounds(270, 160, 40, 40);
+        c13.setBounds(390, 200, 40, 40);
 
         c14.setEditable(false);
         c14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -508,7 +508,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c14);
-        c14.setBounds(310, 160, 40, 40);
+        c14.setBounds(430, 200, 40, 40);
 
         c15.setEditable(false);
         c15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -518,7 +518,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c15);
-        c15.setBounds(350, 160, 40, 40);
+        c15.setBounds(470, 200, 40, 40);
 
         c25.setEditable(false);
         c25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -528,7 +528,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c25);
-        c25.setBounds(350, 200, 40, 40);
+        c25.setBounds(470, 240, 40, 40);
 
         c35.setEditable(false);
         c35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -538,7 +538,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c35);
-        c35.setBounds(350, 240, 40, 40);
+        c35.setBounds(470, 280, 40, 40);
 
         c45.setEditable(false);
         c45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -548,7 +548,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c45);
-        c45.setBounds(350, 280, 40, 40);
+        c45.setBounds(470, 320, 40, 40);
 
         c55.setEditable(false);
         c55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -558,7 +558,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c55);
-        c55.setBounds(350, 320, 40, 40);
+        c55.setBounds(470, 360, 40, 40);
 
         c54.setEditable(false);
         c54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -568,7 +568,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c54);
-        c54.setBounds(310, 320, 40, 40);
+        c54.setBounds(430, 360, 40, 40);
 
         c44.setEditable(false);
         c44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -578,7 +578,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c44);
-        c44.setBounds(310, 280, 40, 40);
+        c44.setBounds(430, 320, 40, 40);
 
         c34.setEditable(false);
         c34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -588,7 +588,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c34);
-        c34.setBounds(310, 240, 40, 40);
+        c34.setBounds(430, 280, 40, 40);
 
         c24.setEditable(false);
         c24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -598,7 +598,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c24);
-        c24.setBounds(310, 200, 40, 40);
+        c24.setBounds(430, 240, 40, 40);
 
         c23.setEditable(false);
         c23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -608,7 +608,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c23);
-        c23.setBounds(270, 200, 40, 40);
+        c23.setBounds(390, 240, 40, 40);
 
         c22.setEditable(false);
         c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -618,7 +618,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(230, 200, 40, 40);
+        c22.setBounds(350, 240, 40, 40);
 
         c33.setEditable(false);
         c33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -628,7 +628,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c33);
-        c33.setBounds(270, 240, 40, 40);
+        c33.setBounds(390, 280, 40, 40);
 
         c32.setEditable(false);
         c32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -638,7 +638,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c32);
-        c32.setBounds(230, 240, 40, 40);
+        c32.setBounds(350, 280, 40, 40);
 
         c42.setEditable(false);
         c42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -648,7 +648,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c42);
-        c42.setBounds(230, 280, 40, 40);
+        c42.setBounds(350, 320, 40, 40);
 
         c43.setEditable(false);
         c43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -658,7 +658,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c43);
-        c43.setBounds(270, 280, 40, 40);
+        c43.setBounds(390, 320, 40, 40);
 
         c53.setEditable(false);
         c53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -668,7 +668,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c53);
-        c53.setBounds(270, 320, 40, 40);
+        c53.setBounds(390, 360, 40, 40);
 
         c05.setEditable(false);
         c05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -678,7 +678,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c05);
-        c05.setBounds(350, 120, 40, 40);
+        c05.setBounds(470, 160, 40, 40);
 
         c06.setEditable(false);
         c06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -688,7 +688,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c06);
-        c06.setBounds(390, 120, 40, 40);
+        c06.setBounds(510, 160, 40, 40);
 
         c16.setEditable(false);
         c16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -698,7 +698,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c16);
-        c16.setBounds(390, 160, 40, 40);
+        c16.setBounds(510, 200, 40, 40);
 
         c26.setEditable(false);
         c26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -708,7 +708,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c26);
-        c26.setBounds(390, 200, 40, 40);
+        c26.setBounds(510, 240, 40, 40);
 
         c36.setEditable(false);
         c36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -718,7 +718,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c36);
-        c36.setBounds(390, 240, 40, 40);
+        c36.setBounds(510, 280, 40, 40);
 
         c46.setEditable(false);
         c46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -728,7 +728,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c46);
-        c46.setBounds(390, 280, 40, 40);
+        c46.setBounds(510, 320, 40, 40);
 
         c56.setEditable(false);
         c56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -738,7 +738,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c56);
-        c56.setBounds(390, 320, 40, 40);
+        c56.setBounds(510, 360, 40, 40);
 
         c66.setEditable(false);
         c66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -748,7 +748,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c66);
-        c66.setBounds(390, 360, 40, 40);
+        c66.setBounds(510, 400, 40, 40);
 
         c65.setEditable(false);
         c65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -758,7 +758,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c65);
-        c65.setBounds(350, 360, 40, 40);
+        c65.setBounds(470, 400, 40, 40);
 
         c64.setEditable(false);
         c64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -768,7 +768,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c64);
-        c64.setBounds(310, 360, 40, 40);
+        c64.setBounds(430, 400, 40, 40);
 
         c63.setEditable(false);
         c63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -778,7 +778,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c63);
-        c63.setBounds(270, 360, 40, 40);
+        c63.setBounds(390, 400, 40, 40);
 
         c62.setEditable(false);
         c62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -788,7 +788,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c62);
-        c62.setBounds(230, 360, 40, 40);
+        c62.setBounds(350, 400, 40, 40);
 
         c61.setEditable(false);
         c61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -798,7 +798,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c61);
-        c61.setBounds(190, 360, 40, 40);
+        c61.setBounds(310, 400, 40, 40);
 
         comprovar.setText("Comprovar");
         comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -812,7 +812,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(comprovar);
-        comprovar.setBounds(20, 330, 110, 50);
+        comprovar.setBounds(270, 460, 280, 50);
 
         Autocompletar.setText("Autocompletar");
         Autocompletar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -826,7 +826,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(20, 250, 110, 60);
+        Autocompletar.setBounds(40, 450, 130, 70);
 
         jButton11.setText("Esborrar");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -835,7 +835,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(560, 370, 73, 23);
+        jButton11.setBounds(750, 370, 100, 60);
 
         jButton12.setText("0");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -844,7 +844,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton12);
-        jButton12.setBounds(450, 370, 50, 50);
+        jButton12.setBounds(650, 370, 60, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
