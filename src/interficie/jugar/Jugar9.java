@@ -1267,34 +1267,40 @@ public class Jugar9 extends javax.swing.JFrame {
 
     private void enrereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enrereActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
-        JFrame frame = new JFrame("");
+        if (!apretat) {
+            Object[] options = {"Guardar","Sortir sense guardar", "Cancela"};
+            JFrame frame = new JFrame("");
 
-        int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
-        
-        if (n == 0) { //Guardar
-            boolean bool = false;
-            while (!bool) {
-                
-                //QUE LI PREGUNTI EL NOM EL NOM
-                String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+            int n = JOptionPane.showOptionDialog(frame,"Vols guardar la partida?", "Guardar partida",1, JOptionPane.INFORMATION_MESSAGE, null,options,options[0]);
 
-                int g = guardarPartida(us,nomP);
+            if (n == 0) { //Guardar
+                boolean bool = false;
+                while (!bool) {
 
-                if (g == 0) {
-                    bool = true;
-                    Menu obj = new Menu(us);
-                    obj.setVisible(true);
-                    dispose();
-                } else {
-                    JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                    //QUE LI PREGUNTI EL NOM EL NOM
+                    String nomP = JOptionPane.showInputDialog(frame, "Escriu el nom de la partida", "Nom Partida", JOptionPane.INFORMATION_MESSAGE);
+
+                    int g = guardarPartida(us,nomP);
+
+                    if (g == 0) {
+                        bool = true;
+                        Menu obj = new Menu(us);
+                        obj.setVisible(true);
+                        dispose();
+                    } else {
+                        JOptionPane.showMessageDialog(frame,"Aquest nom de partida ja existeix, posa'n un altre", "Alerta!", WARNING_MESSAGE);
+                    }
                 }
-            }
-        } else if (n == 1) { //Sortir sense guardar
+            } else if (n == 1) { //Sortir sense guardar
+                Menu obj = new Menu(us);
+                obj.setVisible(true);
+                dispose();
+            } 
+        } else {
             Menu obj = new Menu(us);
             obj.setVisible(true);
             dispose();
-        } 
+        }
     }//GEN-LAST:event_enrereActionPerformed
 
     private void enrereKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_enrereKeyPressed
