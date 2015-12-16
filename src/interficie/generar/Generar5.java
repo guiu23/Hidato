@@ -323,6 +323,7 @@ public class Generar5 extends javax.swing.JFrame {
         jButton11.setBounds(60, 180, 120, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros.setForeground(new java.awt.Color(255, 255, 255));
         numeros.setText("Números:");
         getContentPane().add(numeros);
         numeros.setBounds(690, 110, 90, 50);

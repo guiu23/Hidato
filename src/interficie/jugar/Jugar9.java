@@ -1177,6 +1177,7 @@ public class Jugar9 extends javax.swing.JFrame {
         jButton10.setBounds(280, 460, 270, 50);
 
         numeros1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros1.setForeground(new java.awt.Color(255, 255, 255));
         numeros1.setText("Números:");
         getContentPane().add(numeros1);
         numeros1.setBounds(730, 110, 80, 40);

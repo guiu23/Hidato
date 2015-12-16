@@ -142,6 +142,7 @@ public class Jugar2 extends javax.swing.JFrame {
         c11.setBounds(460, 270, 120, 90);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros.setForeground(new java.awt.Color(255, 255, 255));
         numeros.setText("Números:");
         getContentPane().add(numeros);
         numeros.setBounds(770, 110, 80, 40);

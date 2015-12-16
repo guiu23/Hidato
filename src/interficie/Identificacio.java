@@ -35,7 +35,7 @@ public class Identificacio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titol = new javax.swing.JTextArea();
+        titols = new javax.swing.JLabel();
         EsborraUsuari = new javax.swing.JButton();
         CrearUsuari = new javax.swing.JButton();
         CarregarUsuari = new javax.swing.JButton();
@@ -46,24 +46,11 @@ public class Identificacio extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
 
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 80)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(320, 90, 350, 100);
-        titol.getAccessibleContext().setAccessibleName("");
-        titol.getAccessibleContext().setAccessibleDescription("");
+        titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 80)); // NOI18N
+        titols.setForeground(new java.awt.Color(255, 255, 255));
+        titols.setText("HIDATO");
+        getContentPane().add(titols);
+        titols.setBounds(310, 100, 370, 100);
 
         EsborraUsuari.setText("Esborra Usuari");
         EsborraUsuari.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +144,6 @@ public class Identificacio extends javax.swing.JFrame {
     private javax.swing.JButton CrearUsuari;
     private javax.swing.JButton EsborraUsuari;
     private javax.swing.JLabel fons;
-    private javax.swing.JTextArea titol;
+    private javax.swing.JLabel titols;
     // End of variables declaration//GEN-END:variables
 }

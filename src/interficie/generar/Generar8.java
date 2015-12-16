@@ -401,6 +401,7 @@ public class Generar8 extends javax.swing.JFrame {
         jButton11.setBounds(100, 170, 110, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros.setForeground(new java.awt.Color(255, 255, 255));
         numeros.setText("Números:");
         getContentPane().add(numeros);
         numeros.setBounds(720, 120, 90, 50);

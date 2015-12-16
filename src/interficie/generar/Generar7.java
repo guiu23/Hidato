@@ -371,6 +371,7 @@ public class Generar7 extends javax.swing.JFrame {
         jButton11.setBounds(90, 170, 120, 80);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numeros.setForeground(new java.awt.Color(255, 255, 255));
         numeros.setText("Números:");
         getContentPane().add(numeros);
         numeros.setBounds(710, 120, 90, 50);
