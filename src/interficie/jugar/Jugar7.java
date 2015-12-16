@@ -143,7 +143,6 @@ public class Jugar7 extends javax.swing.JFrame {
         c30 = new javax.swing.JTextField();
         c40 = new javax.swing.JTextField();
         c50 = new javax.swing.JTextField();
-        primera44 = new javax.swing.JTextField();
         c51 = new javax.swing.JTextField();
         c41 = new javax.swing.JTextField();
         c31 = new javax.swing.JTextField();
@@ -181,7 +180,6 @@ public class Jugar7 extends javax.swing.JFrame {
         c63 = new javax.swing.JTextField();
         c62 = new javax.swing.JTextField();
         c61 = new javax.swing.JTextField();
-        primera82 = new javax.swing.JTextField();
         comprovar = new javax.swing.JButton();
         Autocompletar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
@@ -431,16 +429,6 @@ public class Jugar7 extends javax.swing.JFrame {
         });
         getContentPane().add(c50);
         c50.setBounds(150, 320, 40, 40);
-
-        primera44.setEditable(false);
-        primera44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera44.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera44MouseClicked(evt);
-            }
-        });
-        getContentPane().add(primera44);
-        primera44.setBounds(150, 320, 40, 40);
 
         c51.setEditable(false);
         c51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -812,16 +800,6 @@ public class Jugar7 extends javax.swing.JFrame {
         getContentPane().add(c61);
         c61.setBounds(190, 360, 40, 40);
 
-        primera82.setEditable(false);
-        primera82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera82.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera82MouseClicked(evt);
-            }
-        });
-        getContentPane().add(primera82);
-        primera82.setBounds(190, 360, 40, 40);
-
         comprovar.setText("Comprovar");
         comprovar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1069,14 +1047,6 @@ public class Jugar7 extends javax.swing.JFrame {
             i = 35;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c50MouseClicked
-
-    private void primera44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera44MouseClicked
-        tf = null;
-        if (!es_written(4,4)){
-            tf = c44;
-            i = 32;
-        }// TODO add your handling code here:
-    }//GEN-LAST:event_primera44MouseClicked
 
     private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
         tf = null;
@@ -1374,10 +1344,6 @@ public class Jugar7 extends javax.swing.JFrame {
         }// TODO add your handling code here:
     }//GEN-LAST:event_c61MouseClicked
 
-    private void primera82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera82MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera82MouseClicked
-
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
         apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
@@ -1530,8 +1496,6 @@ public class Jugar7 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros;
-    private javax.swing.JTextField primera44;
-    private javax.swing.JTextField primera82;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c10","c11","c12","c13","c14","c15","c16","c20","c21","c22","c23","c24","c25","c26","c30","c31","c32","c33","c34","c35","c36","c40","c41","c42","c43","c44","c45","c46","c50","c51","c52","c53","c54","c55","c56","c60","c61","c62","c63","c64","c65","c66"};
