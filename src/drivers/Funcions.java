@@ -175,10 +175,10 @@ public class Funcions {
                         valormax = Taulell.getValueCell(i,j);
                         //Taulell.setValueCell(valor, i, j);
                     }
-                    else if (/*valor*/Taulell.getValueCell(i,j) == -1){
+                    /*else if (/*valor*//*Taulell.getValueCell(i,j) == -1){
                         //Taulell.setValProvCell(valor, i, j);
                         Taulell.switchValidaCell(i,j);
-                    }
+                    }*/
 
                     /*else {
                     Taulell.setValueCell(valor, i, j);

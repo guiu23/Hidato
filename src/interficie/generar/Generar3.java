@@ -35,7 +35,7 @@ public class Generar3 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         us = usuari;
-        invalida = false;
+       // invalida = false;
         initialitzararraytextfield();
         myinitcomponents();
     }
@@ -439,7 +439,7 @@ public class Generar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        invalida = true;
+        //invalida = true;
         boto("-1");
     }//GEN-LAST:event_jButton11MouseClicked
 
@@ -611,15 +611,17 @@ public class Generar3 extends javax.swing.JFrame {
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
-        else
-             if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
+        else if (textboto == "-1") {
+            //invalida = false;
+            val = -1;
+        }
+        else{
+            val = Integer.parseInt(tf.getText() + textboto);
+        }
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
-        if (textboto == "-1") {
-            invalida = false;
-            val = -1;
-        }
+        
         DefineixCasella(val, f, c, size);
         String afegirstr;
         int afegirint = getCasella(f,c);
@@ -765,7 +767,7 @@ public class Generar3 extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c10","c11","c12","c20","c21","c22"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];
-    private boolean invalida;
+   // private boolean invalida;
     private int val,f,c,i;
     javax.swing.JTextField tf = new javax.swing.JTextField();
 }
