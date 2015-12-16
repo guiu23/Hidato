@@ -1984,7 +1984,7 @@ public class Jugar9 extends javax.swing.JFrame {
         if (!es_written(8,1)){
             tf = c81;
             i = 73;
-        }// TODO add your handling code here:
+        }// TODO add your handling code here:.
     }//GEN-LAST:event_c81MouseClicked
 
     private void c80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c80MouseClicked
