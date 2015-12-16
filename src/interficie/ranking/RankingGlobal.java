@@ -80,14 +80,17 @@ public class RankingGlobal extends javax.swing.JFrame {
         getContentPane().add(enrere);
         enrere.setBounds(890, 500, 90, 50);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POSICIÓ");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(72, 105, 50, 14);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("USUARI");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(141, 105, 50, 14);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PUNTUACIÓ");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(197, 105, 70, 14);
