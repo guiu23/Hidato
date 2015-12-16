@@ -473,7 +473,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        //Casella = null;
+        tf = null;//Casella = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -485,7 +485,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00ActionPerformed
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        //Casella = null;
+        tf = null;//Casella = null;
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
@@ -558,7 +558,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        //Casella = null;
+        tf = null;//Casella = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 2;
@@ -566,7 +566,7 @@ public class Jugar2 extends javax.swing.JFrame {
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        //Casella = null;
+        tf = null;
         if (!es_written(1,1)){
             i = 3;
             tf = c11;
