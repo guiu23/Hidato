@@ -583,7 +583,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -633,7 +633,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_ComprovarMouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
@@ -641,7 +641,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(0,2)){
             tf = c02;
             i = 2;
@@ -650,7 +650,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c02MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 3;
@@ -659,7 +659,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(1,1)){
             tf = c11;
             i = 4;
@@ -668,7 +668,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(1,2)){
             tf = c12;
             i = 5;
@@ -677,7 +677,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c12MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(2,0)){
             tf = c20;
             i = 6;
@@ -686,7 +686,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_c20MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        //tf = null;
+        tf = null;
         if (!es_written(2,1)){
             tf = c21;
             i = 7;
@@ -699,7 +699,7 @@ public class Jugar3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        //tf = null;
+       tf = null;
         if (!es_written(2,2)){
             tf = c22;
             i = 8;

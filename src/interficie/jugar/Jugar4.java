@@ -603,112 +603,127 @@ public class Jugar4 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
-        if (!es_written(3,3)){
+         tf = null;
+         if (!es_written(3,3)){
             tf = c33;
             i = 15;
         }        // TODO add your handling code here:
     }//GEN-LAST:event_c33MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        if (!es_written(0,0)){
+         tf = null;
+         if (!es_written(0,0)){
             tf = c00;
             i = 0;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-       if (!es_written(0,1)){
+        tf = null;
+        if (!es_written(0,1)){
             tf = c01;
             i = 1;
         } // TODO add your handling code here:
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        if (!es_written(0,2)){
+        
+         tf = null;if (!es_written(0,2)){
             tf = c02;
             i = 2;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c02MouseClicked
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
-        if (!es_written(0,3)){
+         tf = null;
+         if (!es_written(0,3)){
             tf = c03;
             i = 3;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c03MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        if (!es_written(1,1)){
+         tf = null;
+         if (!es_written(1,1)){
             tf = c10;
             i = 4;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        if (!es_written(1,1)){
+         tf = null;
+         if (!es_written(1,1)){
             tf = c11;
             i = 5;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        if (!es_written(1,2)){
+         tf = null;
+         if (!es_written(1,2)){
             tf = c12;
             i = 6;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
-        if (!es_written(1,3)){
+         tf = null;
+         if (!es_written(1,3)){
             tf = c13;
             i = 7;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c13MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        if (!es_written(2,0)){
+         tf = null;
+         if (!es_written(2,0)){
             tf = c20;
             i = 8;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c20MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        if (!es_written(2,1)){
+         tf = null;
+         if (!es_written(2,1)){
             tf = c21;
             i = 9;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c21MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        if (!es_written(2,2)){
+         tf = null;
+         if (!es_written(2,2)){
             tf = c22;
             i = 10;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c22MouseClicked
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
-        if (!es_written(2,3)){
+         tf = null;if (!es_written(2,3)){
             tf = c23;
             i = 11;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c23MouseClicked
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
-        if (!es_written(3,0)){
+         tf = null;
+         if (!es_written(3,0)){
             tf = c30;
             i = 12;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c30MouseClicked
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
-        if (!es_written(3,1)){
+         tf = null;
+         if (!es_written(3,1)){
             tf = c31;
             i = 13;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c31MouseClicked
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
-        if (!es_written(3,2)){
+         tf = null;
+         if (!es_written(3,2)){
             tf = c32;
             i = 14;
         }// TODO add your handling code here:
