@@ -774,42 +774,42 @@ public class Generar5 extends javax.swing.JFrame {
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
 
             tf = c02;
-            i = 3;
+            i = 2;
 
     }//GEN-LAST:event_c02MouseClicked
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
 
             tf = c40;
-            i = 21;
+            i = 20;
 
     }//GEN-LAST:event_c40MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
 
             tf = c10;
-            i = 6;
+            i = 5;
 
     }//GEN-LAST:event_c10MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
 
             tf = c11;
-            i = 7;
+            i = 6;
 
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
 
             tf = c12;
-            i = 8;
+            i = 7;
 
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
 
             tf = c13;
-            i = 9;
+            i = 8;
 
     }//GEN-LAST:event_c13MouseClicked
 
@@ -865,13 +865,13 @@ public class Generar5 extends javax.swing.JFrame {
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
 
             tf = c03;
-            i = 4;
+            i = 3;
     }//GEN-LAST:event_c03MouseClicked
 
     private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
 
             tf = c04;
-            i = 5;
+            i = 4;
 
     }//GEN-LAST:event_c04MouseClicked
 

@@ -6,6 +6,7 @@ import domini.stats.HidatoStats;
 import domini.stats.Ranking;
 import domini.stats.stubGame;
 import domini.stats.stubMatch;
+import interficie.Identificacio;
 
 import java.util.*;
 
@@ -15,15 +16,20 @@ import java.util.*;
  */
 
 public class Main {
-    static HidatoBD HBD;
-    static HidatoStats _stats;
-    static PlayersAdmin admin;
-    static Player Jugador;
+   // static HidatoBD HBD;
+   // static HidatoStats _stats;
+  //  static PlayersAdmin admin;
+ //   static Player Jugador;
    
    
     
     public static void main(String[] args) {
-        Scanner input = new Scanner( System.in );
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Identificacio().setVisible(true);
+            }
+        });
+        /* Scanner input = new Scanner( System.in );
         HBD = new HidatoBD();
         HBD.loadPlayers();
         _stats = new HidatoStats(HBD._players, HBD._games, HBD._matches);
@@ -276,7 +282,7 @@ public class Main {
                 Funcions.imprimeixValors(HBD._boards.get(i));
                 
                 for(int i = 0; i< HBD._boardsResolts.size(); ++i)
-                Funcions.imprimeixValors(HBD._boardsResolts.get(i));*/
+                Funcions.imprimeixValors(HBD._boardsResolts.get(i));
                 
                 generat = false;
             } else if (select == 1) {
@@ -290,7 +296,7 @@ public class Main {
                 Funcions.imprimeixValors(HBD._temporal.get(i));
                 
                 for(int i = 0; i< HBD._temporalResolts.size(); ++i)
-                Funcions.imprimeixValors(HBD._temporalResolts.get(i));*/
+                Funcions.imprimeixValors(HBD._temporalResolts.get(i));
                 generat = true;
             }
            
@@ -635,7 +641,7 @@ public class Main {
             ++digits;
             num /= 10;
         }
-        return digits;
+        return digits;*/
     }
 }
 

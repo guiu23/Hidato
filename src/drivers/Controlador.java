@@ -7,9 +7,6 @@ import domini.stats.Ranking;
 import domini.stats.stubGame;
 import domini.stats.stubMatch;
 import static drivers.Funcions.*;
-import static drivers.Main.HBD;
-import static drivers.Main._stats;
-import static drivers.Main.admin;
 
 import java.util.*;
 
