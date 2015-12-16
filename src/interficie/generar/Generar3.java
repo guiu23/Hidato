@@ -608,10 +608,11 @@ public class Generar3 extends javax.swing.JFrame {
    
     private void boto(String textboto){
         String S = Caselles[i];
-        if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
+        else
+             if (!invalida) val = Integer.parseInt(tf.getText() + textboto);
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
