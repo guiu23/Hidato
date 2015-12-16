@@ -1196,7 +1196,7 @@ public class Jugar7 extends javax.swing.JFrame {
         tf = null;
         if (!es_written(2,2)){
             tf = c22;
-            i = 19;
+            i = 16;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c22MouseClicked
 
@@ -1260,7 +1260,7 @@ public class Jugar7 extends javax.swing.JFrame {
         tf = null;
         if (!es_written(1,6)){
             tf = c16;
-            i = 15;
+            i = 13;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c16MouseClicked
 
@@ -1331,7 +1331,7 @@ public class Jugar7 extends javax.swing.JFrame {
     private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
         tf = null;
         if (!es_written(6,2)){
-            tf = c64;
+            tf = c62;
             i = 44;
         }// TODO add your handling code here:.
     }//GEN-LAST:event_c62MouseClicked
