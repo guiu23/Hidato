@@ -242,7 +242,6 @@ public class Jugar9 extends javax.swing.JFrame {
         c83 = new javax.swing.JTextField();
         c81 = new javax.swing.JTextField();
         c80 = new javax.swing.JTextField();
-        primera163 = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
         numeros1 = new javax.swing.JLabel();
         Autocompletar = new javax.swing.JButton();
@@ -1179,16 +1178,6 @@ public class Jugar9 extends javax.swing.JFrame {
         getContentPane().add(c80);
         c80.setBounds(150, 360, 30, 30);
 
-        primera163.setEditable(false);
-        primera163.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera163.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera163MouseClicked(evt);
-            }
-        });
-        getContentPane().add(primera163);
-        primera163.setBounds(150, 360, 30, 30);
-
         jButton10.setText("Comprovar");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1348,6 +1337,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c53MouseClicked
+        tf = null;
         if (!es_written(5,3)){
             tf = c53;
             i = 48;
@@ -1355,6 +1345,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c53MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
+        tf = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -1362,6 +1353,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
+        tf = null;
         if (!es_written(0,1)){
                     tf = c01;
                     i = 1;
@@ -1369,6 +1361,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
+        tf = null;
         if (!es_written(0,2)){
             tf = c02;
             i = 2;
@@ -1376,6 +1369,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c02MouseClicked
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
+        tf = null;
         if (!es_written(0,3)){
             tf = c03;
             i = 3;
@@ -1383,6 +1377,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c03MouseClicked
 
     private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
+        tf = null;
         if (!es_written(0,4)){
             tf = c04;
             i = 4;
@@ -1390,6 +1385,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c04MouseClicked
 
     private void c05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c05MouseClicked
+        tf = null;
         if (!es_written(0,5)){
             tf = c05;
             i = 5;
@@ -1397,6 +1393,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c05MouseClicked
 
     private void c06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c06MouseClicked
+        tf = null;
         if (!es_written(0,6)){
             tf = c06;
             i = 6;
@@ -1404,6 +1401,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c06MouseClicked
 
     private void c82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c82MouseClicked
+        tf = null;
         if (!es_written(8,2)){
             tf = c74;
             i = 0;
@@ -1411,6 +1409,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c82MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
+        tf = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 9;
@@ -1418,6 +1417,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c10MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
+        tf = null;
         if (!es_written(2,0)){
             tf = c20;
             i = 18;
@@ -1425,6 +1425,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c20MouseClicked
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
+        tf = null;
         if (!es_written(3,0)){
             tf = c30;
             i = 27;
@@ -1432,6 +1433,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c30MouseClicked
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
+        tf = null;
         if (!es_written(4,0)){
             tf = c40;
             i = 36;
@@ -1439,6 +1441,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c40MouseClicked
 
     private void c50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c50MouseClicked
+        tf = null;
         if (!es_written(5,0)){
             tf = c50;
             i = 45;
@@ -1446,6 +1449,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c50MouseClicked
 
     private void c60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c60MouseClicked
+        tf = null;
         if (!es_written(6,0)){
             tf = c60;
             i = 54;
@@ -1453,6 +1457,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c60MouseClicked
 
     private void c70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c70MouseClicked
+        tf = null;
         if (!es_written(7,0)){
             tf = c70;
             i = 63;
@@ -1460,6 +1465,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c70MouseClicked
 
     private void c71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c71MouseClicked
+        tf = null;
         if (!es_written(7,1)){
             tf = c71;
             i = 64;
@@ -1467,6 +1473,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c71MouseClicked
 
     private void c72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c72MouseClicked
+        tf = null;
         if (!es_written(7,2)){
             tf = c72;
             i = 65;
@@ -1474,6 +1481,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c72MouseClicked
 
     private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
+        tf = null;
         if (!es_written(6,1)){
             tf = c61;
             i = 55;
@@ -1481,6 +1489,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c61MouseClicked
 
     private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
+        tf = null;
         if (!es_written(5,1)){
             tf = c51;
             i = 46;
@@ -1488,6 +1497,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c51MouseClicked
 
     private void c41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c41MouseClicked
+        tf = null;
         if (!es_written(4,1)){
             tf = c41;
             i = 37;
@@ -1495,6 +1505,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c41MouseClicked
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
+        tf = null;
         if (!es_written(3,1)){
             tf = c31;
             i = 28;
@@ -1502,6 +1513,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c31MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
+        tf = null;
         if (!es_written(2,1)){
             tf = c21;
             i = 19;
@@ -1509,6 +1521,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c21MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
+        tf = null;
         if (!es_written(1,1)){
             tf = c11;
             i = 10;
@@ -1516,6 +1529,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
+        tf = null;
         if (!es_written(1,2)){
             tf = c12;
             i = 11;
@@ -1523,6 +1537,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
+        tf = null;
         if (!es_written(1,3)){
             tf = c13;
             i = 12;
@@ -1530,6 +1545,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c13MouseClicked
 
     private void c14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c14MouseClicked
+        tf = null;
         if (!es_written(1,4)){
             tf = c14;
             i = 13;
@@ -1537,6 +1553,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c14MouseClicked
 
     private void c15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c15MouseClicked
+        tf = null;
         if (!es_written(1,5)){
             tf = c15;
             i = 14;
@@ -1544,6 +1561,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c15MouseClicked
 
     private void c16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c16MouseClicked
+        tf = null;
         if (!es_written(1,6)){
             tf = c16;
             i = 15;
@@ -1551,6 +1569,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c16MouseClicked
 
     private void c17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c17MouseClicked
+        tf = null;
         if (!es_written(1,7)){
             tf = c17;
             i = 16;
@@ -1558,6 +1577,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c17MouseClicked
 
     private void c27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c27MouseClicked
+        tf = null;
         if (!es_written(2,7)){
             tf = c27;
             i = 26;
@@ -1565,6 +1585,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c27MouseClicked
 
     private void c37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c37MouseClicked
+        tf = null;
         if (!es_written(3,7)){
             tf = c37;
             i = 34;
@@ -1572,6 +1593,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c37MouseClicked
 
     private void c47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c47MouseClicked
+        tf = null;
         if (!es_written(4,7)){
             tf = c47;
             i = 43;
@@ -1579,6 +1601,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c47MouseClicked
 
     private void c57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c57MouseClicked
+        tf = null;
         if (!es_written(5,7)){
             tf = c57;
             i = 52;
@@ -1586,6 +1609,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c57MouseClicked
 
     private void c67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c67MouseClicked
+        tf = null;
         if (!es_written(6,7)){
             tf = c67;
             i = 61;
@@ -1593,6 +1617,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c67MouseClicked
 
     private void c77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c77MouseClicked
+        tf = null;
         if (!es_written(7,7)){
             tf = c77;
             i = 70;
@@ -1600,6 +1625,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c77MouseClicked
 
     private void c76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c76MouseClicked
+        tf = null;
         if (!es_written(7,6)){
             tf = c76;
             i = 69;
@@ -1607,6 +1633,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c76MouseClicked
 
     private void c75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c75MouseClicked
+        tf = null;
         if (!es_written(7,5)){
             tf = c75;
             i = 68;
@@ -1614,13 +1641,15 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c75MouseClicked
 
     private void c74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c74MouseClicked
-       if (!es_written(7,4)){
+        tf = null;
+        if (!es_written(7,4)){
             tf = c74;
             i = 67;
         } // TODO add your handling code here:
     }//GEN-LAST:event_c74MouseClicked
 
     private void c73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c73MouseClicked
+        tf = null;
         if (!es_written(7,3)){
             tf = c73;
             i = 66;
@@ -1628,6 +1657,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c73MouseClicked
 
     private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
+        tf = null;
         if (!es_written(6,2)){
             tf = c62;
             i = 56;
@@ -1635,6 +1665,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c62MouseClicked
 
     private void c63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c63MouseClicked
+        tf = null;
         if (!es_written(6,3)){
             tf = c63;
             i = 57;
@@ -1642,6 +1673,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c63MouseClicked
 
     private void c64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c64MouseClicked
+        tf = null;
         if (!es_written(6,4)){
             tf = c64;
             i = 58;
@@ -1649,6 +1681,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c64MouseClicked
 
     private void c65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c65MouseClicked
+        tf = null;
         if (!es_written(6,5)){
             tf = c65;
             i = 59;
@@ -1656,6 +1689,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c65MouseClicked
 
     private void c66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c66MouseClicked
+        tf = null;
         if (!es_written(6,6)){
             tf = c66;
             i = 60;
@@ -1663,6 +1697,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c66MouseClicked
 
     private void c56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c56MouseClicked
+        tf = null;
         if (!es_written(5,6)){
             tf = c56;
             i = 51;
@@ -1670,6 +1705,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c56MouseClicked
 
     private void c46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c46MouseClicked
+        tf = null;
         if (!es_written(4,6)){
             tf = c46;
             i = 42;
@@ -1677,6 +1713,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c46MouseClicked
 
     private void c36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c36MouseClicked
+        tf = null;
         if (!es_written(3,6)){
             tf = c36;
             i = 33;
@@ -1684,6 +1721,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c36MouseClicked
 
     private void c26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c26MouseClicked
+        tf = null;
         if (!es_written(2,6)){
             tf = c26;
             i = 24;
@@ -1691,6 +1729,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c26MouseClicked
 
     private void c25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c25MouseClicked
+        tf = null;
         if (!es_written(2,5)){
             tf = c25;
             i = 23;
@@ -1698,6 +1737,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c25MouseClicked
 
     private void c35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c35MouseClicked
+        tf = null;
         if (!es_written(3,5)){
             tf = c35;
             i = 32;
@@ -1705,6 +1745,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c35MouseClicked
 
     private void c45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c45MouseClicked
+        tf = null;
         if (!es_written(4,5)){
             tf = c45;
             i = 41;
@@ -1712,6 +1753,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c45MouseClicked
 
     private void c55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c55MouseClicked
+        tf = null;
         if (!es_written(5,5)){
             tf = c55;
             i = 50;
@@ -1719,6 +1761,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c55MouseClicked
 
     private void c54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c54MouseClicked
+        tf = null;
         if (!es_written(5,4)){
             tf = c54;
             i = 49;
@@ -1726,6 +1769,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c54MouseClicked
 
     private void c44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c44MouseClicked
+        tf = null;
         if (!es_written(4,4)){
             tf = c44;
             i = 40;
@@ -1733,6 +1777,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c44MouseClicked
 
     private void c34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c34MouseClicked
+        tf = null;
         if (!es_written(3,4)){
             tf = c34;
             i = 31;
@@ -1740,6 +1785,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c34MouseClicked
 
     private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
+        tf = null;
         if (!es_written(2,4)){
             tf = c24;
             i = 22;
@@ -1747,6 +1793,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c24MouseClicked
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
+        tf = null;
         if (!es_written(2,3)){
             tf = c23;
             i = 21;
@@ -1754,6 +1801,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c23MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
+        tf = null;
         if (!es_written(2,2)){
             tf = c22;
             i = 20;
@@ -1761,6 +1809,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c22MouseClicked
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
+        tf = null;
         if (!es_written(3,2)){
             tf = c32;
             i = 29;
@@ -1768,6 +1817,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c32MouseClicked
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
+        tf = null;
         if (!es_written(3,3)){
             tf = c33;
             i = 30;
@@ -1775,6 +1825,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c33MouseClicked
 
     private void c43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c43MouseClicked
+        tf = null;
         if (!es_written(4,3)){
             tf = c43;
             i = 39;
@@ -1782,6 +1833,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c43MouseClicked
 
     private void c42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c42MouseClicked
+        tf = null;
         if (!es_written(4,2)){
             tf = c42;
             i = 38;
@@ -1789,6 +1841,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c42MouseClicked
 
     private void c52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c52MouseClicked
+        tf = null;
         if (!es_written(5,2)){
             tf = c52;
             i = 47;
@@ -1796,6 +1849,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c52MouseClicked
 
     private void c07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c07MouseClicked
+        tf = null;
         if (!es_written(0,7)){
             tf = c07;
             i = 7;
@@ -1803,6 +1857,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c07MouseClicked
 
     private void c08MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c08MouseClicked
+        tf = null;
         if (!es_written(0,8)){
             tf = c08;
             i = 8;
@@ -1810,6 +1865,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c08MouseClicked
 
     private void c18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c18MouseClicked
+        tf = null;
         if (!es_written(1,8)){
             tf = c18;
             i = 17;
@@ -1817,6 +1873,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c18MouseClicked
 
     private void c28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c28MouseClicked
+        tf = null;
         if (!es_written(2,8)){
             tf = c28;
             i = 26;
@@ -1824,6 +1881,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c28MouseClicked
 
     private void c38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c38MouseClicked
+        tf = null;
         if (!es_written(3,8)){
             tf = c38;
             i = 35;
@@ -1831,6 +1889,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c38MouseClicked
 
     private void c48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c48MouseClicked
+        tf = null;
         if (!es_written(4,8)){
             tf = c48;
             i = 44;
@@ -1838,6 +1897,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c48MouseClicked
 
     private void c58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c58MouseClicked
+        tf = null;
         if (!es_written(5,8)){
             tf = c58;
             i = 53;
@@ -1845,6 +1905,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c58MouseClicked
 
     private void c68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c68MouseClicked
+        tf = null;
         if (!es_written(6,8)){
             tf = c68;
             i = 62;
@@ -1852,6 +1913,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c68MouseClicked
 
     private void c78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c78MouseClicked
+        tf = null;
         if (!es_written(7,8)){
             tf = c78;
             i = 71;
@@ -1859,6 +1921,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c78MouseClicked
 
     private void c88MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c88MouseClicked
+        tf = null;
         if (!es_written(8,8)){
             tf = c88;
             i = 80;
@@ -1866,6 +1929,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c88MouseClicked
 
     private void c87MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c87MouseClicked
+        tf = null;
         if (!es_written(8,7)){
             tf = c87;
             i = 79;
@@ -1873,6 +1937,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c87MouseClicked
 
     private void c86MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c86MouseClicked
+        tf = null;
         if (!es_written(8,6)){
             tf = c86;
             i = 78;
@@ -1880,6 +1945,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c86MouseClicked
 
     private void c85MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c85MouseClicked
+        tf = null;
         if (!es_written(8,5)){
             tf = c85;
             i = 77;
@@ -1887,6 +1953,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c85MouseClicked
 
     private void c84MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c84MouseClicked
+        tf = null;
         if (!es_written(8,4)){
             tf = c84;
             i = 76;
@@ -1894,6 +1961,7 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c84MouseClicked
 
     private void c83MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c83MouseClicked
+        tf = null;
         if (!es_written(8,3)){
             tf = c83;
             i = 75;
@@ -1901,22 +1969,20 @@ public class Jugar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_c83MouseClicked
 
     private void c81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c81MouseClicked
+        tf = null;
         if (!es_written(8,1)){
             tf = c81;
             i = 73;
-        }// TODO add your handling code here:
+        }// TODO add your handling code here:.
     }//GEN-LAST:event_c81MouseClicked
 
     private void c80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c80MouseClicked
+        tf = null;
         if (!es_written(0,0)){
             tf = c80;
             i = 72;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c80MouseClicked
-
-    private void primera163MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera163MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera163MouseClicked
 
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
         apretat = true;
@@ -2103,7 +2169,6 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros1;
-    private javax.swing.JTextField primera163;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c08","c10","c11","c12","c13","c14","c15","c16","c17","c18","c20","c21","c22","c23","c24","c25","c26","c27","c28","c30","c31","c32","c33","c34","c35","c36","c37","c38","c40","c41","c42","c43","c44","c45","c46","c47","c48","c50","c51","c52","c53","c54","c55","c56","c57","c58","c60","c61","c62","c63","c64","c65","c66","c67","c68","c70","c71","c72","c73","c74","c75","c76","c77","c78","c80","c81","c82","c83","c84","c85","c86","c87","c88"};
