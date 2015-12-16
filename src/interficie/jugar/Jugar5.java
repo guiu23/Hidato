@@ -710,7 +710,7 @@ public class Jugar5 extends javax.swing.JFrame {
         tf = null;
         if (!es_written(3,3)) {
             tf = c33;
-            i = 19;
+            i = 18;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c33MouseClicked
 
@@ -734,7 +734,7 @@ public class Jugar5 extends javax.swing.JFrame {
          tf = null;
          if (!es_written(0,2)){
             tf = c02;
-            i = 3;
+            i = 2;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c02MouseClicked
 
@@ -742,7 +742,7 @@ public class Jugar5 extends javax.swing.JFrame {
           tf = null;
           if (!es_written(4,0)){
             tf = c40;
-            i = 21;
+            i = 20;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c40MouseClicked
 
@@ -750,7 +750,7 @@ public class Jugar5 extends javax.swing.JFrame {
          tf = null;
          if (!es_written(1,0)){
             tf = c10;
-            i = 6;
+            i = 5;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c10MouseClicked
 
@@ -758,7 +758,7 @@ public class Jugar5 extends javax.swing.JFrame {
          tf = null;
          if (!es_written(1,1)){
             tf = c11;
-            i = 7;
+            i = 6;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c11MouseClicked
 
@@ -766,7 +766,7 @@ public class Jugar5 extends javax.swing.JFrame {
           tf = null;
           if (!es_written(1,2)){
             tf = c12;
-            i = 8;
+            i = 7;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c12MouseClicked
 
@@ -774,7 +774,7 @@ public class Jugar5 extends javax.swing.JFrame {
           tf = null;
           if (!es_written(1,3)){
             tf = c13;
-            i = 9;
+            i = 8;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c13MouseClicked
 
@@ -839,7 +839,7 @@ public class Jugar5 extends javax.swing.JFrame {
           tf = null;
           if (!es_written(0,3)){
             tf = c03;
-            i = 4;
+            i = 3;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c03MouseClicked
 
@@ -847,7 +847,7 @@ public class Jugar5 extends javax.swing.JFrame {
           tf = null;
           if (!es_written(0,4)){
             tf = c04;
-            i = 5;
+            i = 4;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c04MouseClicked
 
