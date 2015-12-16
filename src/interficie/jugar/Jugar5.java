@@ -26,7 +26,7 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 /**
  *
- * @author jordi.guiu.pujols
+ * 
  */
 public class Jugar5 extends javax.swing.JFrame {
     public static String us;
