@@ -247,6 +247,7 @@ public class Jugar9 extends javax.swing.JFrame {
         Autocompletar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1229,6 +1230,10 @@ public class Jugar9 extends javax.swing.JFrame {
         getContentPane().add(jButton12);
         jButton12.setBounds(670, 380, 60, 60);
 
+        fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
+        getContentPane().add(fons);
+        fons.setBounds(0, 0, 1000, 600);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
      private void boto(String textboto){
@@ -2156,6 +2161,7 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JTextField c87;
     private javax.swing.JTextField c88;
     private javax.swing.JButton enrere;
+    private javax.swing.JLabel fons;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
