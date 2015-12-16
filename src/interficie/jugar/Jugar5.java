@@ -696,7 +696,7 @@ public class Jugar5 extends javax.swing.JFrame {
     }//GEN-LAST:event_enrereKeyPressed
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
-         if (!es_written(0,0)){
+         if (!es_written(3,0)){
             tf = c33;
             i = 19;
         }// TODO add your handling code here:
