@@ -464,7 +464,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c53);
-        c53.setBounds(190, 300, 30, 30);
+        c53.setBounds(200, 300, 30, 30);
 
         c00.setEditable(false);
         c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -474,7 +474,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(100, 150, 30, 30);
+        c00.setBounds(110, 150, 30, 30);
 
         c01.setEditable(false);
         c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -484,7 +484,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(130, 150, 30, 30);
+        c01.setBounds(140, 150, 30, 30);
 
         c02.setEditable(false);
         c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -494,7 +494,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(160, 150, 30, 30);
+        c02.setBounds(170, 150, 30, 30);
 
         c03.setEditable(false);
         c03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -504,7 +504,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c03);
-        c03.setBounds(190, 150, 30, 30);
+        c03.setBounds(200, 150, 30, 30);
 
         c04.setEditable(false);
         c04.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -514,7 +514,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c04);
-        c04.setBounds(220, 150, 30, 30);
+        c04.setBounds(230, 150, 30, 30);
 
         c05.setEditable(false);
         c05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -524,7 +524,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c05);
-        c05.setBounds(250, 150, 30, 30);
+        c05.setBounds(260, 150, 30, 30);
 
         c06.setEditable(false);
         c06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -534,7 +534,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c06);
-        c06.setBounds(280, 150, 30, 30);
+        c06.setBounds(290, 150, 30, 30);
 
         c82.setEditable(false);
         c82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -544,7 +544,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c82);
-        c82.setBounds(160, 390, 30, 30);
+        c82.setBounds(170, 390, 30, 30);
 
         c10.setEditable(false);
         c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -554,7 +554,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(100, 180, 30, 30);
+        c10.setBounds(110, 180, 30, 30);
 
         c20.setEditable(false);
         c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -564,7 +564,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(100, 210, 30, 30);
+        c20.setBounds(110, 210, 30, 30);
 
         c30.setEditable(false);
         c30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -574,7 +574,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c30);
-        c30.setBounds(100, 240, 30, 30);
+        c30.setBounds(110, 240, 30, 30);
 
         c40.setEditable(false);
         c40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -584,7 +584,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c40);
-        c40.setBounds(100, 270, 30, 30);
+        c40.setBounds(110, 270, 30, 30);
 
         c50.setEditable(false);
         c50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -594,7 +594,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c50);
-        c50.setBounds(100, 300, 30, 30);
+        c50.setBounds(110, 300, 30, 30);
 
         c60.setEditable(false);
         c60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -604,7 +604,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c60);
-        c60.setBounds(100, 330, 30, 30);
+        c60.setBounds(110, 330, 30, 30);
 
         c70.setEditable(false);
         c70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -614,7 +614,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c70);
-        c70.setBounds(100, 360, 30, 30);
+        c70.setBounds(110, 360, 30, 30);
 
         c71.setEditable(false);
         c71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -624,7 +624,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c71);
-        c71.setBounds(130, 360, 30, 30);
+        c71.setBounds(140, 360, 30, 30);
 
         c72.setEditable(false);
         c72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -634,7 +634,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c72);
-        c72.setBounds(160, 360, 30, 30);
+        c72.setBounds(170, 360, 30, 30);
 
         c61.setEditable(false);
         c61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -644,7 +644,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c61);
-        c61.setBounds(130, 330, 30, 30);
+        c61.setBounds(140, 330, 30, 30);
 
         c51.setEditable(false);
         c51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -654,7 +654,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c51);
-        c51.setBounds(130, 300, 30, 30);
+        c51.setBounds(140, 300, 30, 30);
 
         c41.setEditable(false);
         c41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -664,7 +664,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c41);
-        c41.setBounds(130, 270, 30, 30);
+        c41.setBounds(140, 270, 30, 30);
 
         c31.setEditable(false);
         c31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -674,7 +674,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c31);
-        c31.setBounds(130, 240, 30, 30);
+        c31.setBounds(140, 240, 30, 30);
 
         c21.setEditable(false);
         c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -684,7 +684,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(130, 210, 30, 30);
+        c21.setBounds(140, 210, 30, 30);
 
         c11.setEditable(false);
         c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -694,7 +694,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(130, 180, 30, 30);
+        c11.setBounds(140, 180, 30, 30);
 
         c12.setEditable(false);
         c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -704,7 +704,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(160, 180, 30, 30);
+        c12.setBounds(170, 180, 30, 30);
 
         c13.setEditable(false);
         c13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -714,7 +714,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c13);
-        c13.setBounds(190, 180, 30, 30);
+        c13.setBounds(200, 180, 30, 30);
 
         c14.setEditable(false);
         c14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -724,7 +724,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c14);
-        c14.setBounds(220, 180, 30, 30);
+        c14.setBounds(230, 180, 30, 30);
 
         c15.setEditable(false);
         c15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -734,7 +734,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c15);
-        c15.setBounds(250, 180, 30, 30);
+        c15.setBounds(260, 180, 30, 30);
 
         c16.setEditable(false);
         c16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -744,7 +744,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c16);
-        c16.setBounds(280, 180, 30, 30);
+        c16.setBounds(290, 180, 30, 30);
 
         c17.setEditable(false);
         c17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -754,7 +754,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c17);
-        c17.setBounds(310, 180, 30, 30);
+        c17.setBounds(320, 180, 30, 30);
 
         c27.setEditable(false);
         c27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -764,7 +764,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c27);
-        c27.setBounds(310, 210, 30, 30);
+        c27.setBounds(320, 210, 30, 30);
 
         c37.setEditable(false);
         c37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -774,7 +774,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c37);
-        c37.setBounds(310, 240, 30, 30);
+        c37.setBounds(320, 240, 30, 30);
 
         c47.setEditable(false);
         c47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -784,7 +784,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c47);
-        c47.setBounds(310, 270, 30, 30);
+        c47.setBounds(320, 270, 30, 30);
 
         c57.setEditable(false);
         c57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -794,7 +794,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c57);
-        c57.setBounds(310, 300, 30, 30);
+        c57.setBounds(320, 300, 30, 30);
 
         c67.setEditable(false);
         c67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -804,7 +804,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c67);
-        c67.setBounds(310, 330, 30, 30);
+        c67.setBounds(320, 330, 30, 30);
 
         c77.setEditable(false);
         c77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -814,7 +814,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c77);
-        c77.setBounds(310, 360, 30, 30);
+        c77.setBounds(320, 360, 30, 30);
 
         c76.setEditable(false);
         c76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -824,7 +824,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c76);
-        c76.setBounds(280, 360, 30, 30);
+        c76.setBounds(290, 360, 30, 30);
 
         c75.setEditable(false);
         c75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -834,7 +834,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c75);
-        c75.setBounds(250, 360, 30, 30);
+        c75.setBounds(260, 360, 30, 30);
 
         c74.setEditable(false);
         c74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -844,7 +844,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c74);
-        c74.setBounds(220, 360, 30, 30);
+        c74.setBounds(230, 360, 30, 30);
 
         c73.setEditable(false);
         c73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -854,7 +854,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c73);
-        c73.setBounds(190, 360, 30, 30);
+        c73.setBounds(200, 360, 30, 30);
 
         c62.setEditable(false);
         c62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -864,7 +864,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c62);
-        c62.setBounds(160, 330, 30, 30);
+        c62.setBounds(170, 330, 30, 30);
 
         c63.setEditable(false);
         c63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -874,7 +874,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c63);
-        c63.setBounds(190, 330, 30, 30);
+        c63.setBounds(200, 330, 30, 30);
 
         c64.setEditable(false);
         c64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -884,7 +884,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c64);
-        c64.setBounds(220, 330, 30, 30);
+        c64.setBounds(230, 330, 30, 30);
 
         c65.setEditable(false);
         c65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -894,7 +894,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c65);
-        c65.setBounds(250, 330, 30, 30);
+        c65.setBounds(260, 330, 30, 30);
 
         c66.setEditable(false);
         c66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -904,7 +904,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c66);
-        c66.setBounds(280, 330, 30, 30);
+        c66.setBounds(290, 330, 30, 30);
 
         c56.setEditable(false);
         c56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -914,7 +914,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c56);
-        c56.setBounds(280, 300, 30, 30);
+        c56.setBounds(290, 300, 30, 30);
 
         c46.setEditable(false);
         c46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -924,7 +924,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c46);
-        c46.setBounds(280, 270, 30, 30);
+        c46.setBounds(290, 270, 30, 30);
 
         c36.setEditable(false);
         c36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -934,7 +934,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c36);
-        c36.setBounds(280, 240, 30, 30);
+        c36.setBounds(290, 240, 30, 30);
 
         c26.setEditable(false);
         c26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -944,7 +944,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c26);
-        c26.setBounds(280, 210, 30, 30);
+        c26.setBounds(290, 210, 30, 30);
 
         c25.setEditable(false);
         c25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -954,7 +954,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c25);
-        c25.setBounds(250, 210, 30, 30);
+        c25.setBounds(260, 210, 30, 30);
 
         c35.setEditable(false);
         c35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -964,7 +964,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c35);
-        c35.setBounds(250, 240, 30, 30);
+        c35.setBounds(260, 240, 30, 30);
 
         c45.setEditable(false);
         c45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -974,7 +974,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c45);
-        c45.setBounds(250, 270, 30, 30);
+        c45.setBounds(260, 270, 30, 30);
 
         c55.setEditable(false);
         c55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -984,7 +984,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c55);
-        c55.setBounds(250, 300, 30, 30);
+        c55.setBounds(260, 300, 30, 30);
 
         c54.setEditable(false);
         c54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -994,7 +994,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c54);
-        c54.setBounds(220, 300, 30, 30);
+        c54.setBounds(230, 300, 30, 30);
 
         c44.setEditable(false);
         c44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1004,7 +1004,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c44);
-        c44.setBounds(220, 270, 30, 30);
+        c44.setBounds(230, 270, 30, 30);
 
         c34.setEditable(false);
         c34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1014,7 +1014,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c34);
-        c34.setBounds(220, 240, 30, 30);
+        c34.setBounds(230, 240, 30, 30);
 
         c24.setEditable(false);
         c24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1024,7 +1024,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c24);
-        c24.setBounds(220, 210, 30, 30);
+        c24.setBounds(230, 210, 30, 30);
 
         c23.setEditable(false);
         c23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1034,7 +1034,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c23);
-        c23.setBounds(190, 210, 30, 30);
+        c23.setBounds(200, 210, 30, 30);
 
         c22.setEditable(false);
         c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1044,7 +1044,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(160, 210, 30, 30);
+        c22.setBounds(170, 210, 30, 30);
 
         c32.setEditable(false);
         c32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1054,7 +1054,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c32);
-        c32.setBounds(160, 240, 30, 30);
+        c32.setBounds(170, 240, 30, 30);
 
         c33.setEditable(false);
         c33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1064,7 +1064,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c33);
-        c33.setBounds(190, 240, 30, 30);
+        c33.setBounds(200, 240, 30, 30);
 
         c43.setEditable(false);
         c43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1074,7 +1074,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c43);
-        c43.setBounds(190, 270, 30, 30);
+        c43.setBounds(200, 270, 30, 30);
 
         c42.setEditable(false);
         c42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1084,7 +1084,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c42);
-        c42.setBounds(160, 270, 30, 30);
+        c42.setBounds(170, 270, 30, 30);
 
         c52.setEditable(false);
         c52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1094,7 +1094,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c52);
-        c52.setBounds(160, 300, 30, 30);
+        c52.setBounds(170, 300, 30, 30);
 
         c07.setEditable(false);
         c07.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1104,7 +1104,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c07);
-        c07.setBounds(310, 150, 30, 30);
+        c07.setBounds(320, 150, 30, 30);
 
         c08.setEditable(false);
         c08.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1114,7 +1114,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c08);
-        c08.setBounds(340, 150, 30, 30);
+        c08.setBounds(350, 150, 30, 30);
 
         c18.setEditable(false);
         c18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1124,7 +1124,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c18);
-        c18.setBounds(340, 180, 30, 30);
+        c18.setBounds(350, 180, 30, 30);
 
         c28.setEditable(false);
         c28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1134,7 +1134,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c28);
-        c28.setBounds(340, 210, 30, 30);
+        c28.setBounds(350, 210, 30, 30);
 
         c38.setEditable(false);
         c38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1144,7 +1144,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c38);
-        c38.setBounds(340, 240, 30, 30);
+        c38.setBounds(350, 240, 30, 30);
 
         c48.setEditable(false);
         c48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1154,7 +1154,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c48);
-        c48.setBounds(340, 270, 30, 30);
+        c48.setBounds(350, 270, 30, 30);
 
         c58.setEditable(false);
         c58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1164,7 +1164,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c58);
-        c58.setBounds(340, 300, 30, 30);
+        c58.setBounds(350, 300, 30, 30);
 
         c68.setEditable(false);
         c68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1174,7 +1174,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c68);
-        c68.setBounds(340, 330, 30, 30);
+        c68.setBounds(350, 330, 30, 30);
 
         c78.setEditable(false);
         c78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1184,7 +1184,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c78);
-        c78.setBounds(340, 360, 30, 30);
+        c78.setBounds(350, 360, 30, 30);
 
         c88.setEditable(false);
         c88.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1194,7 +1194,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c88);
-        c88.setBounds(340, 390, 30, 30);
+        c88.setBounds(350, 390, 30, 30);
 
         c87.setEditable(false);
         c87.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1204,7 +1204,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c87);
-        c87.setBounds(310, 390, 30, 30);
+        c87.setBounds(320, 390, 30, 30);
 
         c86.setEditable(false);
         c86.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1214,7 +1214,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c86);
-        c86.setBounds(280, 390, 30, 30);
+        c86.setBounds(290, 390, 30, 30);
 
         c85.setEditable(false);
         c85.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1224,7 +1224,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c85);
-        c85.setBounds(250, 390, 30, 30);
+        c85.setBounds(260, 390, 30, 30);
 
         c84.setEditable(false);
         c84.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1234,7 +1234,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c84);
-        c84.setBounds(220, 390, 30, 30);
+        c84.setBounds(230, 390, 30, 30);
 
         c83.setEditable(false);
         c83.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1244,7 +1244,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c83);
-        c83.setBounds(190, 390, 30, 30);
+        c83.setBounds(200, 390, 30, 30);
 
         c81.setEditable(false);
         c81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1254,7 +1254,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c81);
-        c81.setBounds(130, 390, 30, 30);
+        c81.setBounds(140, 390, 30, 30);
 
         c80.setEditable(false);
         c80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1264,7 +1264,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c80);
-        c80.setBounds(100, 390, 30, 30);
+        c80.setBounds(110, 390, 30, 30);
 
         primera163.setEditable(false);
         primera163.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1274,7 +1274,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(primera163);
-        primera163.setBounds(100, 390, 30, 30);
+        primera163.setBounds(110, 390, 30, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1410,327 +1410,570 @@ public class Generar9 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void c53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c53MouseClicked
-        // TODO add your handling code here:
+
+            tf = c53;
+            i = 48;
+  
     }//GEN-LAST:event_c53MouseClicked
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c00;
+            i = 0;
+   
     }//GEN-LAST:event_c00MouseClicked
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c01;
+            i = 1;
+        
     }//GEN-LAST:event_c01MouseClicked
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c02;
+            i = 2;
+       
     }//GEN-LAST:event_c02MouseClicked
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c03;
+            i = 3;
+        
     }//GEN-LAST:event_c03MouseClicked
 
     private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c04;
+            i = 4;
+       
     }//GEN-LAST:event_c04MouseClicked
 
     private void c05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c05MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c05;
+            i = 5;
+      
     }//GEN-LAST:event_c05MouseClicked
 
     private void c06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c06MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c06;
+            i = 6;
+       
     }//GEN-LAST:event_c06MouseClicked
 
     private void c82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c82MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c74;
+            i = 0;
+    
     }//GEN-LAST:event_c82MouseClicked
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c10;
+            i = 9;
+      
     }//GEN-LAST:event_c10MouseClicked
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c20;
+            i = 18;
+      
     }//GEN-LAST:event_c20MouseClicked
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c30;
+            i = 27;
+       
     }//GEN-LAST:event_c30MouseClicked
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c40;
+            i = 36;
+       
     }//GEN-LAST:event_c40MouseClicked
 
     private void c50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c50MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c50;
+            i = 45;
+       
     }//GEN-LAST:event_c50MouseClicked
 
     private void c60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c60MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c60;
+            i = 54;
+       
     }//GEN-LAST:event_c60MouseClicked
 
     private void c70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c70MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c70;
+            i = 63;
+       
     }//GEN-LAST:event_c70MouseClicked
 
     private void c71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c71MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c71;
+            i = 64;
+       
     }//GEN-LAST:event_c71MouseClicked
 
     private void c72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c72MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c72;
+            i = 65;
+      
     }//GEN-LAST:event_c72MouseClicked
 
     private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c61;
+            i = 55;
+      
     }//GEN-LAST:event_c61MouseClicked
 
     private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c51;
+            i = 46;
+      
     }//GEN-LAST:event_c51MouseClicked
 
     private void c41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c41MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c41;
+            i = 37;
+     
     }//GEN-LAST:event_c41MouseClicked
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c31;
+            i = 28;
+      
     }//GEN-LAST:event_c31MouseClicked
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c21;
+            i = 19;
+      
     }//GEN-LAST:event_c21MouseClicked
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c11;
+            i = 10;
+       
     }//GEN-LAST:event_c11MouseClicked
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c12;
+            i = 11;
+       
     }//GEN-LAST:event_c12MouseClicked
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c13;
+            i = 12;
+       
     }//GEN-LAST:event_c13MouseClicked
 
     private void c14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c14MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c14;
+            i = 13;
+        
     }//GEN-LAST:event_c14MouseClicked
 
     private void c15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c15MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c15;
+            i = 14;
+        
     }//GEN-LAST:event_c15MouseClicked
 
     private void c16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c16MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c16;
+            i = 15;
+        
     }//GEN-LAST:event_c16MouseClicked
 
     private void c17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c17MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c17;
+            i = 16;
+       
     }//GEN-LAST:event_c17MouseClicked
 
     private void c27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c27MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c27;
+            i = 26;
+       
     }//GEN-LAST:event_c27MouseClicked
 
     private void c37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c37MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c37;
+            i = 34;
+       
     }//GEN-LAST:event_c37MouseClicked
 
     private void c47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c47MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c47;
+            i = 43;
+        
     }//GEN-LAST:event_c47MouseClicked
 
     private void c57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c57MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c57;
+            i = 52;
+        
     }//GEN-LAST:event_c57MouseClicked
 
     private void c67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c67MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c67;
+            i = 61;
+       
     }//GEN-LAST:event_c67MouseClicked
 
     private void c77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c77MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c77;
+            i = 70;
+        
     }//GEN-LAST:event_c77MouseClicked
 
     private void c76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c76MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c76;
+            i = 69;
+        
     }//GEN-LAST:event_c76MouseClicked
 
     private void c75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c75MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c75;
+            i = 68;
+       
     }//GEN-LAST:event_c75MouseClicked
 
     private void c74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c74MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c74;
+            i = 67;
+      
     }//GEN-LAST:event_c74MouseClicked
 
     private void c73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c73MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c73;
+            i = 66;
+        
     }//GEN-LAST:event_c73MouseClicked
 
     private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c62;
+            i = 56;
+       
     }//GEN-LAST:event_c62MouseClicked
 
     private void c63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c63MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c63;
+            i = 57;
+       
     }//GEN-LAST:event_c63MouseClicked
 
     private void c64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c64MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c64;
+            i = 58;
+        
     }//GEN-LAST:event_c64MouseClicked
 
     private void c65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c65MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c65;
+            i = 59;
+        
     }//GEN-LAST:event_c65MouseClicked
 
     private void c66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c66MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c66;
+            i = 60;
+        
     }//GEN-LAST:event_c66MouseClicked
 
     private void c56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c56MouseClicked
-        // TODO add your handling code here:
+    
+            tf = c56;
+            i = 51;
+       
     }//GEN-LAST:event_c56MouseClicked
 
     private void c46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c46MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c46;
+            i = 42;
+      
     }//GEN-LAST:event_c46MouseClicked
 
     private void c36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c36MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c36;
+            i = 33;
+       
     }//GEN-LAST:event_c36MouseClicked
 
     private void c26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c26MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c26;
+            i = 24;
+       
     }//GEN-LAST:event_c26MouseClicked
 
     private void c25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c25MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c25;
+            i = 23;
+     
     }//GEN-LAST:event_c25MouseClicked
 
     private void c35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c35MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c35;
+            i = 32;
+      
     }//GEN-LAST:event_c35MouseClicked
 
     private void c45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c45MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c45;
+            i = 41;
+       
     }//GEN-LAST:event_c45MouseClicked
 
     private void c55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c55MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c55;
+            i = 50;
+     
     }//GEN-LAST:event_c55MouseClicked
 
     private void c54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c54MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c54;
+            i = 49;
+      
     }//GEN-LAST:event_c54MouseClicked
 
     private void c44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c44MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c44;
+            i = 40;
+     
     }//GEN-LAST:event_c44MouseClicked
 
     private void c34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c34MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c34;
+            i = 31;
+      
     }//GEN-LAST:event_c34MouseClicked
 
     private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c24;
+            i = 22;
+        
     }//GEN-LAST:event_c24MouseClicked
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c23;
+            i = 21;
+        
     }//GEN-LAST:event_c23MouseClicked
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c22;
+            i = 20;
+     
     }//GEN-LAST:event_c22MouseClicked
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c32;
+            i = 29;
+       
     }//GEN-LAST:event_c32MouseClicked
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c33;
+            i = 30;
+   
     }//GEN-LAST:event_c33MouseClicked
 
     private void c43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c43MouseClicked
-        // TODO add your handling code here:
+     
+            tf = c43;
+            i = 39;
+       
     }//GEN-LAST:event_c43MouseClicked
 
     private void c42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c42MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c42;
+            i = 38;
+      
     }//GEN-LAST:event_c42MouseClicked
 
     private void c52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c52MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c52;
+            i = 47;
+        
     }//GEN-LAST:event_c52MouseClicked
 
     private void c07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c07MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c07;
+            i = 7;
+      
     }//GEN-LAST:event_c07MouseClicked
 
     private void c08MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c08MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c08;
+            i = 8;
+       
     }//GEN-LAST:event_c08MouseClicked
 
     private void c18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c18MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c18;
+            i = 17;
+       
     }//GEN-LAST:event_c18MouseClicked
 
     private void c28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c28MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c28;
+            i = 26;
+       
     }//GEN-LAST:event_c28MouseClicked
 
     private void c38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c38MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c38;
+            i = 35;
+      
     }//GEN-LAST:event_c38MouseClicked
 
     private void c48MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c48MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c48;
+            i = 44;
+       
     }//GEN-LAST:event_c48MouseClicked
 
     private void c58MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c58MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c58;
+            i = 53;
+       
     }//GEN-LAST:event_c58MouseClicked
 
     private void c68MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c68MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c68;
+            i = 62;
+      
     }//GEN-LAST:event_c68MouseClicked
 
     private void c78MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c78MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c78;
+            i = 71;
+       
     }//GEN-LAST:event_c78MouseClicked
 
     private void c88MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c88MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c88;
+            i = 80;
+       
     }//GEN-LAST:event_c88MouseClicked
 
     private void c87MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c87MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c87;
+            i = 79;
+        
     }//GEN-LAST:event_c87MouseClicked
 
     private void c86MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c86MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c86;
+            i = 78;
+       
     }//GEN-LAST:event_c86MouseClicked
 
     private void c85MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c85MouseClicked
-        // TODO add your handling code here:
+      
+            tf = c85;
+            i = 77;
+        
     }//GEN-LAST:event_c85MouseClicked
 
     private void c84MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c84MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c84;
+            i = 76;
+       
     }//GEN-LAST:event_c84MouseClicked
 
     private void c83MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c83MouseClicked
-        // TODO add your handling code here:
+       
+            tf = c83;
+            i = 75;
+       
     }//GEN-LAST:event_c83MouseClicked
 
     private void c81MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c81MouseClicked
-        // TODO add your handling code here:
+        
+            tf = c81;
+            i = 73;
+   
     }//GEN-LAST:event_c81MouseClicked
 
     private void c80MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c80MouseClicked
-        // TODO add your handling code here:
+   
+            tf = c80;
+            i = 72;
+  
     }//GEN-LAST:event_c80MouseClicked
 
     private void primera163MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera163MouseClicked

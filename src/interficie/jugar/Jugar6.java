@@ -926,7 +926,7 @@ public class Jugar6 extends javax.swing.JFrame {
     private void primera44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera44MouseClicked
         // TODO add your handling code here:
         if (!es_written(4,4)){
-            tf = c40;
+            tf = c44;
             i = 28;
         }
     }//GEN-LAST:event_primera44MouseClicked
