@@ -1363,7 +1363,7 @@ public class Jugar7 extends javax.swing.JFrame {
         if (!es_written(6,2)){
             tf = c64;
             i = 44;
-        }// TODO add your handling code here:
+        }// TODO add your handling code here:.
     }//GEN-LAST:event_c62MouseClicked
 
     private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
