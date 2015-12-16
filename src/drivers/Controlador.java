@@ -187,6 +187,7 @@ public class Controlador {
                 }
             }
         }
+        Taulell.setID(nomT);
         return Funcions.llegirTaulell2(Taulell,nomT); //return 1, 2 i 3 tauell correcte i treu dificultat (1,2,3)
                                                  //return 4 el taulell ja existeix
                                                  //return 5 el taulell no te solucio
