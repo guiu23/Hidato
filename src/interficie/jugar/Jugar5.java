@@ -593,20 +593,21 @@ public class Jugar5 extends javax.swing.JFrame {
     private void boto(String textboto){
         //array dstrings com tantes posicions como caselles. 
         //a cada casella li passem a boto la seva posicio dins larray
-        String S = Caselles[i];
+          String S = Caselles[i];
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
-        val = Integer.parseInt(tf.getText() + textboto);
+        else val = Integer.parseInt(tf.getText() + textboto);
         //System.out.println(val);
         //System.out.println(f);
         //System.out.println(c);
-        if (afegirmarca){ 
+        /*if (afegirmarca){ 
             val = Integer.parseInt(textboto);
             switchAnnotationCasella(val, f, c);
             afegirmarca = false;
         }
         else{
+        */
             DefineixCasella(val, f, c,size);
             String afegirstr;
             int afegirint = getCasella(f,c);   
@@ -614,7 +615,6 @@ public class Jugar5 extends javax.swing.JFrame {
             else if (afegirint == -1) afegirstr = "X";
             else afegirstr = String.valueOf(afegirint);
             tf.setText(afegirstr);
-        }
     }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
