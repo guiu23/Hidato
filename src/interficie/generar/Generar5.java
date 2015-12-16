@@ -148,7 +148,7 @@ public class Generar5 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 50, 260, 60);
+        titol.setBounds(280, 50, 260, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -164,7 +164,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 59, 23);
+        enrere.setBounds(840, 470, 100, 60);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,7 +178,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(450, 140, 60, 60);
+        jButton1.setBounds(630, 170, 60, 60);
 
         jButton4.setText("4");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,7 +192,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(450, 210, 60, 60);
+        jButton4.setBounds(630, 240, 60, 60);
 
         jButton7.setText("7");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -206,7 +206,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(450, 280, 60, 60);
+        jButton7.setBounds(630, 310, 60, 60);
 
         guardartaulell.setText("Guardar Taulell");
         guardartaulell.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -220,7 +220,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(guardartaulell);
-        guardartaulell.setBounds(450, 360, 190, 40);
+        guardartaulell.setBounds(300, 440, 250, 40);
 
         jButton8.setText("8");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -234,7 +234,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(520, 280, 60, 60);
+        jButton8.setBounds(700, 310, 60, 60);
 
         jButton5.setText("5");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -248,7 +248,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(520, 210, 60, 60);
+        jButton5.setBounds(700, 240, 60, 60);
 
         jButton2.setText("2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -262,7 +262,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(520, 140, 60, 60);
+        jButton2.setBounds(700, 170, 60, 60);
 
         jButton3.setText("3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -276,7 +276,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 140, 60, 60);
+        jButton3.setBounds(770, 170, 60, 60);
 
         jButton6.setText("6");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -290,7 +290,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(590, 210, 60, 60);
+        jButton6.setBounds(770, 240, 60, 60);
 
         jButton9.setText("9");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -304,7 +304,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(590, 280, 60, 60);
+        jButton9.setBounds(770, 310, 60, 60);
 
         jButton10.setText("0");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -313,7 +313,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(670, 280, 60, 60);
+        jButton10.setBounds(700, 390, 60, 60);
 
         Esborrar.setText("Esborrar");
         Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -322,7 +322,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Esborrar);
-        Esborrar.setBounds(670, 210, 90, 60);
+        Esborrar.setBounds(60, 280, 120, 70);
 
         jButton11.setText("Invalida");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -336,12 +336,12 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(670, 140, 90, 60);
+        jButton11.setBounds(60, 180, 120, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(510, 80, 90, 50);
+        numeros.setBounds(690, 110, 90, 50);
 
         c33.setEditable(false);
         c33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -352,7 +352,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c33);
-        c33.setBounds(290, 310, 50, 50);
+        c33.setBounds(450, 310, 50, 50);
 
         c00.setEditable(false);
         c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -363,7 +363,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(140, 160, 50, 50);
+        c00.setBounds(300, 160, 50, 50);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -374,7 +374,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(190, 160, 50, 50);
+        c01.setBounds(350, 160, 50, 50);
 
         c02.setEditable(false);
         c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -385,7 +385,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(240, 160, 50, 50);
+        c02.setBounds(400, 160, 50, 50);
 
         c40.setEditable(false);
         c40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -396,7 +396,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c40);
-        c40.setBounds(140, 360, 50, 50);
+        c40.setBounds(300, 360, 50, 50);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -407,7 +407,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(140, 210, 50, 50);
+        c10.setBounds(300, 210, 50, 50);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -418,7 +418,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(190, 210, 50, 50);
+        c11.setBounds(350, 210, 50, 50);
 
         c12.setEditable(false);
         c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -429,7 +429,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(240, 210, 50, 50);
+        c12.setBounds(400, 210, 50, 50);
 
         c13.setEditable(false);
         c13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -440,7 +440,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c13);
-        c13.setBounds(290, 210, 50, 50);
+        c13.setBounds(450, 210, 50, 50);
 
         c20.setEditable(false);
         c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -451,7 +451,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(140, 260, 50, 50);
+        c20.setBounds(300, 260, 50, 50);
 
         c21.setEditable(false);
         c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -462,7 +462,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(190, 260, 50, 50);
+        c21.setBounds(350, 260, 50, 50);
 
         c22.setEditable(false);
         c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -473,7 +473,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(240, 260, 50, 50);
+        c22.setBounds(400, 260, 50, 50);
 
         c23.setEditable(false);
         c23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -484,7 +484,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c23);
-        c23.setBounds(290, 260, 50, 50);
+        c23.setBounds(450, 260, 50, 50);
 
         c30.setEditable(false);
         c30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -495,7 +495,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c30);
-        c30.setBounds(140, 310, 50, 50);
+        c30.setBounds(300, 310, 50, 50);
 
         c31.setEditable(false);
         c31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -506,7 +506,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c31);
-        c31.setBounds(190, 310, 50, 50);
+        c31.setBounds(350, 310, 50, 50);
 
         c32.setEditable(false);
         c32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -517,7 +517,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c32);
-        c32.setBounds(240, 310, 50, 50);
+        c32.setBounds(400, 310, 50, 50);
 
         c03.setEditable(false);
         c03.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -528,7 +528,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c03);
-        c03.setBounds(290, 160, 50, 50);
+        c03.setBounds(450, 160, 50, 50);
 
         c04.setEditable(false);
         c04.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -539,7 +539,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c04);
-        c04.setBounds(340, 160, 50, 50);
+        c04.setBounds(500, 160, 50, 50);
 
         c14.setEditable(false);
         c14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -550,7 +550,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c14);
-        c14.setBounds(340, 210, 50, 50);
+        c14.setBounds(500, 210, 50, 50);
 
         c24.setEditable(false);
         c24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -561,7 +561,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c24);
-        c24.setBounds(340, 260, 50, 50);
+        c24.setBounds(500, 260, 50, 50);
 
         c34.setEditable(false);
         c34.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -572,7 +572,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c34);
-        c34.setBounds(340, 310, 50, 50);
+        c34.setBounds(500, 310, 50, 50);
 
         c44.setEditable(false);
         c44.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -583,7 +583,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c44);
-        c44.setBounds(340, 360, 50, 50);
+        c44.setBounds(500, 360, 50, 50);
 
         c43.setEditable(false);
         c43.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -594,7 +594,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c43);
-        c43.setBounds(290, 360, 50, 50);
+        c43.setBounds(450, 360, 50, 50);
 
         c42.setEditable(false);
         c42.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -605,7 +605,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c42);
-        c42.setBounds(240, 360, 50, 50);
+        c42.setBounds(400, 360, 50, 50);
 
         c41.setEditable(false);
         c41.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -616,7 +616,7 @@ public class Generar5 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c41);
-        c41.setBounds(190, 360, 50, 50);
+        c41.setBounds(350, 360, 50, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

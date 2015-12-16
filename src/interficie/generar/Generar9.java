@@ -260,7 +260,7 @@ public class Generar9 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 40, 260, 60);
+        titol.setBounds(330, 50, 260, 60);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -276,7 +276,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(610, 430, 59, 23);
+        enrere.setBounds(850, 490, 100, 50);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -290,7 +290,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(430, 160, 60, 60);
+        jButton1.setBounds(670, 180, 60, 60);
 
         jButton4.setText("4");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -304,7 +304,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(430, 230, 60, 60);
+        jButton4.setBounds(670, 250, 60, 60);
 
         jButton7.setText("7");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -318,7 +318,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(430, 300, 60, 60);
+        jButton7.setBounds(670, 320, 60, 60);
 
         guardartaulell.setText("Guardar Taulell");
         guardartaulell.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -332,7 +332,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(guardartaulell);
-        guardartaulell.setBounds(430, 380, 190, 40);
+        guardartaulell.setBounds(320, 450, 270, 40);
 
         jButton8.setText("8");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -346,7 +346,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(500, 300, 60, 60);
+        jButton8.setBounds(740, 320, 60, 60);
 
         jButton5.setText("5");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -360,7 +360,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(500, 230, 60, 60);
+        jButton5.setBounds(740, 250, 60, 60);
 
         jButton2.setText("2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -374,7 +374,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(500, 160, 60, 60);
+        jButton2.setBounds(740, 180, 60, 60);
 
         jButton3.setText("3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -388,7 +388,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(570, 160, 60, 60);
+        jButton3.setBounds(810, 180, 60, 60);
 
         jButton6.setText("6");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -402,7 +402,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(570, 230, 60, 60);
+        jButton6.setBounds(810, 250, 60, 60);
 
         jButton9.setText("9");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -416,7 +416,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(570, 300, 60, 60);
+        jButton9.setBounds(810, 320, 60, 60);
 
         jButton10.setText("0");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -425,7 +425,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(650, 300, 60, 60);
+        jButton10.setBounds(740, 400, 60, 60);
 
         Esborrar.setText("Esborrar");
         Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -434,7 +434,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Esborrar);
-        Esborrar.setBounds(650, 230, 90, 60);
+        Esborrar.setBounds(80, 300, 100, 70);
 
         jButton11.setText("Invalida");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -448,12 +448,12 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(650, 160, 90, 60);
+        jButton11.setBounds(80, 180, 100, 70);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(490, 100, 90, 50);
+        numeros.setBounds(730, 120, 90, 50);
 
         c53.setEditable(false);
         c53.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -463,7 +463,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c53);
-        c53.setBounds(200, 300, 30, 30);
+        c53.setBounds(410, 310, 30, 30);
 
         c00.setEditable(false);
         c00.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -473,7 +473,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(110, 150, 30, 30);
+        c00.setBounds(320, 160, 30, 30);
 
         c01.setEditable(false);
         c01.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -483,7 +483,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(140, 150, 30, 30);
+        c01.setBounds(350, 160, 30, 30);
 
         c02.setEditable(false);
         c02.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -493,7 +493,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(170, 150, 30, 30);
+        c02.setBounds(380, 160, 30, 30);
 
         c03.setEditable(false);
         c03.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -503,7 +503,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c03);
-        c03.setBounds(200, 150, 30, 30);
+        c03.setBounds(410, 160, 30, 30);
 
         c04.setEditable(false);
         c04.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -513,7 +513,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c04);
-        c04.setBounds(230, 150, 30, 30);
+        c04.setBounds(440, 160, 30, 30);
 
         c05.setEditable(false);
         c05.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -523,7 +523,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c05);
-        c05.setBounds(260, 150, 30, 30);
+        c05.setBounds(470, 160, 30, 30);
 
         c06.setEditable(false);
         c06.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -533,7 +533,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c06);
-        c06.setBounds(290, 150, 30, 30);
+        c06.setBounds(500, 160, 30, 30);
 
         c82.setEditable(false);
         c82.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -543,7 +543,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c82);
-        c82.setBounds(170, 390, 30, 30);
+        c82.setBounds(380, 400, 30, 30);
 
         c10.setEditable(false);
         c10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -553,7 +553,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(110, 180, 30, 30);
+        c10.setBounds(320, 190, 30, 30);
 
         c20.setEditable(false);
         c20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -563,7 +563,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(110, 210, 30, 30);
+        c20.setBounds(320, 220, 30, 30);
 
         c30.setEditable(false);
         c30.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -573,7 +573,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c30);
-        c30.setBounds(110, 240, 30, 30);
+        c30.setBounds(320, 250, 30, 30);
 
         c40.setEditable(false);
         c40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -583,7 +583,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c40);
-        c40.setBounds(110, 270, 30, 30);
+        c40.setBounds(320, 280, 30, 30);
 
         c50.setEditable(false);
         c50.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -593,7 +593,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c50);
-        c50.setBounds(110, 300, 30, 30);
+        c50.setBounds(320, 310, 30, 30);
 
         c60.setEditable(false);
         c60.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -603,7 +603,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c60);
-        c60.setBounds(110, 330, 30, 30);
+        c60.setBounds(320, 340, 30, 30);
 
         c70.setEditable(false);
         c70.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -613,7 +613,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c70);
-        c70.setBounds(110, 360, 30, 30);
+        c70.setBounds(320, 370, 30, 30);
 
         c71.setEditable(false);
         c71.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -623,7 +623,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c71);
-        c71.setBounds(140, 360, 30, 30);
+        c71.setBounds(350, 370, 30, 30);
 
         c72.setEditable(false);
         c72.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -633,7 +633,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c72);
-        c72.setBounds(170, 360, 30, 30);
+        c72.setBounds(380, 370, 30, 30);
 
         c61.setEditable(false);
         c61.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -643,7 +643,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c61);
-        c61.setBounds(140, 330, 30, 30);
+        c61.setBounds(350, 340, 30, 30);
 
         c51.setEditable(false);
         c51.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -653,7 +653,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c51);
-        c51.setBounds(140, 300, 30, 30);
+        c51.setBounds(350, 310, 30, 30);
 
         c41.setEditable(false);
         c41.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -663,7 +663,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c41);
-        c41.setBounds(140, 270, 30, 30);
+        c41.setBounds(350, 280, 30, 30);
 
         c31.setEditable(false);
         c31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -673,7 +673,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c31);
-        c31.setBounds(140, 240, 30, 30);
+        c31.setBounds(350, 250, 30, 30);
 
         c21.setEditable(false);
         c21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -683,7 +683,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(140, 210, 30, 30);
+        c21.setBounds(350, 220, 30, 30);
 
         c11.setEditable(false);
         c11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -693,7 +693,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(140, 180, 30, 30);
+        c11.setBounds(350, 190, 30, 30);
 
         c12.setEditable(false);
         c12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -703,7 +703,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(170, 180, 30, 30);
+        c12.setBounds(380, 190, 30, 30);
 
         c13.setEditable(false);
         c13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -713,7 +713,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c13);
-        c13.setBounds(200, 180, 30, 30);
+        c13.setBounds(410, 190, 30, 30);
 
         c14.setEditable(false);
         c14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -723,7 +723,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c14);
-        c14.setBounds(230, 180, 30, 30);
+        c14.setBounds(440, 190, 30, 30);
 
         c15.setEditable(false);
         c15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -733,7 +733,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c15);
-        c15.setBounds(260, 180, 30, 30);
+        c15.setBounds(470, 190, 30, 30);
 
         c16.setEditable(false);
         c16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -743,7 +743,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c16);
-        c16.setBounds(290, 180, 30, 30);
+        c16.setBounds(500, 190, 30, 30);
 
         c17.setEditable(false);
         c17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -753,7 +753,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c17);
-        c17.setBounds(320, 180, 30, 30);
+        c17.setBounds(530, 190, 30, 30);
 
         c27.setEditable(false);
         c27.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -763,7 +763,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c27);
-        c27.setBounds(320, 210, 30, 30);
+        c27.setBounds(530, 220, 30, 30);
 
         c37.setEditable(false);
         c37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -773,7 +773,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c37);
-        c37.setBounds(320, 240, 30, 30);
+        c37.setBounds(530, 250, 30, 30);
 
         c47.setEditable(false);
         c47.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -783,7 +783,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c47);
-        c47.setBounds(320, 270, 30, 30);
+        c47.setBounds(530, 280, 30, 30);
 
         c57.setEditable(false);
         c57.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -793,7 +793,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c57);
-        c57.setBounds(320, 300, 30, 30);
+        c57.setBounds(530, 310, 30, 30);
 
         c67.setEditable(false);
         c67.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -803,7 +803,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c67);
-        c67.setBounds(320, 330, 30, 30);
+        c67.setBounds(530, 340, 30, 30);
 
         c77.setEditable(false);
         c77.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -813,7 +813,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c77);
-        c77.setBounds(320, 360, 30, 30);
+        c77.setBounds(530, 370, 30, 30);
 
         c76.setEditable(false);
         c76.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -823,7 +823,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c76);
-        c76.setBounds(290, 360, 30, 30);
+        c76.setBounds(500, 370, 30, 30);
 
         c75.setEditable(false);
         c75.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -833,7 +833,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c75);
-        c75.setBounds(260, 360, 30, 30);
+        c75.setBounds(470, 370, 30, 30);
 
         c74.setEditable(false);
         c74.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -843,7 +843,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c74);
-        c74.setBounds(230, 360, 30, 30);
+        c74.setBounds(440, 370, 30, 30);
 
         c73.setEditable(false);
         c73.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -853,7 +853,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c73);
-        c73.setBounds(200, 360, 30, 30);
+        c73.setBounds(410, 370, 30, 30);
 
         c62.setEditable(false);
         c62.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -863,7 +863,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c62);
-        c62.setBounds(170, 330, 30, 30);
+        c62.setBounds(380, 340, 30, 30);
 
         c63.setEditable(false);
         c63.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -873,7 +873,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c63);
-        c63.setBounds(200, 330, 30, 30);
+        c63.setBounds(410, 340, 30, 30);
 
         c64.setEditable(false);
         c64.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -883,7 +883,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c64);
-        c64.setBounds(230, 330, 30, 30);
+        c64.setBounds(440, 340, 30, 30);
 
         c65.setEditable(false);
         c65.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -893,7 +893,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c65);
-        c65.setBounds(260, 330, 30, 30);
+        c65.setBounds(470, 340, 30, 30);
 
         c66.setEditable(false);
         c66.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -903,7 +903,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c66);
-        c66.setBounds(290, 330, 30, 30);
+        c66.setBounds(500, 340, 30, 30);
 
         c56.setEditable(false);
         c56.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -913,7 +913,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c56);
-        c56.setBounds(290, 300, 30, 30);
+        c56.setBounds(500, 310, 30, 30);
 
         c46.setEditable(false);
         c46.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -923,7 +923,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c46);
-        c46.setBounds(290, 270, 30, 30);
+        c46.setBounds(500, 280, 30, 30);
 
         c36.setEditable(false);
         c36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -933,7 +933,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c36);
-        c36.setBounds(290, 240, 30, 30);
+        c36.setBounds(500, 250, 30, 30);
 
         c26.setEditable(false);
         c26.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -943,7 +943,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c26);
-        c26.setBounds(290, 210, 30, 30);
+        c26.setBounds(500, 220, 30, 30);
 
         c25.setEditable(false);
         c25.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -953,7 +953,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c25);
-        c25.setBounds(260, 210, 30, 30);
+        c25.setBounds(470, 220, 30, 30);
 
         c35.setEditable(false);
         c35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -963,7 +963,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c35);
-        c35.setBounds(260, 240, 30, 30);
+        c35.setBounds(470, 250, 30, 30);
 
         c45.setEditable(false);
         c45.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -973,7 +973,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c45);
-        c45.setBounds(260, 270, 30, 30);
+        c45.setBounds(470, 280, 30, 30);
 
         c55.setEditable(false);
         c55.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -983,7 +983,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c55);
-        c55.setBounds(260, 300, 30, 30);
+        c55.setBounds(470, 310, 30, 30);
 
         c54.setEditable(false);
         c54.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -993,7 +993,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c54);
-        c54.setBounds(230, 300, 30, 30);
+        c54.setBounds(440, 310, 30, 30);
 
         c44.setEditable(false);
         c44.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1003,7 +1003,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c44);
-        c44.setBounds(230, 270, 30, 30);
+        c44.setBounds(440, 280, 30, 30);
 
         c34.setEditable(false);
         c34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1013,7 +1013,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c34);
-        c34.setBounds(230, 240, 30, 30);
+        c34.setBounds(440, 250, 30, 30);
 
         c24.setEditable(false);
         c24.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1023,7 +1023,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c24);
-        c24.setBounds(230, 210, 30, 30);
+        c24.setBounds(440, 220, 30, 30);
 
         c23.setEditable(false);
         c23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1033,7 +1033,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c23);
-        c23.setBounds(200, 210, 30, 30);
+        c23.setBounds(410, 220, 30, 30);
 
         c22.setEditable(false);
         c22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1043,7 +1043,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(170, 210, 30, 30);
+        c22.setBounds(380, 220, 30, 30);
 
         c32.setEditable(false);
         c32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1053,7 +1053,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c32);
-        c32.setBounds(170, 240, 30, 30);
+        c32.setBounds(380, 250, 30, 30);
 
         c33.setEditable(false);
         c33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1063,7 +1063,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c33);
-        c33.setBounds(200, 240, 30, 30);
+        c33.setBounds(410, 250, 30, 30);
 
         c43.setEditable(false);
         c43.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1073,7 +1073,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c43);
-        c43.setBounds(200, 270, 30, 30);
+        c43.setBounds(410, 280, 30, 30);
 
         c42.setEditable(false);
         c42.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1083,7 +1083,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c42);
-        c42.setBounds(170, 270, 30, 30);
+        c42.setBounds(380, 280, 30, 30);
 
         c52.setEditable(false);
         c52.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1093,7 +1093,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c52);
-        c52.setBounds(170, 300, 30, 30);
+        c52.setBounds(380, 310, 30, 30);
 
         c07.setEditable(false);
         c07.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1103,7 +1103,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c07);
-        c07.setBounds(320, 150, 30, 30);
+        c07.setBounds(530, 160, 30, 30);
 
         c08.setEditable(false);
         c08.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1113,7 +1113,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c08);
-        c08.setBounds(350, 150, 30, 30);
+        c08.setBounds(560, 160, 30, 30);
 
         c18.setEditable(false);
         c18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1123,7 +1123,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c18);
-        c18.setBounds(350, 180, 30, 30);
+        c18.setBounds(560, 190, 30, 30);
 
         c28.setEditable(false);
         c28.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1133,7 +1133,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c28);
-        c28.setBounds(350, 210, 30, 30);
+        c28.setBounds(560, 220, 30, 30);
 
         c38.setEditable(false);
         c38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1143,7 +1143,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c38);
-        c38.setBounds(350, 240, 30, 30);
+        c38.setBounds(560, 250, 30, 30);
 
         c48.setEditable(false);
         c48.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1153,7 +1153,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c48);
-        c48.setBounds(350, 270, 30, 30);
+        c48.setBounds(560, 280, 30, 30);
 
         c58.setEditable(false);
         c58.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1163,7 +1163,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c58);
-        c58.setBounds(350, 300, 30, 30);
+        c58.setBounds(560, 310, 30, 30);
 
         c68.setEditable(false);
         c68.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1173,7 +1173,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c68);
-        c68.setBounds(350, 330, 30, 30);
+        c68.setBounds(560, 340, 30, 30);
 
         c78.setEditable(false);
         c78.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1183,7 +1183,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c78);
-        c78.setBounds(350, 360, 30, 30);
+        c78.setBounds(560, 370, 30, 30);
 
         c88.setEditable(false);
         c88.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1193,7 +1193,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c88);
-        c88.setBounds(350, 390, 30, 30);
+        c88.setBounds(560, 400, 30, 30);
 
         c87.setEditable(false);
         c87.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1203,7 +1203,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c87);
-        c87.setBounds(320, 390, 30, 30);
+        c87.setBounds(530, 400, 30, 30);
 
         c86.setEditable(false);
         c86.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1213,7 +1213,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c86);
-        c86.setBounds(290, 390, 30, 30);
+        c86.setBounds(500, 400, 30, 30);
 
         c85.setEditable(false);
         c85.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1223,7 +1223,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c85);
-        c85.setBounds(260, 390, 30, 30);
+        c85.setBounds(470, 400, 30, 30);
 
         c84.setEditable(false);
         c84.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1233,7 +1233,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c84);
-        c84.setBounds(230, 390, 30, 30);
+        c84.setBounds(440, 400, 30, 30);
 
         c83.setEditable(false);
         c83.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1243,7 +1243,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c83);
-        c83.setBounds(200, 390, 30, 30);
+        c83.setBounds(410, 400, 30, 30);
 
         c81.setEditable(false);
         c81.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1253,7 +1253,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c81);
-        c81.setBounds(140, 390, 30, 30);
+        c81.setBounds(350, 400, 30, 30);
 
         c80.setEditable(false);
         c80.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -1263,7 +1263,7 @@ public class Generar9 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c80);
-        c80.setBounds(110, 390, 30, 30);
+        c80.setBounds(320, 400, 30, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

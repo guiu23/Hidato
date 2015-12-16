@@ -123,7 +123,7 @@ public class Generar3 extends javax.swing.JFrame {
         titol.setSelectionColor(new java.awt.Color(255, 255, 255));
         titol.setVerifyInputWhenFocusTarget(false);
         getContentPane().add(titol);
-        titol.setBounds(120, 50, 260, 60);
+        titol.setBounds(310, 50, 260, 60);
 
         c00.setEditable(false);
         c00.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -134,7 +134,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c00);
-        c00.setBounds(170, 170, 60, 60);
+        c00.setBounds(360, 170, 60, 60);
 
         c02.setEditable(false);
         c02.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -145,7 +145,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c02);
-        c02.setBounds(290, 170, 60, 60);
+        c02.setBounds(480, 170, 60, 60);
 
         c01.setEditable(false);
         c01.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -156,7 +156,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c01);
-        c01.setBounds(230, 170, 60, 60);
+        c01.setBounds(420, 170, 60, 60);
 
         c22.setEditable(false);
         c22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -167,12 +167,12 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c22);
-        c22.setBounds(290, 290, 60, 60);
+        c22.setBounds(480, 290, 60, 60);
 
         numeros.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numeros.setText("Números:");
         getContentPane().add(numeros);
-        numeros.setBounds(610, 90, 90, 50);
+        numeros.setBounds(700, 100, 90, 50);
 
         enrere.setBackground(new java.awt.Color(0, 0, 0));
         enrere.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,7 +188,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enrere);
-        enrere.setBounds(910, 560, 59, 23);
+        enrere.setBounds(850, 490, 100, 50);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -199,7 +199,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c10);
-        c10.setBounds(170, 230, 60, 60);
+        c10.setBounds(360, 230, 60, 60);
 
         c11.setEditable(false);
         c11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -210,7 +210,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c11);
-        c11.setBounds(230, 230, 60, 60);
+        c11.setBounds(420, 230, 60, 60);
 
         c12.setEditable(false);
         c12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -221,7 +221,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c12);
-        c12.setBounds(290, 230, 60, 60);
+        c12.setBounds(480, 230, 60, 60);
 
         c20.setEditable(false);
         c20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -232,7 +232,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c20);
-        c20.setBounds(170, 290, 60, 60);
+        c20.setBounds(360, 290, 60, 60);
 
         c21.setEditable(false);
         c21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -243,7 +243,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(c21);
-        c21.setBounds(230, 290, 60, 60);
+        c21.setBounds(420, 290, 60, 60);
 
         guardartaulell.setText("Guardar Taulell");
         guardartaulell.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -257,7 +257,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(guardartaulell);
-        guardartaulell.setBounds(550, 370, 190, 40);
+        guardartaulell.setBounds(360, 380, 180, 40);
 
         jButton11.setText("Invalida");
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -271,7 +271,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton11);
-        jButton11.setBounds(770, 150, 90, 60);
+        jButton11.setBounds(110, 170, 100, 70);
 
         Esborrar.setText("Esborrar");
         Esborrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -280,7 +280,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Esborrar);
-        Esborrar.setBounds(770, 220, 90, 60);
+        Esborrar.setBounds(110, 270, 100, 70);
 
         jButton1.setText("1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -294,7 +294,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(550, 150, 60, 60);
+        jButton1.setBounds(640, 160, 60, 60);
 
         jButton2.setText("2");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -308,7 +308,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(620, 150, 60, 60);
+        jButton2.setBounds(710, 160, 60, 60);
 
         jButton3.setText("3");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -322,7 +322,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(690, 150, 60, 60);
+        jButton3.setBounds(780, 160, 60, 60);
 
         jButton4.setText("4");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -336,7 +336,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(550, 220, 60, 60);
+        jButton4.setBounds(640, 230, 60, 60);
 
         jButton5.setText("5");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -350,7 +350,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(620, 220, 60, 60);
+        jButton5.setBounds(710, 230, 60, 60);
 
         jButton6.setText("6");
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -364,7 +364,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(690, 220, 60, 60);
+        jButton6.setBounds(780, 230, 60, 60);
 
         jButton7.setText("7");
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -378,7 +378,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(550, 290, 60, 60);
+        jButton7.setBounds(640, 300, 60, 60);
 
         jButton8.setText("8");
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -392,7 +392,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(620, 290, 60, 60);
+        jButton8.setBounds(710, 300, 60, 60);
 
         jButton9.setText("9");
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -406,7 +406,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(690, 290, 60, 60);
+        jButton9.setBounds(780, 300, 60, 60);
 
         jButton10.setText("0");
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -415,7 +415,7 @@ public class Generar3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(770, 290, 60, 60);
+        jButton10.setBounds(710, 380, 60, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
