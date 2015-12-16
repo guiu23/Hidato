@@ -1154,6 +1154,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c53MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c53MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,3)){
             tf = c53;
             i = 43;
@@ -1162,6 +1163,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c00MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,0)){
             tf = c00;
             i = 0;
@@ -1170,6 +1172,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c01MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,1)){
             tf = c01;
             i = 1;
@@ -1178,6 +1181,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c02MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,2)){
             tf = c02;
             i = 2;
@@ -1186,6 +1190,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c03MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,3)){
             tf = c03;
             i = 3;
@@ -1194,6 +1199,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c04MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c04MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,4)){
             tf = c04;
             i = 4;
@@ -1202,6 +1208,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c05MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c05MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,5)){
             tf = c05;
             i = 5;
@@ -1210,6 +1217,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c06MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c06MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,6)){
             tf = c06;
             i = 6;
@@ -1218,6 +1226,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c07MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c07MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(0,7)){
             tf = c07;
             i = 7;
@@ -1226,6 +1235,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c10MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,0)){
             tf = c10;
             i = 8;
@@ -1234,6 +1244,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c20MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,0)){
             tf = c20;
             i = 16;
@@ -1242,6 +1253,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c30MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,0)){
             tf = c30;
             i = 24;
@@ -1250,6 +1262,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c40MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,0)){
             tf = c40;
             i = 32;
@@ -1258,6 +1271,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c50MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,0)){
             tf = c50;
             i = 40;
@@ -1266,6 +1280,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c60MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c60MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,0)){
             tf = c60;
             i = 48;
@@ -1274,6 +1289,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c70MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c70MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,0)){
             tf = c70;
             i = 56;
@@ -1282,6 +1298,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c71MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c71MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,1)){
             tf = c71;
             i = 57;
@@ -1290,6 +1307,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c72MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,2)){
             tf = c72;
             i = 58;
@@ -1298,6 +1316,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c61MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c61MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,1)){
             tf = c61;
             i = 49;
@@ -1306,6 +1325,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c51MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,1)){
             tf = c51;
             i = 41;
@@ -1314,6 +1334,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c41MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,1)){
             tf = c41;
             i = 33;
@@ -1322,6 +1343,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c31MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,1)){
             tf = c31;
             i = 25;
@@ -1330,6 +1352,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c21MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,1)){
             tf = c21;
             i = 17;
@@ -1338,6 +1361,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c11MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,1)){
             tf = c11;
             i = 9;
@@ -1346,6 +1370,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c12MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,2)){
             tf = c12;
             i = 10;
@@ -1354,6 +1379,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c13MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,3)){
             tf = c13;
             i = 11;
@@ -1362,6 +1388,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c14MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,4)){
             tf = c14;
             i = 12;
@@ -1370,6 +1397,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c15MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,5)){
             tf = c15;
             i = 13;
@@ -1378,6 +1406,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c16MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,6)){
             tf = c16;
             i = 14;
@@ -1386,6 +1415,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c17MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(1,7)){
             tf = c17;
             i = 15;
@@ -1394,6 +1424,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c27MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,7)){
             tf = c27;
             i = 23;
@@ -1402,6 +1433,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c37MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,7)){
             tf = c37;
             i = 31;
@@ -1410,6 +1442,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c47MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c47MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,7)){
             tf = c47;
             i = 39;
@@ -1418,6 +1451,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c57MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c57MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,7)){
             tf = c57;
             i = 47;
@@ -1426,6 +1460,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c67MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c67MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,7)){
             tf = c67;
             i = 55;
@@ -1434,6 +1469,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c77MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c77MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,7)){
             tf = c77;
             i = 63;
@@ -1442,6 +1478,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c76MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c76MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,6)){
             tf = c76;
             i = 62;
@@ -1450,6 +1487,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c75MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c75MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,5)){
             tf = c75;
             i = 61;
@@ -1458,6 +1496,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c74MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c74MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,4)){
             tf = c74;
             i = 60;
@@ -1466,6 +1505,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c73MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c73MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(7,3)){
             tf = c73;
             i = 59;
@@ -1474,6 +1514,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c62MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c62MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,2)){
             tf = c62;
             i = 50;
@@ -1482,6 +1523,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c63MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c63MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,3)){
             tf = c63;
             i = 51;
@@ -1490,6 +1532,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c64MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,4)){
             tf = c64;
             i = 52;
@@ -1498,6 +1541,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c65MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c65MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,5)){
             tf = c65;
             i = 53;
@@ -1506,6 +1550,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c66MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(6,6)){
             tf = c66;
             i = 54;
@@ -1514,6 +1559,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c56MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c56MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,6)){
             tf = c56;
             i = 46;
@@ -1522,6 +1568,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c46MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c46MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,6)){
             tf = c46;
             i = 38;
@@ -1530,6 +1577,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c36MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,6)){
             tf = c36;
             i = 30;
@@ -1538,6 +1586,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c26MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,6)){
             tf = c26;
             i = 22;
@@ -1546,6 +1595,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c25MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,5)){
             tf = c25;
             i = 21;
@@ -1554,6 +1604,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c35MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,5)){
             tf = c35;
             i = 29;
@@ -1562,6 +1613,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c45MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c45MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,5)){
             tf = c45;
             i = 37;
@@ -1570,6 +1622,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c55MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,5)){
             tf = c55;
             i = 45;
@@ -1578,6 +1631,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c54MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c54MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,4)){
             tf = c54;
             i = 44;
@@ -1586,6 +1640,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c44MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c44MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,4)){
             tf = c44;
             i = 36;
@@ -1594,6 +1649,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c34MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,4)){
             tf = c34;
             i = 28;
@@ -1602,6 +1658,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,4)){
             tf = c24;
             i = 20;
@@ -1610,6 +1667,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c23MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,3)){
             tf = c23;
             i = 19;
@@ -1618,6 +1676,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c22MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(2,2)){
             tf = c22;
             i = 18;
@@ -1626,6 +1685,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c32MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,2)){
             tf = c32;
             i = 26;
@@ -1634,6 +1694,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c33MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(3,3)){
             tf = c33;
             i = 27;
@@ -1642,6 +1703,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c43MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,3)){
             tf = c43;
             i = 35;
@@ -1650,6 +1712,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c42MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(4,2)){
             tf = c42;
             i = 34;
@@ -1658,6 +1721,7 @@ public class Jugar8 extends javax.swing.JFrame {
 
     private void c52MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c52MouseClicked
         // TODO add your handling code here:
+        tf = null;
         if (!es_written(5,2)){
             tf = c52;
             i = 42;
