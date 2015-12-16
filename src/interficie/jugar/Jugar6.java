@@ -668,7 +668,7 @@ public class Jugar6 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(50, 430, 130, 70);
+        Autocompletar.setBounds(90, 260, 130, 70);
 
         jButton12.setText("0");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {

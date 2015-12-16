@@ -811,7 +811,7 @@ public class Jugar7 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(40, 450, 130, 70);
+        Autocompletar.setBounds(60, 270, 130, 70);
 
         jButton11.setText("Esborrar");
         jButton11.addActionListener(new java.awt.event.ActionListener() {

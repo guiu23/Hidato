@@ -440,7 +440,7 @@ public class Jugar4 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Autocompletar);
-        Autocompletar.setBounds(90, 410, 130, 70);
+        Autocompletar.setBounds(90, 250, 130, 70);
 
         jButton12.setText("0");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
