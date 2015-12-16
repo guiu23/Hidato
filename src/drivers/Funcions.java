@@ -197,7 +197,9 @@ public class Funcions {
                 correcte = true;
                 boolean jaExisteix = false;
                 for ( int i =0; i< HBD._boards.size() && !jaExisteix; ++i) {
-                    if (HBD._boards.get(i).equals(Taulell)) jaExisteix = true; 
+                    System.out.println("1: " + HBD._boards.get(i).getID());
+                    System.out.println("2: " + Taulell.getID());
+                    if (HBD._boards.get(i).getID().equals(Taulell.getID())) jaExisteix = true; 
                 }
                 if (!jaExisteix) {
                     Taulell.setID(nomT);

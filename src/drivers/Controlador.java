@@ -223,7 +223,7 @@ public class Controlador {
                 HBD.saveTemporal();
                 
                 for (int j = 0; j < HBD._boardsResolts.size(); ++j) {
-                    if (HBD._boards.get(i).getID().equals(nomT)) {
+                    if (HBD._boardsResolts.get(i).getID().equals(nomT)) {
                         BoardHidato Taulell2 = HBD._boardsResolts.get(i);
                         Taulell2.setID("temporal");
                         HBD._temporalResolts.add(Taulell2); //posa solucio al temporalResolts per si la maquina ha de solucionar-ho
