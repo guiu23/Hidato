@@ -14,6 +14,13 @@ import interficie.jugar.*;
 import interficie.ranking.AltresEstadistiques;
 import interficie.ranking.RankingGlobal;
 import interficie.ranking.RankingPersonal;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.nio.file.Files;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -136,8 +143,13 @@ public class Menu extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(420, 470, 160, 40);
+        jButton1.setBounds(410, 480, 160, 40);
 
         titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 80)); // NOI18N
         titols.setForeground(new java.awt.Color(255, 255, 255));
@@ -508,10 +520,25 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
        // Object[] options = {"2x2","3x3","4x4","5x5","6x6","7x7","8x8","9x9"};
        // Object[] optDif = {"Fàcil", "Mitjà", "Difícil"};
-        JFrame frame = new JFrame("Sobre l'Hidato");
+        /*JFrame frame = new JFrame("Sobre l'Hidato");
         JOptionPane.showMessageDialog(frame,"Hidato és un joc de lògica creat pel Dr. Gyora Benedek, un matemàtic israelià.", "Història", JOptionPane.INFORMATION_MESSAGE);    
-        JOptionPane.showMessageDialog(frame,"El objectiu de l'Hidato és omplenar el taulell amb numeros consecutius que es connecten horitzontalment, vertical o diagonalment.", "Com s'hi juga", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(frame,"El objectiu de l'Hidato és omplenar el taulell amb numeros consecutius que es connecten horitzontalment, vertical o diagonalment.", "Com s'hi juga", JOptionPane.INFORMATION_MESSAGE);*/
+        /*URL resource = Thread.currentThread().getContextClassLoader().getResource("resources/Explicacio.pdf");  
+        File userGuideFile = null; 
+        */
+        Desktop d = Desktop.getDesktop();
+        try{
+            d.open(new File("Explicacio.pdf"));
+        }
+        catch (IOException ex){
+                JOptionPane.showMessageDialog(this,"document no trobat", "Error",JOptionPane.ERROR_MESSAGE);
+            }
+        
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     /**
