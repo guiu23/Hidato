@@ -238,7 +238,6 @@ public class Generar9 extends javax.swing.JFrame {
         c83 = new javax.swing.JTextField();
         c81 = new javax.swing.JTextField();
         c80 = new javax.swing.JTextField();
-        primera163 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -1266,16 +1265,6 @@ public class Generar9 extends javax.swing.JFrame {
         getContentPane().add(c80);
         c80.setBounds(110, 390, 30, 30);
 
-        primera163.setEditable(false);
-        primera163.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        primera163.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                primera163MouseClicked(evt);
-            }
-        });
-        getContentPane().add(primera163);
-        primera163.setBounds(110, 390, 30, 30);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1467,8 +1456,8 @@ public class Generar9 extends javax.swing.JFrame {
 
     private void c82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c82MouseClicked
       
-            tf = c74;
-            i = 0;
+            tf = c82;
+            i = 74;
     
     }//GEN-LAST:event_c82MouseClicked
 
@@ -1622,7 +1611,7 @@ public class Generar9 extends javax.swing.JFrame {
     private void c27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c27MouseClicked
         
             tf = c27;
-            i = 26;
+            i = 25;
        
     }//GEN-LAST:event_c27MouseClicked
 
@@ -1976,10 +1965,6 @@ public class Generar9 extends javax.swing.JFrame {
   
     }//GEN-LAST:event_c80MouseClicked
 
-    private void primera163MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primera163MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_primera163MouseClicked
-
     private void boto(String textboto){
         String S = Caselles[i];
         f = Character.getNumericValue(S.charAt(1));
@@ -2148,7 +2133,6 @@ public class Generar9 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros;
-    private javax.swing.JTextField primera163;
     private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c08","c10","c11","c12","c13","c14","c15","c16","c17","c18","c20","c21","c22","c23","c24","c25","c26","c27","c28","c30","c31","c32","c33","c34","c35","c36","c37","c38","c40","c41","c42","c43","c44","c45","c46","c47","c48","c50","c51","c52","c53","c54","c55","c56","c57","c58","c60","c61","c62","c63","c64","c65","c66","c67","c68","c70","c71","c72","c73","c74","c75","c76","c77","c78","c80","c81","c82","c83","c84","c85","c86","c87","c88"};

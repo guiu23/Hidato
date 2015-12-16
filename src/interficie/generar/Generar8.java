@@ -498,6 +498,11 @@ public class Generar8 extends javax.swing.JFrame {
                 c06MouseClicked(evt);
             }
         });
+        c06.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c06ActionPerformed(evt);
+            }
+        });
         getContentPane().add(c06);
         c06.setBounds(310, 150, 30, 30);
 
@@ -1705,6 +1710,10 @@ public class Generar8 extends javax.swing.JFrame {
             i = 42;
     
     }//GEN-LAST:event_c52MouseClicked
+
+    private void c06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c06ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c06ActionPerformed
 
     private void boto(String textboto){
         String S = Caselles[i];
