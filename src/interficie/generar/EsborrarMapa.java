@@ -45,7 +45,6 @@ public class EsborrarMapa extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         list1 = new java.awt.List();
         jTextField1 = new javax.swing.JTextField();
-        titol = new javax.swing.JTextArea();
         on_vol_entrar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         fons = new javax.swing.JLabel();
@@ -92,23 +91,6 @@ public class EsborrarMapa extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField1);
         jTextField1.setBounds(175, 188, 330, 28);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 80)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(328, 70, 341, 92);
         getContentPane().add(on_vol_entrar);
         on_vol_entrar.setBounds(570, 190, 170, 30);
 
@@ -226,6 +208,5 @@ public class EsborrarMapa extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private java.awt.List list1;
     private javax.swing.JTextField on_vol_entrar;
-    private javax.swing.JTextArea titol;
     // End of variables declaration//GEN-END:variables
 }

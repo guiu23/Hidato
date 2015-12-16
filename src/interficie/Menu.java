@@ -62,10 +62,10 @@ public class Menu extends javax.swing.JFrame {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         titol1 = new javax.swing.JTextArea();
-        titol = new javax.swing.JTextArea();
         LogOut = new javax.swing.JButton();
         sortir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        titols = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
         MenuPrincipal = new javax.swing.JMenuBar();
         JugarPartida = new javax.swing.JMenu();
@@ -107,24 +107,6 @@ public class Menu extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(null);
 
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 72)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setFocusable(false);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(340, 214, 320, 100);
-
         LogOut.setText("Tancar sessió");
         LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,6 +138,12 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(420, 470, 160, 40);
+
+        titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 80)); // NOI18N
+        titols.setForeground(new java.awt.Color(255, 255, 255));
+        titols.setText("HIDATO");
+        getContentPane().add(titols);
+        titols.setBounds(310, 200, 370, 100);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -583,7 +571,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton sortir;
-    private javax.swing.JTextArea titol;
     private javax.swing.JTextArea titol1;
+    private javax.swing.JLabel titols;
     // End of variables declaration//GEN-END:variables
 }

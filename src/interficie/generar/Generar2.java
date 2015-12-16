@@ -67,7 +67,6 @@ public class Generar2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titol = new javax.swing.JTextArea();
         c10 = new javax.swing.JTextField();
         c01 = new javax.swing.JTextField();
         c00 = new javax.swing.JTextField();
@@ -87,6 +86,7 @@ public class Generar2 extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         esborrar = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        titols = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,23 +94,6 @@ public class Generar2 extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(330, 40, 240, 80);
 
         c10.setEditable(false);
         c10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -358,6 +341,12 @@ public class Generar2 extends javax.swing.JFrame {
         });
         getContentPane().add(jButton10);
         jButton10.setBounds(730, 400, 60, 60);
+
+        titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 70)); // NOI18N
+        titols.setForeground(new java.awt.Color(255, 255, 255));
+        titols.setText("HIDATO");
+        getContentPane().add(titols);
+        titols.setBounds(270, 50, 330, 80);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -646,7 +635,7 @@ public class Generar2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros;
-    private javax.swing.JTextArea titol;
+    private javax.swing.JLabel titols;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c10","c11"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[9];

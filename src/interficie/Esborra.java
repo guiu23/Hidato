@@ -40,13 +40,13 @@ public class Esborra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titol = new javax.swing.JTextArea();
         user = new javax.swing.JTextField();
         Esborra = new javax.swing.JButton();
         enrere = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
         text_nom = new javax.swing.JTextField();
         text_contra = new javax.swing.JTextField();
+        titols = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,25 +54,6 @@ public class Esborra extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 80)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(310, 100, 340, 100);
-        titol.getAccessibleContext().setAccessibleName("");
-        titol.getAccessibleContext().setAccessibleDescription("");
 
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +139,12 @@ public class Esborra extends javax.swing.JFrame {
         });
         getContentPane().add(text_contra);
         text_contra.setBounds(200, 350, 140, 50);
+
+        titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 80)); // NOI18N
+        titols.setForeground(new java.awt.Color(255, 255, 255));
+        titols.setText("HIDATO");
+        getContentPane().add(titols);
+        titols.setBounds(280, 90, 370, 100);
 
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
@@ -316,7 +303,7 @@ public class Esborra extends javax.swing.JFrame {
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField text_contra;
     private javax.swing.JTextField text_nom;
-    private javax.swing.JTextArea titol;
+    private javax.swing.JLabel titols;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

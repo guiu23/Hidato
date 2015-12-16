@@ -150,7 +150,6 @@ public class Jugar9 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titol = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -247,6 +246,7 @@ public class Jugar9 extends javax.swing.JFrame {
         Autocompletar = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        titols = new javax.swing.JLabel();
         fons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -254,23 +254,6 @@ public class Jugar9 extends javax.swing.JFrame {
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(688, 488));
         getContentPane().setLayout(null);
-
-        titol.setEditable(false);
-        titol.setBackground(new java.awt.Color(0, 0, 0));
-        titol.setColumns(20);
-        titol.setFont(new java.awt.Font("Rockwell", 1, 60)); // NOI18N
-        titol.setForeground(new java.awt.Color(255, 255, 255));
-        titol.setRows(5);
-        titol.setText("HIDATO");
-        titol.setAutoscrolls(false);
-        titol.setBorder(null);
-        titol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        titol.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        titol.setRequestFocusEnabled(false);
-        titol.setSelectionColor(new java.awt.Color(255, 255, 255));
-        titol.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(titol);
-        titol.setBounds(280, 40, 260, 60);
 
         jButton1.setText("1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1230,6 +1213,12 @@ public class Jugar9 extends javax.swing.JFrame {
         getContentPane().add(jButton12);
         jButton12.setBounds(670, 380, 60, 60);
 
+        titols.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 70)); // NOI18N
+        titols.setForeground(new java.awt.Color(255, 255, 255));
+        titols.setText("HIDATO");
+        getContentPane().add(titols);
+        titols.setBounds(270, 40, 330, 80);
+
         fons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imatges/images/fonspng.png"))); // NOI18N
         getContentPane().add(fons);
         fons.setBounds(0, 0, 1000, 600);
@@ -2175,7 +2164,7 @@ public class Jugar9 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel numeros1;
-    private javax.swing.JTextArea titol;
+    private javax.swing.JLabel titols;
     // End of variables declaration//GEN-END:variables
     private String Caselles[] = {"c00","c01","c02","c03","c04","c05","c06","c07","c08","c10","c11","c12","c13","c14","c15","c16","c17","c18","c20","c21","c22","c23","c24","c25","c26","c27","c28","c30","c31","c32","c33","c34","c35","c36","c37","c38","c40","c41","c42","c43","c44","c45","c46","c47","c48","c50","c51","c52","c53","c54","c55","c56","c57","c58","c60","c61","c62","c63","c64","c65","c66","c67","c68","c70","c71","c72","c73","c74","c75","c76","c77","c78","c80","c81","c82","c83","c84","c85","c86","c87","c88"};
     private javax.swing.JTextField txtField[] = new javax.swing.JTextField[81];
