@@ -104,7 +104,7 @@ public class Jugar9 extends javax.swing.JFrame {
         txtField[64] = c71;
         txtField[65] = c72;
         txtField[66] = c73;
-        txtField[67] = c74;
+        txtField[67] = c74;//
         txtField[68] = c75;
         txtField[69] = c76;
         txtField[70] = c77;
@@ -1403,8 +1403,8 @@ public class Jugar9 extends javax.swing.JFrame {
     private void c82MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c82MouseClicked
         tf = null;
         if (!es_written(8,2)){
-            tf = c74;
-            i = 0;
+            tf = c82;
+            i = 74;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c82MouseClicked
 
@@ -1580,7 +1580,7 @@ public class Jugar9 extends javax.swing.JFrame {
         tf = null;
         if (!es_written(2,7)){
             tf = c27;
-            i = 26;
+            i = 25;
         }// TODO add your handling code here:
     }//GEN-LAST:event_c27MouseClicked
 
