@@ -599,10 +599,10 @@ public class Jugar5 extends javax.swing.JFrame {
         //array dstrings com tantes posicions como caselles. 
         //a cada casella li passem a boto la seva posicio dins larray
         String S = Caselles[i];
-        val = Integer.parseInt(tf.getText() + textboto);
         f = Character.getNumericValue(S.charAt(1));
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
+        val = Integer.parseInt(tf.getText() + textboto);
         System.out.println(val);
         System.out.println(f);
         System.out.println(c);
