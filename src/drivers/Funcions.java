@@ -738,10 +738,10 @@ public class Funcions {
         Boolean canviat = false;
         long val = 50000000L;
         if (size == 5) val = 250000000L;
-        if (size == 6) val = 500000000L;
-        if (size == 7) val = 5000000000L; //FALTA AQUÍ
-        if (size == 8) val = 5000000000L; //FALTA AQUÍ
-        if (size == 9) val = 10000000000L; //FALTA AQUÍ
+        if (size == 6) val = 700000000L;
+        if (size == 7) val = 5000000000L; 
+        if (size == 8) val = 5000000000L;
+        if (size == 9) val = 50000000000L; 
         if ((System.nanoTime() - inicial) > val) fi = true;
         if (comprovar2(Taulell, X, Y, size, startx, starty)) {
             if(escriure) imprimeixValors(Taulell);
