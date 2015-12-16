@@ -1089,7 +1089,7 @@ public class Jugar6 extends javax.swing.JFrame {
     }//GEN-LAST:event_c34MouseClicked
 
     private void c24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c24MouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here:.
         tf = null;
         if (!es_written(2,4)){
             tf = c24;
