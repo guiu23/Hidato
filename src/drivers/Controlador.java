@@ -169,6 +169,7 @@ public class Controlador {
     
     public static int ConfirmarBoardCreat(String nomT) { //un cop posats tots els valors del taulell, la funcio mira si es pot resoldre i en cas afirmatiu la guarda a la BD amb la seva resposta
         BoardHidato Taulell = Funcions.CarregarTemporal();
+        System.out.println("taulell fet");
         imprimeixValors(Taulell);
         Integer X[] = {0,1,1,1,0,-1,-1,-1};
         Integer Y[] = {1,1,0,-1,-1,-1,0,1};

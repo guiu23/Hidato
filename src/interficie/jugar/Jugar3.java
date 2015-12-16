@@ -76,7 +76,6 @@ public class Jugar3 extends javax.swing.JFrame {
         for (int i = 0; i < valors.size(); ++i){
             tf = txtField[i];
              if (valors.get(i) != 0){
-                System.out.println(tf);
                 tf.setText(Integer.toString(valors.get(i)));
                 if ("1".equals(tf.getText())) tf.setBackground(color);            
                 else if (tf.getText().equals(lastnum)) tf.setBackground(color);
