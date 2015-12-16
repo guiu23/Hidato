@@ -104,7 +104,7 @@ public class Jugar7 extends javax.swing.JFrame {
                 else if (tf.getText().equals(lastnum)) tf.setBackground(color);
                 else if ("-1".equals(tf.getText())){
                     tf.setBackground(Color.black);
-                    tf.setText("X");
+                    tf.setText("");
                 }
             }
         }   
@@ -851,7 +851,7 @@ public class Jugar7 extends javax.swing.JFrame {
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
         else val = Integer.parseInt(tf.getText() + textboto);
-        System.out.println(val);
+        /*System.out.println(val);
         System.out.println(f);
         System.out.println(c);
         if (afegirmarca){ 
@@ -859,7 +859,7 @@ public class Jugar7 extends javax.swing.JFrame {
             switchAnnotationCasella(val, f, c);
             afegirmarca = false;
         }
-        else{
+        else{*/
             DefineixCasella(val, f, c,size);
             String afegirstr;
             int afegirint = getCasella(f,c);   
@@ -867,7 +867,7 @@ public class Jugar7 extends javax.swing.JFrame {
             else if (afegirint == -1) afegirstr = "X";
             else afegirstr = String.valueOf(afegirint);
             tf.setText(afegirstr);
-        }
+        
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boto(jButton1.getText()); // TODO add your handling code here:
@@ -1340,12 +1340,16 @@ public class Jugar7 extends javax.swing.JFrame {
     }//GEN-LAST:event_c61MouseClicked
 
     private void AutocompletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AutocompletarMouseClicked
-        apretat = true;
+          apretat = true;
         ArrayList<Integer> valors = CarregarSolucioTaulell();
+       // Funcions.imprimeixValors(valors);
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
             afegir = String.valueOf(valors.get(i));
-            txtField[i].setText(afegir);
+            if (!"-1".equals(afegir)){
+                System.out.println(afegir);
+                txtField[i].setText(afegir);
+            }
         }
     }//GEN-LAST:event_AutocompletarMouseClicked
 

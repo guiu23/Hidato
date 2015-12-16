@@ -90,7 +90,7 @@ public class Jugar5 extends javax.swing.JFrame {
                 else if (tf.getText().equals(lastnum)) tf.setBackground(color);
                 else if ("-1".equals(tf.getText())){
                     tf.setBackground(Color.black);
-                    tf.setText("X");
+                    tf.setText(null);
                 }
             }
         }   
@@ -598,9 +598,9 @@ public class Jugar5 extends javax.swing.JFrame {
         c =  Character.getNumericValue(S.charAt(2));
         if (textboto == "Esborrar") val = 0;
         val = Integer.parseInt(tf.getText() + textboto);
-        System.out.println(val);
-        System.out.println(f);
-        System.out.println(c);
+        //System.out.println(val);
+        //System.out.println(f);
+        //System.out.println(c);
         if (afegirmarca){ 
             val = Integer.parseInt(textboto);
             switchAnnotationCasella(val, f, c);
@@ -904,7 +904,10 @@ public class Jugar5 extends javax.swing.JFrame {
         String afegir;
         for (int i = 0; i < valors.size(); ++i){
             afegir = String.valueOf(valors.get(i));
-            txtField[i].setText(afegir);
+            if (!"-1".equals(afegir)){
+                System.out.println(afegir);
+                txtField[i].setText(afegir);
+            }
         }
     }//GEN-LAST:event_AutocompletarMouseClicked
 
